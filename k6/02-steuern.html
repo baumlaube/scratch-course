@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Steuern mit Tasten und Finger · Scratch-Kurs Klasse 6</title>
+<meta name="description" content="Lektion 2 im Scratch-Lernpfad Klasse 6: Mit „Wenn Taste … gedrückt wird“ Robo steuern, x und y auf der Bühne verstehen – am PC mit den Pfeiltasten, am iPad mit Knöpfen zum Antippen.">
+<link rel="canonical" href="https://scratch.herrseibert.de/k6/02-steuern.html">
+<!-- vorschau -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Scratch-Kurs">
+<meta property="og:locale" content="de_DE">
+<meta property="og:url" content="https://scratch.herrseibert.de/k6/02-steuern.html">
+<meta property="og:title" content="Steuern mit Tasten und Finger · Scratch-Kurs Klasse 6">
+<meta property="og:description" content="Lektion 2 im Scratch-Lernpfad Klasse 6: Mit „Wenn Taste … gedrückt wird“ Robo steuern, x und y auf der Bühne verstehen – am PC mit den Pfeiltasten, am iPad mit Knöpfen zum Antippen.">
+<meta property="og:image" content="https://scratch.herrseibert.de/vorschau.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Scratch-Kurs – Programmieren lernen Schritt für Schritt, mit Übungsbühne">
+<meta name="twitter:card" content="summary_large_image">
+<!-- /vorschau -->
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="stylesheet" href="../assets/kurs.css?v=d645e573e3">
+<link rel="stylesheet" href="../assets/buehne.css?v=dedfa8895b">
+<script src="../assets/i18n.js?v=4588e8929d" data-page="k6-02-steuern" data-langs="de"></script>
+<script src="../assets/kurs.js?v=9e315750a5"></script>
+<script src="../assets/buehne.js?v=dec13e3017"></script>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><img class="logo" src="../favicon.svg" alt="" width="34" height="34"> Scratch-Kurs <span>· Programmieren lernen</span></a>
+    <span class="spacer"></span>
+    <button class="theme-btn" type="button" aria-label="Hell oder dunkel umschalten">◐ Hell/Dunkel</button>
+  </div>
+</header>
+
+<main class="wrap">
+  <nav class="path" aria-label="Lernpfad Klasse 6">
+    <strong class="t">Klasse 6:</strong>
+    <ol>
+      <li class="done"><a href="01-start-check.html" title="1 · Start-Check">1</a></li>
+      <li class="now"><span title="2 · Steuern mit Tasten und Finger" aria-current="step">2</span></li>
+      <li class="done"><a href="03-falls-dann.html" title="3 · Robo entscheidet: falls … dann">3</a></li>
+      <li class="soon"><span title="4 · falls … sonst (in Arbeit)">4</span></li>
+      <li class="soon"><span title="5 · wiederhole bis (in Arbeit)">5</span></li>
+      <li class="soon"><span title="6 · Alles zusammen (in Arbeit)">6</span></li>
+      <li class="soon"><span title="7 · Projekt: Fangspiel (in Arbeit)">7</span></li>
+      <li class="soon"><span title="8 · Projekt: Fangspiel (in Arbeit)">8</span></li>
+    </ol>
+  </nav>
+
+  <section class="hero">
+    <h1>Steuern mit Tasten und Finger – du lenkst Robo</h1>
+    <div class="meta">
+      <span class="chip">Klasse 6 · Lektion 2</span>
+      <span class="chip">⏱ ca. 35 Minuten</span>
+    </div>
+    <ul class="goals">
+      <li>Ich starte ein Skript mit einer Taste.</li>
+      <li>Ich weiß, was x und y auf der Bühne bedeuten.</li>
+      <li>Ich steuere Robo in alle vier Richtungen.</li>
+    </ul>
+  </section>
+
+  <details class="card woerter">
+    <summary>📖 Scratch-Wörter für diese Lektion</summary>
+    <p class="note">Die Wörter links bleiben deutsch – so heißen sie in Scratch.</p>
+    <div class="tbl-scroll"><table class="plain">
+      <tr><th class="wort">die Taste <small>die Tasten</small></th><td>Ein Knopf auf der Tastatur, z. B. die Leertaste oder eine Pfeiltaste.</td></tr>
+      <tr><th class="wort">das Ereignis <small>die Ereignisse</small></th><td>Etwas passiert: Jemand drückt eine Taste oder klickt auf die Flagge. Dann startet ein Skript.</td></tr>
+      <tr><th class="wort">die Koordinate <small>die Koordinaten</small></th><td>Zwei Zahlen, die sagen, wo Robo steht: x und y.</td></tr>
+      <tr><th class="wort">x <small>–</small></th><td>links ↔ rechts. Nach rechts wird x größer.</td></tr>
+      <tr><th class="wort">y <small>–</small></th><td>unten ↕ oben. Nach oben wird y größer.</td></tr>
+      <tr><th class="wort">ändern <small>er ändert</small></th><td>Eine Zahl größer oder kleiner machen: <em>ändere x um 10</em>.</td></tr>
+    </table></div>
+  </details>
+
+  <section class="card">
+    <h2><span class="step-no">ℹ</span> So arbeitest du heute</h2>
+    <p class="lead">Du übst mit der <strong>Übungsbühne</strong> direkt hier im Browser. Sie funktioniert mit Maus und mit Finger.</p>
+    <ul class="tasks">
+      <li><span class="badge basis">Tasten</span><span>Am PC drückst du die <strong>Pfeiltasten</strong> <kbd>←</kbd> <kbd>↑</kbd> <kbd>↓</kbd> <kbd>→</kbd>. Klick vorher einmal auf die Bühne.</span></li>
+      <li><span class="badge basis">iPad</span><span>Ohne Tastatur tippst du auf die <strong>Knöpfe unter der Bühne</strong> ◀ ▲ ▼ ▶. Sie wirken genau wie die Tasten.</span></li>
+      <li><span class="badge basis">Ziehen</span><span>Zieh Blöcke von <em>Blöcke</em> nach <em>Skript</em>. Tippen geht auch: Dann hängt der Block unten dran.</span></li>
+      <li><span class="badge basis">Zu zweit</span><span>Eine Person steuert, die andere liest vor und prüft. Nach jeder Aufgabe wechseln.</span></li>
+    </ul>
+  </section>
+
+  <section class="card wdh">
+    <h2><span class="step-no">↺</span> Weißt du noch? <span class="chip">2 Minuten</span></h2>
+    <div id="wdh"></div>
+  </section>
+
+  <!-- 1 · Vorhersagen -->
+  <section class="card">
+    <h2><span class="step-no">1</span> Überleg: Ein neuer Startblock <span class="chip">4 Minuten</span></h2>
+    <p class="lead">Lies das Skript. Starte noch nichts!</p>
+    <div class="script-row">
+      <figure><div data-script='[["key","rechts"],["changex",40]]' data-small></div></figure>
+      <div style="flex:1;min-width:220px">
+        <p><strong>Überleg:</strong> Wann läuft dieses Skript – und was macht Robo dann?</p>
+        <div class="choices" id="pred1">
+          <button type="button" class="choice">Wenn man auf ⚑ klickt. Robo geht nach rechts.</button>
+          <button type="button" class="choice">Wenn man die Taste <kbd>→</kbd> drückt. Robo geht ein Stück nach rechts.</button>
+          <button type="button" class="choice">Wenn man die Taste <kbd>→</kbd> drückt. Robo dreht sich nach rechts.</button>
+          <button type="button" class="choice">Nie – oben fehlt die Flagge.</button>
+        </div>
+        <p class="fb" id="fb1"></p>
+      </div>
+    </div>
+    <div id="probe1" hidden>
+      <p><strong>Probier es aus:</strong> Drück <kbd>→</kbd> – oder tipp auf ▶ unter der Bühne. Drück ruhig mehrmals.</p>
+      <div id="b1"></div>
+      <p class="note">Das Skript startet mit einer <strong>Taste</strong>, nicht mit der Flagge. Ein Klick auf ⚑ Start bringt hier also nichts.</p>
+    </div>
+  </section>
+
+  <!-- 2 · Koordinaten -->
+  <section class="card">
+    <h2><span class="step-no">2</span> Wo ist Robo? x und y <span class="chip">6 Minuten</span></h2>
+    <p>Die Bühne ist wie eine Landkarte mit Gitter. Jeder Punkt hat zwei Zahlen:</p>
+    <div class="side">
+      <p class="rule" style="margin:0"><strong>x</strong> = links ↔ rechts<br><small>rechts: plus · links: minus</small></p>
+      <p class="rule" style="margin:0"><strong>y</strong> = unten ↕ oben<br><small>oben: plus · unten: minus</small></p>
+    </div>
+    <p>In der Mitte ist <strong>x: 0 y: 0</strong>. Ein Kästchen ist <strong>40 Schritte</strong> breit. Steuer Robo mit den Pfeilen und schau unten rechts auf die Zahlen.</p>
+    <div id="b2"></div>
+    <p><strong>Überleg:</strong> Robo steht bei <strong>x: 0 y: 0</strong>. Du drückst 2-mal ▶ und 1-mal ▼ (jedes Mal 40 Schritte). Wo steht Robo dann?</p>
+    <div class="choices" id="pred2">
+      <button type="button" class="choice">x: 80 y: −40</button>
+      <button type="button" class="choice">x: −80 y: 40</button>
+      <button type="button" class="choice">x: 40 y: −80</button>
+      <button type="button" class="choice">x: 80 y: 40</button>
+    </div>
+    <p class="fb" id="fb2"></p>
+  </section>
+
+  <!-- 3 · Lücke -->
+  <section class="card">
+    <h2><span class="step-no">3</span> Robo springt zum Stern <span class="badge basis">Basis</span> <span class="chip">5 Minuten</span></h2>
+    <p>Mit <em>gehe zu x: … y: …</em> springt Robo direkt an einen Punkt. Schreib die richtigen Zahlen in die <strong>gelben Felder</strong>, damit Robo beim Start auf dem Stern landet.</p>
+    <div id="b3"></div>
+    <div id="hints3"></div>
+  </section>
+
+  <!-- 4 · Puzzle -->
+  <section class="card">
+    <h2><span class="step-no">4</span> Die Fernsteuerung bauen <span class="badge basis">Basis</span> <span class="chip">7 Minuten</span></h2>
+    <p>Bau für jede Pfeiltaste ein eigenes Skript: <strong>immer ein Startblock und darunter ein Bewegungsblock</strong>. Dann steuer Robo zum Stern.</p>
+    <div id="b4"></div>
+    <p class="note">Tipp am iPad: Tipp erst auf einen Startblock, dann auf den passenden Bewegungsblock. So entsteht ein Paar nach dem anderen.</p>
+  </section>
+
+  <!-- 5 · Fehlerdetektiv -->
+  <section class="card">
+    <h2><span class="step-no">5</span> Fehlerdetektiv 🔍 <span class="badge basis">Basis</span> <span class="chip">5 Minuten</span></h2>
+    <p>Jonas hat eine Fernsteuerung gebaut. Aber eine Taste macht etwas Falsches. Probier alle vier Tasten aus.</p>
+    <div id="b5"></div>
+    <ol class="howto">
+      <li>Was <strong>soll</strong> passieren?</li>
+      <li>Was <strong>passiert</strong> wirklich?</li>
+      <li><strong>In welchem Skript</strong> läuft es anders?</li>
+    </ol>
+    <p>Repariere es. Du musst nur <strong>eine Zahl</strong> ändern.</p>
+    <div id="hints5"></div>
+  </section>
+
+  <section class="card">
+    <p class="rule">Ein Startblock mit <strong>Taste</strong> wartet, bis die Taste gedrückt wird.<br>
+      <strong>x</strong>: rechts plus, links minus · <strong>y</strong>: oben plus, unten minus.</p>
+  </section>
+
+  <!-- Plus -->
+  <section class="card">
+    <h2><span class="step-no">+</span> Robo springt mit der Leertaste <span class="badge plus">Plus</span> <span class="chip">für Schnelle</span></h2>
+    <p>Bau ein Skript: Wenn man die <strong>Leertaste</strong> drückt, springt Robo hoch und landet wieder. Man soll den Sprung sehen!</p>
+    <div id="bplus"></div>
+  </section>
+
+  <section class="card">
+    <h2><span class="step-no">✓</span> Kurz-Check <span class="chip">4 Minuten</span></h2>
+    <div id="quiz"></div>
+  </section>
+
+  <section class="card merke">
+    <h2>Merke</h2>
+    <ul>
+      <li><strong>Wenn Taste … gedrückt wird</strong> startet ein Skript, sobald man die Taste drückt – so oft man will.</li>
+      <li>Jede Taste bekommt ihr <strong>eigenes Skript</strong>.</li>
+      <li><strong>x</strong> ist links ↔ rechts, <strong>y</strong> ist unten ↕ oben. Die Mitte ist x: 0 y: 0.</li>
+      <li><em>ändere x um −10</em> heißt: 10 Schritte nach <strong>links</strong>. Das Minus zeigt die Richtung.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2><span class="step-no">⚑</span> Jetzt in echt: Scratch <span class="chip">zu Hause oder nächste Stunde</span></h2>
+    <p><a class="btn" href="https://scratch.mit.edu/projects/editor/" target="_blank" rel="noopener">Scratch in neuem Fenster öffnen ↗</a></p>
+    <ol class="howto">
+      <li>Bei <strong>Ereignisse</strong> den Block <em>Wenn Taste Leertaste gedrückt wird</em> holen. Im Feld <strong>Pfeil nach rechts</strong> wählen.</li>
+      <li>Bei <strong>Bewegung</strong> den Block <em>ändere x um 10</em> darunter setzen.</li>
+      <li>Genauso für die anderen drei Pfeile. Dann die Pfeiltasten drücken.</li>
+    </ol>
+    <p class="note">⌨️ <strong>Wichtig:</strong> Tasten-Skripte brauchen im echten Scratch eine <strong>Tastatur</strong>. Am iPad ohne Tastatur gibt es keine Pfeiltasten.
+      Dann nimm <em>Wenn diese Figur angeklickt wird</em>: Das Skript startet, wenn man die Figur antippt.</p>
+    <div class="script-row">
+      <figure><div data-script='[["click"],["move",40]]' data-small></div><figcaption>Antippen statt Taste: geht am iPad</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2><span class="step-no">☑</span> Das kann ich</h2>
+    <ul class="checklist" id="checklist">
+      <li><label><input type="checkbox"> Ich kann ein Skript mit einer Taste starten.</label></li>
+      <li><label><input type="checkbox"> Ich kann sagen, wo x: 0 y: 0 ist und in welche Richtung x und y größer werden.</label></li>
+      <li><label><input type="checkbox"> Ich kann Robo mit vier Skripten in alle Richtungen steuern.</label></li>
+      <li><label><input type="checkbox"> Ich weiß, was ich am iPad ohne Tastatur nehmen kann.</label></li>
+    </ul>
+  </section>
+
+  <section class="card frei">
+    <h2><span class="step-no">★</span> Freiwillig</h2>
+    <p class="lead">Für alle, die schon fertig sind.</p>
+
+    <h3 class="sub"><span class="badge ueben">Üben</span> Antippen statt Taste</h3>
+    <p>Bau ein Skript: Wenn man <strong>Robo antippt</strong> (oder anklickt), dreht er sich um 90 Grad und sagt „Hui!“. Tipp dann auf Robo.</p>
+    <div id="bklick"></div>
+
+    <h3 class="sub"><span class="badge expedition">★ Expedition</span> Die Zaubertafel</h3>
+    <p>Robo hält den Malstift. Bau eine Fernsteuerung, mit der du malst: Bei ⚑ wird der Stift eingeschaltet, mit den Pfeilen fährt Robo herum.
+      Schaffst du den ersten Buchstaben deines Namens?</p>
+    <div id="bzauber"></div>
+  </section>
+
+  <nav class="pager">
+    <a href="01-start-check.html">← Lektion 1: Start-Check</a>
+    <a href="03-falls-dann.html">Lektion 3: Robo entscheidet: falls … dann →</a>
+  </nav>
+</main>
+
+<footer>
+  <div class="wrap t">Lernmaterial von <a href="https://herrseibert.de">herrseibert.de</a> · Lizenz <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.de">CC BY-SA 4.0</a> · ohne Tracking, ohne Cookies<br>Erstellt von der KI Claude von Anthropic.</div>
+  <div class="wrap t gh">Fehler gefunden oder eine Idee? → <a href="https://github.com/baumlaube/scratch-course">Kurs auf GitHub</a></div>
+  <div class="wrap t gh">Scratch ist ein Projekt der Scratch Foundation. Dieser Kurs ist kein offizielles Angebot der Scratch Foundation.</div>
+  <div class="wrap legal"><a href="../impressum.html">Impressum</a> · <a href="../datenschutz.html">Datenschutz</a></div>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const { pick, quiz, hints, checklist } = window.Kurs;
+  const B = window.Buehne;
+  const $ = (id) => document.getElementById(id);
+  const sm = (s) => B.render(s, { small: true });
+  const at = (tr, x, y) => Math.hypot(tr.x - x, tr.y - y) < 1;
+  const num = (v) => parseFloat(String(v).replace(",", "."));
+  const STEUER = (d) => [[["key", "rechts"], ["changex", d]], [["key", "links"], ["changex", -d]], [["key", "oben"], ["changey", d]], [["key", "unten"], ["changey", -d]]];
+  // Welche Tasten-Skripte schicken Robo in die falsche Richtung (oder gar nicht)?
+  const RICHTUNG = { rechts: ["changex", 1], links: ["changex", -1], oben: ["changey", 1], unten: ["changey", -1] };
+  const NAME = { rechts: "Pfeil nach rechts", links: "Pfeil nach links", oben: "Pfeil nach oben", unten: "Pfeil nach unten" };
+  function falsch(skripte) {
+    const out = [];
+    skripte.forEach((st) => {
+      if (!st[0] || st[0].op !== "key" || !RICHTUNG[st[0].args.k]) return;
+      const [op, sign] = RICHTUNG[st[0].args.k];
+      const m = st.slice(1).find((n) => n.op === "changex" || n.op === "changey");
+      if (!m) out.push({ k: st[0].args.k, was: "leer" });
+      else if (m.op !== op) out.push({ k: st[0].args.k, was: "achse" });
+      else if (Math.sign(num(m.args.n)) !== sign) out.push({ k: st[0].args.k, was: "vorzeichen" });
+    });
+    return out;
+  }
+
+  /* Weißt du noch? */
+  quiz($("wdh"), [
+    { q: "Wie oft wechselt Robo das Kostüm?",
+      html: sm(["flag", ["repeat", 3, [["repeat", 2, [["costume"]]]]]]),
+      options: ["2-mal", "3-mal", "5-mal", "6-mal"], right: 3,
+      miss: ["Die innere Schleife läuft 2-mal – aber in jeder der 3 Runden außen.", "Außen sind 3 Runden. In jeder Runde wechselt Robo 2-mal.",
+        "Nicht plus rechnen: 3 Runden außen, in jeder 2-mal innen."],
+      why: "3 × 2 = 6." },
+    { q: "Robo schaut nach rechts (→) und dreht sich ↺ um 90 Grad. Wohin schaut er jetzt?",
+      options: ["nach oben ↑", "nach unten ↓", "nach links ←"], right: 0,
+      miss: [null, "↺ dreht gegen den Uhrzeigersinn. Von rechts aus geht es nach oben.", "Nach links schaut Robo erst nach 180 Grad."],
+      why: "↺ dreht gegen den Uhrzeigersinn: von → nach ↑." },
+  ]);
+
+  /* 1 · Vorhersage */
+  const b1 = B.create($("b1"), { mode: "lesen", scripts: [[["key", "rechts"], ["changex", 40]]], start: { x: -160, y: 0, dir: 90 } });
+  pick($("pred1"), { right: 1, fb: $("fb1"),
+    miss: ["Oben steht keine Flagge, sondern <em>Wenn Taste … gedrückt wird</em>.", null,
+      "<em>ändere x um 40</em> dreht nicht. Robo rutscht 40 Schritte zur Seite.", "Auch dieser Block ist ein Startblock – er wartet auf die Taste statt auf die Flagge."],
+    why: "Der Startblock wartet auf die Taste <kbd>→</kbd>. Bei jedem Druck läuft das Skript einmal: Robo rückt 40 Schritte nach rechts.",
+    onDone() { $("probe1").hidden = false; b1.el.dispatchEvent(new Event("resize")); } });
+
+  /* 2 · Koordinaten */
+  B.create($("b2"), { mode: "lesen", scripts: STEUER(40), start: { x: 0, y: 0, dir: 90 }, koordinaten: true });
+  pick($("pred2"), { right: 0, fb: $("fb2"),
+    miss: [null, "Andersherum: Nach rechts wird x größer (plus), nach unten wird y kleiner (minus).",
+      "x und y sind vertauscht. Rechts/links ist x, oben/unten ist y.", "▼ geht nach unten. Dann wird y kleiner: minus."],
+    why: "2-mal rechts: x = 80. 1-mal runter: y = −40." });
+
+  /* 3 · gehe zu x: ? y: ? */
+  B.create($("b3"), { mode: "frei", edit: "gaps", start: { x: -160, y: 120, dir: 90 }, sterne: [[120, -80]], koordinaten: true,
+    script: ["!flag", ["!goto", "?", "?"]],
+    check(tr) {
+      if (at(tr, 120, -80)) return true;
+      if (at(tr, -80, 120)) return "x und y sind vertauscht. Zuerst kommt x (links ↔ rechts), dann y (unten ↕ oben).";
+      if (at(tr, 120, 80)) return "x stimmt! Aber der Stern ist <strong>unter</strong> der Mitte. Unten ist y minus.";
+      if (at(tr, -120, -80)) return "y stimmt! Aber der Stern ist <strong>rechts</strong> von der Mitte. Rechts ist x plus.";
+      if (at(tr, -120, 80)) return "Beide Vorzeichen sind falsch herum: rechts ist plus, unten ist minus.";
+      return "Noch nicht. Zähl die Kästchen von der Mitte aus: Jedes ist 40 Schritte.";
+    },
+    ok: "✔ Treffer! Der Stern liegt bei x: 120 y: −80." });
+  hints($("hints3"), [
+    "Fang in der Mitte an (x: 0 y: 0). Wie viele Kästchen ist der Stern nach rechts? Wie viele nach unten?",
+    "3 Kästchen nach rechts = 3 × 40 = 120. 2 Kästchen nach unten = 2 × 40 = 80, aber unten ist minus.",
+    "Lösung: <em>gehe zu x: <strong>120</strong> y: <strong>-80</strong></em>",
+  ]);
+
+  /* 4 · Fernsteuerung bauen */
+  B.create($("b4"), { mode: "puzzle", script: [], start: { x: -160, y: -80, dir: 90 }, sterne: [[120, 80]],
+    palette: [["key", "rechts"], ["key", "links"], ["key", "oben"], ["key", "unten"], ["changex", 40], ["changex", -40], ["changey", 40], ["changey", -40]],
+    check(tr) {
+      const f = falsch(tr.skripte);
+      if (f.length) {
+        const w = f[0];
+        if (w.was === "leer") return `Unter <strong>${NAME[w.k]}</strong> fehlt noch ein Bewegungsblock.`;
+        if (w.was === "achse") return `Bei <strong>${NAME[w.k]}</strong> rutscht Robo in die falsche Richtung. <em>ändere x</em> ist links ↔ rechts, <em>ändere y</em> ist unten ↕ oben.`;
+        return `Bei <strong>${NAME[w.k]}</strong> läuft Robo genau verkehrt herum. Schau aufs Vorzeichen: plus oder minus?`;
+      }
+      if (Math.hypot(tr.x - 120, tr.y - 80) < 30) return tr.skripte.filter((s) => s[0] && s[0].op === "key").length === 4 ? true
+        : "Robo ist am Stern! Aber die Fernsteuerung ist noch nicht fertig: Jede Pfeiltaste braucht ihr Skript.";
+      return null;
+    },
+    ok: "✔ Robo ist am Stern – und die Fernsteuerung funktioniert in alle vier Richtungen!" });
+
+  /* 5 · Fehlerdetektiv: Pfeil nach unten fährt nach oben */
+  B.create($("b5"), { mode: "frei", edit: true, start: { x: 0, y: 0, dir: 90 }, koordinaten: true,
+    scripts: [[["!key", "oben"], ["!changey", 20]], [["!key", "unten"], ["!changey", 20]], [["!key", "rechts"], ["!changex", 20]], [["!key", "links"], ["!changex", -20]]],
+    check(tr) {
+      const f = falsch(tr.skripte);
+      if (!f.length) return true;
+      return null;   // still: weiter ausprobieren
+    },
+    ok: "✔ Fall gelöst! Bei Pfeil nach unten stand +20. Nach unten heißt: y wird kleiner, also −20." });
+  hints($("hints5"), [
+    "Drück jede Taste einmal und schau auf die Zahlen unten rechts. Bei welcher Taste stimmt die Richtung nicht?",
+    "Bei <kbd>↓</kbd> geht Robo nach oben. Schau ins Skript <em>Wenn Taste Pfeil nach unten gedrückt wird</em>.",
+    "Lösung: Im Skript für Pfeil nach unten <em>ändere y um <strong>-20</strong></em> schreiben.",
+  ]);
+
+  /* Plus · Sprung */
+  B.create($("bplus"), { mode: "frei", start: { x: 0, y: -60, dir: 90 },
+    palette: [["key", "leertaste"], ["changey", 60], ["changey", -60], ["wait", 0.3]],
+    check(tr) {
+      const st = tr.skripte.find((s) => s[0] && s[0].op === "key" && s[0].args.k === "leertaste");
+      if (!st) return tr.tasten ? "Dein Startblock muss auf die <strong>Leertaste</strong> warten." : null;
+      const ops = st.slice(1).map((n) => (n.op === "changey" ? (num(n.args.n) > 0 ? "hoch" : "runter") : n.op));
+      if (!ops.includes("hoch")) return "Robo springt nicht hoch. Welcher Block bringt ihn nach oben?";
+      if (Math.abs(tr.y + 60) > 1) return "Robo landet nicht wieder. Was bringt ihn zurück nach unten?";
+      if (ops.indexOf("wait") < 0 || ops.indexOf("wait") > ops.indexOf("runter") || ops.indexOf("wait") < ops.indexOf("hoch"))
+        return "Robo springt so schnell, dass man es gar nicht sieht. Was gehört <strong>zwischen</strong> hoch und runter?";
+      return true;
+    },
+    ok: "✔ Hopp! Robo springt – und landet wieder." });
+
+  /* Kurz-Check */
+  quiz($("quiz"), [
+    { q: "Wann sagt Robo „Hallo!“?", html: sm([["key", "leertaste"], ["say", "Hallo!", 1]]),
+      options: ["Wenn man auf ⚑ klickt", "Wenn man die Leertaste drückt", "Sofort, ohne dass man etwas tut", "Wenn man Robo anklickt"], right: 1,
+      miss: ["Das wäre <em>Wenn ⚑ angeklickt wird</em>. Hier steht ein anderer Startblock.", null,
+        "Jedes Skript wartet auf sein Ereignis. Hier ist es die Leertaste.", "Dafür gibt es einen eigenen Startblock: <em>Wenn diese Figur angeklickt wird</em>."],
+      why: "Der Startblock wartet auf die Leertaste." },
+    { q: "Robo bekommt den Block <em>ändere y um −40</em>. Wohin bewegt er sich?",
+      options: ["40 Schritte nach unten", "40 Schritte nach oben", "40 Schritte nach links", "40 Schritte rückwärts"], right: 0,
+      miss: [null, "Minus bei y heißt: nach unten.", "Links und rechts ist x. Hier geht es um y.",
+        "<em>ändere y</em> schaut nicht, wohin Robo blickt. Es geht immer nach oben oder unten."],
+      why: "y ist unten ↕ oben. Minus heißt nach unten." },
+    { q: "Robo steht bei <strong>x: 200 y: 0</strong>. Wo ist das auf der Bühne?",
+      options: ["rechts, auf halber Höhe", "links, auf halber Höhe", "oben in der Mitte", "genau in der Mitte"], right: 0,
+      miss: [null, "x ist plus, also rechts von der Mitte.", "Oben wäre ein großes y. Hier ist y = 0.", "Die Mitte ist x: 0 y: 0. Hier ist x = 200."],
+      why: "x: 200 ist weit rechts (der Rand ist bei 240), y: 0 ist auf halber Höhe." },
+    { q: "Leon hat ein iPad <strong>ohne Tastatur</strong>. Wie kann er Robo im echten Scratch trotzdem starten?",
+      options: ["Gar nicht", "Mit <em>Wenn Taste … gedrückt wird</em> – er tippt auf die Bühne", "Mit <em>Wenn diese Figur angeklickt wird</em> – er tippt auf die Figur", "Die grüne Flagge drückt alle Tasten"], right: 2,
+      miss: ["Es gibt einen Startblock, der ohne Tastatur geht.", "Antippen der Bühne ist keine Taste. Ohne Tastatur startet das Skript nie.", null,
+        "Die Flagge startet nur Skripte mit <em>Wenn ⚑ angeklickt wird</em>."],
+      why: "<em>Wenn diese Figur angeklickt wird</em> startet, wenn man die Figur antippt – das geht mit dem Finger." },
+  ]);
+
+  /* Freiwillig */
+  B.create($("bklick"), { mode: "frei", start: { x: 0, y: 0, dir: 90 },
+    palette: [["click"], ["right", 90], ["say", "Hui!", 1]],
+    check(tr) {
+      if (tr.anlass !== "click") return tr.skripte.some((s) => s[0] && s[0].op === "click") ? "Jetzt tipp auf Robo (oder klick ihn an)." : null;
+      return tr.says.includes("Hui!") ? true : "Robo dreht sich. Sagt er auch „Hui!“?";
+    },
+    ok: "✔ Robo reagiert aufs Antippen – das geht auch am iPad ohne Tastatur." });
+  B.create($("bzauber"), { mode: "frei", start: { x: -120, y: 80, dir: 90 },
+    palette: ["flag", ["pendown"], ["penup"], ["key", "rechts"], ["key", "links"], ["key", "oben"], ["key", "unten"], ["changex", 10], ["changex", -10], ["changey", 10], ["changey", -10]],
+    check(tr) { return tr.segs.length >= 12 ? true : null; },
+    ok: "✔ Du malst mit den Pfeiltasten! Klick auf ⚑, um neu anzufangen." });
+
+  checklist($("checklist"), "k6-02");
+});
+</script>
+</body>
+</html>

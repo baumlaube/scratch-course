@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Start-Check · Scratch-Kurs Klasse 6</title>
+<meta name="description" content="Lektion 1 im Scratch-Lernpfad Klasse 6: Der Start-Check zeigt, was aus Klasse 5 sitzt – Startblock, Reihenfolge, Malstift, Schleife und Schleife in der Schleife. Mit Bericht, Links zum Nachschlagen und Übungen direkt im Browser.">
+<link rel="canonical" href="https://scratch.herrseibert.de/k6/01-start-check.html">
+<!-- vorschau -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Scratch-Kurs">
+<meta property="og:locale" content="de_DE">
+<meta property="og:url" content="https://scratch.herrseibert.de/k6/01-start-check.html">
+<meta property="og:title" content="Start-Check · Scratch-Kurs Klasse 6">
+<meta property="og:description" content="Lektion 1 im Scratch-Lernpfad Klasse 6: Der Start-Check zeigt, was aus Klasse 5 sitzt – Startblock, Reihenfolge, Malstift, Schleife und Schleife in der Schleife. Mit Bericht, Links zum Nachschlagen und Übungen direkt im Browser.">
+<meta property="og:image" content="https://scratch.herrseibert.de/vorschau.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Scratch-Kurs – Programmieren lernen Schritt für Schritt, mit Übungsbühne">
+<meta name="twitter:card" content="summary_large_image">
+<!-- /vorschau -->
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="stylesheet" href="../assets/kurs.css?v=d645e573e3">
+<link rel="stylesheet" href="../assets/buehne.css?v=dedfa8895b">
+<script src="../assets/i18n.js?v=4588e8929d" data-page="k6-01-start-check" data-langs="de"></script>
+<script src="../assets/kurs.js?v=9e315750a5"></script>
+<script src="../assets/buehne.js?v=dec13e3017"></script>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><img class="logo" src="../favicon.svg" alt="" width="34" height="34"> Scratch-Kurs <span>· Programmieren lernen</span></a>
+    <span class="spacer"></span>
+    <button class="theme-btn" type="button" aria-label="Hell oder dunkel umschalten">◐ Hell/Dunkel</button>
+  </div>
+</header>
+
+<main class="wrap">
+  <nav class="path" aria-label="Lernpfad Klasse 6">
+    <strong class="t">Klasse 6:</strong>
+    <ol>
+      <li class="now"><span title="1 · Start-Check" aria-current="step">1</span></li>
+      <li class="done"><a href="02-steuern.html" title="2 · Steuern mit Tasten und Finger">2</a></li>
+      <li class="done"><a href="03-falls-dann.html" title="3 · Robo entscheidet: falls … dann">3</a></li>
+      <li class="soon"><span title="4 · falls … sonst (in Arbeit)">4</span></li>
+      <li class="soon"><span title="5 · wiederhole bis (in Arbeit)">5</span></li>
+      <li class="soon"><span title="6 · Alles zusammen (in Arbeit)">6</span></li>
+      <li class="soon"><span title="7 · Projekt: Fangspiel (in Arbeit)">7</span></li>
+      <li class="soon"><span title="8 · Projekt: Fangspiel (in Arbeit)">8</span></li>
+    </ol>
+  </nav>
+
+  <section class="hero">
+    <h1>Start-Check – was kann Robo noch?</h1>
+    <div class="meta">
+      <span class="chip">Klasse 6 · Lektion 1</span>
+      <span class="chip">⏱ ca. 35 Minuten</span>
+    </div>
+    <ul class="goals">
+      <li>Ich finde heraus, was ich aus Klasse 5 noch kann.</li>
+      <li>Ich weiß, wo ich nachschlagen kann.</li>
+      <li>Ich übe gezielt das, was noch wackelt.</li>
+    </ul>
+  </section>
+
+  <details class="card woerter">
+    <summary>📖 Scratch-Wörter aus Klasse 5</summary>
+    <p class="note">Die Wörter links bleiben deutsch – so heißen sie in Scratch.</p>
+    <div class="tbl-scroll"><table class="plain">
+      <tr><th class="wort">der Startblock <small>die Startblöcke</small></th><td>Der Block ganz oben, z. B. <em>Wenn ⚑ angeklickt wird</em>. Er sagt, wann das Skript losgeht.</td></tr>
+      <tr><th class="wort">die Reihenfolge <small>–</small></th><td>Scratch macht die Blöcke von oben nach unten, einen nach dem anderen.</td></tr>
+      <tr><th class="wort">der Malstift <small>die Malstifte</small></th><td>Ist er eingeschaltet, malt Robo eine Linie, wenn er sich bewegt.</td></tr>
+      <tr><th class="wort">die Schleife <small>die Schleifen</small></th><td>Ein Block, der andere Blöcke mehrmals ausführt.</td></tr>
+      <tr><th class="wort">die Schachtelung <small>–</small></th><td>Eine Schleife steckt in einer anderen Schleife.</td></tr>
+      <tr><th class="wort">der Bericht <small>die Berichte</small></th><td>Am Ende des Start-Checks: Was sitzt, was übst du noch?</td></tr>
+    </table></div>
+  </details>
+
+  <section class="card">
+    <h2><span class="step-no">ℹ</span> So arbeitest du heute</h2>
+    <ul class="tasks">
+      <li><span class="badge basis">Allein</span><span>Den Start-Check machst du <strong>allein</strong>. Nur so zeigt der Bericht, was <em>du</em> kannst.</span></li>
+      <li><span class="badge basis">Ein Versuch</span><span>Bei jeder Frage zählt die <strong>erste</strong> Antwort. Auf der Bühne darfst du so oft probieren, wie du willst.</span></li>
+      <li><span class="badge basis">Keine Note</span><span>Fehler sind heute gut: Sie zeigen dir, was du üben sollst.</span></li>
+      <li><span class="badge basis">Danach</span><span>Im Bericht stehen Links. Üb die Themen mit ↺ – unten auf dieser Seite gibt es zu jedem Thema eine Station.</span></li>
+    </ul>
+  </section>
+
+  <section class="card wdh" id="check">
+    <h2><span class="step-no">↺</span> Der Start-Check <span class="chip">15 Minuten</span></h2>
+    <p class="lead">10 Aufgaben aus Klasse 5: Startblock, Reihenfolge, Malstift, Schleife und Schleife in der Schleife.</p>
+    <div id="diag"></div>
+  </section>
+
+  <!-- Stationen: nach dem Bericht üben -->
+  <section class="card">
+    <h2><span class="step-no">🛠</span> Stationen: Üb, was wackelt <span class="chip">15 Minuten</span></h2>
+    <p class="lead">Fang mit den Stationen an, die <span class="badge plus">für dich</span> markiert sind. Sitzt alles? Dann probier die Stationen trotzdem – und danach die Plus-Aufgabe.</p>
+    <p class="note">Die Bühne funktioniert mit Maus und mit Finger. Tippen auf einen Block hängt ihn unten an. 🐢 ist die Zeitlupe, 👣 geht Block für Block.</p>
+  </section>
+
+  <section class="card station" id="st-reihenfolge">
+    <h2><span class="step-no">A</span> Fehlerdetektiv: Robo findet den Stern nicht <span class="badge plus empfohlen">für dich</span> <span class="badge basis">Basis</span> <span class="chip">4 Minuten</span></h2>
+    <p>Elif will Robo zum Stern schicken. Klick auf ⚑ Start. Das Skript hat <strong>zwei</strong> Fehler.</p>
+    <div id="bA"></div>
+    <ol class="howto">
+      <li>Was <strong>soll</strong> passieren?</li>
+      <li>Was <strong>passiert</strong> wirklich?</li>
+      <li><strong>Ab welchem Block</strong> läuft es anders?</li>
+    </ol>
+    <div id="hintsA"></div>
+    <p class="note">Nachlesen: <a href="../k5/02-scratch-kennenlernen.html">Klasse 5 · Lektion 2: Scratch kennenlernen</a> und <a href="../k5/03-befehle-der-reihe-nach.html">Lektion 3: Befehle der Reihe nach</a></p>
+  </section>
+
+  <section class="card station" id="st-stift">
+    <h2><span class="step-no">B</span> Malstift: Strich – Lücke – Strich <span class="badge plus empfohlen">für dich</span> <span class="badge basis">Basis</span> <span class="chip">3 Minuten</span></h2>
+    <p>Robo soll die graue Vorlage malen: zwei Striche mit einer Lücke dazwischen. Bring die Blöcke in die richtige Reihenfolge.</p>
+    <div id="bB"></div>
+    <p class="note">Nachlesen: <a href="../k5/04-malen-mit-dem-stift.html">Klasse 5 · Lektion 4: Malen mit dem Stift</a></p>
+  </section>
+
+  <section class="card station" id="st-schleife">
+    <h2><span class="step-no">C</span> Schleife: das Sechseck <span class="badge plus empfohlen">für dich</span> <span class="badge basis">Basis</span> <span class="chip">4 Minuten</span></h2>
+    <p>Male das graue Sechseck. Ein Sechseck hat 6 Ecken. Hol dir die Blöcke selbst und ändere die Zahlen.</p>
+    <div id="bC"></div>
+    <div id="hintsC"></div>
+    <p class="note">Nachlesen: <a href="../k5/05-schleife.html">Klasse 5 · Lektion 5: Die Schleife</a> und <a href="../k5/06-schleifen-ueben.html">Lektion 6: Schleifen üben</a></p>
+  </section>
+
+  <section class="card station" id="st-schachtel">
+    <h2><span class="step-no">D</span> Schleife in der Schleife: 4 Dreiecke <span class="badge plus empfohlen">für dich</span> <span class="badge basis">Basis</span> <span class="chip">4 Minuten</span></h2>
+    <p>Robo soll 4 Dreiecke im Kreis malen. Die innere Schleife malt ein Dreieck. Die äußere Schleife wiederholt das Dreieck.</p>
+    <div id="bD"></div>
+    <div id="hintsD"></div>
+    <p class="note">Nachlesen: <a href="../k5/07-schleife-in-der-schleife.html">Klasse 5 · Lektion 7: Schleife in der Schleife</a></p>
+  </section>
+
+  <section class="card">
+    <h2><span class="step-no">+</span> Der Sternenweg <span class="badge plus">Plus</span> <span class="chip">für Schnelle</span></h2>
+    <p>Robo soll alle drei Sterne besuchen und dabei eine Treppe malen. Schaffst du es mit <strong>höchstens 7 Blöcken</strong>?</p>
+    <div id="bplus"></div>
+  </section>
+
+  <section class="card">
+    <h2><span class="step-no">👀</span> Ausblick: Robo lernt Entscheiden <span class="chip">3 Minuten</span></h2>
+    <p>In Klasse 6 kommen neue Blöcke dazu. Schau dir dieses Skript an und klick auf ⚑ Start.</p>
+    <div id="bAus"></div>
+    <p><strong>Überleg:</strong> Was macht wohl der Block <em>falls … , dann</em>?</p>
+    <div class="choices" id="predAus">
+      <button type="button" class="choice">Er wiederholt die Blöcke in ihm.</button>
+      <button type="button" class="choice">Er stellt eine Frage. Nur wenn die Antwort „ja“ ist, laufen die Blöcke in ihm.</button>
+      <button type="button" class="choice">Er startet das Skript.</button>
+    </div>
+    <p class="fb" id="fbAus"></p>
+  </section>
+
+  <section class="card merke">
+    <h2>Merke aus Klasse 5</h2>
+    <ul>
+      <li>Ganz oben steht ein <strong>Startblock</strong>. Ohne ihn läuft nichts.</li>
+      <li>Scratch macht die Blöcke <strong>der Reihe nach</strong> – von oben nach unten.</li>
+      <li>Robo malt nur, wenn der <strong>Stift eingeschaltet</strong> ist.</li>
+      <li>Eine <strong>Schleife</strong> wiederholt, was in ihr steht. Schleife in Schleife: <strong>innen × außen</strong>.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2><span class="step-no">⚑</span> Jetzt in echt: Scratch <span class="chip">zu Hause oder nächste Stunde</span></h2>
+    <p><a class="btn" href="https://scratch.mit.edu/projects/editor/" target="_blank" rel="noopener">Scratch in neuem Fenster öffnen ↗</a></p>
+    <ol class="howto">
+      <li>Unten links auf <strong>Erweiterung hinzufügen</strong> klicken und <strong>Malstift</strong> wählen.</li>
+      <li>Bau das Skript von Station D nach: 4 Dreiecke im Kreis.</li>
+      <li>Klick auf die grüne Flagge ⚑. Ändere dann die Zahlen: Schaffst du 6 Dreiecke?</li>
+    </ol>
+  </section>
+
+  <section class="card">
+    <h2><span class="step-no">☑</span> Das kann ich</h2>
+    <ul class="checklist" id="checklist">
+      <li><label><input type="checkbox"> Ich habe den Start-Check gemacht und kenne meinen Bericht.</label></li>
+      <li><label><input type="checkbox"> Ich habe die Stationen mit „für dich“ geübt.</label></li>
+      <li><label><input type="checkbox"> Ich weiß, wo ich Themen aus Klasse 5 nachschlagen kann.</label></li>
+    </ul>
+  </section>
+
+  <section class="card frei">
+    <h2><span class="step-no">★</span> Freiwillig</h2>
+    <p class="lead">Für alle, die schon fertig sind.</p>
+
+    <h3 class="sub"><span class="badge ueben">Üben</span> Die Klasse-5-Lektionen</h3>
+    <p>Jede Lektion aus Klasse 5 hat am Ende eine Expedition (★). Such dir eine aus, die du noch nicht gemacht hast:
+      <a href="../k5/05-schleife.html">Fast ein Kreis</a> · <a href="../k5/07-schleife-in-der-schleife.html">Muster aus Vielecken</a>.</p>
+
+    <h3 class="sub"><span class="badge expedition">★ Expedition</span> Die Sternblume</h3>
+    <p>Male eine Blume aus <strong>8 Quadraten</strong>. Wie weit muss sich Robo nach jedem Quadrat drehen? (Einmal ganz herum sind 360 Grad.)</p>
+    <div id="bblume"></div>
+  </section>
+
+  <details class="card">
+    <summary><strong>Für Lehrkräfte</strong></summary>
+    <p>Der Bericht bleibt nur auf dem Gerät des Kindes (im Browser gespeichert), es wird nichts gesendet. Für einen schnellen Überblick in der Klasse:
+      Kinder zeigen per Handzeichen, welche Station markiert ist – daraus lassen sich Tischgruppen für die Stationen bilden.
+      „↺ Start-Check noch einmal machen“ setzt den Bericht zurück, z. B. für das nächste Kind am selben Gerät.</p>
+  </details>
+
+  <nav class="pager">
+    <a href="../k5/08-mein-projekt.html">← Klasse 5 · Lektion 8: Mein Projekt</a>
+    <a href="02-steuern.html">Lektion 2: Steuern mit Tasten und Finger →</a>
+  </nav>
+</main>
+
+<footer>
+  <div class="wrap t">Lernmaterial von <a href="https://herrseibert.de">herrseibert.de</a> · Lizenz <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.de">CC BY-SA 4.0</a> · ohne Tracking, ohne Cookies<br>Erstellt von der KI Claude von Anthropic.</div>
+  <div class="wrap t gh">Fehler gefunden oder eine Idee? → <a href="https://github.com/baumlaube/scratch-course">Kurs auf GitHub</a></div>
+  <div class="wrap t gh">Scratch ist ein Projekt der Scratch Foundation. Dieser Kurs ist kein offizielles Angebot der Scratch Foundation.</div>
+  <div class="wrap legal"><a href="../impressum.html">Impressum</a> · <a href="../datenschutz.html">Datenschutz</a></div>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const { pick, hints, checklist, diagnose } = window.Kurs;
+  const B = window.Buehne;
+  const $ = (id) => document.getElementById(id);
+  const sm = (s) => B.render(s, { small: true });
+  const at = (tr, x, y) => Math.hypot(tr.x - x, tr.y - y) < 1;
+  const findOp = (list, op) => { for (const n of list) { if (n.op === op) return n; if (n.body) { const r = findOp(n.body, op); if (r) return r; } } return null; };
+
+  /* ---------- Start-Check ---------- */
+  const WEG = ["flag", ["move", 160], ["left", 90], ["move", 120]];
+  const QUADRAT = ["flag", ["pendown"], ["repeat", 4, [["move", 80], ["right", 90]]]];
+  const DREI = ["flag", ["pendown"], ["repeat", 3, [["repeat", 4, [["move", 50], ["right", 90]]], ["right", 120]]]];
+  const THEMEN = {
+    "Startblock": { href: "../k5/02-scratch-kennenlernen.html", titel: "Klasse 5 · Lektion 2", station: "st-reihenfolge", stationTitel: "Station A" },
+    "Reihenfolge": { href: "../k5/03-befehle-der-reihe-nach.html", titel: "Klasse 5 · Lektion 3", station: "st-reihenfolge", stationTitel: "Station A" },
+    "Malstift": { href: "../k5/04-malen-mit-dem-stift.html", titel: "Klasse 5 · Lektion 4", station: "st-stift", stationTitel: "Station B" },
+    "Schleife": { href: "../k5/05-schleife.html", titel: "Klasse 5 · Lektion 5", station: "st-schleife", stationTitel: "Station C" },
+    "Schleife in der Schleife": { href: "../k5/07-schleife-in-der-schleife.html", titel: "Klasse 5 · Lektion 7", station: "st-schachtel", stationTitel: "Station D" },
+  };
+  diagnose($("diag"), [
+    { thema: "Startblock", q: "Kai klickt auf ⚑. Was passiert bei diesem Skript?",
+      html: sm([["move", 100], ["say", "Hallo!", 2]]),
+      options: ["Robo geht 100 Schritte und sagt „Hallo!“", "Robo sagt nur „Hallo!“", "Nichts"], right: 2,
+      miss: ["Ganz oben fehlt der Startblock. Ohne ihn weiß Scratch nicht, wann das Skript losgehen soll.",
+        "Auch „sage“ läuft nicht: Oben fehlt der Startblock."],
+      why: "Jedes Skript braucht oben einen Startblock wie <em>Wenn ⚑ angeklickt wird</em>." },
+    { thema: "Startblock", q: "Was macht dieser Block?", html: sm(["flag"]),
+      options: ["Er startet das Skript, wenn man auf die grüne Flagge klickt.", "Robo zeigt eine Flagge.", "Er stoppt das Skript.", "Er wiederholt das Skript."], right: 0,
+      miss: [null, "Robo zeigt nichts. Der Block ist der Startknopf für das Skript.",
+        "Stoppen macht das rote Stoppschild ⏹ neben der Flagge.", "Wiederholen macht eine Schleife, z. B. <em>wiederhole … mal</em>."],
+      why: "Der Startblock wartet, bis jemand auf ⚑ klickt. Dann laufen die Blöcke darunter." },
+    { thema: "Reihenfolge", q: "Robo schaut nach rechts (→). In welche Richtung läuft er bei diesem Skript?",
+      html: sm(["flag", ["right", 90], ["move", 100]]),
+      options: ["nach rechts →", "nach unten ↓", "nach oben ↑", "nach links ←"], right: 1,
+      miss: ["Robo dreht sich <strong>zuerst</strong>. Erst danach geht er.", null,
+        "↻ dreht im Uhrzeigersinn – von rechts aus geht es nach unten.", "Für links müsste sich Robo um 180 Grad drehen."],
+      why: "Erst drehen (↻ 90 Grad: von → nach ↓), dann gehen." },
+    { thema: "Reihenfolge", q: "Bring Robo zum Stern. Zieh die Blöcke in der richtigen Reihenfolge unter die Flagge.",
+      buehne: { mode: "puzzle", script: ["!flag"], start: { x: -120, y: -40, dir: 90 }, sterne: [[40, 80]],
+        palette: [["move", 120], ["left", 90], ["move", 160]],
+        check: (tr) => (at(tr, 40, 80) ? true : at(tr, 0, 120) ? "Robo ist zuerst zu weit nach oben gelaufen. Welche Strecke kommt zuerst: nach rechts oder nach oben?"
+          : "Noch nicht. Schau mit 🐢 zu: Wohin läuft Robo zuerst?"),
+        ok: "✔ Robo ist am Stern!" } },
+    { thema: "Malstift", q: "Wie lang ist die Linie, die Robo malt?",
+      html: sm(["flag", ["move", 50], ["pendown"], ["move", 100]]),
+      options: ["150 Schritte", "100 Schritte", "50 Schritte", "Robo malt nichts."], right: 1,
+      miss: ["Die ersten 50 Schritte geht Robo noch <strong>ohne</strong> Stift.", null,
+        "Bei den ersten 50 Schritten ist der Stift noch aus. Gemalt wird erst danach.", "Der Stift wird eingeschaltet – danach malt Robo."],
+      why: "Gemalt wird erst, wenn der Stift an ist: die letzten 100 Schritte." },
+    { thema: "Malstift", q: "Robo soll zwei Striche mit einer Lücke malen: ▬ ▬. Welcher Block gehört an die Stelle mit dem ❓?",
+      html: sm(["flag", ["pendown"], ["move", 60]]) + '<div class="sb-luecke">❓</div>' + sm([["move", 40], ["pendown"], ["move", 60]]),
+      options: ["schalte Stift aus", "lösche alles", "warte 1 Sekunden", "drehe dich ↻ um 90 Grad"], right: 0,
+      miss: [null, "„lösche alles“ wischt den ersten Strich weg. Die Lücke entsteht so nicht.",
+        "Warten macht keine Lücke. Robo geht danach mit eingeschaltetem Stift weiter.", "Dann läuft Robo um die Ecke. Die Striche sollen in einer Reihe liegen."],
+      why: "Stift aus → Robo läuft ohne zu malen → Lücke. Danach wieder einschalten." },
+    { thema: "Schleife", q: "Wie oft sagt Robo „Hallo!“?",
+      html: sm(["flag", ["repeat", 4, [["say", "Hallo!", 1]]], ["say", "Tschüss!", 1]]),
+      options: ["1-mal", "4-mal", "5-mal"], right: 1,
+      miss: ["Der sage-Block steht nur einmal da – aber in der Schleife. Sie läuft 4 Runden.", null,
+        "„Tschüss!“ steht unter der Schleife und ist kein „Hallo!“. Es kommt nur einmal, ganz am Ende."],
+      why: "Die Schleife läuft 4 Runden: 4-mal „Hallo!“. Danach einmal „Tschüss!“." },
+    { thema: "Schleife", q: "Schreib die richtigen Zahlen in die gelben Felder: Robo soll das graue Quadrat malen.",
+      buehne: { mode: "frei", edit: "gaps", start: { x: -40, y: 40, dir: 90 },
+        script: ["!flag", "!pendown", ["!repeat", "?", [["!move", 80], ["!right", "?"]]]], ziel: QUADRAT,
+        check(tr) {
+          const r = findOp(tr.script, "repeat"), d = findOp(tr.script, "right");
+          const n = parseFloat(String(r.args.n).replace(",", ".")), g = parseFloat(String(d.args.g).replace(",", "."));
+          if (n === 4 && g === 90) return true;
+          if (g === 90) return "90 Grad stimmt. Wie viele Ecken hat ein Quadrat?";
+          if (n === 4) return "4 Runden stimmen. Wie weit dreht sich Robo an einer Ecke vom Quadrat?";
+          return "Noch nicht. Ein Quadrat hat 4 Ecken, und jede Ecke ist ein rechter Winkel.";
+        }, ok: "✔ Ein Quadrat!" } },
+    { thema: "Schleife in der Schleife", q: "Wie oft wechselt Robo das Kostüm?",
+      html: sm(["flag", ["repeat", 4, [["repeat", 3, [["costume"]]]]]]),
+      options: ["3-mal", "4-mal", "7-mal", "12-mal"], right: 3,
+      miss: ["Die innere Schleife läuft 3-mal – aber in <strong>jeder</strong> Runde der äußeren Schleife.",
+        "Die äußere Schleife läuft 4 Runden. In jeder Runde wechselt Robo 3-mal.",
+        "Nicht plus rechnen: In jeder der 4 Runden läuft die innere Schleife ganz – 3-mal."],
+      why: "4 Runden außen × 3 Runden innen = 12." },
+    { thema: "Schleife in der Schleife", q: "Robo soll 3 Quadrate im Kreis malen. Zieh die Blöcke an die richtige Stelle.",
+      buehne: { mode: "puzzle", script: ["!flag", "!pendown"], start: { x: 0, y: 0, dir: 90 },
+        palette: [["repeat", 3], ["repeat", 4], ["move", 50], ["right", 90], ["right", 120]], ziel: DREI,
+        check(tr) {
+          const outer = findOp(tr.script, "repeat");
+          if (!outer) return "Es fehlt noch eine Schleife.";
+          if (outer.args.n == 4 && outer.body.some((n) => n.op === "repeat")) return "Die Schleifen sind vertauscht: Die <strong>innere</strong> Schleife malt ein Quadrat (4 Seiten).";
+          return null;
+        }, ok: "✔ Drei Quadrate im Kreis!" } },
+  ], {
+    key: "k6-01", themen: THEMEN,
+    onReport(r) {
+      document.querySelectorAll(".station").forEach((s) => s.classList.remove("ist-empfohlen"));
+      if (!r) return;
+      r.luecken.forEach((t) => { const st = THEMEN[t] && $(THEMEN[t].station); if (st) st.classList.add("ist-empfohlen"); });
+    },
+  });
+
+  /* ---------- Stationen ---------- */
+  B.create($("bA"), { mode: "frei", edit: false, start: { x: -120, y: -40, dir: 90 }, sterne: [[0, 40]],
+    palette: ["flag", ["left", 90], ["right", 90]],
+    script: [["move", 120], ["right", 90], ["move", 80]],
+    check(tr) {
+      if (at(tr, 0, 40)) return true;
+      if (at(tr, 0, -120)) return "Der Startblock ist da. Aber Robo biegt falsch ab: ↻ dreht nach rechts herum. Zum Stern geht es nach oben.";
+      return "Noch nicht am Stern. Schau mit 🐢 zu: Wo biegt Robo ab?";
+    },
+    ok: "✔ Fall gelöst! Es fehlte der Startblock, und Robo musste sich nach links (↺) drehen." });
+  hints($("hintsA"), [
+    "Klick auf ⚑ Start. Passiert überhaupt etwas? Was steht sonst immer ganz oben?",
+    "Robo soll an der Ecke nach <strong>oben</strong> abbiegen. Er schaut nach rechts. Welche Drehung bringt ihn nach oben: ↻ oder ↺?",
+    "Lösung: Zieh <em>Wenn ⚑ angeklickt wird</em> ganz nach oben. Tausch <em>drehe dich ↻ um 90 Grad</em> gegen <em>drehe dich ↺ um 90 Grad</em>.",
+  ]);
+  const STRICH = ["flag", ["pendown"], ["move", 60], ["penup"], ["move", 40], ["pendown"], ["move", 60]];
+  B.create($("bB"), { mode: "puzzle", script: ["!flag"], start: { x: -80, y: 0, dir: 90 },
+    palette: [["move", 60], ["penup"], ["pendown"], ["move", 40], ["pendown"], ["move", 60]], ziel: STRICH,
+    check(tr) {
+      if (tr.segs.length === 0) return "Robo malt nichts. Wann muss der Stift eingeschaltet werden?";
+      if (B.sameDrawing(tr.segs, B.simulate(["flag", ["pendown"], ["move", 160]], { x: -80, y: 0, dir: 90 }).segs)) return "Robo malt eine durchgehende Linie. Wo muss der Stift aus sein?";
+      return null;
+    },
+    ok: "✔ Strich – Lücke – Strich!" });
+  const SECHS = ["flag", ["pendown"], ["repeat", 6, [["move", 60], ["right", 60]]]];
+  B.create($("bC"), { mode: "frei", start: { x: -30, y: 70, dir: 90 },
+    palette: ["flag", ["pendown"], ["move", 60], ["right", 90], ["repeat", 4]], ziel: SECHS,
+    check(tr) {
+      const r = findOp(tr.script, "repeat");
+      if (!r) return "Nimm eine Schleife – sonst brauchst du sehr viele Blöcke.";
+      if (r.args.n == 6 && tr.segs.length && Math.hypot(tr.x + 30, tr.y - 70) > 1) return "6 Runden stimmen. Aber Robo kommt nicht zurück zum Anfang: Der Winkel passt noch nicht.";
+      return null;
+    },
+    ok: "✔ Ein Sechseck! 360 : 6 = 60 Grad." });
+  hints($("hintsC"), [
+    "6 Ecken → wie viele Runden?",
+    "Einmal ganz herum sind 360 Grad. Verteilt auf 6 Ecken: 360 : 6 = ?",
+    "Lösung: <em>Wenn ⚑ angeklickt wird</em>, <em>schalte Stift ein</em>, <em>wiederhole 6 mal</em> – darin <em>gehe 60 er Schritt</em> und <em>drehe dich ↻ um 60 Grad</em>.",
+  ]);
+  const VIER = ["flag", ["pendown"], ["repeat", 4, [["repeat", 3, [["move", 60], ["right", 120]]], ["right", 90]]]];
+  B.create($("bD"), { mode: "puzzle", script: ["!flag", "!pendown"], start: { x: 0, y: 0, dir: 90 },
+    palette: [["repeat", 4], ["repeat", 3], ["move", 60], ["right", 120], ["right", 90]], ziel: VIER,
+    check(tr) {
+      const o = findOp(tr.script, "repeat");
+      if (!o) return "Es fehlen noch die Schleifen.";
+      const inner = o.body.find((n) => n.op === "repeat");
+      if (!inner) return "Die zweite Schleife muss <strong>in</strong> die erste.";
+      if (inner.body.some((n) => n.op === "right" && n.args.g == 90)) return "Die Drehung um 90 Grad gehört <strong>nach</strong> dem Dreieck – also unter die innere Schleife, aber noch in die äußere.";
+      return null;
+    },
+    ok: "✔ 4 Dreiecke – mit nur 7 Blöcken!" });
+  hints($("hintsD"), [
+    "Ein Dreieck: wiederhole 3 mal – gehe 60, drehe dich 120 Grad.",
+    "Nach jedem Dreieck dreht sich Robo um 90 Grad. Dann malt er das nächste.",
+    "Lösung: <em>wiederhole 4 mal</em> → darin <em>wiederhole 3 mal</em> (mit <em>gehe 60</em> und <em>drehe dich ↻ um 120 Grad</em>) und darunter <em>drehe dich ↻ um 90 Grad</em>.",
+  ]);
+
+  /* Plus · Sternenweg */
+  const TREPPE = ["flag", ["pendown"], ["repeat", 3, [["move", 80], ["left", 90], ["move", 80], ["right", 90]]]];
+  B.create($("bplus"), { mode: "frei", start: { x: -160, y: -120, dir: 90 }, sterne: [[-80, -40], [0, 40], [80, 120]],
+    palette: ["flag", ["pendown"], ["move", 80], ["right", 90], ["left", 90], ["repeat", 3]], ziel: TREPPE,
+    check(tr) {
+      if (!B.sameDrawing(tr.segs, B.simulate(TREPPE, { x: -160, y: -120, dir: 90 }).segs)) return "Die Treppe sieht noch anders aus als die Vorlage. Schau mit 🐢 zu.";
+      if (tr.blocks > 7) return `Die Treppe stimmt! Aber du hast ${tr.blocks} Blöcke. Es geht mit 7: Was wiederholt sich?`;
+      return true;
+    },
+    ok: "✔ Stark! Alle Sterne besucht – mit 7 Blöcken." });
+
+  /* Ausblick */
+  B.create($("bAus"), { mode: "lesen", start: { x: -200, y: 0, dir: 90 },
+    script: ["flag", ["repeat", 60, [["move", 10], ["if", ["touch", "rand"], [["right", 180]]]]]] });
+  pick($("predAus"), { right: 1, fb: $("fbAus"),
+    miss: ["Wiederholen macht die Schleife außen herum.", null, "Starten macht der Block mit der Flagge ganz oben."],
+    why: "Robo fragt bei jedem Schritt: <em>Wird der Rand berührt?</em> Nur wenn ja, dreht er sich um. Mehr dazu in Lektion 3." });
+
+  /* Freiwillig */
+  const BLUME = ["flag", ["pendown"], ["repeat", 8, [["repeat", 4, [["move", 60], ["right", 90]]], ["right", 45]]]];
+  B.create($("bblume"), { mode: "frei", start: { x: 0, y: 0, dir: 90 }, echtzeit: true,
+    palette: ["flag", ["pendown"], ["move", 60], ["right", 90], ["repeat", 4]], ziel: BLUME,
+    ok: "✔ Die Sternblume! 360 : 8 = 45 Grad." });
+
+  checklist($("checklist"), "k6-01");
+});
+</script>
+</body>
+</html>

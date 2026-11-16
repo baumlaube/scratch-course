@@ -136,6 +136,23 @@ kbd {
 .quiz-why { margin: 6px 0 0; font-size: 15px; }
 .quiz-score { font-weight: 800; margin-top: 16px; }
 
+/* Start-Check (Kurs.diagnose) */
+.card.wdh { border: 2px dashed var(--accent); }
+.diag-bar { height: 8px; border-radius: 4px; background: var(--surface-2); overflow: hidden; margin: 6px 0 4px; }
+.diag-bar span { display: block; height: 100%; background: var(--accent); border-radius: 4px; transition: width .3s; }
+.diag-step { margin: 6px 0 0; color: var(--muted); font-weight: 700; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.diag-next { margin-top: 12px; }
+.diag-score { font-size: 19px; margin: 6px 0 10px; }
+.diag-report { list-style: none; padding: 0; margin: 0; }
+.diag-report li { display: flex; gap: 12px; align-items: baseline; padding: 9px 12px; border-radius: 10px; margin: 6px 0; }
+.diag-report li.sitzt { background: var(--ok-bg); color: var(--ok-fg); }
+.diag-report li.luecke { background: var(--hint-bg); color: var(--hint-fg); }
+.diag-report a { color: inherit; font-weight: 700; }
+.diag-ico { font-weight: 800; flex: none; }
+.diag-end { font-weight: 700; margin: 12px 0; }
+.empfohlen { display: none; }
+.station.ist-empfohlen .empfohlen { display: inline-block; }
+.station.ist-empfohlen { outline: 3px solid var(--plus); outline-offset: -1px; }
 /* Rückmeldungen */
 .fb { border-radius: 10px; padding: 10px 14px; margin: 12px 0 0; display: none; }
 .fb.show { display: block; }

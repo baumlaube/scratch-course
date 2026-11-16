@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Robo entscheidet: falls … dann · Scratch-Kurs Klasse 6</title>
+<meta name="description" content="Lektion 3 im Scratch-Lernpfad Klasse 6: Die erste Bedingung. Mit „falls …, dann“ und „wird Rand berührt?“ entscheidet Robo selbst. Wahr oder falsch, Struktogramm ansehen, Fehler finden – direkt im Browser.">
+<link rel="canonical" href="https://scratch.herrseibert.de/k6/03-falls-dann.html">
+<!-- vorschau -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Scratch-Kurs">
+<meta property="og:locale" content="de_DE">
+<meta property="og:url" content="https://scratch.herrseibert.de/k6/03-falls-dann.html">
+<meta property="og:title" content="Robo entscheidet: falls … dann · Scratch-Kurs Klasse 6">
+<meta property="og:description" content="Lektion 3 im Scratch-Lernpfad Klasse 6: Die erste Bedingung. Mit „falls …, dann“ und „wird Rand berührt?“ entscheidet Robo selbst. Wahr oder falsch, Struktogramm ansehen, Fehler finden – direkt im Browser.">
+<meta property="og:image" content="https://scratch.herrseibert.de/vorschau.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Scratch-Kurs – Programmieren lernen Schritt für Schritt, mit Übungsbühne">
+<meta name="twitter:card" content="summary_large_image">
+<!-- /vorschau -->
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="stylesheet" href="../assets/kurs.css?v=d645e573e3">
+<link rel="stylesheet" href="../assets/buehne.css?v=dedfa8895b">
+<script src="../assets/i18n.js?v=4588e8929d" data-page="k6-03-falls-dann" data-langs="de"></script>
+<script src="../assets/kurs.js?v=9e315750a5"></script>
+<script src="../assets/buehne.js?v=dec13e3017"></script>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><img class="logo" src="../favicon.svg" alt="" width="34" height="34"> Scratch-Kurs <span>· Programmieren lernen</span></a>
+    <span class="spacer"></span>
+    <button class="theme-btn" type="button" aria-label="Hell oder dunkel umschalten">◐ Hell/Dunkel</button>
+  </div>
+</header>
+
+<main class="wrap">
+  <nav class="path" aria-label="Lernpfad Klasse 6">
+    <strong class="t">Klasse 6:</strong>
+    <ol>
+      <li class="done"><a href="01-start-check.html" title="1 · Start-Check">1</a></li>
+      <li class="done"><a href="02-steuern.html" title="2 · Steuern mit Tasten und Finger">2</a></li>
+      <li class="now"><span title="3 · Robo entscheidet: falls … dann" aria-current="step">3</span></li>
+      <li class="soon"><span title="4 · falls … sonst (in Arbeit)">4</span></li>
+      <li class="soon"><span title="5 · wiederhole bis (in Arbeit)">5</span></li>
+      <li class="soon"><span title="6 · Alles zusammen (in Arbeit)">6</span></li>
+      <li class="soon"><span title="7 · Projekt: Fangspiel (in Arbeit)">7</span></li>
+      <li class="soon"><span title="8 · Projekt: Fangspiel (in Arbeit)">8</span></li>
+    </ol>
+  </nav>
+
+  <section class="hero">
+    <h1>Robo entscheidet: falls … dann</h1>
+    <div class="meta">
+      <span class="chip">Klasse 6 · Lektion 3</span>
+      <span class="chip">⏱ ca. 35 Minuten</span>
+    </div>
+    <ul class="goals">
+      <li>Ich weiß, was eine Bedingung ist: Sie ist wahr oder falsch.</li>
+      <li>Ich baue mit <em>falls … , dann</em> eine Entscheidung ins Skript.</li>
+      <li>Ich erkenne <em>falls … dann</em> im Struktogramm.</li>
+    </ul>
+  </section>
+
+  <details class="card woerter">
+    <summary>📖 Scratch-Wörter für diese Lektion</summary>
+    <p class="note">Die Wörter links bleiben deutsch – so heißen sie in Scratch.</p>
+    <div class="tbl-scroll"><table class="plain">
+      <tr><th class="wort">die Bedingung <small>die Bedingungen</small></th><td>Eine Ja-Nein-Frage, z. B. „Wird der Rand berührt?“</td></tr>
+      <tr><th class="wort">wahr <small>–</small></th><td>Die Antwort ist ja.</td></tr>
+      <tr><th class="wort">falsch <small>–</small></th><td>Die Antwort ist nein.</td></tr>
+      <tr><th class="wort">berühren <small>er berührt</small></th><td>Robo stößt an etwas an, z. B. an den Rand oder an eine Farbe.</td></tr>
+      <tr><th class="wort">der Rand <small>die Ränder</small></th><td>Die Kante der Bühne: links, rechts, oben, unten.</td></tr>
+      <tr><th class="wort">die Entscheidung <small>die Entscheidungen</small></th><td>Robo prüft die Bedingung und macht dann etwas – oder nicht.</td></tr>
+    </table></div>
+  </details>
+
+  <section class="card">
+    <h2><span class="step-no">ℹ</span> So arbeitest du heute</h2>
+    <p class="lead">Du übst mit der <strong>Übungsbühne</strong> direkt hier im Browser. Sie funktioniert mit Maus und mit Finger.</p>
+    <ul class="tasks">
+      <li><span class="badge basis">Sechseck</span><span>Bedingungen sind <strong>sechseckige</strong> Blöcke. Sie passen nur in sechseckige Felder. Zieh sie hinein, bis das Feld weiß leuchtet.</span></li>
+      <li><span class="badge basis">Start</span><span><strong>⚑ Start</strong> lässt Robo laufen. 👣 geht Block für Block – dann siehst du, ob die Bedingung <span class="sb-val wahr">wahr</span> oder <span class="sb-val falsch">falsch</span> ist.</span></li>
+      <li><span class="badge basis">Zu zweit</span><span>Eine Person zieht die Blöcke, die andere liest vor und prüft. Nach jeder Aufgabe wechseln.</span></li>
+    </ul>
+  </section>
+
+  <section class="card wdh">
+    <h2><span class="step-no">↺</span> Weißt du noch? <span class="chip">2 Minuten</span></h2>
+    <div id="wdh"></div>
+  </section>
+
+  <!-- 1 · Überleg -->
+  <section class="card">
+    <h2><span class="step-no">1</span> Überleg: Ja oder nein? <span class="chip">4 Minuten</span></h2>
+    <p>Du triffst jeden Tag Entscheidungen: <em>Falls es regnet, dann nehme ich den Schirm.</em><br>
+      „Regnet es?“ ist eine <strong>Bedingung</strong>. Die Antwort ist immer <strong>wahr</strong> (ja) oder <strong>falsch</strong> (nein).</p>
+    <p><strong>Überleg:</strong> Welcher Block ist eine Bedingung?</p>
+    <div class="choices" id="pred1">
+      <button type="button" class="choice"><span data-script='[["move",10]]' data-small></span></button>
+      <button type="button" class="choice"><span data-script='[["touch","rand"]]' data-small></span></button>
+      <button type="button" class="choice"><span data-script='[["say","Hallo!",2]]' data-small></span></button>
+      <button type="button" class="choice"><span data-script='[["repeat",10]]' data-small></span></button>
+    </div>
+    <p class="fb" id="fb1"></p>
+  </section>
+
+  <!-- 2 · Zuschauen -->
+  <section class="card">
+    <h2><span class="step-no">2</span> Robo schaut bei jedem Schritt nach <span class="chip">6 Minuten</span></h2>
+    <div class="script-row">
+      <figure><div data-script='["flag",["repeat",50,[["move",10],["if",["touch","rand"],[["right",180]]]]]]' data-small></div></figure>
+      <div style="flex:1;min-width:220px">
+        <p>Robo läuft nach rechts. Lies das Skript.</p>
+        <p><strong>Überleg:</strong> Was passiert, wenn Robo am rechten Rand ankommt?</p>
+        <div class="choices" id="pred2">
+          <button type="button" class="choice">Robo bleibt stehen.</button>
+          <button type="button" class="choice">Robo dreht um und läuft zurück.</button>
+          <button type="button" class="choice">Robo läuft aus der Bühne hinaus.</button>
+          <button type="button" class="choice">Robo dreht sich nach jedem Schritt.</button>
+        </div>
+        <p class="fb" id="fb2"></p>
+      </div>
+    </div>
+    <div id="probe2" hidden>
+      <p><strong>Schau zu:</strong> Klick auf ⚑ Start. Danach noch einmal mit <strong>👣 Schritt</strong>: Neben dem falls-Block steht dann
+        <span class="sb-val falsch">falsch</span> oder <span class="sb-val wahr">wahr</span>.</p>
+      <div id="b2"></div>
+      <p class="note">Robo steht nach dem Umdrehen auf dem Kopf. Das ist richtig so: Er hat sich ja um 180 Grad gedreht. Im echten Scratch macht die Katze das genauso.</p>
+      <p><strong>Überleg:</strong> Robo macht 50 Schritte. Bei wie vielen davon ist die Bedingung <em>wird Rand berührt?</em> <strong>wahr</strong>?</p>
+      <div class="choices" id="pred3">
+        <button type="button" class="choice">bei allen 50</button>
+        <button type="button" class="choice">bei keinem</button>
+        <button type="button" class="choice">bei einem</button>
+      </div>
+      <p class="fb" id="fb3"></p>
+    </div>
+  </section>
+
+  <!-- 3 · Wahr oder falsch -->
+  <section class="card">
+    <h2><span class="step-no">3</span> Wahr oder falsch? <span class="chip">4 Minuten</span></h2>
+    <p>Der Rand ist bei x = 240 und x = −240. Robo ist etwa 50 Schritte breit.</p>
+    <div class="wf">
+      <p><strong>a)</strong> Robo steht bei <strong>x: 230 y: 0</strong>. <span data-script='[["touch","rand"]]' data-small class="sb-inline"></span></p>
+      <div class="choices" id="wf1"><button type="button" class="choice">wahr</button><button type="button" class="choice">falsch</button></div>
+      <p class="fb" id="fbwf1"></p>
+      <p><strong>b)</strong> Robo steht bei <strong>x: 0 y: 0</strong>. <span data-script='[["touch","rand"]]' data-small class="sb-inline"></span></p>
+      <div class="choices" id="wf2"><button type="button" class="choice">wahr</button><button type="button" class="choice">falsch</button></div>
+      <p class="fb" id="fbwf2"></p>
+      <p><strong>c)</strong> Robo steht mitten im roten Feld. <span data-script='[["color","rot"]]' data-small class="sb-inline"></span></p>
+      <div class="choices" id="wf3"><button type="button" class="choice">wahr</button><button type="button" class="choice">falsch</button></div>
+      <p class="fb" id="fbwf3"></p>
+    </div>
+  </section>
+
+  <!-- 4 · Puzzle -->
+  <section class="card">
+    <h2><span class="step-no">4</span> Robo kehrt an der roten Wand um <span class="badge basis">Basis</span> <span class="chip">7 Minuten</span></h2>
+    <p>Robo soll an der roten Wand umdrehen – nicht durch sie hindurchlaufen. Bau die Entscheidung in die Schleife.</p>
+    <div id="b4"></div>
+    <ol class="howto">
+      <li>Zieh <em>falls … , dann</em> in die Schleife, unter <em>gehe 10 er Schritt</em>.</li>
+      <li>Zieh die Bedingung (Sechseck) in das Feld von <em>falls</em>.</li>
+      <li>Zieh <em>drehe dich</em> <strong>in</strong> das falls.</li>
+    </ol>
+  </section>
+
+  <!-- 5 · Fehlerdetektiv -->
+  <section class="card">
+    <h2><span class="step-no">5</span> Fehlerdetektiv 🔍 <span class="badge basis">Basis</span> <span class="chip">5 Minuten</span></h2>
+    <p>Mia wollte, dass Robo an der blauen Wand umdreht. Klick auf ⚑ Start: Robo zappelt aber auf der Stelle.</p>
+    <div id="b5"></div>
+    <ol class="howto">
+      <li>Was <strong>soll</strong> passieren?</li>
+      <li>Was <strong>passiert</strong> wirklich? Schau mit 👣 zu.</li>
+      <li><strong>Ab welchem Block</strong> läuft es anders?</li>
+    </ol>
+    <p>Repariere Mias Skript. Du musst nur <strong>einen Block verschieben</strong>.</p>
+    <div id="hints5"></div>
+  </section>
+
+  <!-- 6 · Merksatz und Struktogramm -->
+  <section class="card">
+    <h2><span class="step-no">6</span> So funktioniert falls … dann <span class="chip">3 Minuten</span></h2>
+    <p class="rule">Robo prüft die <strong>Bedingung</strong>.<br>Ist sie <strong>wahr</strong>, laufen die Blöcke im falls. Ist sie <strong>falsch</strong>, überspringt Robo sie.</p>
+    <h3 class="sub">Das Struktogramm</h3>
+    <p class="note">Du musst kein Struktogramm zeichnen. Schau nur: Die Bedingung steht im Dreieck. Links steht, was bei <strong>wahr</strong> passiert, rechts, was bei <strong>falsch</strong> passiert – hier nichts (–).</p>
+    <div class="script-row">
+      <figure><div data-script='["flag",["repeat",30,[["move",10],["if",["color","rot"],[["right",180]]]]]]' data-small></div><figcaption>Das Skript aus Schritt 4</figcaption></figure>
+      <figure>
+        <div class="nsd" aria-label="Struktogramm: 30-mal wiederholen: gehe 10 Schritte, dann Verzweigung: Farbe rot berührt? Wenn wahr: drehe dich um 180 Grad. Wenn falsch: nichts.">
+          <div class="nsd-loop">
+            <div class="nsd-head">wiederhole 30-mal</div>
+            <div class="nsd-body">
+              <div class="nsd-row">gehe 10 Schritte</div>
+              <div class="nsd-if">
+                <div class="nsd-cond"><span class="nsd-q">Farbe rot berührt?</span><span class="nsd-w">wahr</span><span class="nsd-f">falsch</span></div>
+                <div class="nsd-cols"><div class="nsd-col"><div class="nsd-row">drehe dich um 180°</div></div><div class="nsd-col"><div class="nsd-row nsd-leer">–</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <figcaption>Das Struktogramm dazu</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Plus -->
+  <section class="card">
+    <h2><span class="step-no">+</span> Pendeln zwischen zwei Wänden <span class="badge plus">Plus</span> <span class="chip">für Schnelle</span></h2>
+    <p>Jetzt gibt es zwei Wände: rot und blau. Robo soll an <strong>beiden</strong> umdrehen und hin und her pendeln.</p>
+    <div id="bplus"></div>
+  </section>
+
+  <section class="card">
+    <h2><span class="step-no">✓</span> Kurz-Check <span class="chip">4 Minuten</span></h2>
+    <div id="quiz"></div>
+  </section>
+
+  <section class="card merke">
+    <h2>Merke</h2>
+    <ul>
+      <li>Eine <strong>Bedingung</strong> ist eine Ja-Nein-Frage. Sie ist <strong>wahr</strong> oder <strong>falsch</strong>.</li>
+      <li>Bedingungen sind <strong>Sechsecke</strong>. Sie passen in das Feld von <em>falls … , dann</em>.</li>
+      <li>Die Blöcke <strong>im</strong> falls laufen nur, wenn die Bedingung wahr ist.</li>
+      <li>Steht das falls in einer <strong>Schleife</strong>, prüft Robo die Bedingung in jeder Runde neu.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2><span class="step-no">⚑</span> Jetzt in echt: Scratch <span class="chip">zu Hause oder nächste Stunde</span></h2>
+    <p><a class="btn" href="https://scratch.mit.edu/projects/editor/" target="_blank" rel="noopener">Scratch in neuem Fenster öffnen ↗</a></p>
+    <ol class="howto">
+      <li>Bau: <em>Wenn ⚑ angeklickt wird</em> → <em>wiederhole 100 mal</em> → darin <em>gehe 10 er Schritt</em>.</li>
+      <li>Hol <em>falls … , dann</em> bei <strong>Steuerung</strong> und setz es unter <em>gehe</em>. Darin: <em>drehe dich ↻ um 180 Grad</em>.</li>
+      <li>Bei <strong>Fühlen</strong> den Block <em>wird Mauszeiger berührt?</em> holen, ins Sechseck-Feld ziehen und im Feld <strong>Rand</strong> wählen. Dann ⚑.</li>
+    </ol>
+    <p class="note">🎨 <strong>Farben in Scratch:</strong> Bei <em>wird Farbe … berührt?</em> klickst du auf das Farbfeld und dann auf die <strong>Pipette</strong>. Jetzt kannst du die Farbe direkt auf der Bühne antippen.</p>
+  </section>
+
+  <section class="card">
+    <h2><span class="step-no">☑</span> Das kann ich</h2>
+    <ul class="checklist" id="checklist">
+      <li><label><input type="checkbox"> Ich kann erklären, was eine Bedingung ist.</label></li>
+      <li><label><input type="checkbox"> Ich kann sagen, ob eine Bedingung wahr oder falsch ist.</label></li>
+      <li><label><input type="checkbox"> Ich kann mit <em>falls … , dann</em> Robo an einer Wand umdrehen lassen.</label></li>
+      <li><label><input type="checkbox"> Ich finde den Fehler, wenn ein Block außerhalb vom falls steht.</label></li>
+    </ul>
+  </section>
+
+  <section class="card frei">
+    <h2><span class="step-no">★</span> Freiwillig</h2>
+    <p class="lead">Für alle, die schon fertig sind.</p>
+
+    <h3 class="sub"><span class="badge ueben">Üben</span> Robo meldet den Stern</h3>
+    <p>Robo läuft über die Bühne. Wenn er den Stern berührt, soll er „Stern!“ sagen. Wähl im gelben Feld, was Robo berühren soll.</p>
+    <div id="bstern"></div>
+
+    <h3 class="sub"><span class="badge expedition">★ Expedition</span> Steuern mit falls</h3>
+    <p>Hier läuft eine Schleife <strong>immer weiter</strong> (<em>wiederhole fortlaufend</em>). In jeder Runde fragt Robo: <em>Ist die Taste gedrückt?</em>
+      Bau für ▶ und ◀ je ein falls. Klick auf ⚑ Start. Halte dann die Taste gedrückt – oder den Knopf unter der Bühne – und bring Robo zum Stern.</p>
+    <div id="bexp"></div>
+    <p class="note">So steuert man Figuren in vielen Spielen. Das brauchst du später für das Fangspiel.</p>
+  </section>
+
+  <nav class="pager">
+    <a href="02-steuern.html">← Lektion 2: Steuern mit Tasten und Finger</a>
+    <span>Lektion 4: falls … sonst (in Arbeit) →</span>
+  </nav>
+</main>
+
+<footer>
+  <div class="wrap t">Lernmaterial von <a href="https://herrseibert.de">herrseibert.de</a> · Lizenz <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.de">CC BY-SA 4.0</a> · ohne Tracking, ohne Cookies<br>Erstellt von der KI Claude von Anthropic.</div>
+  <div class="wrap t gh">Fehler gefunden oder eine Idee? → <a href="https://github.com/baumlaube/scratch-course">Kurs auf GitHub</a></div>
+  <div class="wrap t gh">Scratch ist ein Projekt der Scratch Foundation. Dieser Kurs ist kein offizielles Angebot der Scratch Foundation.</div>
+  <div class="wrap legal"><a href="../impressum.html">Impressum</a> · <a href="../datenschutz.html">Datenschutz</a></div>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const { pick, quiz, hints, checklist } = window.Kurs;
+  const B = window.Buehne;
+  const $ = (id) => document.getElementById(id);
+  const sm = (s) => B.render(s, { small: true });
+  // Wo steht ein Block? → Liste der umgebenden Blöcke, z. B. ["repeat", "if"]
+  function where(list, op, path = []) {
+    for (const n of list) {
+      if (n.op === op) return path;
+      for (const body of [n.body, n.body2]) if (body) { const r = where(body, op, path.concat(n.op)); if (r) return r; }
+    }
+    return null;
+  }
+  const findOp = (list, op) => { for (const n of list) { if (n.op === op) return n; for (const b of [n.body, n.body2, n.args.b && [n.args.b]]) if (b) { const r = findOp(b, op); if (r) return r; } } return null; };
+
+  /* Weißt du noch? */
+  quiz($("wdh"), [
+    { q: "Robo bekommt <em>ändere x um −40</em>. Wohin bewegt er sich?",
+      options: ["40 Schritte nach links", "40 Schritte nach rechts", "40 Schritte nach unten"], right: 0,
+      miss: [null, "Minus heißt bei x: nach links.", "Oben und unten ist y. Hier geht es um x."],
+      why: "x ist links ↔ rechts. Minus heißt nach links." },
+    { q: "Wann läuft dieses Skript?", html: sm([["key", "leertaste"], ["move", 10]]),
+      options: ["Wenn man auf ⚑ klickt", "Jedes Mal, wenn man die Leertaste drückt", "Nur beim ersten Druck auf die Leertaste"], right: 1,
+      miss: ["Hier steht kein Flaggen-Block. Der Startblock wartet auf eine Taste.", null, "Das Skript startet bei <strong>jedem</strong> Druck neu."],
+      why: "<em>Wenn Taste Leertaste gedrückt wird</em> startet das Skript bei jedem Druck." },
+  ]);
+
+  /* 1 · Welcher Block ist eine Bedingung? */
+  pick($("pred1"), { right: 1, fb: $("fb1"),
+    miss: ["„gehe“ ist ein Befehl. Man kann ihn nicht mit ja oder nein beantworten.", null,
+      "„sage“ ist ein Befehl: Robo spricht. Das ist keine Frage.", "Die Schleife wiederholt Blöcke. Sie fragt nichts."],
+    why: "<em>wird Rand berührt?</em> ist eine Frage mit Fragezeichen – die Antwort ist wahr oder falsch. Bedingungen haben in Scratch die Form eines <strong>Sechsecks</strong>." });
+
+  /* 2 · Zuschauen */
+  const b2 = B.create($("b2"), { mode: "lesen", start: { x: -100, y: 0, dir: 90 },
+    script: ["flag", ["repeat", 50, [["move", 10], ["if", ["touch", "rand"], [["right", 180]]]]]] });
+  pick($("pred2"), { right: 1, fb: $("fb2"),
+    miss: ["Im falls steht kein Halt. Dort steht <em>drehe dich um 180 Grad</em>.", null,
+      "Robo fragt bei jedem Schritt: Wird der Rand berührt? Am Rand ist die Antwort ja.",
+      "Der drehe-Block steht <strong>im</strong> falls. Er läuft nur, wenn die Bedingung wahr ist – also nur am Rand."],
+    why: "Am Rand ist die Bedingung wahr. Dann läuft der Block im falls: Robo dreht sich um 180 Grad und läuft zurück.",
+    onDone() { $("probe2").hidden = false; b2.el.dispatchEvent(new Event("resize")); } });
+  pick($("pred3"), { right: 2, fb: $("fb3"),
+    miss: ["Robo <strong>fragt</strong> bei allen 50 Schritten. Aber nur einmal ist die Antwort ja.",
+      "Am rechten Rand ist die Antwort einmal ja – sonst würde Robo nicht umdrehen."],
+    why: "Robo prüft die Bedingung in jeder Runde. Wahr ist sie nur einmal: ganz am Rand. Danach läuft er weg vom Rand – dann ist sie wieder falsch." });
+
+  /* 3 · wahr oder falsch */
+  pick($("wf1"), { right: 0, fb: $("fbwf1"), miss: [null, "230 ist ganz nah am Rand (240). Robo ist breit – er stößt schon an."], why: "Bei x: 230 ragt Robo über den Rand hinaus: wahr." });
+  pick($("wf2"), { right: 1, fb: $("fbwf2"), miss: ["x: 0 y: 0 ist die Mitte der Bühne. Dort ist kein Rand."], why: "In der Mitte ist Robo weit weg vom Rand: falsch." });
+  pick($("wf3"), { right: 0, fb: $("fbwf3"), miss: [null, "Robo steht mitten im Rot – er berührt die Farbe."], why: "Robo steht auf Rot: wahr." });
+
+  /* 4 · Puzzle: rote Wand */
+  const WAND = [[120, -180, 160, 180, "rot"]];
+  B.create($("b4"), { mode: "puzzle", echtzeit: true, start: { x: -160, y: 0, dir: 90 }, felder: WAND,
+    script: ["!flag", ["!repeat", 30, [["!move", 10]]]], palette: [["if"], ["color", "rot"], ["right", 180]],
+    check(tr) {
+      const s = tr.script, fi = findOp(s, "if");
+      if (!fi) return "Robo läuft durch die Wand. Es fehlt noch das <em>falls … , dann</em>.";
+      if (!(where(s, "if") || []).includes("repeat")) return "Das falls steht unter der Schleife. Dann fragt Robo nur <strong>einmal</strong> – ganz am Ende. Es muss <strong>in</strong> die Schleife.";
+      if (!fi.args.b) return "Das Sechseck-Feld ist leer. Ohne Bedingung ist die Antwort immer „falsch“ – Robo dreht nie um. Zieh <em>wird Farbe … berührt?</em> hinein.";
+      const wr = where(s, "right");
+      if (wr && !wr.includes("if")) return wr.includes("repeat") ? "Robo dreht sich bei <strong>jedem</strong> Schritt – auch ohne Wand. Der drehe-Block muss <strong>in</strong> das falls."
+        : "Robo dreht sich erst ganz am Ende – einmal. Der drehe-Block muss <strong>in</strong> das falls.";
+      if (!wr) return "Robo merkt die Wand – aber er tut nichts. Was soll er an der Wand machen?";
+      if (tr.x < 120 && tr.dir === -90) return true;
+      return "Noch nicht. Schau mit 👣 zu.";
+    },
+    ok: "✔ Robo kehrt an der Wand um! Er fragt bei jedem Schritt – und nur an der Wand ist die Antwort wahr." });
+
+  /* 5 · Fehlerdetektiv: drehe steht unter dem falls */
+  B.create($("b5"), { mode: "frei", edit: false, echtzeit: true, start: { x: -120, y: 0, dir: 90 }, felder: [[120, -180, 160, 180, "blau"]],
+    script: ["!flag", ["!repeat", 30, [["!move", 10], ["!if", ["!color", "blau"], []], ["right", 180]]]],
+    check(tr) {
+      const wr = where(tr.script, "right");
+      if (wr && wr.includes("if")) return tr.x < 120 ? true : "Fast! Schau mit 👣 zu, ob Robo an der Wand umdreht.";
+      if (wr && wr.includes("repeat")) return "Robo dreht sich nach <strong>jedem</strong> Schritt: hin, zurück, hin, zurück. Der drehe-Block läuft immer – egal, was die Bedingung sagt.";
+      return "Robo dreht sich jetzt gar nicht mehr. Wo muss der drehe-Block stehen, damit er nur an der Wand läuft?";
+    },
+    ok: "✔ Fall gelöst! Der drehe-Block stand unter dem falls und lief bei jedem Schritt. Jetzt steht er im falls und läuft nur an der Wand." });
+  hints($("hints5"), [
+    "Schau mit 👣 zu: Wann dreht sich Robo zum ersten Mal? Berührt er da schon die blaue Wand?",
+    "Der drehe-Block steht <strong>unter</strong> dem falls. Er gehört aber nicht zur Entscheidung.",
+    "Lösung: Zieh <em>drehe dich ↻ um 180 Grad</em> <strong>in</strong> das falls, in die Lücke unter <em>falls wird Farbe … berührt?, dann</em>.",
+  ]);
+
+  /* Plus · zwei Wände */
+  B.create($("bplus"), { mode: "frei", echtzeit: true, start: { x: 0, y: 0, dir: 90 },
+    felder: [[120, -180, 160, 180, "rot"], [-160, -180, -120, 180, "blau"]],
+    script: ["!flag", ["!repeat", 60, [["!move", 10]]]], palette: [["if"], ["color", "rot"], ["color", "blau"], ["right", 180]],
+    check(tr) {
+      if (Math.abs(tr.x) >= 120) return "Robo läuft durch eine Wand. Für jede Wand braucht er eine eigene Frage.";
+      if (tr.conds.wahr < 2) return "Robo dreht noch nicht an beiden Wänden um. Schau mit 🐢 zu.";
+      return true;
+    },
+    ok: "✔ Robo pendelt! Zwei falls-Blöcke – zwei Fragen in jeder Runde." });
+
+  /* Kurz-Check */
+  const NSD_Q = `<div class="nsd" aria-label="Struktogramm: Verzweigung: Taste Leertaste gedrückt? Wenn wahr: sage Hallo. Wenn falsch: nichts.">
+    <div class="nsd-if"><div class="nsd-cond"><span class="nsd-q">Leertaste gedrückt?</span><span class="nsd-w">wahr</span><span class="nsd-f">falsch</span></div>
+    <div class="nsd-cols"><div class="nsd-col"><div class="nsd-row">sage „Hallo!“</div></div><div class="nsd-col"><div class="nsd-row nsd-leer">–</div></div></div></div></div>`;
+  quiz($("quiz"), [
+    { q: "Was gehört in das Sechseck-Feld von <em>falls … , dann</em>?",
+      options: ["eine Ja-Nein-Frage (Bedingung)", "eine Zahl", "ein Bewegungsblock", "ein Startblock"], right: 0,
+      miss: [null, "Zahlen kommen in die runden Felder, z. B. bei <em>gehe 10 er Schritt</em>.",
+        "Bewegungsblöcke kommen <strong>in</strong> das falls, nicht ins Sechseck.", "Startblöcke stehen immer ganz oben im Skript."],
+      why: "Ins Sechseck kommt eine Bedingung: wahr oder falsch." },
+    { q: "Robo steht in der Mitte der Bühne. Wie oft sagt er „Rand!“?",
+      html: sm(["flag", ["repeat", 3, [["if", ["touch", "rand"], [["say", "Rand!", 1]]]]]]),
+      options: ["0-mal", "1-mal", "3-mal"], right: 0,
+      miss: [null, "Robo bewegt sich gar nicht. Er bleibt in der Mitte – die Bedingung ist in jeder Runde falsch.",
+        "Robo fragt 3-mal. Aber die Antwort ist jedes Mal „falsch“ – also sagt er nichts."],
+      why: "In der Mitte berührt Robo nie den Rand. Die Bedingung ist dreimal falsch." },
+    { q: "Bei welchem Skript prüft Robo bei <strong>jedem</strong> Schritt, ob er den Rand berührt?",
+      html: `<div class="script-row"><figure>${sm(["flag", ["repeat", 40, [["move", 10]]], ["if", ["touch", "rand"], [["right", 180]]]])}<figcaption>Skript A</figcaption></figure>`
+        + `<figure>${sm(["flag", ["repeat", 40, [["move", 10], ["if", ["touch", "rand"], [["right", 180]]]]]])}<figcaption>Skript B</figcaption></figure></div>`,
+      options: ["Skript A", "Skript B", "bei beiden"], right: 1,
+      miss: ["Bei A steht das falls <strong>unter</strong> der Schleife. Robo fragt nur einmal, ganz am Ende.", null,
+        "Schau genau, wo das falls steht: Nur bei B ist es in der Schleife."],
+      why: "Nur bei B steht das falls in der Schleife. Dann fragt Robo in jeder Runde." },
+    { q: "Welches Skript passt zu diesem Struktogramm?", html: NSD_Q,
+      options: [sm([["if", ["keypressed", "leertaste"], [["say", "Hallo!", 2]]]]), sm([["say", "Hallo!", 2], ["if", ["keypressed", "leertaste"], []]]), sm([["repeat", 10, [["say", "Hallo!", 2]]]])], right: 0,
+      miss: [null, "Hier sagt Robo „Hallo!“ immer – auch ohne Leertaste. Im Struktogramm steht „sage“ unter <strong>wahr</strong>.",
+        "Das ist eine Schleife. Im Struktogramm steht ein Dreieck – das ist eine Entscheidung."],
+      why: "Das Dreieck ist die Entscheidung. Unter <strong>wahr</strong> steht „sage Hallo!“ – das kommt in das falls." },
+  ]);
+
+  /* Freiwillig */
+  B.create($("bstern"), { mode: "frei", edit: "gaps", echtzeit: true, start: { x: -200, y: 0, dir: 90 }, objekte: [{ name: "Stern", x: 40, y: 0 }],
+    script: ["!flag", ["!repeat", 40, [["!move", 10], ["!if", ["!touch", "?"], [["!saynow", "Stern!"]]]]]],
+    check(tr) {
+      if (tr.says.includes("Stern!")) return true;
+      const t = findOp(tr.script, "touch");
+      if (t && t.args.w === "rand") return "Robo fragt jetzt nach dem Rand. Den berührt er hier nie. Wähl, was Robo unterwegs trifft.";
+      if (t && t.args.w === "maus") return "Robo fragt jetzt nach dem Mauszeiger. Wähl, was Robo unterwegs trifft.";
+      return null;
+    },
+    ok: "✔ Robo hat den Stern gemeldet!" });
+  B.create($("bexp"), { mode: "frei", start: { x: -160, y: 0, dir: 90 }, objekte: [{ name: "Stern", x: 160, y: 0 }],
+    script: ["!flag", ["!forever", []]], palette: [["if"], ["keypressed", "rechts"], ["keypressed", "links"], ["changex", 5], ["changex", -5]],
+    check(tr) { return tr.beruehrt("Stern") ? true : null; },
+    ok: "✔ Am Stern! Die Schleife fragt 30-mal pro Sekunde: Ist die Taste gedrückt?" });
+
+  checklist($("checklist"), "k6-03");
+});
+</script>
+</body>
+</html>
