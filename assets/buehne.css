@@ -126,7 +126,7 @@ html.buehne-dragging, html.buehne-dragging * { cursor: grabbing !important; }
 .nsd-loop { border-top: 2px solid var(--text); }
 .nsd-loop > .nsd-head { padding: 6px 12px; font-weight: 700; }
 .nsd-loop > .nsd-body { margin-left: 28px; border-left: 2px solid var(--text); border-top: 2px solid var(--text); }
-.nsd-body > .nsd-row:first-child { border-top: 0; }
+.nsd-body > .nsd-row:first-child, .nsd-body > .nsd-loop:first-child { border-top: 0; }
 
 /* ---------- Hilfe-Leiter ---------- */
 .hints-list { margin: 8px 0; padding-inline-start: 22px; }
@@ -136,3 +136,9 @@ html.buehne-dragging, html.buehne-dragging * { cursor: grabbing !important; }
 
 /* ---------- Kursübersicht: Lektion noch in Arbeit ---------- */
 .soon { opacity: .55; }
+
+/* Robos Kostüme als Bild im Text */
+.robo-kostueme { display: flex; gap: 18px; flex-wrap: wrap; margin: 10px 0; }
+.robo-kostueme figure { margin: 0; text-align: center; padding: 8px 12px; border: 1px solid var(--line); border-radius: 10px; background: #fff; }
+.robo-kostueme svg { width: 84px; height: 84px; display: block; margin: 0 auto; }
+.robo-kostueme figcaption { font-size: 14px; font-weight: 700; color: #2b3a55; margin-top: 4px; }

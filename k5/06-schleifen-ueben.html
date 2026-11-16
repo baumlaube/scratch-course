@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Schleifen üben · Scratch-Kurs Klasse 5</title>
+<meta name="description" content="Lektion 6 im Scratch-Lernpfad: Schleifen üben – Sechseck, Achteck, Zickzack-Muster und eine Animation mit Kostüm und warte. Mit Puzzle, Lücke und Fehlerdetektiv direkt im Browser.">
+<link rel="canonical" href="https://scratch.herrseibert.de/k5/06-schleifen-ueben.html">
+<!-- vorschau -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Scratch-Kurs">
+<meta property="og:locale" content="de_DE">
+<meta property="og:url" content="https://scratch.herrseibert.de/k5/06-schleifen-ueben.html">
+<meta property="og:title" content="Schleifen üben · Scratch-Kurs Klasse 5">
+<meta property="og:description" content="Lektion 6 im Scratch-Lernpfad: Schleifen üben – Sechseck, Achteck, Zickzack-Muster und eine Animation mit Kostüm und warte. Mit Puzzle, Lücke und Fehlerdetektiv direkt im Browser.">
+<meta property="og:image" content="https://scratch.herrseibert.de/vorschau.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Scratch-Kurs – Programmieren lernen Schritt für Schritt, mit Übungsbühne">
+<meta name="twitter:card" content="summary_large_image">
+<!-- /vorschau -->
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="stylesheet" href="../assets/kurs.css?v=852db3b491">
+<link rel="stylesheet" href="../assets/buehne.css?v=790d4b98ab">
+<script src="../assets/i18n.js?v=4588e8929d" data-page="k5-06-schleifen-ueben" data-langs="de"></script>
+<script src="../assets/kurs.js?v=5fcc1de7cc"></script>
+<script src="../assets/buehne.js?v=30778f51ec"></script>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><img class="logo" src="../favicon.svg" alt="" width="34" height="34"> Scratch-Kurs <span>· Programmieren lernen</span></a>
+    <span class="spacer"></span>
+    <button class="theme-btn" type="button" aria-label="Hell oder dunkel umschalten">◐ Hell/Dunkel</button>
+  </div>
+</header>
+
+<main class="wrap">
+  <nav class="path" aria-label="Lernpfad Klasse 5">
+    <strong class="t">Klasse 5:</strong>
+    <ol>
+      <li class="done"><a href="01-programmieren.html" title="1 · Was ist Programmieren?">1</a></li>
+      <li class="done"><a href="02-scratch-kennenlernen.html" title="2 · Scratch kennenlernen">2</a></li>
+      <li class="done"><a href="03-befehle-der-reihe-nach.html" title="3 · Befehle der Reihe nach">3</a></li>
+      <li class="done"><a href="04-malen-mit-dem-stift.html" title="4 · Malen mit dem Stift">4</a></li>
+      <li class="done"><a href="05-schleife.html" title="5 · Die Schleife">5</a></li>
+      <li class="now"><span title="6 · Schleifen üben" aria-current="step">6</span></li>
+      <li class="done"><a href="07-schleife-in-der-schleife.html" title="7 · Schleife in der Schleife">7</a></li>
+      <li class="done"><a href="08-mein-projekt.html" title="8 · Mein Projekt">8</a></li>
+    </ol>
+  </nav>
+
+  <section class="hero">
+    <h1>Schleifen üben – Robo malt, winkt und spricht</h1>
+    <div class="meta">
+      <span class="chip">Klasse 5 · Lektion 6</span>
+      <span class="chip">⏱ ca. 35 Minuten</span>
+    </div>
+    <ul class="goals">
+      <li>Ich male Vielecke und Muster mit einer Schleife.</li>
+      <li>Ich baue eine Animation mit Kostüm und warte in der Schleife.</li>
+      <li>Ich finde Fehler: falsche Zahl oder vergessenes warte.</li>
+    </ul>
+  </section>
+
+  <details class="card woerter">
+    <summary>📖 Scratch-Wörter für diese Lektion</summary>
+    <p class="note">Die Wörter links bleiben deutsch – so heißen sie in Scratch.</p>
+    <div class="tbl-scroll"><table class="plain">
+      <tr><th class="wort">die Runde <small>die Runden</small></th><td>Ein Durchlauf der Schleife. Bei <em>wiederhole 4 mal</em> gibt es 4 Runden.</td></tr>
+      <tr><th class="wort">das Kostüm <small>die Kostüme</small></th><td>Ein Aussehen der Figur. Robo hat zwei: Arm unten und Arm oben.</td></tr>
+      <tr><th class="wort">die Animation <small>die Animationen</small></th><td>Bilder wechseln schnell hintereinander. So sieht es aus, als ob sich etwas bewegt.</td></tr>
+      <tr><th class="wort">das Muster <small>die Muster</small></th><td>Eine Form, die sich immer wieder gleich wiederholt, z. B. ein Zickzack.</td></tr>
+      <tr><th class="wort">das Sechseck <small>die Sechsecke</small></th><td>Ein Vieleck mit 6 Ecken. Das Achteck hat 8 Ecken.</td></tr>
+    </table></div>
+  </details>
+
+  <section class="card">
+    <h2><span class="step-no">ℹ</span> So arbeitest du heute</h2>
+    <p class="lead">Viele kleine Aufgaben mit der <strong>Übungsbühne</strong>. Sie funktioniert mit Maus und mit Finger.</p>
+    <ul class="tasks">
+      <li><span class="badge basis">Ziehen</span><span>Zieh Blöcke von <em>Blöcke</em> nach <em>Skript</em>. Tippen geht auch: Dann hängt der Block unten dran.</span></li>
+      <li><span class="badge basis">Start</span><span><strong>⚑ Start</strong> lässt Robo laufen. 🐢 ist die Zeitlupe, 👣 geht Block für Block.</span></li>
+      <li><span class="badge basis">Vorlage</span><span>Die graue gestrichelte Form ist das Ziel. Robo soll genau darüber malen.</span></li>
+      <li><span class="badge basis">Zu zweit</span><span>Eine Person zieht die Blöcke, die andere liest vor und prüft. Nach jeder Aufgabe wechseln.</span></li>
+    </ul>
+  </section>
+
+  <section class="card wdh">
+    <h2><span class="step-no">↺</span> Weißt du noch? <span class="chip">2 Minuten</span></h2>
+    <div id="wdh"></div>
+  </section>
+
+  <!-- 1 · Vorhersagen: Sechseck -->
+  <section class="card">
+    <h2><span class="step-no">1</span> Überleg: Was malt Robo? <span class="chip">4 Minuten</span></h2>
+    <div class="script-row">
+      <figure><div data-script='["flag",["pendown"],["repeat",6,[["move",60],["right",60]]]]' data-small></div></figure>
+      <div style="flex:1;min-width:220px">
+        <p><strong>Überleg:</strong> Was malt Robo? Starte noch nichts!</p>
+        <div class="choices" id="pred1">
+          <button type="button" class="choice"><svg width="46" height="38" viewBox="0 0 46 38" aria-hidden="true"><path d="M8 34L23 4L38 34Z" stroke="currentColor" stroke-width="3" fill="none"/></svg><br>ein Dreieck</button>
+          <button type="button" class="choice"><svg width="46" height="38" viewBox="0 0 46 38" aria-hidden="true"><path d="M9 5H37V33H9Z" stroke="currentColor" stroke-width="3" fill="none"/></svg><br>ein Quadrat</button>
+          <button type="button" class="choice"><svg width="46" height="38" viewBox="0 0 46 38" aria-hidden="true"><path d="M14 4H32L41 19L32 34H14L5 19Z" stroke="currentColor" stroke-width="3" fill="none"/></svg><br>ein Sechseck</button>
+          <button type="button" class="choice"><svg width="46" height="38" viewBox="0 0 46 38" aria-hidden="true"><circle cx="23" cy="19" r="15" stroke="currentColor" stroke-width="3" fill="none"/></svg><br>ein Kreis</button>
+        </div>
+        <p class="fb" id="fb1"></p>
+      </div>
+    </div>
+    <div id="probe1" hidden>
+      <p><strong>Probier es aus:</strong> Klick auf ⚑ Start.</p>
+      <div id="b1"></div>
+    </div>
+  </section>
+
+  <!-- 2 · Lücke: Achteck -->
+  <section class="card">
+    <h2><span class="step-no">2</span> Das Achteck <span class="badge basis">Basis</span> <span class="chip">5 Minuten</span></h2>
+    <div id="b2"></div>
+    <p>Ein Achteck hat <strong>8 Ecken</strong> – wie ein Stoppschild. Schreib die richtigen Zahlen in die <strong>gelben Felder</strong>.</p>
+    <p class="rule">Vieleck: so viele Runden wie Ecken.<br>Drehung = <strong>360 : Ecken</strong>.</p>
+    <div id="hints2"></div>
+  </section>
+
+  <!-- 3 · Puzzle: Animation -->
+  <section class="card">
+    <h2><span class="step-no">3</span> Robo winkt – mit Schleife <span class="badge basis">Basis</span> <span class="chip">6 Minuten</span></h2>
+    <p>Weißt du noch? Robo hat <strong>zwei Kostüme</strong>. Der Block <em>wechsle zum nächsten Kostüm</em> schaltet um.</p>
+    <div class="robo-kostueme">
+      <figure><span id="kost0"></span><figcaption>Kostüm 1: Arm unten</figcaption></figure>
+      <figure><span id="kost1"></span><figcaption>Kostüm 2: Arm oben</figcaption></figure>
+    </div>
+    <p><strong>Überleg:</strong> Robo soll <strong>10-mal</strong> umschalten und jedes Mal kurz warten. Wie viele Blöcke brauchst du <strong>ohne</strong> Schleife (ohne die Flagge)?</p>
+    <div class="choices" id="pred3">
+      <button type="button" class="choice">2 Blöcke</button>
+      <button type="button" class="choice">10 Blöcke</button>
+      <button type="button" class="choice">20 Blöcke</button>
+    </div>
+    <p class="fb" id="fb3"></p>
+    <div id="teil3" hidden>
+      <p>Mit Schleife geht es mit 3 Blöcken. Zieh sie ins Skript. <em>0.5 Sekunden</em> ist eine halbe Sekunde.</p>
+      <div id="b3"></div>
+    </div>
+  </section>
+
+  <!-- 4 · Fehlerdetektiv: warte vergessen -->
+  <section class="card">
+    <h2><span class="step-no">4</span> Fehlerdetektiv: Robo winkt nicht 🔍 <span class="badge basis">Basis</span> <span class="chip">5 Minuten</span></h2>
+    <div id="b4"></div>
+    <p>Jonas will, dass Robo 10-mal winkt. Klick auf ⚑ Start. Man sieht fast nichts!</p>
+    <p><strong>Überleg:</strong> Hat Robo das Kostüm gewechselt?</p>
+    <div class="choices" id="pred4">
+      <button type="button" class="choice">Nein, gar nicht.</button>
+      <button type="button" class="choice">Ja, 10-mal – aber viel zu schnell.</button>
+      <button type="button" class="choice">Nur ein einziges Mal.</button>
+    </div>
+    <p class="fb" id="fb4"></p>
+    <p><strong>Die Detektiv-Fragen:</strong></p>
+    <ol class="howto">
+      <li>Was <strong>soll</strong> passieren?</li>
+      <li>Was <strong>passiert</strong> wirklich?</li>
+      <li><strong>Was fehlt</strong> oder steht an der falschen Stelle?</li>
+    </ol>
+    <p>Repariere Jonas’ Skript. Du brauchst nur <strong>einen Block</strong> aus <em>Blöcke</em>.</p>
+    <div id="hints4"></div>
+  </section>
+
+  <!-- 5 · Vorhersagen: sage in der Schleife -->
+  <section class="card">
+    <h2><span class="step-no">5</span> Überleg: Was sagt Robo? <span class="chip">4 Minuten</span></h2>
+    <div class="script-row">
+      <figure><div id="skript5"></div></figure>
+      <div style="flex:1;min-width:220px">
+        <p><strong>Überleg:</strong> Was sagt Robo – in welcher Reihenfolge?</p>
+        <div class="choices" id="pred5">
+          <button type="button" class="choice">Hallo! · Wie geht’s? · Tschüss!</button>
+          <button type="button" class="choice">Hallo! · Hallo! · Wie geht’s? · Wie geht’s? · Tschüss!</button>
+          <button type="button" class="choice">Hallo! · Wie geht’s? · Hallo! · Wie geht’s? · Tschüss!</button>
+          <button type="button" class="choice">Hallo! · Wie geht’s? · Tschüss! · Hallo! · Wie geht’s? · Tschüss!</button>
+        </div>
+        <p class="fb" id="fb5"></p>
+      </div>
+    </div>
+    <div id="probe5" hidden>
+      <p><strong>Probier es aus:</strong> Klick auf ⚑ Start und lies mit.</p>
+      <div id="b5"></div>
+    </div>
+  </section>
+
+  <!-- 6 · Fehlerdetektiv: falsche Anzahl -->
+  <section class="card">
+    <h2><span class="step-no">6</span> Fehlerdetektiv: das Zickzack 🔍 <span class="badge basis">Basis</span> <span class="chip">5 Minuten</span></h2>
+    <div id="b6"></div>
+    <p>Elif will ein Zickzack-Muster mit <strong>5 Spitzen</strong> malen – wie die graue Vorlage. Klick auf ⚑ Start.</p>
+    <p>Stell dir die Detektiv-Fragen: Was <strong>soll</strong> passieren? Was <strong>passiert</strong>? <strong>Welche Zahl</strong> ist falsch?</p>
+    <p class="note">Ändere nur eine Zahl. Die anderen stimmen.</p>
+    <div id="hints6"></div>
+  </section>
+
+  <!-- Plus -->
+  <section class="card">
+    <h2><span class="step-no">+</span> Der Stern <span class="badge plus">Plus</span> <span class="chip">für Schnelle</span></h2>
+    <p>Robo soll den grauen Stern malen. Er hat 5 Spitzen. Die Blöcke sind schon da – aber eine Zahl musst du selbst finden.</p>
+    <div id="bplus"></div>
+    <div id="hintsplus"></div>
+  </section>
+
+  <section class="card">
+    <h2><span class="step-no">✓</span> Kurz-Check <span class="chip">4 Minuten</span></h2>
+    <div id="quiz"></div>
+  </section>
+
+  <section class="card merke">
+    <h2>Merke</h2>
+    <ul>
+      <li>Vieleck: so viele Runden wie Ecken. Drehung = <strong>360 : Ecken</strong>.</li>
+      <li>Animation: <em>wechsle zum nächsten Kostüm</em> und <em>warte</em> zusammen <strong>in</strong> die Schleife.</li>
+      <li>Ohne <em>warte</em> läuft die Animation so schnell, dass man sie kaum sieht.</li>
+      <li>Was in der Schleife steht, läuft in jeder Runde. Was darunter steht, läuft nur einmal – am Ende.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2><span class="step-no">⚑</span> Jetzt in echt: Scratch <span class="chip">zu Hause oder nächste Stunde</span></h2>
+    <p><a class="btn" href="https://scratch.mit.edu/projects/editor/" target="_blank" rel="noopener">Scratch in neuem Fenster öffnen ↗</a></p>
+    <ol class="howto">
+      <li>Hol dir <em>Wenn ⚑ angeklickt wird</em> (<strong>Ereignisse</strong>) und <em>wiederhole 10 mal</em> (<strong>Steuerung</strong>).</li>
+      <li>In die Schleife: <em>wechsle zum nächsten Kostüm</em> (<strong>Aussehen</strong>) und <em>warte 0.5 Sekunden</em> (<strong>Steuerung</strong>).</li>
+      <li>Klick auf die grüne Flagge ⚑. Die Katze hat auch zwei Kostüme – sie läuft auf der Stelle.</li>
+    </ol>
+    <p class="note">In Scratch schreibst du eine Kommazahl mit <strong>Punkt</strong>: <em>0.5</em> statt <em>0,5</em>.
+      Bonus: Setz noch <em>gehe 10 er Schritt</em> in die Schleife. Dann läuft die Katze wirklich los.</p>
+  </section>
+
+  <section class="card">
+    <h2><span class="step-no">☑</span> Das kann ich</h2>
+    <ul class="checklist" id="checklist">
+      <li><label><input type="checkbox"> Ich kann mit einer Schleife ein Vieleck malen und die Drehung ausrechnen.</label></li>
+      <li><label><input type="checkbox"> Ich kann mit Kostüm und warte in der Schleife eine Animation bauen.</label></li>
+      <li><label><input type="checkbox"> Ich weiß, warum man ohne warte die Animation nicht sieht.</label></li>
+      <li><label><input type="checkbox"> Ich finde eine falsche Zahl in einer Schleife.</label></li>
+    </ul>
+  </section>
+
+  <section class="card frei">
+    <h2><span class="step-no">★</span> Freiwillig</h2>
+    <p class="lead">Für alle, die schon fertig sind.</p>
+
+    <h3 class="sub"><span class="badge ueben">Üben</span> Robo spaziert</h3>
+    <p>Robo soll zum Stern laufen und dabei mit dem Arm schwingen: In jeder Runde geht er <strong>20 Schritte</strong>,
+      wechselt das Kostüm und wartet kurz. Hol dir die Blöcke selbst. Wie viele Runden braucht er bis zum Stern?</p>
+    <div id="bspazier"></div>
+    <div id="hintsspazier"></div>
+
+    <h3 class="sub"><span class="badge expedition">★ Expedition</span> Zauber-Sterne</h3>
+    <p>Probier <em>wiederhole 8 mal: gehe 100, drehe dich ↻ um 135 Grad</em>. Was entsteht?
+      Und was passiert bei <em>wiederhole 9 mal … 160 Grad</em> oder <em>wiederhole 12 mal … 150 Grad</em>?</p>
+    <div id="bzauber"></div>
+  </section>
+
+  <nav class="pager">
+    <a href="05-schleife.html">← Lektion 5: Die Schleife</a>
+    <a href="07-schleife-in-der-schleife.html">Lektion 7: Schleife in der Schleife →</a>
+  </nav>
+</main>
+
+<footer>
+  <div class="wrap t">Lernmaterial von <a href="https://herrseibert.de">herrseibert.de</a> · Lizenz <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.de">CC BY-SA 4.0</a> · ohne Tracking, ohne Cookies<br>Erstellt von der KI Claude von Anthropic.</div>
+  <div class="wrap t gh">Fehler gefunden oder eine Idee? → <a href="https://github.com/baumlaube/scratch-course">Kurs auf GitHub</a></div>
+  <div class="wrap t gh">Scratch ist ein Projekt der Scratch Foundation. Dieser Kurs ist kein offizielles Angebot der Scratch Foundation.</div>
+  <div class="wrap legal"><a href="../impressum.html">Impressum</a> · <a href="../datenschutz.html">Datenschutz</a></div>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const { feedback, pick, quiz, hints, checklist } = window.Kurs;
+  const B = window.Buehne;
+  const $ = (id) => document.getElementById(id);
+  const findOp = (list, op) => { for (const n of list) { if (n.op === op) return n; if (n.body) { const r = findOp(n.body, op); if (r) return r; } } return null; };
+  const inLoop = (list, op) => { const r = findOp(list, "repeat"); return !!(r && findOp(r.body, op)); };
+  const zahl = (v) => parseFloat(String(v).replace(",", "."));
+
+  /* Weißt du noch? */
+  quiz($("wdh"), [
+    { q: "Wie oft läuft der Block <em>gehe 100 er Schritt</em>?",
+      html: B.render(["flag", ["pendown"], ["repeat", 4, [["move", 100], ["right", 90]]]], { small: true }),
+      options: ["1-mal", "4-mal", "5-mal", "100-mal"], right: 1,
+      miss: ["Der Block steht nur einmal da. Aber er ist in der Schleife – und die läuft 4 Runden.", null,
+        "Die Flagge und der Stift zählen nicht. Die Schleife läuft 4 Runden.",
+        "100 ist die Zahl der Schritte – nicht, wie oft der Block läuft."],
+      why: "Die Schleife läuft 4 Runden. In jeder Runde läuft <em>gehe</em> einmal." },
+    { q: "Robo soll ein Dreieck malen. Um wie viel Grad dreht er sich an jeder Ecke?",
+      options: ["60 Grad", "90 Grad", "120 Grad", "360 Grad"], right: 2,
+      miss: ["60 Grad ist der Winkel <strong>innen</strong> im Dreieck. Robo muss sich weiter drehen.",
+        "90 Grad passt zum Quadrat: 360 : 4.", null,
+        "360 Grad ist einmal ganz herum. Das verteilt sich auf 3 Ecken."],
+      why: "360 : 3 = 120 Grad." },
+  ]);
+
+  /* 1 · Sechseck vorhersagen */
+  const SECHS = ["flag", ["pendown"], ["repeat", 6, [["move", 60], ["right", 60]]]];
+  pick($("pred1"), { right: 2, fb: $("fb1"),
+    miss: ["Zähl die Runden: 6. Ein Dreieck hätte nur 3.",
+      "Ein Quadrat hat 4 Ecken und 90 Grad. Hier sind es 6 Runden und 60 Grad.", null,
+      "Für einen Kreis braucht man viel mehr Ecken, z. B. 36. Bei 6 Ecken sieht man die Ecken gut."],
+    why: "6 Runden, 6 Ecken, 360 : 6 = 60 Grad. Das ist ein Sechseck.",
+    onDone() { $("probe1").hidden = false; } });
+  B.create($("b1"), { mode: "lesen", script: SECHS, start: { x: -30, y: 52, dir: 90 } });
+
+  /* 2 · Achteck: Lücke */
+  B.create($("b2"), { mode: "frei", edit: "gaps", start: { x: -25, y: 60, dir: 90 },
+    script: ["!flag", "!pendown", ["!repeat", "?", [["!move", 50], ["!right", "?"]]]],
+    ziel: ["flag", ["pendown"], ["repeat", 8, [["move", 50], ["right", 45]]]],
+    check(tr) {
+      const n = zahl(findOp(tr.script, "repeat").args.n), g = zahl(findOp(tr.script, "right").args.g);
+      if (n === 8 && g === 45) return true;
+      if (n === 8 && g === 90) return "8 Runden stimmen. Aber 90 Grad passen zum Quadrat. Rechne: 360 : 8 = ?";
+      if (n === 8) return "8 Runden stimmen. Jetzt der Winkel: 360 Grad verteilt auf 8 Ecken.";
+      if (g === 45) return "Der Winkel stimmt! Wie viele Ecken hat ein Achteck?";
+      if (n === 45 && g === 8) return "Fast – du hast die beiden Zahlen vertauscht. Oben steht, wie oft. Unten, wie weit Robo sich dreht.";
+      return "Noch nicht. Ein Achteck hat 8 Ecken. Nimm die Tipps unten, wenn du nicht weiterkommst.";
+    },
+    ok: "✔ Super! 8 Runden, 360 : 8 = 45 Grad: ein Achteck." });
+  hints($("hints2"), [
+    "Ein Achteck hat 8 Ecken. Wie oft muss Robo also gehen und sich drehen?",
+    "Einmal ganz herum sind 360 Grad. Teil sie auf 8 Ecken auf: 360 : 8 = ?",
+    "Lösung: <em>wiederhole <strong>8</strong> mal</em> und <em>drehe dich ↻ um <strong>45</strong> Grad</em>.",
+  ]);
+
+  /* 3 · Animation als Puzzle */
+  $("kost0").innerHTML = B.robo(0); $("kost1").innerHTML = B.robo(1);
+  pick($("pred3"), { right: 2, fb: $("fb3"),
+    miss: ["2 Blöcke reichen für einmal umschalten und warten. Robo soll aber 10-mal umschalten.",
+      "Pro Runde brauchst du 2 Blöcke: wechsle Kostüm <strong>und</strong> warte."],
+    why: "10 × 2 Blöcke = 20 Blöcke. Mit der Schleife sind es nur 3.",
+    onDone() { $("teil3").hidden = false; } });
+  B.create($("b3"), { mode: "puzzle", echtzeit: true, script: ["!flag"], start: { x: 0, y: 0, dir: 90 },
+    palette: [["wait", 0.5], ["repeat", 10], ["costume"]],
+    check(tr) {
+      const s = tr.script;
+      if (!findOp(s, "repeat")) return "Es fehlt noch die Schleife.";
+      if (findOp(s, "costume") && !inLoop(s, "costume")) return "Robo schaltet nur einmal um. <em>wechsle zum nächsten Kostüm</em> muss <strong>in</strong> die Schleife.";
+      if (!findOp(s, "costume")) return "Es fehlt noch <em>wechsle zum nächsten Kostüm</em>.";
+      if (!inLoop(s, "wait")) return "Robo hat 10-mal umgeschaltet – aber blitzschnell. <em>warte</em> muss auch <strong>in</strong> die Schleife.";
+      return tr.wechsel === 10 ? true : null;
+    },
+    ok: "✔ Geschafft! Robo winkt 10-mal – mit nur 3 Blöcken." });
+
+  /* 4 · Fehlerdetektiv: warte fehlt */
+  pick($("pred4"), { right: 1, fb: $("fb4"),
+    miss: ["Doch! Der Block steht in der Schleife und läuft 10 Runden. Schau mit 🐢 oder 👣 zu.", null,
+      "Der Block steht in der Schleife. Er läuft in jeder Runde – also 10-mal."],
+    why: "Der Computer ist sehr schnell. Ohne <em>warte</em> sind 10 Wechsel in einem Augenblick vorbei. Mit 🐢 siehst du sie." });
+  B.create($("b4"), { mode: "frei", edit: false, echtzeit: true, start: { x: 0, y: 0, dir: 90 },
+    palette: [["wait", 0.5]],
+    script: ["!flag", ["!repeat", 10, [["!costume"]]]],
+    check(tr) {
+      const s = tr.script;
+      if (inLoop(s, "wait")) return true;
+      if (findOp(s, "wait")) return "Robo wartet jetzt nur einmal – ganz am Ende. Wo muss <em>warte</em> stehen, damit Robo in <strong>jeder Runde</strong> wartet?";
+      return "Robo hat 10-mal umgeschaltet. Aber so schnell, dass man es kaum sieht. Was fehlt?";
+    },
+    ok: "✔ Fall gelöst! Mit <em>warte</em> in der Schleife sieht man jedes Winken." });
+  hints($("hints4"), [
+    "Klick auf 🐢 und dann auf ⚑ Start. Was siehst du jetzt?",
+    "Zwischen zwei Wechseln braucht Robo eine kleine Pause. Welcher Block macht eine Pause?",
+    "Lösung: Zieh <em>warte 0.5 Sekunden</em> in die Schleife, direkt unter <em>wechsle zum nächsten Kostüm</em>.",
+  ]);
+
+  /* 5 · sage in der Schleife */
+  const SAGE = ["flag", ["repeat", 2, [["say", "Hallo!", 1], ["say", "Wie geht’s?", 1]]], ["say", "Tschüss!", 1]];
+  $("skript5").innerHTML = B.render(SAGE, { small: true });
+  pick($("pred5"), { right: 2, fb: $("fb5"),
+    miss: ["Die Schleife läuft <strong>2</strong> Runden. Also kommt Hallo und Wie geht’s zweimal.",
+      "In jeder Runde läuft die Schleife von oben nach unten durch: erst Hallo, dann Wie geht’s. Dann kommt die nächste Runde.", null,
+      "Tschüss steht <strong>unter</strong> der Schleife. Es läuft erst, wenn die Schleife fertig ist – nur einmal."],
+    why: "Runde 1: Hallo, Wie geht’s. Runde 2: Hallo, Wie geht’s. Danach einmal Tschüss.",
+    onDone() { $("probe5").hidden = false; } });
+  B.create($("b5"), { mode: "lesen", script: SAGE, start: { x: -60, y: -40, dir: 90 } });
+
+  /* 6 · Fehlerdetektiv: falsche Anzahl */
+  const ZICK = ["flag", ["pendown"], ["repeat", 5, [["move", 40], ["right", 90], ["move", 40], ["left", 90]]]];
+  const zStart = { x: -140, y: -30, dir: 45 };
+  B.create($("b6"), { mode: "frei", edit: true, start: zStart,
+    script: ["!flag", "!pendown", ["!repeat", 3, [["!move", 40], ["!right", 90], ["!move", 40], ["!left", 90]]]],
+    ziel: ZICK,
+    check(tr) {
+      const r = findOp(tr.script, "repeat"), n = zahl(r.args.n);
+      const rest = r.body.map((b) => zahl(b.args.n !== undefined ? b.args.n : b.args.g)).join();
+      if (rest !== "40,90,40,90") return "Jetzt sieht das Zickzack anders aus. Die Zahlen <strong>in</strong> der Schleife stimmten schon. Klick auf ↺ Von vorn.";
+      if (n === 5) return true;
+      if (n === 3) return "Robo malt nur 3 Spitzen. Zähl die Spitzen in der grauen Vorlage. Welche Zahl sagt, wie oft?";
+      if (n === 10) return "Jetzt sind es zu viele Spitzen. Jede Runde malt <strong>eine</strong> Spitze.";
+      return n > 5 ? "Zu viele Spitzen! Zähl die Spitzen in der Vorlage." : "Noch zu wenige Spitzen. Zähl die Spitzen in der Vorlage.";
+    },
+    ok: "✔ Fall gelöst! Eine Runde = eine Spitze. 5 Spitzen = wiederhole 5 mal." });
+  hints($("hints6"), [
+    "Schau mit 👣 zu: Was malt Robo in <strong>einer</strong> Runde?",
+    "Eine Runde malt eine Spitze. Wie viele Spitzen hat die Vorlage?",
+    "Lösung: Ändere <em>wiederhole 3 mal</em> zu <em>wiederhole <strong>5</strong> mal</em>.",
+  ]);
+
+  /* Plus · Stern */
+  const STERN = ["flag", ["pendown"], ["repeat", 5, [["move", 150], ["right", 144]]]];
+  const sStart = { x: -75, y: 30, dir: 90 };
+  B.create($("bplus"), { mode: "frei", edit: true, start: sStart,
+    script: ["flag", ["pendown"], ["repeat", 5, [["move", 150], ["right", 72]]]],
+    ziel: STERN,
+    check(tr) {
+      const g = zahl(findOp(tr.script, "right").args.g);
+      if (g === 72) return "Mit 72 Grad wird es ein Fünfeck. Beim Stern dreht sich Robo viel weiter – er macht eine spitze Ecke.";
+      return null;
+    },
+    ok: "✔ Ein Stern! Robo dreht sich 144 Grad – doppelt so weit wie beim Fünfeck." });
+  hints($("hintsplus"), [
+    "Beim Fünfeck dreht sich Robo 72 Grad. Beim Stern muss er sich weiter drehen, sonst wird die Ecke nicht spitz.",
+    "Robo läuft beim Stern <strong>zweimal</strong> ganz herum. Rechne: 2 × 360 = 720 Grad, verteilt auf 5 Spitzen.",
+    "Lösung: <em>drehe dich ↻ um <strong>144</strong> Grad</em>.",
+  ]);
+
+  /* Kurz-Check */
+  quiz($("quiz"), [
+    { q: "Wie oft wechselt Robo das Kostüm?",
+      html: B.render(["flag", ["repeat", 6, [["costume"], ["wait", 0.5]]]], { small: true }),
+      options: ["1-mal", "2-mal", "6-mal", "12-mal"], right: 2,
+      miss: ["Der Block steht nur einmal da – aber in der Schleife. Sie läuft 6 Runden.",
+        "Robo hat 2 Kostüme. Aber er schaltet in jeder der 6 Runden einmal um.", null,
+        "<em>warte</em> ist kein Kostümwechsel. Pro Runde schaltet Robo einmal um."],
+      why: "6 Runden, in jeder Runde ein Wechsel: 6-mal." },
+    { q: "Paul sieht Robo nicht winken. Warum?",
+      html: B.render(["flag", ["repeat", 20, [["costume"]]]], { small: true }),
+      options: ["Die Zahl 20 ist zu klein.", "In der Schleife fehlt <em>warte</em>.", "Robo hat nur ein Kostüm.", "Die Schleife läuft nur einmal."], right: 1,
+      miss: ["Auch mit 100 Runden sieht man nichts – es geht dann nur länger blitzschnell.", null,
+        "Robo hat zwei Kostüme. Er schaltet auch um – nur viel zu schnell.",
+        "Die Schleife läuft 20 Runden. Das geht aber so schnell, dass man es nicht sieht."],
+      why: "Ohne <em>warte</em> sind alle Wechsel in einem Augenblick vorbei." },
+    { q: "Robo soll ein Achteck malen. Wie weit dreht er sich an jeder Ecke?",
+      options: ["8 Grad", "45 Grad", "80 Grad", "90 Grad"], right: 1,
+      miss: ["8 ist die Zahl der Ecken – sie gehört in <em>wiederhole … mal</em>.", null,
+        "Rechne: 360 : 8. Das ist nicht 80.",
+        "90 Grad passen zum Quadrat mit 4 Ecken."],
+      why: "360 : 8 = 45 Grad." },
+    { q: "Robo soll 3-mal „Hip hip“ sagen und danach einmal „Hurra!“. Wohin gehört <em>sage Hurra!</em>?",
+      options: ["in die Schleife", "unter die Schleife", "über die Schleife", "ganz oben über die Flagge"], right: 1,
+      miss: ["Dann sagt Robo in jeder Runde Hurra – also 3-mal.", null,
+        "Dann sagt Robo Hurra zuerst – vor dem Hip hip.",
+        "Über der Flagge läuft gar nichts. Die Flagge muss ganz oben stehen."],
+      why: "Was unter der Schleife steht, läuft einmal – wenn die Schleife fertig ist." },
+  ]);
+
+  /* Freiwillig · Robo spaziert */
+  const spStart = { x: -160, y: -20, dir: 90 };
+  B.create($("bspazier"), { mode: "frei", echtzeit: true, start: spStart, sterne: [[120, -20]],
+    palette: ["flag", ["repeat", 10], ["move", 20], ["costume"], ["wait", 0.3]],
+    check(tr) {
+      const s = tr.script;
+      if (Math.hypot(tr.x - 120, tr.y + 20) < 1) {
+        if (!inLoop(s, "costume")) return "Robo ist am Stern! Aber er schwingt nicht mit dem Arm. Was fehlt in der Schleife?";
+        if (!inLoop(s, "wait")) return "Robo ist am Stern! Aber das Winken sieht man kaum. Was fehlt in der Schleife?";
+        return true;
+      }
+      if (tr.x > 120) return "Robo ist zu weit gelaufen. Wie viele Runden zu je 20 Schritten braucht er?";
+      return "Robo ist noch nicht am Stern. Der Stern ist 280 Schritte entfernt (7 Kästchen).";
+    },
+    ok: "✔ Robo ist da – und hat den ganzen Weg gewinkt!" });
+  hints($("hintsspazier"), [
+    "Ein Kästchen sind 40 Schritte. Der Stern ist 7 Kästchen entfernt: 7 × 40 = 280 Schritte.",
+    "In jeder Runde geht Robo 20 Schritte. 280 : 20 = ?",
+    "Lösung: <em>wiederhole <strong>14</strong> mal</em>, darin <em>gehe 20 er Schritt</em>, <em>wechsle zum nächsten Kostüm</em>, <em>warte 0.3 Sekunden</em>.",
+  ]);
+  B.create($("bzauber"), { mode: "frei", start: { x: -50, y: 30, dir: 90 },
+    palette: ["flag", ["pendown"], ["repeat", 8], ["move", 100], ["right", 135]],
+    check(tr) {
+      if (tr.segs.length >= 5 && Math.hypot(tr.x + 50, tr.y - 30) < 1) return true;
+      if (tr.segs.length >= 5) return "Robo ist am Ende nicht wieder am Anfang. Probier andere Zahlen!";
+      return "Bau das Skript: Flagge, Stift ein, wiederhole 8 mal – darin gehe 100 und drehe dich 135 Grad.";
+    },
+    ok: "✔ Ein Zauberstern! Robo ist genau dort angekommen, wo er losging." });
+
+  checklist($("checklist"), "k5-06");
+});
+</script>
+</body>
+</html>

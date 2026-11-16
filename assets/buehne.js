@@ -111,7 +111,7 @@
   const norm = (g) => { let r = ((g + 179) % 360 + 360) % 360 - 179; return r; };   // wie Scratch: -179 … 180
 
   function newState(start) {
-    return { x: start.x, y: start.y, dir: start.dir, pen: false, costume: 0, segs: [], says: [], steps: 0, errors: [] };
+    return { x: start.x, y: start.y, dir: start.dir, pen: false, costume: 0, wechsel: 0, segs: [], says: [], steps: 0, errors: [] };
   }
   /** Führt einen einfachen Block aus und ändert den Zustand. Gibt Wartezeit in s zurück (warte, sage). */
   function apply(s, n) {
@@ -137,7 +137,7 @@
       }
       case "dir": s.dir = norm(need("g")); return 0;
       case "say": s.says.push(String(a.t)); return Math.max(0, need("s"));
-      case "costume": s.costume = (s.costume + 1) % 2; return 0;
+      case "costume": s.costume = (s.costume + 1) % 2; s.wechsel++; return 0;
       case "wait": return Math.max(0, need("s"));
       case "pendown": s.pen = true; return 0;
       case "penup": s.pen = false; return 0;
@@ -166,7 +166,7 @@
     return trace(s, nodes, hat);
   }
   function trace(s, nodes, hat) {
-    return { segs: s.segs, says: s.says, x: s.x, y: s.y, dir: s.dir, costume: s.costume,
+    return { segs: s.segs, says: s.says, x: s.x, y: s.y, dir: s.dir, costume: s.costume, wechsel: s.wechsel,
       blocks: count(nodes), hat, errors: s.errors, script: nodes };
   }
 
@@ -503,16 +503,20 @@
       scr.querySelectorAll(".sb-count").forEach((c) => c.remove());
       draw();
     }
-    async function pause(tok) {
+    // cfg.echtzeit: bei 🐇 so schnell wie echtes Scratch – Blöcke ohne Pause, jede Schleifenrunde ein Bild (1/30 s).
+    // So sieht man z. B. eine Animation ohne „warte“ fast gar nicht – genau wie in Scratch.
+    const echt = () => cfg.echtzeit && !stepMode && speed === "schnell";
+    async function pause(tok, runde) {
       if (stepMode) { await new Promise((res) => { stepWait = res; }); stepWait = null; }
+      else if (echt()) { if (runde) await sleep(1000 / 30, tok); }
       else await sleep(SPEED[speed], tok);
     }
     async function animate(from, s, tok) {
-      const ms = stepMode ? 350 : Math.min(SPEED[speed] * 0.85, 500);
+      const ms = stepMode ? 350 : echt() ? 0 : Math.min(SPEED[speed] * 0.85, 500);
       const t0 = performance.now();
       const seg = s.segs.length > segs.length ? s.segs[s.segs.length - 1] : null;
       while (run && run.token === tok) {
-        const t = Math.min(1, (performance.now() - t0) / ms);
+        const t = ms ? Math.min(1, (performance.now() - t0) / ms) : 1;
         vis.x = from.x + (s.x - from.x) * t; vis.y = from.y + (s.y - from.y) * t;
         let dd = s.dir - from.dir; if (dd > 180) dd -= 360; if (dd < -180) dd += 360;
         if (from.turn !== undefined) dd = from.turn;
@@ -551,7 +555,7 @@
             for (let i = 1; i <= Math.min(k, 500); i++) {
               if (!run || run.token !== tok) return;
               highlight(n.id); counter(n.id, i, k);
-              await pause(tok);
+              await pause(tok, true);
               await runList(n.body);
             }
             counter(n.id, 0);
@@ -635,5 +639,5 @@
     });
   });
 
-  window.Buehne = { create, render, simulate, sameDrawing, parse, count, DEF };
+  window.Buehne = { create, render, simulate, sameDrawing, parse, count, DEF, robo: roboSVG };
 })();

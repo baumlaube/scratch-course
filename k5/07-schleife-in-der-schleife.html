@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Schleife in der Schleife · Scratch-Kurs Klasse 5</title>
+<meta name="description" content="Lektion 7 im Scratch-Lernpfad: Schleife in der Schleife – Robo malt eine Blume aus 6 Quadraten. Zählen mit beiden Rundenzählern, Struktogramm ansehen, Puzzle, Lücke und Fehlerdetektiv im Browser.">
+<link rel="canonical" href="https://scratch.herrseibert.de/k5/07-schleife-in-der-schleife.html">
+<!-- vorschau -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Scratch-Kurs">
+<meta property="og:locale" content="de_DE">
+<meta property="og:url" content="https://scratch.herrseibert.de/k5/07-schleife-in-der-schleife.html">
+<meta property="og:title" content="Schleife in der Schleife · Scratch-Kurs Klasse 5">
+<meta property="og:description" content="Lektion 7 im Scratch-Lernpfad: Schleife in der Schleife – Robo malt eine Blume aus 6 Quadraten. Zählen mit beiden Rundenzählern, Struktogramm ansehen, Puzzle, Lücke und Fehlerdetektiv im Browser.">
+<meta property="og:image" content="https://scratch.herrseibert.de/vorschau.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Scratch-Kurs – Programmieren lernen Schritt für Schritt, mit Übungsbühne">
+<meta name="twitter:card" content="summary_large_image">
+<!-- /vorschau -->
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="stylesheet" href="../assets/kurs.css?v=852db3b491">
+<link rel="stylesheet" href="../assets/buehne.css?v=790d4b98ab">
+<script src="../assets/i18n.js?v=4588e8929d" data-page="k5-07-schleife-in-der-schleife" data-langs="de"></script>
+<script src="../assets/kurs.js?v=5fcc1de7cc"></script>
+<script src="../assets/buehne.js?v=30778f51ec"></script>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><img class="logo" src="../favicon.svg" alt="" width="34" height="34"> Scratch-Kurs <span>· Programmieren lernen</span></a>
+    <span class="spacer"></span>
+    <button class="theme-btn" type="button" aria-label="Hell oder dunkel umschalten">◐ Hell/Dunkel</button>
+  </div>
+</header>
+
+<main class="wrap">
+  <nav class="path" aria-label="Lernpfad Klasse 5">
+    <strong class="t">Klasse 5:</strong>
+    <ol>
+      <li class="done"><a href="01-programmieren.html" title="1 · Was ist Programmieren?">1</a></li>
+      <li class="done"><a href="02-scratch-kennenlernen.html" title="2 · Scratch kennenlernen">2</a></li>
+      <li class="done"><a href="03-befehle-der-reihe-nach.html" title="3 · Befehle der Reihe nach">3</a></li>
+      <li class="done"><a href="04-malen-mit-dem-stift.html" title="4 · Malen mit dem Stift">4</a></li>
+      <li class="done"><a href="05-schleife.html" title="5 · Die Schleife">5</a></li>
+      <li class="done"><a href="06-schleifen-ueben.html" title="6 · Schleifen üben">6</a></li>
+      <li class="now"><span title="7 · Schleife in der Schleife" aria-current="step">7</span></li>
+      <li class="done"><a href="08-mein-projekt.html" title="8 · Mein Projekt">8</a></li>
+    </ol>
+  </nav>
+
+  <section class="hero">
+    <h1>Schleife in der Schleife – Robo malt eine Blume</h1>
+    <div class="meta">
+      <span class="chip">Klasse 5 · Lektion 7</span>
+      <span class="chip">⏱ ca. 35 Minuten</span>
+    </div>
+    <ul class="goals">
+      <li>Ich kann ausrechnen, wie oft ein Block in zwei Schleifen läuft.</li>
+      <li>Ich baue eine Blume aus Quadraten mit einer Schleife in der Schleife.</li>
+      <li>Ich finde einen Block, der in der falschen Schleife steht.</li>
+    </ul>
+  </section>
+
+  <details class="card woerter">
+    <summary>📖 Scratch-Wörter für diese Lektion</summary>
+    <p class="note">Die Wörter links bleiben deutsch – so heißen sie in Scratch.</p>
+    <div class="tbl-scroll"><table class="plain">
+      <tr><th class="wort">die Schachtelung <small>schachteln</small></th><td>Etwas steckt in etwas anderem – wie eine kleine Schachtel in einer großen.</td></tr>
+      <tr><th class="wort">die äußere Schleife</th><td>Die große Schleife außen herum.</td></tr>
+      <tr><th class="wort">die innere Schleife</th><td>Die kleine Schleife, die in der großen steckt.</td></tr>
+      <tr><th class="wort">die Runde <small>die Runden</small></th><td>Ein Durchlauf der Schleife.</td></tr>
+      <tr><th class="wort">das Struktogramm <small>die Struktogramme</small></th><td>Ein Bild, das zeigt, wie ein Programm aufgebaut ist.</td></tr>
+    </table></div>
+  </details>
+
+  <section class="card">
+    <h2><span class="step-no">ℹ</span> So arbeitest du heute</h2>
+    <p class="lead">Du übst mit der <strong>Übungsbühne</strong> direkt hier im Browser. Sie funktioniert mit Maus und mit Finger.</p>
+    <ul class="tasks">
+      <li><span class="badge basis">Ziehen</span><span>Zieh Blöcke von <em>Blöcke</em> nach <em>Skript</em>. Tippen geht auch: Dann hängt der Block unten dran.</span></li>
+      <li><span class="badge basis">Start</span><span><strong>⚑ Start</strong> lässt Robo laufen. 🐢 ist die Zeitlupe, 👣 geht Block für Block.</span></li>
+      <li><span class="badge basis">Vorlage</span><span>Die graue gestrichelte Form ist das Ziel. Robo soll genau darüber malen.</span></li>
+      <li><span class="badge basis">Zu zweit</span><span>Eine Person zieht die Blöcke, die andere liest vor und prüft. Nach jeder Aufgabe wechseln.</span></li>
+    </ul>
+  </section>
+
+  <section class="card wdh">
+    <h2><span class="step-no">↺</span> Weißt du noch? <span class="chip">2 Minuten</span></h2>
+    <div id="wdh"></div>
+  </section>
+
+  <!-- 1 · Zählen -->
+  <section class="card">
+    <h2><span class="step-no">1</span> Überleg: Wie oft sagt Robo „Hallo!“? <span class="chip">5 Minuten</span></h2>
+    <div class="script-row">
+      <figure><div data-script='["flag",["repeat",4,[["repeat",3,[["say","Hallo!",0.5]]]]]]' data-small></div></figure>
+      <div style="flex:1;min-width:220px">
+        <p>Hier steckt eine Schleife <strong>in</strong> einer Schleife.</p>
+        <p><strong>Überleg:</strong> Wie oft sagt Robo „Hallo!“? Starte noch nichts!</p>
+        <div class="choices" id="pred1">
+          <button type="button" class="choice">3-mal</button>
+          <button type="button" class="choice">4-mal</button>
+          <button type="button" class="choice">7-mal</button>
+          <button type="button" class="choice">12-mal</button>
+        </div>
+        <p class="fb" id="fb1"></p>
+      </div>
+    </div>
+    <div id="probe1" hidden>
+      <p><strong>Prüf es nach:</strong> Drück immer wieder auf <strong>👣 Schritt</strong>. Jede Schleife hat ihren eigenen Rundenzähler.
+        Schau, welcher Zähler sich schneller ändert.</p>
+      <div id="b1"></div>
+      <p class="rule">Die innere Schleife läuft in <strong>jeder Runde</strong> der äußeren ganz durch.<br>
+        Zählen: <strong>außen × innen</strong> – 4 × 3 = 12.</p>
+    </div>
+  </section>
+
+  <!-- 2 · Zuschauen: Blume -->
+  <section class="card">
+    <h2><span class="step-no">2</span> Die Blume aus Quadraten <span class="chip">6 Minuten</span></h2>
+    <div class="script-row">
+      <figure><div data-script='["flag",["pendown"],["repeat",6,[["repeat",4,[["move",70],["right",90]]],["right",60]]]]' data-small></div></figure>
+      <div style="flex:1;min-width:220px">
+        <p><strong>Überleg:</strong> Schau nur auf die <strong>innere</strong> Schleife. Was malt sie allein?</p>
+        <div class="choices" id="pred2">
+          <button type="button" class="choice"><svg width="46" height="38" viewBox="0 0 46 38" aria-hidden="true"><path d="M4 19H42" stroke="currentColor" stroke-width="3" fill="none"/></svg><br>eine Linie</button>
+          <button type="button" class="choice"><svg width="46" height="38" viewBox="0 0 46 38" aria-hidden="true"><path d="M9 5H37V33H9Z" stroke="currentColor" stroke-width="3" fill="none"/></svg><br>ein Quadrat</button>
+          <button type="button" class="choice"><svg width="46" height="38" viewBox="0 0 46 38" aria-hidden="true"><path d="M14 4H32L41 19L32 34H14L5 19Z" stroke="currentColor" stroke-width="3" fill="none"/></svg><br>ein Sechseck</button>
+        </div>
+        <p class="fb" id="fb2"></p>
+      </div>
+    </div>
+    <div id="probe2" hidden>
+      <p><strong>Schau zu:</strong> Klick auf ⚑ Start. Die innere Schleife malt ein Quadrat. Dann dreht sich Robo um 60 Grad –
+        und die äußere Schleife fängt die nächste Runde an.</p>
+      <div id="b2"></div>
+      <p>6 Quadrate, nach jedem 60 Grad weiter: 6 × 60 = 360 Grad. Robo ist einmal ganz herum – die Blume ist rund.</p>
+      <h3 class="sub">So sieht das im Struktogramm aus</h3>
+      <p class="note">Du musst kein Struktogramm zeichnen. Schau nur: Der Kasten der inneren Schleife steckt im Kasten der äußeren.</p>
+      <div class="nsd" aria-label="Struktogramm: Stift ein. 6-mal wiederholen: 4-mal wiederholen: gehe 70 Schritte, drehe dich 90 Grad. Danach drehe dich 60 Grad.">
+        <div class="nsd-row">Stift einschalten</div>
+        <div class="nsd-loop">
+          <div class="nsd-head">wiederhole 6-mal</div>
+          <div class="nsd-body">
+            <div class="nsd-loop">
+              <div class="nsd-head">wiederhole 4-mal</div>
+              <div class="nsd-body">
+                <div class="nsd-row">gehe 70 Schritte</div>
+                <div class="nsd-row">drehe dich 90° nach rechts</div>
+              </div>
+            </div>
+            <div class="nsd-row">drehe dich 60° nach rechts</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 · Puzzle -->
+  <section class="card">
+    <h2><span class="step-no">3</span> Bau die Blume selbst <span class="badge basis">Basis</span> <span class="chip">6 Minuten</span></h2>
+    <div id="b3"></div>
+    <p>Zieh die Blöcke ins Skript. Fang mit der <strong>äußeren</strong> Schleife an. Dann kommt die innere Schleife <strong>in</strong> die äußere.</p>
+    <p class="note">Achte auf den blauen Strich: Er zeigt, in welche Schleife der Block kommt.</p>
+    <div id="hints3"></div>
+  </section>
+
+  <!-- 4 · Lücke: Windrad -->
+  <section class="card">
+    <h2><span class="step-no">4</span> Das Windrad aus Dreiecken <span class="badge basis">Basis</span> <span class="chip">5 Minuten</span></h2>
+    <div id="b4"></div>
+    <p>Die innere Schleife malt ein Dreieck. Robo soll <strong>8 Dreiecke</strong> rundherum malen. Schreib die Zahlen in die <strong>gelben Felder</strong>.</p>
+    <div id="hints4"></div>
+  </section>
+
+  <!-- 5 · Fehlerdetektiv -->
+  <section class="card">
+    <h2><span class="step-no">5</span> Fehlerdetektiv: die Fahnenkette 🔍 <span class="badge basis">Basis</span> <span class="chip">6 Minuten</span></h2>
+    <div id="b5"></div>
+    <p>Kai will eine Kette aus <strong>4 Fahnen</strong> malen – wie die graue Vorlage. Klick auf ⚑ Start. Robo malt Chaos!</p>
+    <p><strong>Die Detektiv-Fragen:</strong></p>
+    <ol class="howto">
+      <li>Was <strong>soll</strong> passieren?</li>
+      <li>Was <strong>passiert</strong> wirklich?</li>
+      <li>Welcher Block steht in der <strong>falschen Schleife</strong>?</li>
+    </ol>
+    <p>Repariere Kais Skript. Du musst nur <strong>einen Block verschieben</strong>.</p>
+    <div id="hints5"></div>
+  </section>
+
+  <!-- Plus -->
+  <section class="card">
+    <h2><span class="step-no">+</span> Die große Blume <span class="badge plus">Plus</span> <span class="chip">für Schnelle</span></h2>
+    <p>Diese Blume hat <strong>12 Quadrate</strong>. Bau sie selbst. Zwei Zahlen musst du ändern – welche?</p>
+    <div id="bplus"></div>
+    <div id="hintsplus"></div>
+  </section>
+
+  <section class="card">
+    <h2><span class="step-no">✓</span> Kurz-Check <span class="chip">5 Minuten</span></h2>
+    <div id="quiz"></div>
+  </section>
+
+  <section class="card merke">
+    <h2>Merke</h2>
+    <ul>
+      <li>Eine Schleife kann <strong>in</strong> einer anderen Schleife stecken. Das heißt <strong>Schachtelung</strong>.</li>
+      <li>Die innere Schleife läuft in <strong>jeder Runde</strong> der äußeren ganz durch.</li>
+      <li>Wie oft läuft ein Block innen? <strong>außen × innen</strong>, z. B. 4 × 3 = 12.</li>
+      <li>Blume: Die innere Schleife malt die Form. Die äußere sagt, wie viele. Danach drehen: <strong>360 : Anzahl</strong>.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2><span class="step-no">⚑</span> Jetzt in echt: Scratch <span class="chip">zu Hause oder nächste Stunde</span></h2>
+    <p><a class="btn" href="https://scratch.mit.edu/projects/editor/" target="_blank" rel="noopener">Scratch in neuem Fenster öffnen ↗</a></p>
+    <ol class="howto">
+      <li>Unten links auf <strong>Erweiterung hinzufügen</strong> klicken und <strong>Malstift</strong> wählen.</li>
+      <li>Bau die Blume nach: zwei Blöcke <em>wiederhole … mal</em> (<strong>Steuerung</strong>), einer im anderen.</li>
+      <li>Klick auf die grüne Flagge ⚑. Probier dann andere Zahlen: 8 Quadrate? 10 Fünfecke?</li>
+    </ol>
+    <p class="note">Damit die Katze immer in der Mitte anfängt, setz unter die Flagge: <em>lösche alles</em>, <em>gehe zu x: 0 y: 0</em>
+      und <em>setze Richtung auf 90 Grad</em>.</p>
+  </section>
+
+  <section class="card">
+    <h2><span class="step-no">☑</span> Das kann ich</h2>
+    <ul class="checklist" id="checklist">
+      <li><label><input type="checkbox"> Ich kann eine Schleife in eine andere Schleife ziehen.</label></li>
+      <li><label><input type="checkbox"> Ich kann ausrechnen, wie oft ein Block in zwei Schleifen läuft.</label></li>
+      <li><label><input type="checkbox"> Ich kann eine Blume aus Quadraten oder Dreiecken bauen.</label></li>
+      <li><label><input type="checkbox"> Ich erkenne, ob ein Block in der inneren oder in der äußeren Schleife stehen muss.</label></li>
+    </ul>
+  </section>
+
+  <section class="card frei">
+    <h2><span class="step-no">★</span> Freiwillig</h2>
+    <p class="lead">Für alle, die schon fertig sind.</p>
+
+    <h3 class="sub"><span class="badge ueben">Üben</span> Die Bienenwaben-Blume</h3>
+    <p>Diesmal malt die innere Schleife ein <strong>Sechseck</strong>. Robo malt 6 Sechsecke rundherum. Hol dir die Blöcke selbst.</p>
+    <div id="bwabe"></div>
+    <div id="hintswabe"></div>
+
+    <h3 class="sub"><span class="badge expedition">★ Expedition</span> Deine eigene Blume</h3>
+    <p>Hier malt die innere Schleife fast einen Kreis. Probier es aus. Dann ändere die Zahlen:
+      mehr Kreise, größere Kreise, andere Drehung. Welche Blume gefällt dir am besten?</p>
+    <div id="bkreis"></div>
+  </section>
+
+  <nav class="pager">
+    <a href="06-schleifen-ueben.html">← Lektion 6: Schleifen üben</a>
+    <a href="08-mein-projekt.html">Lektion 8: Mein Projekt →</a>
+  </nav>
+</main>
+
+<footer>
+  <div class="wrap t">Lernmaterial von <a href="https://herrseibert.de">herrseibert.de</a> · Lizenz <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.de">CC BY-SA 4.0</a> · ohne Tracking, ohne Cookies<br>Erstellt von der KI Claude von Anthropic.</div>
+  <div class="wrap t gh">Fehler gefunden oder eine Idee? → <a href="https://github.com/baumlaube/scratch-course">Kurs auf GitHub</a></div>
+  <div class="wrap t gh">Scratch ist ein Projekt der Scratch Foundation. Dieser Kurs ist kein offizielles Angebot der Scratch Foundation.</div>
+  <div class="wrap legal"><a href="../impressum.html">Impressum</a> · <a href="../datenschutz.html">Datenschutz</a></div>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const { feedback, pick, quiz, hints, checklist } = window.Kurs;
+  const B = window.Buehne;
+  const $ = (id) => document.getElementById(id);
+  const zahl = (v) => parseFloat(String(v).replace(",", "."));
+  // Wo steht ein Block? Liefert die Liste, in der er steckt, und den Schleifen-Block drumherum (oder null).
+  const where = (list, test, parent = null) => {
+    for (const n of list) {
+      if (test(n)) return { list, parent, node: n };
+      if (n.body) { const r = where(n.body, test, n); if (r) return r; }
+    }
+    return null;
+  };
+  const isTurn = (g) => (n) => n.op === "right" && zahl(n.args.g) === g;
+  const isMove = (k) => (n) => n.op === "move" && zahl(n.args.n) === k;
+  const loops = (list) => list.filter((n) => n.op === "repeat");
+
+  /* Weißt du noch? */
+  quiz($("wdh"), [
+    { q: "Robo soll ein Sechseck malen. Welche Zahlen passen?",
+      options: ["wiederhole 6 mal, drehe 60 Grad", "wiederhole 6 mal, drehe 90 Grad", "wiederhole 60 mal, drehe 6 Grad", "wiederhole 4 mal, drehe 60 Grad"], right: 0,
+      miss: [null, "90 Grad passen zum Quadrat. Rechne 360 : 6.", "Das wird ein Vieleck mit 60 Ecken – fast ein Kreis.", "Ein Sechseck hat 6 Ecken – also 6 Runden."],
+      why: "6 Ecken → 6 Runden. 360 : 6 = 60 Grad." },
+    { q: "Robo soll in der Schleife winken. Was muss neben <em>wechsle zum nächsten Kostüm</em> noch in die Schleife?",
+      options: ["<em>sage Hallo!</em>", "<em>warte 0.5 Sekunden</em>", "<em>gehe 10 er Schritt</em>", "nichts"], right: 1,
+      miss: ["Sagen ist schön, aber das Winken sieht man trotzdem kaum.", null, "Dann läuft Robo – aber das Winken bleibt zu schnell.", "Ohne warte geht das Winken so schnell, dass man es nicht sieht."],
+      why: "Ohne <em>warte</em> sieht man die Animation nicht." },
+  ]);
+
+  /* 1 · Zählen */
+  pick($("pred1"), { right: 3, fb: $("fb1"),
+    miss: ["3 ist nur die innere Schleife. Aber sie läuft selbst 4-mal – in jeder Runde der äußeren.",
+      "4 ist nur die äußere Schleife. In jeder dieser Runden sagt Robo aber 3-mal Hallo.",
+      "Die Zahlen werden nicht addiert. 4 Runden, in jeder Runde 3-mal Hallo: 3 + 3 + 3 + 3.", null],
+    why: "4 Runden außen, in jeder 3-mal Hallo: 4 × 3 = 12.",
+    onDone() { $("probe1").hidden = false; } });
+  B.create($("b1"), { mode: "lesen", script: ["flag", ["repeat", 4, [["repeat", 3, [["say", "Hallo!", 0.5]]]]]], start: { x: -60, y: -40, dir: 90 } });
+
+  /* 2 · Blume zuschauen */
+  const BLUME = ["flag", ["pendown"], ["repeat", 6, [["repeat", 4, [["move", 70], ["right", 90]]], ["right", 60]]]];
+  pick($("pred2"), { right: 1, fb: $("fb2"),
+    miss: ["Robo dreht sich in der inneren Schleife um 90 Grad. Darum geht es um die Ecke.", null,
+      "Die innere Schleife hat 4 Runden und 90 Grad. Das ist ein Quadrat."],
+    why: "4 Runden, 90 Grad: Die innere Schleife malt ein Quadrat.",
+    onDone() { $("probe2").hidden = false; } });
+  B.create($("b2"), { mode: "lesen", script: BLUME, start: { x: 0, y: 0, dir: 90 } });
+
+  /* 3 · Puzzle Blume */
+  B.create($("b3"), { mode: "puzzle", script: ["!flag", "!pendown"], start: { x: 0, y: 0, dir: 90 },
+    palette: [["right", 60], ["repeat", 4], ["move", 70], ["repeat", 6], ["right", 90]], ziel: BLUME,
+    check(tr) {
+      const s = tr.script, top = loops(s);
+      if (!top.length) return "Es fehlt noch die äußere Schleife.";
+      if (top.length > 1) return "Die beiden Schleifen stehen <strong>untereinander</strong>. Die Schleife für das Quadrat muss <strong>in</strong> die andere Schleife.";
+      const outer = top[0], inner = loops(outer.body)[0];
+      if (!inner) return "Steck die zweite Schleife <strong>in</strong> die erste.";
+      if (zahl(outer.args.n) === 4 && zahl(inner.args.n) === 6) return "Die Schleifen sind vertauscht. Die innere malt das Quadrat – dafür braucht sie 4 Runden. Die äußere sagt, wie viele Quadrate: 6.";
+      const t60 = where(s, isTurn(60)), t90 = where(s, isTurn(90)), mv = where(s, isMove(70));
+      if (mv && mv.parent !== inner) return "<em>gehe 70</em> gehört in die <strong>innere</strong> Schleife – zum Quadrat.";
+      if (t90 && t90.parent !== inner) return "<em>drehe dich um 90 Grad</em> gehört in die <strong>innere</strong> Schleife – das sind die Ecken des Quadrats.";
+      if (t60 && t60.parent === inner) return "<em>drehe dich um 60 Grad</em> steht in der inneren Schleife. Dann wird das Quadrat schief. Robo soll sich erst drehen, wenn das Quadrat <strong>fertig</strong> ist.";
+      if (t60 && t60.parent === null) return "Du siehst nur ein Quadrat: Alle 6 liegen genau übereinander! <em>drehe dich um 60 Grad</em> muss in die <strong>äußere</strong> Schleife – unter die innere.";
+      if (t60 && outer.body.indexOf(t60.node) < outer.body.indexOf(inner)) return "Fast! Robo dreht sich jetzt <strong>vor</strong> jedem Quadrat. Zieh <em>drehe dich um 60 Grad</em> <strong>unter</strong> die innere Schleife.";
+      return null;
+    },
+    ok: "✔ Wunderschön! 6 Quadrate, jedes um 60 Grad gedreht. Der Block <em>gehe</em> lief 6 × 4 = 24-mal." });
+  hints($("hints3"), [
+    "Die innere Schleife malt ein Quadrat: <em>wiederhole 4 mal</em> mit <em>gehe 70</em> und <em>drehe dich um 90 Grad</em>.",
+    "Die äußere Schleife sagt, wie viele Quadrate: <em>wiederhole 6 mal</em>. Nach jedem Quadrat dreht sich Robo um 60 Grad.",
+    "Lösung: <em>wiederhole 6 mal</em> → darin <em>wiederhole 4 mal</em> (darin <em>gehe 70</em>, <em>drehe dich um 90 Grad</em>) → darunter, noch in der äußeren Schleife: <em>drehe dich um 60 Grad</em>.",
+  ]);
+
+  /* 4 · Windrad: Lücke */
+  B.create($("b4"), { mode: "frei", edit: "gaps", echtzeit: true, start: { x: 0, y: 0, dir: 90 },
+    script: ["!flag", "!pendown", ["!repeat", "?", [["!repeat", 3, [["!move", 80], ["!right", 120]]], ["!right", "?"]]]],
+    ziel: ["flag", ["pendown"], ["repeat", 8, [["repeat", 3, [["move", 80], ["right", 120]]], ["right", 45]]]],
+    check(tr) {
+      const outer = tr.script[2], n = zahl(outer.args.n), g = zahl(outer.body[1].args.g);
+      if (n === 8 && g === 45) return true;
+      if (n === 8 && g === 120) return "120 Grad sind die Ecken des Dreiecks – die stehen schon in der inneren Schleife. Wie weit dreht sich Robo nach jedem Dreieck? 360 : 8 = ?";
+      if (n === 8) return "8 Dreiecke stimmen. Jetzt die Drehung: einmal ganz herum sind 360 Grad – verteilt auf 8 Dreiecke.";
+      if (n === 3) return "3 ist die Zahl für die Ecken des Dreiecks. Die äußere Schleife sagt, <strong>wie viele Dreiecke</strong>.";
+      if (g === 45) return "Die Drehung stimmt! Wie viele Dreiecke soll Robo malen?";
+      return "Noch nicht. Zähl die Dreiecke in der Vorlage. Nimm die Tipps unten, wenn du nicht weiterkommst.";
+    },
+    ok: "✔ Super! 8 Dreiecke, nach jedem 360 : 8 = 45 Grad weiter." });
+  hints($("hints4"), [
+    "Das obere gelbe Feld ist die äußere Schleife: Wie viele Dreiecke soll Robo malen?",
+    "Nach jedem Dreieck dreht sich Robo ein Stück weiter. Nach 8 Dreiecken soll er einmal ganz herum sein: 360 : 8 = ?",
+    "Lösung: <em>wiederhole <strong>8</strong> mal</em> und unten <em>drehe dich ↻ um <strong>45</strong> Grad</em>.",
+  ]);
+
+  /* 5 · Fehlerdetektiv: gehe 60 in der falschen Schleife */
+  const KETTE = ["flag", ["pendown"], ["repeat", 4, [["repeat", 4, [["move", 40], ["right", 90]]], ["move", 60]]]];
+  const kStart = { x: -150, y: 60, dir: 90 };
+  B.create($("b5"), { mode: "frei", edit: false, start: kStart, ziel: KETTE,
+    script: ["!flag", "!pendown", ["!repeat", 4, [["!repeat", 4, [["!move", 40], ["!right", 90], ["move", 60]]]]]],
+    check(tr) {
+      const s = tr.script, outer = loops(s)[0], inner = loops(outer.body)[0], m = where(s, isMove(60));
+      if (m.parent === inner) return "<em>gehe 60</em> steht noch in der <strong>inneren</strong> Schleife. Dort läuft er 16-mal – in jeder Ecke!";
+      if (m.parent === null) return "Jetzt steht <em>gehe 60</em> außerhalb der Schleifen und läuft nur einmal. Alle Fahnen liegen übereinander. Er muss in die <strong>äußere</strong> Schleife.";
+      if (outer.body.indexOf(m.node) < outer.body.indexOf(inner)) return "Fast! Robo geht jetzt <strong>vor</strong> jeder Fahne weiter. Zieh <em>gehe 60</em> <strong>unter</strong> die innere Schleife.";
+      return null;
+    },
+    ok: "✔ Fall gelöst! <em>gehe 60</em> läuft jetzt nach jeder Fahne – 4-mal statt 16-mal." });
+  hints($("hints5"), [
+    "Schau mit 👣 zu: Wann läuft <em>gehe 60</em>? Nach jeder Ecke oder nach jeder Fahne?",
+    "Robo soll erst eine ganze Fahne (ein Quadrat) malen und dann 60 Schritte weitergehen. Welche Schleife ist fertig, wenn ein Quadrat fertig ist?",
+    "Lösung: Zieh <em>gehe 60 er Schritt</em> aus der inneren Schleife heraus – direkt <strong>unter</strong> die innere Schleife, aber noch <strong>in</strong> die äußere.",
+  ]);
+
+  /* Plus · Blume mit 12 Quadraten */
+  const GROSS = ["flag", ["pendown"], ["repeat", 12, [["repeat", 4, [["move", 60], ["right", 90]]], ["right", 30]]]];
+  B.create($("bplus"), { mode: "frei", edit: true, echtzeit: true, start: { x: 0, y: 0, dir: 90 }, ziel: GROSS,
+    palette: ["flag", ["pendown"], ["repeat", 6], ["repeat", 4], ["move", 60], ["right", 90], ["right", 60]],
+    check(tr) {
+      const top = loops(tr.script)[0];
+      if (!top || !loops(top.body).length) return "Du brauchst eine Schleife in der Schleife – wie bei der Blume oben.";
+      return null;
+    },
+    ok: "✔ Eine Blume mit 12 Quadraten! 360 : 12 = 30 Grad." });
+  hints($("hintsplus"), [
+    "Bau zuerst die Blume aus Schritt 3 nach. Dann ändere zwei Zahlen.",
+    "Die äußere Schleife sagt, wie viele Quadrate: 12. Die Drehung danach: 360 : 12 = ?",
+    "Lösung: <em>wiederhole <strong>12</strong> mal</em> außen und danach <em>drehe dich um <strong>30</strong> Grad</em>.",
+  ]);
+
+  /* Kurz-Check */
+  quiz($("quiz"), [
+    { q: "Wie oft läuft der Block <em>gehe 10 er Schritt</em>?",
+      html: B.render(["flag", ["repeat", 5, [["repeat", 2, [["move", 10]]]]]], { small: true }),
+      options: ["2-mal", "5-mal", "7-mal", "10-mal"], right: 3,
+      miss: ["2 ist nur die innere Schleife. Sie läuft aber selbst 5-mal.", "5 ist nur die äußere Schleife. In jeder Runde läuft <em>gehe</em> 2-mal.",
+        "Nicht plus rechnen! In jeder der 5 Runden läuft <em>gehe</em> 2-mal: 2 + 2 + 2 + 2 + 2.", null],
+      why: "außen × innen: 5 × 2 = 10." },
+    { q: "Was malt Robo?",
+      html: B.render(["flag", ["pendown"], ["repeat", 3, [["repeat", 4, [["move", 50], ["right", 90]]], ["right", 120]]]], { small: true }),
+      options: ["ein Quadrat", "3 Quadrate, jedes gedreht", "4 Dreiecke", "12 Quadrate"], right: 1,
+      miss: ["Die äußere Schleife läuft 3 Runden. In jeder malt die innere ein Quadrat.", null,
+        "Die innere Schleife hat 4 Runden und 90 Grad – das ist ein Quadrat, kein Dreieck.",
+        "12 ist die Zahl der Linien: 3 × 4. Es sind aber nur 3 Quadrate."],
+      why: "Außen 3 Runden, innen ein Quadrat, dazwischen 120 Grad: 3 gedrehte Quadrate." },
+    { q: "In der Blume aus Schritt 3: Wie oft läuft <em>drehe dich um 60 Grad</em>?",
+      html: B.render(BLUME, { small: true }),
+      options: ["1-mal", "4-mal", "6-mal", "24-mal"], right: 2,
+      miss: ["Der Block steht in der äußeren Schleife. Die läuft 6 Runden.",
+        "4 ist die innere Schleife. Der Block steht aber nicht in ihr.", null,
+        "24-mal läuft <em>gehe 70</em>, weil es in der inneren Schleife steht. <em>drehe 60</em> steht nur in der äußeren."],
+      why: "Der Block steht in der äußeren Schleife, unter der inneren: 6 Runden → 6-mal." },
+    { q: "Robo soll eine Blume aus <strong>8 Quadraten</strong> malen. Wie weit dreht er sich nach jedem Quadrat?",
+      options: ["8 Grad", "45 Grad", "90 Grad", "360 Grad"], right: 1,
+      miss: ["8 ist die Zahl der Quadrate. Sie gehört in die äußere Schleife.", null,
+        "90 Grad sind die Ecken <strong>im</strong> Quadrat. Danach dreht sich Robo 360 : 8.",
+        "Mit 360 Grad dreht Robo einmal ganz herum – alle Quadrate lägen übereinander."],
+      why: "360 : 8 = 45 Grad." },
+  ]);
+
+  /* Freiwillig */
+  const WABE = ["flag", ["pendown"], ["repeat", 6, [["repeat", 6, [["move", 40], ["right", 60]]], ["right", 60]]]];
+  B.create($("bwabe"), { mode: "frei", echtzeit: true, start: { x: 0, y: 0, dir: 90 }, ziel: WABE,
+    palette: ["flag", ["pendown"], ["repeat", 6], ["move", 40], ["right", 60]],
+    check(tr) {
+      const top = loops(tr.script)[0];
+      if (!top || !loops(top.body).length) return "Du brauchst eine Schleife in der Schleife. Tipp: Du kannst <em>wiederhole 6 mal</em> zweimal holen.";
+      return null;
+    },
+    ok: "✔ Wie eine Bienenwabe! Innen ein Sechseck, außen 6 Stück." });
+  hints($("hintswabe"), [
+    "Die innere Schleife malt ein Sechseck: 6 Runden, 360 : 6 = 60 Grad.",
+    "Die äußere Schleife sagt: 6 Sechsecke. Danach dreht sich Robo – auch um 60 Grad.",
+    "Lösung: <em>wiederhole 6 mal</em> → darin <em>wiederhole 6 mal</em> (<em>gehe 40</em>, <em>drehe dich um 60 Grad</em>) → darunter <em>drehe dich um 60 Grad</em>.",
+  ]);
+  B.create($("bkreis"), { mode: "frei", edit: true, echtzeit: true, start: { x: 0, y: 0, dir: 90 },
+    palette: ["flag", ["pendown"], ["repeat", 10], ["move", 10], ["right", 30]],
+    script: ["flag", ["pendown"], ["repeat", 12, [["repeat", 18, [["move", 15], ["right", 20]]], ["right", 30]]]],
+    check(tr) {
+      const top = loops(tr.script)[0];
+      if (top && loops(top.body).length && tr.segs.length >= 20) return true;
+      return "Für eine Blume brauchst du eine Schleife in der Schleife.";
+    },
+    ok: "✔ Deine eigene Blume! Ändere die Zahlen und probier weiter." });
+
+  checklist($("checklist"), "k5-07");
+});
+</script>
+</body>
+</html>
