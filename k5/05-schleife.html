@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Die Schleife · Scratch-Kurs Klasse 5</title>
+<meta name="description" content="Lektion 5 im Scratch-Lernpfad: Warum wir Schleifen brauchen. Mit „wiederhole … mal“ Quadrat und Dreieck malen, Schritt für Schritt zuschauen und Fehler finden – direkt im Browser.">
+<link rel="canonical" href="https://scratch.herrseibert.de/k5/05-schleife.html">
+<!-- vorschau -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Scratch-Kurs">
+<meta property="og:locale" content="de_DE">
+<meta property="og:url" content="https://scratch.herrseibert.de/k5/05-schleife.html">
+<meta property="og:title" content="Die Schleife · Scratch-Kurs Klasse 5">
+<meta property="og:description" content="Lektion 5 im Scratch-Lernpfad: Warum wir Schleifen brauchen. Mit „wiederhole … mal“ Quadrat und Dreieck malen, Schritt für Schritt zuschauen und Fehler finden – direkt im Browser.">
+<meta property="og:image" content="https://scratch.herrseibert.de/vorschau.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Scratch-Kurs – Programmieren lernen Schritt für Schritt, mit Übungsbühne">
+<meta name="twitter:card" content="summary_large_image">
+<!-- /vorschau -->
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="stylesheet" href="../assets/kurs.css?v=852db3b491">
+<link rel="stylesheet" href="../assets/buehne.css?v=71ab1408ba">
+<script src="../assets/i18n.js?v=4588e8929d" data-page="k5-05-schleife" data-langs="de"></script>
+<script src="../assets/kurs.js?v=5fcc1de7cc"></script>
+<script src="../assets/buehne.js?v=2006410025"></script>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><img class="logo" src="../favicon.svg" alt="" width="34" height="34"> Scratch-Kurs <span>· Programmieren lernen</span></a>
+    <span class="spacer"></span>
+    <button class="theme-btn" type="button" aria-label="Hell oder dunkel umschalten">◐ Hell/Dunkel</button>
+  </div>
+</header>
+
+<main class="wrap">
+  <nav class="path" aria-label="Lernpfad Klasse 5">
+    <strong class="t">Klasse 5:</strong>
+    <ol>
+      <li class="soon"><span title="1 · Was ist Programmieren? (in Arbeit)">1</span></li>
+      <li class="soon"><span title="2 · Scratch kennenlernen (in Arbeit)">2</span></li>
+      <li class="soon"><span title="3 · Befehle der Reihe nach (in Arbeit)">3</span></li>
+      <li class="soon"><span title="4 · Malen mit dem Stift (in Arbeit)">4</span></li>
+      <li class="now"><span title="5 · Die Schleife" aria-current="step">5</span></li>
+      <li class="soon"><span title="6 · Schleifen üben (in Arbeit)">6</span></li>
+      <li class="soon"><span title="7 · Schleife in der Schleife (in Arbeit)">7</span></li>
+      <li class="soon"><span title="8 · Mein Projekt (in Arbeit)">8</span></li>
+    </ol>
+  </nav>
+
+  <section class="hero">
+    <h1>Die Schleife – Robo wiederholt für dich</h1>
+    <div class="meta">
+      <span class="chip">Klasse 5 · Lektion 5</span>
+      <span class="chip">⏱ ca. 35 Minuten</span>
+    </div>
+    <ul class="goals">
+      <li>Ich weiß, wozu man eine Schleife braucht.</li>
+      <li>Ich male mit „wiederhole … mal“ ein Quadrat und ein Dreieck.</li>
+      <li>Ich finde einen Fehler in einer Schleife.</li>
+    </ul>
+  </section>
+
+  <details class="card woerter">
+    <summary>📖 Scratch-Wörter für diese Lektion</summary>
+    <p class="note">Die Wörter links bleiben deutsch – so heißen sie in Scratch.</p>
+    <div class="tbl-scroll"><table class="plain">
+      <tr><th class="wort">die Schleife <small>die Schleifen</small></th><td>Ein Block, der andere Blöcke mehrmals ausführt.</td></tr>
+      <tr><th class="wort">wiederholen <small>er wiederholt</small></th><td>Etwas noch einmal und noch einmal machen.</td></tr>
+      <tr><th class="wort">der Block <small>die Blöcke</small></th><td>Ein Befehl in Scratch. Man setzt Blöcke zusammen wie Puzzleteile.</td></tr>
+      <tr><th class="wort">das Skript <small>die Skripte</small></th><td>Blöcke, die zusammenhängen. Das ist dein Programm.</td></tr>
+      <tr><th class="wort">die Ecke <small>die Ecken</small></th><td>Die Stelle, an der zwei Linien zusammenstoßen.</td></tr>
+      <tr><th class="wort">das Grad <small>90 Grad</small></th><td>So misst man, wie weit man sich dreht. Einmal ganz herum sind 360 Grad.</td></tr>
+      <tr><th class="wort">das Vieleck <small>die Vielecke</small></th><td>Eine Form mit vielen geraden Seiten und Ecken, z. B. Dreieck, Viereck, Fünfeck.</td></tr>
+    </table></div>
+  </details>
+
+  <section class="card">
+    <h2><span class="step-no">ℹ</span> So arbeitest du heute</h2>
+    <p class="lead">Du übst mit der <strong>Übungsbühne</strong> direkt hier im Browser. Sie funktioniert mit Maus und mit Finger.</p>
+    <ul class="tasks">
+      <li><span class="badge basis">Ziehen</span><span>Zieh Blöcke von <em>Blöcke</em> nach <em>Skript</em>. Tippen geht auch: Dann hängt der Block unten dran.</span></li>
+      <li><span class="badge basis">Start</span><span><strong>⚑ Start</strong> lässt Robo laufen. 🐢 ist die Zeitlupe, 👣 geht Block für Block.</span></li>
+      <li><span class="badge basis">Vorlage</span><span>Die graue gestrichelte Form ist das Ziel. Robo soll genau darüber malen.</span></li>
+    </ul>
+    <p class="note">Die Übungsbühne stellt Robo vor jedem Start an den Anfang zurück. Das echte Scratch macht das nicht – dazu am Ende mehr.</p>
+  </section>
+
+  <section class="card wdh">
+    <h2><span class="step-no">↺</span> Weißt du noch? <span class="chip">2 Minuten</span></h2>
+    <div id="wdh"></div>
+  </section>
+
+  <!-- 1 · Vorhersagen -->
+  <section class="card">
+    <h2><span class="step-no">1</span> Überleg: Was malt Robo?</h2>
+    <p class="lead">Lies das Skript von oben nach unten. Starte noch nichts!</p>
+    <div class="script-row">
+      <figure><div data-script='["flag",["pendown"],["move",100],["right",90],["move",100],["right",90],["move",100],["right",90],["move",100],["right",90]]' data-small></div></figure>
+      <div style="flex:1;min-width:220px">
+        <p><strong>Überleg:</strong> Was malt Robo, wenn man auf ⚑ klickt?</p>
+        <div class="choices" id="pred1">
+          <button type="button" class="choice"><svg width="46" height="34" viewBox="0 0 46 34" aria-hidden="true"><path d="M4 17H42" stroke="currentColor" stroke-width="3" fill="none"/></svg><br>eine lange Linie</button>
+          <button type="button" class="choice"><svg width="46" height="34" viewBox="0 0 46 34" aria-hidden="true"><path d="M8 30L23 4L38 30Z" stroke="currentColor" stroke-width="3" fill="none"/></svg><br>ein Dreieck</button>
+          <button type="button" class="choice"><svg width="46" height="34" viewBox="0 0 46 34" aria-hidden="true"><path d="M8 3H36V31H8Z" stroke="currentColor" stroke-width="3" fill="none"/></svg><br>ein Quadrat</button>
+          <button type="button" class="choice"><svg width="46" height="34" viewBox="0 0 46 34" aria-hidden="true"><path d="M4 31V22H14V13H24V4H34" stroke="currentColor" stroke-width="3" fill="none"/></svg><br>eine Treppe</button>
+        </div>
+        <p class="fb" id="fb1"></p>
+      </div>
+    </div>
+    <div id="probe1" hidden>
+      <p><strong>Probier es aus:</strong> Klick auf ⚑ Start. Mit 🐢 siehst du es langsamer.</p>
+      <div id="b1"></div>
+    </div>
+  </section>
+
+  <!-- 2 · Warum Schleifen? -->
+  <section class="card">
+    <h2><span class="step-no">2</span> Das geht kürzer!</h2>
+    <p>Zähl die Blöcke im Skript von Schritt 1. Es sind <strong>10 Blöcke</strong>. Und immer wieder kommt dasselbe Paar:
+      <em>gehe 100</em> und <em>drehe dich 90</em>.</p>
+    <p><strong>Überleg:</strong> Robo soll ein Vieleck mit <strong>100 Ecken</strong> malen. Wie viele Blöcke bräuchtest du so?</p>
+    <div class="choices" id="pred2">
+      <button type="button" class="choice">etwa 10</button>
+      <button type="button" class="choice">etwa 100</button>
+      <button type="button" class="choice">über 200</button>
+    </div>
+    <p class="fb" id="fb2"></p>
+    <p class="rule">Was sich wiederholt, kommt in die <strong>Schleife</strong>.<br>Die Zahl sagt, <strong>wie oft</strong>.</p>
+    <div class="script-row">
+      <figure><div data-script='["flag",["pendown"],["move",100],["right",90],["move",100],["right",90],["move",100],["right",90],["move",100],["right",90]]' data-small></div><figcaption>Ohne Schleife: 10 Blöcke</figcaption></figure>
+      <figure><div data-script='["flag",["pendown"],["repeat",4,[["move",100],["right",90]]]]' data-small></div><figcaption>Mit Schleife: 5 Blöcke – malt genau dasselbe</figcaption></figure>
+    </div>
+    <p>Der Block <strong>wiederhole … mal</strong> sieht aus wie ein <strong>C</strong>. Die Blöcke <em>im</em> C laufen in jeder Runde einmal.</p>
+    <h3 class="sub">So zeichnen Informatiker das: das Struktogramm</h3>
+    <p class="note">Du musst kein Struktogramm zeichnen. Schau nur: Die Schleife ist ein Kasten, und was wiederholt wird, steht eingerückt darin.</p>
+    <div class="nsd" aria-label="Struktogramm: Stift ein, dann 4-mal wiederholen: gehe 100 Schritte, drehe dich 90 Grad nach rechts">
+      <div class="nsd-row">Stift einschalten</div>
+      <div class="nsd-loop">
+        <div class="nsd-head">wiederhole 4-mal</div>
+        <div class="nsd-body">
+          <div class="nsd-row">gehe 100 Schritte</div>
+          <div class="nsd-row">drehe dich 90° nach rechts</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 · Zuschauen -->
+  <section class="card">
+    <h2><span class="step-no">3</span> Schritt für Schritt zuschauen</h2>
+    <div id="b3"></div>
+    <p>Drück immer wieder auf <strong>👣 Schritt</strong>. Der Block, der gerade läuft, <strong>leuchtet gelb</strong>.
+      Am wiederhole-Block steht, in welcher <strong>Runde</strong> Robo gerade ist.</p>
+    <p><strong>Überleg:</strong> Wie oft läuft der Block <em>drehe dich ↻ um 90 Grad</em>?</p>
+    <div class="choices" id="pred3">
+      <button type="button" class="choice">1-mal</button>
+      <button type="button" class="choice">4-mal</button>
+      <button type="button" class="choice">90-mal</button>
+      <button type="button" class="choice">5-mal</button>
+    </div>
+    <p class="fb" id="fb3"></p>
+  </section>
+
+  <!-- 4 · Puzzle -->
+  <section class="card">
+    <h2><span class="step-no">4</span> Bau das Quadrat selbst <span class="badge basis">Basis</span></h2>
+    <div id="b4"></div>
+    <p>Die Blöcke sind schon da – aber durcheinander. Zieh sie ins Skript, in der richtigen Reihenfolge.</p>
+    <p class="note">So kommt ein Block <strong>in</strong> die Schleife: Zieh ihn in die Lücke des wiederhole-Blocks, bis der blaue Strich dort erscheint.</p>
+  </section>
+
+  <!-- 5 · Verändern -->
+  <section class="card">
+    <h2><span class="step-no">5</span> Aus dem Quadrat wird ein Dreieck <span class="badge basis">Basis</span></h2>
+    <div id="b5"></div>
+    <p>Das Skript ist fast fertig. Schreib die richtigen Zahlen in die <strong>gelben Felder</strong>, damit Robo das graue Dreieck malt.</p>
+    <div id="hints5"></div>
+  </section>
+
+  <!-- 6 · Fehlerdetektiv -->
+  <section class="card">
+    <h2><span class="step-no">6</span> Fehlerdetektiv 🔍 <span class="badge basis">Basis</span></h2>
+    <div id="b6"></div>
+    <p>Mia wollte ein Quadrat malen. Klick auf ⚑ Start: Robo malt aber nur eine lange Linie.</p>
+    <p><strong>Die Detektiv-Fragen:</strong></p>
+    <ol class="howto">
+      <li>Was <strong>soll</strong> passieren?</li>
+      <li>Was <strong>passiert</strong> wirklich?</li>
+      <li><strong>Ab welchem Block</strong> läuft es anders?</li>
+    </ol>
+    <p>Repariere Mias Skript. Du musst nur <strong>einen Block verschieben</strong>.</p>
+    <div id="hints6"></div>
+  </section>
+
+  <!-- Plus -->
+  <section class="card">
+    <h2><span class="step-no">+</span> Kürzer machen: die Treppe <span class="badge plus">Plus</span></h2>
+    <p>Dieses Skript malt eine Treppe mit 3 Stufen. Es hat <strong>14 Blöcke</strong>.</p>
+    <div data-script='["flag",["pendown"],["move",40],["right",90],["move",40],["left",90],["move",40],["right",90],["move",40],["left",90],["move",40],["right",90],["move",40],["left",90]]' data-small></div>
+    <p>Bau dieselbe Treppe mit <strong>höchstens 7 Blöcken</strong>. Was wiederholt sich?</p>
+    <div id="bplus"></div>
+  </section>
+
+  <section class="card">
+    <h2><span class="step-no">✓</span> Kurz-Check</h2>
+    <div id="quiz"></div>
+  </section>
+
+  <section class="card merke">
+    <h2>Merke</h2>
+    <ul>
+      <li>Eine <strong>Schleife</strong> wiederholt die Blöcke, die in ihr stecken.</li>
+      <li>Die Zahl in <strong>wiederhole … mal</strong> sagt, wie oft.</li>
+      <li>Was <strong>in</strong> der Schleife steht, läuft in jeder Runde. Was <strong>darunter</strong> steht, läuft erst danach – nur einmal.</li>
+      <li>Vieleck: so viele Wiederholungen wie Ecken. Drehung = <strong>360 : Ecken</strong>.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2><span class="step-no">⚑</span> Jetzt in echt: Scratch</h2>
+    <p><a class="btn" href="https://scratch.mit.edu/projects/editor/" target="_blank" rel="noopener">Scratch in neuem Fenster öffnen ↗</a></p>
+    <ol class="howto">
+      <li>Unten links auf <strong>Erweiterung hinzufügen</strong> klicken und <strong>Malstift</strong> wählen.</li>
+      <li>Bau das Quadrat-Skript mit <strong>wiederhole 4 mal</strong> nach.</li>
+      <li>Klick auf die grüne Flagge ⚑.</li>
+    </ol>
+    <p class="note">In Scratch malt die Katze statt Robo. Sie bleibt nach dem Start dort stehen, wo sie aufgehört hat.
+      Damit sie immer am selben Platz anfängt, setz unter die Flagge: <em>lösche alles</em>, <em>gehe zu x: 0 y: 0</em> und <em>setze Richtung auf 90 Grad</em>.</p>
+  </section>
+
+  <section class="card">
+    <h2><span class="step-no">☑</span> Das kann ich</h2>
+    <ul class="checklist" id="checklist">
+      <li><label><input type="checkbox"> Ich kann erklären, wozu man eine Schleife braucht.</label></li>
+      <li><label><input type="checkbox"> Ich kann einen Block in eine Schleife ziehen.</label></li>
+      <li><label><input type="checkbox"> Ich kann mit einer Schleife ein Quadrat und ein Dreieck malen.</label></li>
+      <li><label><input type="checkbox"> Ich finde den Fehler, wenn ein Block außerhalb der Schleife steht.</label></li>
+    </ul>
+  </section>
+
+  <section class="card frei">
+    <h2><span class="step-no">★</span> Freiwillig</h2>
+    <p class="lead">Für alle, die schon fertig sind.</p>
+
+    <h3 class="sub"><span class="badge ueben">Üben</span> Vieleck-Werkstatt: das Fünfeck</h3>
+    <p>Male das graue Fünfeck. Ein Fünfeck hat 5 Ecken. Hol dir die Blöcke selbst.</p>
+    <div id="bfuenf"></div>
+    <div id="hintsfuenf"></div>
+
+    <h3 class="sub"><span class="badge expedition">★ Expedition</span> Fast ein Kreis</h3>
+    <p>Was malt Robo bei <em>wiederhole 36 mal: gehe 10, drehe dich ↻ um 10 Grad</em>? Bau es und probier es aus.
+      Danach: Schaffst du einen <strong>größeren</strong> Kreis? Und was passiert bei <em>wiederhole 18 mal … drehe dich um 20 Grad</em>?</p>
+    <div id="bkreis"></div>
+  </section>
+
+  <details class="card">
+    <summary><strong>Für Lehrkräfte: Ablauf und Zeit</strong></summary>
+    <table class="plain">
+      <tr><th>Teil</th><th>Zeit</th><th>Worum geht es?</th></tr>
+      <tr><td>Weißt du noch?</td><td>2 Min.</td><td>Drehen um 90°, Startblock</td></tr>
+      <tr><td>1 · Überleg</td><td>4 Min.</td><td>Vorhersagen, dann ausprobieren</td></tr>
+      <tr><td>2 · Das geht kürzer</td><td>6 Min.</td><td>Warum Schleifen? Merksatz, Struktogramm nur zeigen</td></tr>
+      <tr><td>3 · Zuschauen</td><td>4 Min.</td><td>Schritt-Modus, Runden zählen</td></tr>
+      <tr><td>4 · Puzzle</td><td>5 Min.</td><td>Blöcke in die Schleife ziehen</td></tr>
+      <tr><td>5 · Dreieck</td><td>5 Min.</td><td>Zahlen ändern, 360 : 3</td></tr>
+      <tr><td>6 · Fehlerdetektiv</td><td>5 Min.</td><td>Block außerhalb der Schleife</td></tr>
+      <tr><td>Kurz-Check</td><td>4 Min.</td><td>4 Fragen mit Rückmeldung</td></tr>
+    </table>
+    <p class="note">Plus und Freiwillig für Schnelle. „Jetzt in echt“ eignet sich als Hausaufgabe oder für den Anfang der nächsten Stunde.
+      Partnerarbeit bietet sich an: eine Person zieht die Blöcke, die andere liest vor und prüft – nach jeder Aufgabe wechseln.</p>
+  </details>
+
+  <nav class="pager">
+    <span>← Lektion 4: Malen mit dem Stift (in Arbeit)</span>
+    <span>Lektion 6: Schleifen üben (in Arbeit) →</span>
+  </nav>
+</main>
+
+<footer>
+  <div class="wrap t">Lernmaterial von <a href="https://herrseibert.de">herrseibert.de</a> · Lizenz <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.de">CC BY-SA 4.0</a> · ohne Tracking, ohne Cookies<br>Erstellt von der KI Claude von Anthropic.</div>
+  <div class="wrap t gh">Fehler gefunden oder eine Idee? → <a href="https://github.com/baumlaube/scratch-course">Kurs auf GitHub</a></div>
+  <div class="wrap t gh">Scratch ist ein Projekt der Scratch Foundation. Dieser Kurs ist kein offizielles Angebot der Scratch Foundation.</div>
+  <div class="wrap legal"><a href="../impressum.html">Impressum</a> · <a href="../datenschutz.html">Datenschutz</a></div>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const { feedback, pick, quiz, hints, checklist } = window.Kurs;
+  const B = window.Buehne;
+  const $ = (id) => document.getElementById(id);
+  const QUADRAT = ["flag", ["pendown"], ["repeat", 4, [["move", 100], ["right", 90]]]];
+  const LANG = ["flag", ["pendown"], ["move", 100], ["right", 90], ["move", 100], ["right", 90], ["move", 100], ["right", 90], ["move", 100], ["right", 90]];
+  const findOp = (list, op) => { for (const n of list) { if (n.op === op) return n; if (n.body) { const r = findOp(n.body, op); if (r) return r; } } return null; };
+  const inLoop = (list, op) => { const r = findOp(list, "repeat"); return !!(r && r.body.some((n) => n.op === op)); };
+
+  /* Weißt du noch? */
+  quiz($("wdh"), [
+    { q: "Robo soll abbiegen wie an der Ecke eines Quadrats. Um wie viel Grad dreht er sich?",
+      options: ["45 Grad", "90 Grad", "180 Grad", "360 Grad"], right: 1,
+      miss: ["45 Grad ist nur eine halbe Ecke – Robo läuft dann schräg weiter.", null,
+        "Bei 180 Grad dreht Robo ganz um und läuft zurück.", "Bei 360 Grad dreht sich Robo einmal ganz herum und schaut wieder in dieselbe Richtung."],
+      why: "Eine Ecke wie beim Quadrat ist ein rechter Winkel: 90 Grad." },
+    { q: "Kai klickt auf ⚑. Was passiert bei diesem Skript?",
+      html: B.render([["move", 100], ["say", "Hallo!", 2]], { small: true }),
+      options: ["Robo geht 100 Schritte und sagt „Hallo!“", "Robo sagt nur „Hallo!“", "Nichts"], right: 2,
+      miss: ["Ganz oben fehlt der Startblock. Ohne ihn weiß Scratch nicht, wann das Skript losgehen soll.",
+        "Auch das „sage“ läuft nicht: Oben fehlt der Startblock.", null],
+      why: "Jedes Skript braucht oben <em>Wenn ⚑ angeklickt wird</em>." },
+  ]);
+
+  /* 1 · Vorhersage, danach ausprobieren */
+  pick($("pred1"), { right: 2, fb: $("fb1"),
+    miss: ["Robo dreht sich nach jedem gehe-Block. Darum geht es um die Ecke.",
+      "Zähl die gehe-Blöcke: Es sind 4 Seiten, also kein Dreieck.", null,
+      "Für eine Treppe müsste sich Robo mal links, mal rechts drehen. Hier dreht er sich immer nach rechts (↻)."],
+    why: "Robo geht 4-mal 100 Schritte und dreht sich jedes Mal um 90 Grad nach rechts. Das ist ein Quadrat.",
+    onDone() { $("probe1").hidden = false; b1.el.dispatchEvent(new Event("resize")); } });
+  const b1 = B.create($("b1"), { mode: "lesen", script: LANG, start: { x: -50, y: 50, dir: 90 } });
+
+  /* 2 · Wie viele Blöcke? */
+  pick($("pred2"), { right: 2, fb: $("fb2"),
+    miss: ["10 Blöcke reichen nur fürs Quadrat mit 4 Ecken.",
+      "Pro Ecke brauchst du 2 Blöcke: gehe und drehe dich."],
+    why: "100 Ecken × 2 Blöcke = 200 Blöcke, dazu Flagge und Stift. Das will niemand abschreiben – dafür gibt es die Schleife." });
+
+  /* 3 · Schritt für Schritt */
+  B.create($("b3"), { mode: "lesen", script: QUADRAT, start: { x: -50, y: 50, dir: 90 } });
+  pick($("pred3"), { right: 1, fb: $("fb3"),
+    miss: ["Der Block steht zwar nur einmal da. Aber er ist in der Schleife – und die läuft 4 Runden.", null,
+      "90 ist der Winkel, also wie weit Robo sich dreht – nicht wie oft.",
+      "Schau auf die Zahl im wiederhole-Block: 4 Runden. Die Flagge zählt nicht mit."],
+    why: "Die Schleife läuft 4 Runden. In jeder Runde läuft jeder Block in ihr einmal." });
+
+  /* 4 · Puzzle */
+  B.create($("b4"), { mode: "puzzle", script: ["!flag"], start: { x: -50, y: 50, dir: 90 },
+    palette: [["move", 100], ["repeat", 4], ["right", 90], ["pendown"]], ziel: QUADRAT,
+    check(tr) {
+      const s = tr.script;
+      if (!findOp(s, "pendown")) return "Robo malt nichts. Fehlt der Block <em>schalte Stift ein</em>?";
+      if (!findOp(s, "repeat")) return "Es fehlt noch die Schleife.";
+      if (findOp(s, "move") && !inLoop(s, "move")) return "Robo geht nur einmal. Der gehe-Block muss <strong>in</strong> die Schleife.";
+      if (findOp(s, "right") && !inLoop(s, "right")) return "Robo dreht sich erst ganz am Ende. Der drehe-Block muss auch <strong>in</strong> die Schleife.";
+      return null;   // sonst: Zeichnung mit der Vorlage vergleichen
+    },
+    ok: "✔ Geschafft! 5 Blöcke statt 10 – und Robo malt dasselbe Quadrat." });
+
+  /* 5 · Dreieck: Zahlen einsetzen */
+  B.create($("b5"), { mode: "frei", edit: "gaps", start: { x: -50, y: 60, dir: 90 },
+    script: ["!flag", "!pendown", ["!repeat", "?", [["!move", 100], ["!right", "?"]]]],
+    ziel: ["flag", ["pendown"], ["repeat", 3, [["move", 100], ["right", 120]]]],
+    check(tr) {
+      const r = findOp(tr.script, "repeat"), d = findOp(tr.script, "right");
+      const n = parseFloat(String(r.args.n).replace(",", ".")), g = parseFloat(String(d.args.g).replace(",", "."));
+      if (n === 3 && g === 120) return true;
+      if (n === 3 && g === 60) return "Fast! 60 Grad ist der Winkel <strong>innen</strong> im Dreieck. Robo muss sich aber weiter drehen: 360 : 3 = ?";
+      if (n === 3) return "3 Wiederholungen sind richtig. Jetzt noch der Winkel: Einmal ganz herum sind 360 Grad – verteilt auf 3 Ecken.";
+      if (n === 4) return "Mit 4 Wiederholungen hat die Form 4 Seiten. Ein Dreieck hat 3.";
+      if (g === 120) return "Der Winkel stimmt! Wie viele Ecken hat ein Dreieck?";
+      return "Noch nicht. Ein Dreieck hat 3 Ecken. Nimm die Tipps unten, wenn du nicht weiterkommst.";
+    },
+    ok: "✔ Super! Wiederhole 3 mal, drehe dich 120 Grad: ein Dreieck." });
+  hints($("hints5"), [
+    "Ein Dreieck hat 3 Ecken. Wie oft muss Robo also gehen und sich drehen?",
+    "Wenn Robo einmal ganz herumfährt, dreht er sich insgesamt 360 Grad. Das teilt sich auf 3 Ecken auf: 360 : 3 = ?",
+    "Lösung: <em>wiederhole <strong>3</strong> mal</em> und <em>drehe dich ↻ um <strong>120</strong> Grad</em>.",
+  ]);
+
+  /* 6 · Fehlerdetektiv: drehe-Block steht unter der Schleife */
+  B.create($("b6"), { mode: "frei", edit: false, start: { x: -50, y: 50, dir: 90 },
+    script: ["!flag", "!pendown", ["!repeat", 4, [["!move", 100]]], ["right", 90]], ziel: QUADRAT,
+    check(tr) {
+      if (inLoop(tr.script, "right")) {
+        const r = findOp(tr.script, "repeat");
+        if (r.body[0].op === "right") return "Fast! Robo dreht sich jetzt <strong>vor</strong> dem Gehen. Zieh den drehe-Block <strong>unter</strong> gehe.";
+        return null;
+      }
+      return "Robo läuft nur geradeaus und dreht sich erst ganz am Ende. Wo muss der drehe-Block stehen, damit er in <strong>jeder Runde</strong> läuft?";
+    },
+    ok: "✔ Fall gelöst! Der drehe-Block stand unter der Schleife und lief nur einmal am Ende. Jetzt läuft er in jeder Runde." });
+  hints($("hints6"), [
+    "Schau mit 👣 zu: Wann dreht sich Robo zum ersten Mal?",
+    "Der drehe-Block läuft erst, wenn die Schleife ganz fertig ist. Er soll aber nach jedem gehe laufen.",
+    "Lösung: Zieh <em>drehe dich ↻ um 90 Grad</em> in die Schleife, direkt unter <em>gehe 100 er Schritt</em>.",
+  ]);
+
+  /* Plus · Treppe kürzer */
+  const TREPPE = ["flag", ["pendown"], ["repeat", 3, [["move", 40], ["right", 90], ["move", 40], ["left", 90]]]];
+  B.create($("bplus"), { mode: "frei", edit: true, start: { x: -100, y: -60, dir: 0 },
+    palette: ["flag", ["pendown"], ["move", 40], ["right", 90], ["left", 90], ["repeat", 3]],
+    ziel: TREPPE,
+    check(tr) {
+      if (!B.sameDrawing(tr.segs, B.simulate(TREPPE, { x: -100, y: -60, dir: 0 }).segs)) return "Die Treppe sieht noch anders aus als die Vorlage. Schau mit 🐢 zu.";
+      if (tr.blocks > 7) return `Die Treppe stimmt! Aber du hast ${tr.blocks} Blöcke. Es geht mit 7: Welche 4 Blöcke wiederholen sich?`;
+      return true;
+    },
+    ok: "✔ Stark! 7 Blöcke statt 14 – halb so viele." });
+
+  /* Kurz-Check */
+  quiz($("quiz"), [
+    { q: "Wie oft sagt Robo „Hallo!“?",
+      html: B.render(["flag", ["repeat", 3, [["say", "Hallo!", 1]]]], { small: true }),
+      options: ["1-mal", "2-mal", "3-mal", "4-mal"], right: 2,
+      miss: ["Der sage-Block steht nur einmal da – aber in der Schleife. Sie läuft 3 Runden.",
+        "Zähl die Runden: Die Zahl im wiederhole-Block ist 3.", null,
+        "Die Flagge zählt nicht mit. Die Schleife läuft 3 Runden."],
+      why: "Die Schleife läuft 3-mal. In jeder Runde sagt Robo einmal „Hallo!“." },
+    { q: "Was malt Robo?",
+      html: B.render(["flag", ["pendown"], ["repeat", 4, [["move", 50]]], ["right", 90]], { small: true }),
+      options: ["ein Quadrat", "eine lange Linie", "vier kleine Quadrate", "gar nichts"], right: 1,
+      miss: ["Der drehe-Block steht <strong>unter</strong> der Schleife. Er läuft erst ganz am Ende – nur einmal.", null,
+        "In der Schleife steht nur gehe. Robo dreht sich in den Runden gar nicht.",
+        "Der Stift ist eingeschaltet, also malt Robo eine Linie."],
+      why: "Robo geht 4-mal 50 Schritte geradeaus: eine lange Linie. Erst danach dreht er sich." },
+    { q: "Robo soll ein Sechseck malen (6 Ecken). Welche Zahlen passen?",
+      options: ["wiederhole 6 mal, drehe 90 Grad", "wiederhole 60 mal, drehe 6 Grad", "wiederhole 6 mal, drehe 60 Grad", "wiederhole 4 mal, drehe 60 Grad"], right: 2,
+      miss: ["90 Grad passt zum Quadrat: 360 : 4 = 90. Beim Sechseck rechnest du 360 : 6.",
+        "Das wird ein Vieleck mit 60 Ecken – fast ein Kreis.", null,
+        "Ein Sechseck hat 6 Ecken. Dann brauchst du auch 6 Wiederholungen."],
+      why: "6 Ecken → wiederhole 6 mal. Drehung: 360 : 6 = 60 Grad." },
+    { q: "Wozu braucht man eine Schleife?",
+      options: ["Damit das Skript startet", "Damit Robo schneller läuft", "Damit Robo sich dreht", "Damit man gleiche Blöcke nicht immer wieder hinschreiben muss"], right: 3,
+      miss: ["Zum Starten ist <em>Wenn ⚑ angeklickt wird</em> da.",
+        "Die Schleife macht nichts schneller. Sie spart nur Blöcke.",
+        "Drehen macht der Block <em>drehe dich</em>. Die Schleife wiederholt nur, was in ihr steht."],
+      why: "Eine Schleife wiederholt Blöcke. So wird das Skript kurz und übersichtlich." },
+  ]);
+
+  /* Freiwillig */
+  const FUENF = ["flag", ["pendown"], ["repeat", 5, [["move", 80], ["right", 72]]]];
+  B.create($("bfuenf"), { mode: "frei", start: { x: -40, y: 70, dir: 90 },
+    palette: ["flag", ["pendown"], ["move", 80], ["right", 90], ["repeat", 4]], ziel: FUENF,
+    ok: "✔ Ein Fünfeck! 360 : 5 = 72 Grad." });
+  hints($("hintsfuenf"), [
+    "Du brauchst die gleichen Blöcke wie beim Quadrat. Nur zwei Zahlen ändern sich.",
+    "5 Ecken → wiederhole 5 mal. Drehung: 360 : 5 = ?",
+    "Lösung: <em>wiederhole 5 mal</em>, darin <em>gehe 80 er Schritt</em> und <em>drehe dich ↻ um 72 Grad</em>.",
+  ]);
+  B.create($("bkreis"), { mode: "frei", start: { x: 0, y: -60, dir: 90 },
+    palette: ["flag", ["pendown"], ["move", 10], ["right", 10], ["repeat", 36]],
+    check(tr) {
+      if (tr.segs.length >= 18 && Math.hypot(tr.x - 0, tr.y + 60) < 1) return true;
+      if (tr.segs.length >= 18) return "Schön rund – aber Robo ist noch nicht wieder am Anfang. Dreht er sich insgesamt 360 Grad?";
+      return "Bau die Schleife: wiederhole 36 mal, darin gehe 10 und drehe dich 10 Grad.";
+    },
+    ok: "✔ Fast ein Kreis – aus lauter kleinen geraden Linien! Probier jetzt andere Zahlen." });
+
+  checklist($("checklist"), "k5-05");
+});
+</script>
+</body>
+</html>

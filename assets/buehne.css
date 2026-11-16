@@ -1,0 +1,138 @@
+/* Übungsbühne und Scratch-Blöcke · Scratch-Kurs
+   Blockfarben wie die Kategorien in Scratch 3, Formen selbst gezeichnet.
+   Lizenz: CC BY-SA 4.0 · Erstellt von der KI Claude von Anthropic. */
+:root {
+  --sb-motion: #4c97ff; --sb-motion-b: #3373cc;
+  --sb-looks: #9966ff; --sb-looks-b: #774dcb;
+  --sb-events: #ffbf00; --sb-events-b: #cc9900;
+  --sb-control: #ffab19; --sb-control-b: #cf8b17;
+  --sb-pen: #0fbd8c; --sb-pen-b: #0b8e69;
+  --ws: #f9f9fb;
+}
+:root[data-theme="dark"] { --ws: #1d2530; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --ws: #1d2530; } }
+
+/* ---------- Blöcke ---------- */
+.sb-stack { display: flex; flex-direction: column; align-items: flex-start; }
+.sb {
+  --c: var(--sb-motion); --b: var(--sb-motion-b);
+  position: relative; display: inline-flex; align-items: center; gap: .32em; flex-wrap: nowrap;
+  min-height: 40px; padding: 5px 11px 7px; color: #fff; background: var(--c);
+  border: 1px solid var(--b); border-radius: 5px;
+  font: 600 15px/1.2 system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", sans-serif; white-space: nowrap;
+  -webkit-user-select: none; user-select: none; -webkit-touch-callout: none;
+}
+.sb-motion { --c: var(--sb-motion); --b: var(--sb-motion-b); }
+.sb-looks { --c: var(--sb-looks); --b: var(--sb-looks-b); }
+.sb-events { --c: var(--sb-events); --b: var(--sb-events-b); }
+.sb-control { --c: var(--sb-control); --b: var(--sb-control-b); }
+.sb-pen { --c: var(--sb-pen); --b: var(--sb-pen-b); }
+/* Nase unten (greift in den nächsten Block) und Kerbe oben */
+.sb::after, .sb-c-foot::after, .sb-c-head::after {
+  content: ""; position: absolute; left: 14px; bottom: -7px; width: 24px; height: 7px; z-index: 1;
+  background: var(--c); border: 1px solid var(--b); border-top: 0; border-radius: 0 0 6px 6px;
+}
+.sb.sb-c::after { display: none; }
+.sb::before {
+  content: ""; position: absolute; left: 14px; top: -1px; width: 24px; height: 6px;
+  background: rgba(0, 0, 0, .14); border-radius: 0 0 6px 6px;
+}
+.sb-hat::before, .sb-c::before { display: none; }
+.sb-hat { border-radius: 22px 22px 5px 5px; padding-top: 13px; min-width: 190px; }
+.sb-flag { width: 22px; height: 22px; flex: none; }
+.sb-ico { font-size: 18px; line-height: 1; }
+.sb-in {
+  display: inline-block; min-width: 30px; padding: 3px 9px; border-radius: 999px; border: 1px solid rgba(0,0,0,.15);
+  background: #fff; color: #575e75; font: 600 15px/1.2 system-ui, sans-serif; text-align: center;
+}
+input.sb-in { width: auto; cursor: text; -webkit-user-select: text; user-select: text; }
+input.sb-in:focus { outline: 3px solid rgba(255, 255, 255, .7); outline-offset: 1px; }
+.sb-in.sb-txt { border-radius: 6px; }
+.sb-in.sb-gap { background: #fff4c2; border: 2px dashed #b38b00; color: #3d3000; }
+/* C-Block (wiederhole) */
+.sb-c { padding: 0; flex-direction: column; align-items: stretch; background: var(--c); }
+.sb-c-head { position: relative; display: flex; align-items: center; gap: .32em; padding: 5px 11px 7px; min-height: 40px; }
+.sb-c-head::after { left: 30px; }
+.sb-c-mid { display: flex; padding-left: 16px; }
+.sb-c-mid > .sb-stack { background: var(--ws); min-height: 36px; min-width: 150px; border-radius: 5px 0 0 5px; padding: 0; }
+.sb-c-foot { position: relative; height: 22px; border-radius: 0 0 5px 5px; }
+/* Bild im Text: etwas kleiner, nicht ziehbar */
+.sb-static { margin: 10px 0; }
+.sb-static .sb { cursor: default; }
+.sb-small .sb, .sb-small .sb-in { font-size: 13px; }
+.sb-small .sb, .sb-small .sb-c-head { min-height: 34px; }
+.script-row { display: flex; gap: 20px; flex-wrap: wrap; align-items: flex-start; margin: 10px 0; }
+.script-row > figure { margin: 0; }
+.script-row figcaption { font-size: 14px; color: var(--muted); margin-top: 8px; font-weight: 700; }
+
+/* Lauf: aktueller Block leuchtet, Runden-Zähler */
+.sb.sb-run:not(.sb-c), .sb-c.sb-run > .sb-c-head { box-shadow: 0 0 0 3px #fff36b, 0 0 12px 3px #ffd400; z-index: 2; }
+.sb-c.sb-run > .sb-c-head { border-radius: 5px; }
+.sb-count {
+  margin-left: 8px; padding: 2px 9px; border-radius: 999px; background: #fff36b; color: #4a3b00;
+  font-size: 13.5px; font-weight: 800;
+}
+
+/* ---------- Übungsbühne ---------- */
+.buehne {
+  display: grid; grid-template-columns: minmax(250px, 360px) minmax(0, 1fr); gap: 16px; align-items: start;
+  margin: 14px 0; padding: 12px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface-2);
+}
+.buehne-lesen { grid-template-columns: minmax(250px, 360px) minmax(0, 1fr); }
+.buehne-canvas { position: relative; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; background: #fff; }
+.buehne-canvas canvas { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; }
+.buehne-bubble {
+  position: absolute; max-width: 140px; padding: 5px 10px; background: #fff; color: #222; border: 2px solid #b8c0cc;
+  border-radius: 14px; font: 600 14px/1.3 system-ui, sans-serif; pointer-events: none;
+}
+.buehne-ctrl { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin-top: 10px; }
+.buehne-ctrl .btn { padding: 7px 12px; font-size: 15px; }
+.buehne-ctrl .go { background: #2e9d3a; }
+.buehne-ctrl .go .sb-flag { width: 20px; height: 20px; background: #fff; border-radius: 4px; padding: 1px; }
+.buehne-speed { display: inline-flex; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+.buehne-speed button { font: inherit; font-size: 18px; padding: 4px 10px; border: 0; background: var(--surface); cursor: pointer; opacity: .55; }
+.buehne-speed button.on { opacity: 1; background: var(--fix-bg); }
+.buehne-fb { margin-top: 10px; }
+.buehne-label { font-size: 13px; font-weight: 800; color: var(--muted); text-transform: uppercase; letter-spacing: .05em; margin: 0 0 6px; }
+.buehne-count { text-transform: none; letter-spacing: 0; font-weight: 600; }
+.buehne-palette {
+  display: flex; flex-wrap: wrap; gap: 14px 12px; align-items: flex-start; padding: 12px; min-height: 64px;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 10px; margin-bottom: 14px;
+}
+.buehne-palette .sb, .buehne-script .sb:not(.sb-lock) { cursor: grab; touch-action: none; }
+.buehne-script {
+  min-height: 230px; padding: 14px 12px 26px; background: var(--ws); border: 2px dashed var(--line); border-radius: 10px;
+  overflow-x: auto;
+}
+.buehne-script .sb-lock { cursor: not-allowed; }
+.buehne-script .sb-lock::before { display: none; }
+.buehne-empty { margin: 0; color: var(--muted); font-size: 15px; white-space: normal; }
+.buehne-tools { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-top: 10px; }
+.buehne-tools .btn { padding: 6px 12px; font-size: 14px; }
+.buehne-tip { font-size: 13.5px; color: var(--muted); }
+.buehne-ghost { position: fixed; left: 0; top: 0; z-index: 1000; pointer-events: none; opacity: .9; filter: drop-shadow(0 6px 10px rgba(0,0,0,.3)); }
+.buehne-mark { position: absolute; left: 0; top: 0; z-index: 999; width: 160px; height: 6px; border-radius: 3px; background: #1f6feb; pointer-events: none; display: none; }
+html.buehne-dragging, html.buehne-dragging * { cursor: grabbing !important; }
+@media (max-width: 720px) {
+  .buehne { grid-template-columns: minmax(0, 1fr); padding: 10px; }
+  .buehne-canvas { max-width: 420px; }
+  .buehne-script { min-height: 180px; }
+}
+
+/* ---------- Struktogramm (nur zum Ansehen) ---------- */
+.nsd { display: inline-block; min-width: 220px; border: 2px solid var(--text); font-size: 15px; background: var(--surface); margin: 8px 0; }
+.nsd-row { padding: 6px 12px; border-top: 2px solid var(--text); }
+.nsd > .nsd-row:first-child, .nsd-loop > .nsd-row:first-child { border-top: 0; }
+.nsd-loop { border-top: 2px solid var(--text); }
+.nsd-loop > .nsd-head { padding: 6px 12px; font-weight: 700; }
+.nsd-loop > .nsd-body { margin-left: 28px; border-left: 2px solid var(--text); border-top: 2px solid var(--text); }
+.nsd-body > .nsd-row:first-child { border-top: 0; }
+
+/* ---------- Hilfe-Leiter ---------- */
+.hints-list { margin: 8px 0; padding-inline-start: 22px; }
+.hints-list li { margin: 6px 0; }
+.hints-list li.hints-sol { list-style: none; margin-inline-start: -22px; padding: 8px 12px; border-radius: 10px; background: var(--fix-bg); }
+.quiz-extra { margin: 4px 0 8px; }
+
+/* ---------- Kursübersicht: Lektion noch in Arbeit ---------- */
+.soon { opacity: .55; }
