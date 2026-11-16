@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projekt Fangspiel 2: Meteore und Ziel · Scratch-Kurs Klasse 6</title>
+<meta name="description" content="Lektion 8 im Scratch-Lernpfad Klasse 6: Projekt Fangspiel, Teil 2. Meteore, ein Ziel und „Game over“ – mit falls, falls … sonst und wiederhole bis wird das Spiel fertig. Abschluss von Klasse 6.">
+<link rel="canonical" href="https://scratch.herrseibert.de/k6/08-fangspiel-fertig.html">
+<!-- vorschau -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Scratch-Kurs">
+<meta property="og:locale" content="de_DE">
+<meta property="og:url" content="https://scratch.herrseibert.de/k6/08-fangspiel-fertig.html">
+<meta property="og:title" content="Projekt Fangspiel 2: Meteore und Ziel · Scratch-Kurs Klasse 6">
+<meta property="og:description" content="Lektion 8 im Scratch-Lernpfad Klasse 6: Projekt Fangspiel, Teil 2. Meteore, ein Ziel und „Game over“ – mit falls, falls … sonst und wiederhole bis wird das Spiel fertig. Abschluss von Klasse 6.">
+<meta property="og:image" content="https://scratch.herrseibert.de/vorschau.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Scratch-Kurs – Programmieren lernen Schritt für Schritt, mit Übungsbühne">
+<meta name="twitter:card" content="summary_large_image">
+<!-- /vorschau -->
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="stylesheet" href="../assets/kurs.css?v=48917f175f">
+<link rel="stylesheet" href="../assets/buehne.css?v=a89e0c4e3f">
+<script src="../assets/i18n.js?v=4588e8929d" data-page="k6-08-fangspiel-fertig" data-langs="de"></script>
+<script src="../assets/kurs.js?v=9e315750a5"></script>
+<script src="../assets/buehne.js?v=ad43812cde"></script>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><img class="logo" src="../favicon.svg" alt="" width="34" height="34"> Scratch-Kurs <span>· Programmieren lernen</span></a>
+    <span class="spacer"></span>
+    <button class="theme-btn" type="button" aria-label="Hell oder dunkel umschalten">◐ Hell/Dunkel</button>
+  </div>
+</header>
+
+<main class="wrap">
+  <nav class="path" aria-label="Lernpfad Klasse 6">
+    <strong class="t">Klasse 6:</strong>
+    <ol>
+      <li class="done"><a href="01-start-check.html" title="1 · Start-Check">1</a></li>
+      <li class="done"><a href="02-steuern.html" title="2 · Steuern mit Tasten und Finger">2</a></li>
+      <li class="done"><a href="03-falls-dann.html" title="3 · Robo entscheidet: falls … dann">3</a></li>
+      <li class="done"><a href="04-falls-sonst.html" title="4 · Zwei Wege: falls … sonst">4</a></li>
+      <li class="done"><a href="05-wiederhole-bis.html" title="5 · Bis es passt: wiederhole bis">5</a></li>
+      <li class="done"><a href="06-alles-zusammen.html" title="6 · Alles zusammen">6</a></li>
+      <li class="done"><a href="07-projekt-fangspiel.html" title="7 · Projekt Fangspiel 1: Robo jagt Sterne">7</a></li>
+      <li class="now"><span title="8 · Projekt Fangspiel 2: Meteore und Ziel" aria-current="step">8</span></li>
+    </ol>
+  </nav>
+
+  <section class="hero">
+    <h1>Projekt Fangspiel 2: Meteore und Ziel</h1>
+    <div class="meta">
+      <span class="chip">Klasse 6 · Lektion 8</span>
+      <span class="chip">⏱ ca. 35 Minuten</span>
+      <span class="chip">Projekt: Teil 2 von 2</span>
+    </div>
+    <ul class="goals">
+      <li>Ich baue ein „Game over“ mit <em>falls</em> und <em>stoppe alles</em>.</li>
+      <li>Ich baue ein Ziel: Die Spielschleife läuft, <strong>bis</strong> Robo im Ziel ist.</li>
+      <li>Ich teste mein Spiel, passe es an – und kann zeigen, was ich in Klasse 6 gelernt habe.</li>
+    </ul>
+  </section>
+
+  <details class="card woerter">
+    <summary>📖 Scratch-Wörter für dieses Projekt</summary>
+    <p class="note">Die Wörter links bleiben deutsch – so heißen sie in Scratch.</p>
+    <div class="tbl-scroll"><table class="plain">
+      <tr><th class="wort">der Meteor <small>die Meteore</small></th><td>Ein Stein, der durchs All fliegt. Im Spiel: das Hindernis.</td></tr>
+      <tr><th class="wort">das Hindernis <small>die Hindernisse</small></th><td>Etwas, dem man ausweichen muss.</td></tr>
+      <tr><th class="wort">Game over <small>–</small></th><td>Englisch für „Spiel vorbei“: Du hast verloren.</td></tr>
+      <tr><th class="wort">stoppe alles <small>–</small></th><td>Der Block hält das ganze Programm an – alle Skripte.</td></tr>
+      <tr><th class="wort">die Schwierigkeit <small>die Schwierigkeiten</small></th><td>Wie leicht oder schwer ein Spiel ist.</td></tr>
+    </table></div>
+  </details>
+
+  <section class="card">
+    <h2><span class="step-no">ℹ</span> So arbeitest du heute</h2>
+    <p class="lead">Die Steuerung und die Sterne vom letzten Mal sind schon da. Heute machst du daraus ein richtiges Spiel.</p>
+    <ul class="tasks">
+      <li><span class="badge basis">Tasten</span><span>Am PC: Pfeiltasten (vorher einmal auf die Bühne tippen). Am iPad: die <strong>Knöpfe unter der Bühne</strong> halten.</span></li>
+      <li><span class="badge basis">Testen</span><span>Nach jedem Schritt: ⚑ Start und spielen. Erst wenn es klappt, geht es weiter.</span></li>
+      <li><span class="badge basis">Zu zweit</span><span>Eine Person baut, die andere testet. Nach jedem Schritt wechseln.</span></li>
+    </ul>
+  </section>
+
+  <section class="card wdh">
+    <h2><span class="step-no">↺</span> Weißt du noch? <span class="chip">2 Minuten</span></h2>
+    <div id="wdh"></div>
+  </section>
+
+  <!-- 1 · Überleg -->
+  <section class="card">
+    <h2><span class="step-no">1</span> Überleg: Wohin mit dem Meteor? <span class="chip">3 Minuten</span></h2>
+    <p>Ein Meteor fliegt über die Bühne. Berührt Robo ihn, ist das Spiel aus. Robo muss also <strong>immer wieder</strong> fragen: <em>Wird Meteor berührt?</em></p>
+    <p><strong>Überleg:</strong> Wo muss diese Frage stehen?</p>
+    <div class="choices" id="pred1">
+      <button type="button" class="choice">ganz oben, gleich unter <em>Wenn ⚑ angeklickt wird</em></button>
+      <button type="button" class="choice"><strong>in</strong> der Spielschleife, bei den Tasten-Fragen</button>
+      <button type="button" class="choice">in einem eigenen Skript ohne Schleife</button>
+    </div>
+    <p class="fb" id="fb1"></p>
+  </section>
+
+  <!-- 2 · Game over -->
+  <section class="card">
+    <h2><span class="step-no">2</span> Game over <span class="badge basis">Basis</span> <span class="chip">6 Minuten</span></h2>
+    <p>Bau in die Spielschleife: <em>falls wird Meteor berührt?, dann</em> → <em>sage Autsch!</em> → <em>stoppe alles</em>.
+      Dann teste: Flieg absichtlich gegen den Meteor.</p>
+    <div id="b2"></div>
+    <p class="note">Den Meteor wählst du im Sechseck <em>wird … berührt?</em> aus der Liste: Mauszeiger, Rand, Stern – oder <strong>Meteor</strong>.</p>
+  </section>
+
+  <!-- 3 · Ziel -->
+  <section class="card">
+    <h2><span class="step-no">3</span> Das Ziel: wiederhole bis <span class="badge basis">Basis</span> <span class="chip">7 Minuten</span></h2>
+    <p>Jetzt soll man auch <strong>gewinnen</strong> können: Oben rechts ist das grüne Ziel. Dafür ist die Spielschleife jetzt <em>wiederhole bis</em>:
+      Das Spiel läuft, bis Robo im Ziel ist. Danach sagt er „Gewonnen!“.</p>
+    <p><strong>Überleg:</strong> Welche Bedingung gehört in das gelbe Feld? Zieh sie hinein. Dann spiel: Sammle Sterne, weich dem Meteor aus – und flieg ins Ziel.</p>
+    <div id="b3"></div>
+  </section>
+
+  <!-- 4 · Fehlerdetektiv -->
+  <section class="card">
+    <h2><span class="step-no">4</span> Fehlerdetektiv 🔍 <span class="badge basis">Basis</span> <span class="chip">5 Minuten</span></h2>
+    <p>Elif hat das Spiel nachgebaut. Klick auf ⚑: Robo ruft sofort „Gewonnen!“ – obwohl er noch gar nicht im Ziel ist.</p>
+    <div id="b4"></div>
+    <ol class="howto">
+      <li>Was <strong>soll</strong> passieren?</li>
+      <li>Was <strong>passiert</strong> wirklich? Wann läuft <em>sage Gewonnen!</em>?</li>
+      <li><strong>Wo</strong> muss der Block stehen?</li>
+    </ol>
+    <p>Repariere Elifs Spiel und flieg ins Ziel. Du musst nur <strong>einen Block verschieben</strong>.</p>
+    <div id="hints4"></div>
+  </section>
+
+  <!-- 5 · Stand 2 -->
+  <section class="card">
+    <h2><span class="step-no">5</span> Dein Spiel, Stand 2: spielen und anpassen <span class="badge basis">Basis</span> <span class="chip">6 Minuten</span></h2>
+    <p>Das ist das fertige Spiel. Wähl die <strong>Schwierigkeit</strong> – dein Skript nimmst du mit. Wie viele Sterne schaffst du, bevor du ins Ziel fliegst?</p>
+    <div class="choices" id="stufe" role="group" aria-label="Schwierigkeit">
+      <button type="button" class="choice" data-stufe="0">leicht: 1 Meteor</button>
+      <button type="button" class="choice" data-stufe="1">mittel: 2 Meteore</button>
+      <button type="button" class="choice" data-stufe="2">schwer: 3 schnelle Meteore</button>
+    </div>
+    <div id="b5a"></div><div id="b5b" hidden></div><div id="b5c" hidden></div>
+    <p><strong>Anpassen:</strong> Tipp im Skript auf die Zahlen. Wie schnell soll Robo sein? Wo soll er starten? Was soll er sagen?</p>
+  </section>
+
+  <!-- 6 · Rückblick -->
+  <section class="card">
+    <h2><span class="step-no">6</span> Alles drin, was du in Klasse 6 gelernt hast <span class="chip">2 Minuten</span></h2>
+    <p class="note">Nur anschauen: das Struktogramm deines Spiels. Findest du alles wieder?</p>
+    <div class="script-row">
+      <figure>
+        <div class="nsd" aria-label="Struktogramm des Spiels: gehe zu x minus 200 y 0. Wiederhole bis Farbe grün berührt: vier Verzweigungen für die Pfeiltasten, dann Verzweigung Meteor berührt? Wenn wahr: sage Autsch, stoppe alles. Danach: sage Gewonnen.">
+          <div class="nsd-row">gehe zu x: −200 y: 0</div>
+          <div class="nsd-loop">
+            <div class="nsd-head">wiederhole bis Farbe grün berührt</div>
+            <div class="nsd-body">
+              <div class="nsd-if"><div class="nsd-cond"><span class="nsd-q">Pfeil rechts?</span><span class="nsd-w">wahr</span><span class="nsd-f">falsch</span></div><div class="nsd-cols"><div class="nsd-col"><div class="nsd-row">ändere x um 5</div></div><div class="nsd-col"><div class="nsd-row nsd-leer">–</div></div></div></div>
+              <div class="nsd-row nsd-leer">… genauso für ◀ ▲ ▼ …</div>
+              <div class="nsd-if"><div class="nsd-cond"><span class="nsd-q">Meteor berührt?</span><span class="nsd-w">wahr</span><span class="nsd-f">falsch</span></div><div class="nsd-cols"><div class="nsd-col"><div class="nsd-row">sage „Autsch!“</div><div class="nsd-row">stoppe alles</div></div><div class="nsd-col"><div class="nsd-row nsd-leer">–</div></div></div></div>
+            </div>
+          </div>
+          <div class="nsd-row">sage „Gewonnen!“</div>
+        </div>
+        <figcaption>Dein Spiel als Struktogramm</figcaption>
+      </figure>
+      <div style="flex:1;min-width:220px">
+        <p><strong>Das steckt in deinem Spiel:</strong></p>
+        <ul>
+          <li><strong>Bedingungen</strong> (Sechsecke): Taste gedrückt? Meteor berührt? Farbe grün berührt? – <a href="03-falls-dann.html">Lektion 3</a></li>
+          <li><strong>falls … dann</strong>: für jede Taste und für den Meteor – <a href="03-falls-dann.html">Lektion 3</a></li>
+          <li><strong>falls … sonst</strong>: war für die Steuerung die falsche Wahl – <a href="04-falls-sonst.html">Lektion 4</a></li>
+          <li><strong>wiederhole bis</strong>: die Spielschleife bis zum Ziel – <a href="05-wiederhole-bis.html">Lektion 5</a></li>
+          <li><strong>Schachtelung</strong>: falls in der Schleife – <a href="06-alles-zusammen.html">Lektion 6</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Plus -->
+  <section class="card">
+    <h2><span class="step-no">+</span> Turbo <span class="badge plus">Plus</span> <span class="chip">für Schnelle</span></h2>
+    <p>Hältst du zusätzlich die <strong>Leertaste</strong>, fliegt Robo doppelt so schnell nach rechts. Bau ein <em>falls … sonst</em> <strong>in</strong> das falls für ▶:
+      Leertaste gedrückt? Dann x um 10. Sonst x um 5. Flieg dann ins Ziel.</p>
+    <div id="bplus"></div>
+  </section>
+
+  <section class="card">
+    <h2><span class="step-no">✓</span> Kurz-Check <span class="chip">4 Minuten</span></h2>
+    <div id="quiz"></div>
+  </section>
+
+  <section class="card merke">
+    <h2>Merke</h2>
+    <ul>
+      <li>Ein „Game over“ ist ein <em>falls</em> in der Spielschleife: <em>falls wird Meteor berührt?</em> → <em>stoppe alles</em>.</li>
+      <li><em>stoppe alles</em> hält das ganze Programm an.</li>
+      <li>Mit <em>wiederhole bis</em> läuft das Spiel, <strong>bis</strong> das Ziel erreicht ist. Was danach kommt, steht <strong>unter</strong> der Schleife.</li>
+      <li>Ein Spiel wird gut durch <strong>Testen und Anpassen</strong>.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2><span class="step-no">⚑</span> Jetzt in echt: Scratch <span class="chip">zu Hause oder nächste Stunde</span></h2>
+    <p><a class="btn" href="https://scratch.mit.edu/projects/editor/" target="_blank" rel="noopener">Scratch in neuem Fenster öffnen ↗</a></p>
+    <p>Lade dein Spiel von letzter Stunde (<strong>Datei → Von deinem Computer hochladen</strong>) oder bau die Steuerung neu.</p>
+    <ol class="howto">
+      <li><strong>Meteor:</strong> Figur wählen → <strong>Rocks</strong>. Sein Skript: <em>Wenn ⚑ angeklickt wird</em> → <em>wiederhole fortlaufend</em> → <em>gehe 5 er Schritt</em> und <em>pralle vom Rand ab</em>.</li>
+      <li><strong>Game over:</strong> In die Spielschleife der Katze: <em>falls wird Rocks berührt?, dann</em> → <em>sage Autsch!</em> → <em>stoppe alles</em>.</li>
+      <li><strong>Ziel:</strong> Klick unten rechts auf die <strong>Bühne</strong>, dann auf <strong>Bühnenbilder</strong>. Mal mit dem Rechteck ein grünes Feld in eine Ecke.
+        Die Spielschleife wird <em>wiederhole bis wird Farbe grün berührt?</em> (Farbe mit der Pipette wählen). Darunter: <em>sage Gewonnen!</em></li>
+    </ol>
+    <p class="note">💾 Speichern ohne Konto: <strong>Datei → Auf deinem Computer speichern</strong>. ⌨️ Am iPad ohne Tastatur: Steuerung mit <em>Maustaste gedrückt?</em> und <em>drehe dich zu Mauszeiger</em> wie letzte Stunde.</p>
+  </section>
+
+  <section class="card">
+    <h2><span class="step-no">☑</span> Das kann ich</h2>
+    <ul class="checklist" id="checklist">
+      <li><label><input type="checkbox"> Ich kann ein „Game over“ mit <em>falls</em> und <em>stoppe alles</em> bauen.</label></li>
+      <li><label><input type="checkbox"> Ich kann mit <em>wiederhole bis</em> ein Ziel einbauen.</label></li>
+      <li><label><input type="checkbox"> Ich weiß, warum <em>sage Gewonnen!</em> unter der Schleife steht.</label></li>
+      <li><label><input type="checkbox"> Ich habe mein Spiel getestet und angepasst.</label></li>
+    </ul>
+  </section>
+
+  <section class="card frei">
+    <h2><span class="step-no">★</span> Freiwillig</h2>
+    <p class="lead">Für alle, die schon fertig sind.</p>
+
+    <h3 class="sub"><span class="badge ueben">Üben</span> Neues Level: rote Wände</h3>
+    <p>In diesem Level stehen rote Wände im Weg. Berührt Robo eine Wand, muss er zurück zum Start. Bau die Frage dafür in die Spielschleife.</p>
+    <div id="bwand"></div>
+
+    <h3 class="sub"><span class="badge expedition">★ Expedition</span> Schutzschild</h3>
+    <p>Solange du die <strong>Leertaste</strong> hältst, hat Robo ein Schutzschild: Meteore tun ihm nichts. Dafür brauchst du ein falls <strong>im</strong> falls – und den Block <em>nicht</em>.</p>
+    <div id="bschild"></div>
+  </section>
+
+  <section class="card">
+    <h2><span class="step-no">🎓</span> Klasse 6 geschafft! Wie geht es weiter?</h2>
+    <p>Du kannst jetzt Programme bauen, die <strong>entscheiden</strong> und <strong>wiederholen, bis etwas passiert</strong>. Damit hast du ein ganzes Spiel gebaut.</p>
+    <p><strong>In Klasse 7</strong> werden die Figuren zu <strong>Objekten</strong>: Sie haben Eigenschaften wie x, y und Größe. Du gestaltest Robos Kostüme selbst – und lernst
+      <strong>Variablen</strong> kennen. Dann zählt dein Programm die Sterne selbst, ohne Hilfe der Bühne. Am Ende baust du das Klick-Spiel <em>Robo-Fang</em>.</p>
+    <p><a class="btn secondary" href="../index.html#k7">Zur Übersicht Klasse 7</a></p>
+  </section>
+
+  <nav class="pager">
+    <a href="07-projekt-fangspiel.html">← Lektion 7: Projekt Fangspiel 1: Robo jagt Sterne</a>
+    <span>Klasse 7: Figuren als Objekte (in Arbeit) →</span>
+  </nav>
+</main>
+
+<footer>
+  <div class="wrap t">Lernmaterial von <a href="https://herrseibert.de">herrseibert.de</a> · Lizenz <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.de">CC BY-SA 4.0</a> · ohne Tracking, ohne Cookies<br>Erstellt von der KI Claude von Anthropic.</div>
+  <div class="wrap t gh">Fehler gefunden oder eine Idee? → <a href="https://github.com/baumlaube/scratch-course">Kurs auf GitHub</a></div>
+  <div class="wrap t gh">Scratch ist ein Projekt der Scratch Foundation. Dieser Kurs ist kein offizielles Angebot der Scratch Foundation.</div>
+  <div class="wrap legal"><a href="../impressum.html">Impressum</a> · <a href="../datenschutz.html">Datenschutz</a></div>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const { pick, quiz, hints, checklist } = window.Kurs;
+  const B = window.Buehne;
+  const $ = (id) => document.getElementById(id);
+  const sm = (s) => B.render(s, { small: true });
+  function where(list, op, pred, path = []) {
+    for (const n of list) {
+      if (n.op === op && (!pred || pred(n))) return path;
+      const r = (n.body && where(n.body, op, pred, path.concat(n.op))) || (n.body2 && where(n.body2, op, pred, path.concat(n.op + ":sonst")));
+      if (r) return r;
+    }
+    return null;
+  }
+  const allOps = (list, op, out = []) => { list.forEach((n) => { if (n.op === op) out.push(n); [n.body, n.body2].forEach((b) => b && allOps(b, op, out)); }); return out; };
+  const fragt = (k) => (n) => n.args.b && n.args.b.op === "touch" && n.args.b.args.w === k;
+
+  /* Spielwelt */
+  const START = { x: -200, y: 0, dir: 90 };
+  const ZIEL = [[180, 100, 240, 180, "gruen"]];
+  const STERN = { name: "Stern", x: 40, y: -80, fangen: "springt" };
+  const M1 = { name: "Meteor", art: "meteor", x: 40, y: 120, dx: 3, dy: 2 };
+  const M2 = { name: "Meteor", art: "meteor", x: -40, y: -120, dx: -2, dy: 3 };
+  const M3 = { name: "Meteor", art: "meteor", x: 120, y: 0, dx: 0, dy: 5 };
+  const STEUER = [
+    ["if", ["keypressed", "rechts"], [["changex", 5]]], ["if", ["keypressed", "links"], [["changex", -5]]],
+    ["if", ["keypressed", "oben"], [["changey", 5]]], ["if", ["keypressed", "unten"], [["changey", -5]]]];
+  const METEOR = ["if", ["touch", "Meteor"], [["saynow", "Autsch!"], ["stop", "alles"]]];
+  const spiel = (bed, innen, danach) => ["flag", ["goto", -200, 0], ["until", bed, innen], ...danach];
+  const GEWONNEN = ["saynow", "Gewonnen!"];
+  const gewonnen = (tr) => tr.says.includes("Gewonnen!") && tr.farbe("gruen") && !tr.gestoppt;
+  const gameOver = "Game over! Weich dem Meteor aus und versuch es noch einmal: ⚑.";
+
+  /* Weißt du noch? */
+  quiz($("wdh"), [
+    { q: "Warum stehen die Tasten-Fragen <strong>in</strong> der Spielschleife?",
+      options: ["Damit Robo immer wieder fragt.", "Damit sie nur einmal am Anfang laufen.", "Weil es schöner aussieht."], right: 0,
+      miss: [null, "Dann würde Robo nur einmal fragen – und danach nie wieder reagieren.", "Es geht nicht ums Aussehen: Wo ein Block steht, entscheidet, wann er läuft."],
+      why: "In der Schleife fragt Robo 30-mal pro Sekunde: Ist die Taste gedrückt?" },
+    { q: "Wann hört diese Schleife auf?", html: sm([["until", ["color", "gruen"], [["changex", 5]]]]),
+      options: ["sobald Robo Grün berührt", "nach 5 Runden", "nie"], right: 0,
+      miss: [null, "Die 5 gehört zu <em>ändere x um 5</em> – das ist keine Rundenzahl.", "Sie hört auf, sobald die Bedingung wahr ist."],
+      why: "<em>wiederhole bis</em> läuft, bis die Bedingung wahr ist: bis Robo Grün berührt." },
+  ]);
+
+  /* 1 · Überleg */
+  pick($("pred1"), { right: 1, fb: $("fb1"),
+    miss: ["Dort fragt Robo nur einmal – ganz am Anfang. Da ist der Meteor noch weit weg.", null,
+      "Ohne Schleife fragt das Skript auch nur einmal."],
+    why: "In der Spielschleife fragt Robo immer wieder – genau wie bei den Tasten." });
+
+  /* 2 · Game over */
+  B.create($("b2"), { mode: "frei", start: START, objekte: [STERN, M1],
+    script: ["!flag", ["!goto", -200, 0], ["!forever", STEUER]],
+    palette: [["if"], ["touch", "Meteor"], ["saynow", "Autsch!"], ["stop", "alles"]],
+    check(tr) {
+      const fi = allOps(tr.script, "if").find(fragt("Meteor"));
+      const gut = fi && (where(tr.script, "if", (n) => n === fi) || []).includes("forever") && fi.body.some((n) => n.op === "stop" && n.args.w === "alles");
+      if (tr.gestoppt) return gut ? true : null;
+      if (tr.live && tr.beruehrt("Meteor")) {
+        if (!fi) return "Robo fliegt durch den Meteor – nichts passiert. Bau die Frage <em>falls wird Meteor berührt?</em> in die Spielschleife.";
+        if (!gut) return "Robo berührt den Meteor, aber das Spiel geht weiter. Steht die Frage <strong>in</strong> der Spielschleife? Und darin <em>stoppe alles</em>?";
+      }
+      return null;
+    },
+    ok: "✔ Autsch – Game over! Genau so soll es sein. Das falls in der Spielschleife hat den Meteor bemerkt." });
+
+  /* 3 · Ziel mit wiederhole bis (Lücke) */
+  B.create($("b3"), { mode: "frei", edit: "gaps", start: START, felder: ZIEL, objekte: [STERN, M1],
+    script: ["!flag", ["!goto", -200, 0], ["!until", "?", [...STEUER, METEOR]], ["!saynow", "Gewonnen!"]],
+    palette: [["touch", "Stern"], ["touch", "rand"], ["color", "gruen"]],
+    check(tr) {
+      if (tr.gestoppt) return gameOver;
+      const b = allOps(tr.script, "until")[0].args.b;
+      if (b && b.op === "touch" && b.args.w === "Stern") return "Das Spiel ist beim ersten Stern schon vorbei. Die Spielschleife soll laufen, bis Robo im <strong>Ziel</strong> ist.";
+      if (b && b.op === "touch" && b.args.w === "rand") return "Das Spiel ist vorbei, sobald Robo den Rand berührt. Das Ziel ist aber das grüne Feld.";
+      return gewonnen(tr) ? true : null;
+    },
+    ok: "✔ Gewonnen! Die Spielschleife hat aufgehört, als die Bedingung wahr war – dann kam der Block darunter." });
+
+  /* 4 · Fehlerdetektiv: Gewonnen in der Schleife */
+  B.create($("b4"), { mode: "frei", edit: false, start: START, felder: ZIEL, objekte: [STERN, M1],
+    script: ["!flag", ["!goto", -200, 0], ["!until", ["!color", "gruen"], [...STEUER.map((s) => ["!" + s[0], s[1], s[2]]), ["!if", ["!touch", "Meteor"], [["!saynow", "Autsch!"], ["!stop", "alles"]]], GEWONNEN]]],
+    check(tr) {
+      if (tr.gestoppt) return gameOver;
+      const w = where(tr.script, "saynow", (n) => n.args.t === "Gewonnen!");
+      if (w && w.includes("until")) return "Robo hat schon die ganze Zeit „Gewonnen!“ gerufen. Der Block steht <strong>in</strong> der Schleife – er läuft in jeder Runde.";
+      return gewonnen(tr) ? true : null;
+    },
+    ok: "✔ Fall gelöst! „Gewonnen!“ steht jetzt <strong>unter</strong> der Schleife. Es läuft erst, wenn die Schleife fertig ist – im Ziel." });
+  hints($("hints4"), [
+    "Klick auf ⚑ und schau aufs Skript: Wann leuchtet <em>sage Gewonnen!</em> auf?",
+    "Alles <strong>in</strong> der Schleife läuft in jeder Runde. Was <strong>unter</strong> der Schleife steht, läuft erst, wenn die Schleife fertig ist.",
+    "Lösung: Zieh <em>sage Gewonnen!</em> aus der Schleife heraus und häng es <strong>unter</strong> die Schleife.",
+  ]);
+
+  /* 5 · Stand 2 mit Schwierigkeit */
+  const STUFEN = [[STERN, M1], [STERN, M1, M2], [STERN, { ...M1, dx: 5, dy: 3 }, { ...M2, dx: -3, dy: 5 }, M3]];
+  const stufenEl = [$("b5a"), $("b5b"), $("b5c")];
+  const stufen = STUFEN.map((objekte, i) => B.create(stufenEl[i], { mode: "frei", start: START, felder: ZIEL, objekte,
+    script: spiel(["color", "gruen"], [...STEUER, METEOR], [GEWONNEN]),
+    check(tr) { if (tr.gestoppt) return gameOver; return gewonnen(tr) ? true : null; },
+    ok: "✔ Gewonnen! Schau oben links: So viele Sterne hast du gefangen. Schaffst du mehr?" }));
+  let stufe = 0;
+  const knoepfe = [...document.querySelectorAll("#stufe .choice")];
+  function zeige(i) {
+    if (i !== stufe) { stufen[stufe].stop(); stufen[i].scripts = stufen[stufe].scripts; }
+    stufe = i;
+    stufenEl.forEach((el, k) => { el.hidden = k !== i; });
+    knoepfe.forEach((b, k) => { b.classList.toggle("picked", k === i); b.setAttribute("aria-pressed", k === i); });
+  }
+  knoepfe.forEach((b, k) => b.addEventListener("click", () => zeige(k)));
+  zeige(0);
+
+  /* Plus · Turbo */
+  B.create($("bplus"), { mode: "frei", start: START, felder: ZIEL, objekte: [STERN, M1],
+    script: ["!flag", ["!goto", -200, 0], ["!until", ["!color", "gruen"], [...STEUER, METEOR]], ["!saynow", "Gewonnen!"]],
+    palette: [["ifelse"], ["keypressed", "leertaste"], ["changex", 10]],
+    check(tr) {
+      if (tr.gestoppt) return gameOver;
+      const fr = allOps(tr.script, "if").find((n) => n.args.b && n.args.b.args.k === "rechts");
+      const fe = fr && fr.body.find((n) => n.op === "ifelse" && n.args.b && n.args.b.args.k === "leertaste");
+      const turbo = fe && fe.body.some((n) => n.op === "changex" && Number(n.args.n) === 10) && fe.body2.some((n) => n.op === "changex" && Number(n.args.n) === 5)
+        && !fr.body.some((n) => n.op === "changex");
+      if (!gewonnen(tr)) return null;
+      return turbo ? true : "Gewonnen – aber ohne Turbo. Das <em>falls … sonst</em> mit der Leertaste gehört <strong>in</strong> das falls für ▶: dann x um 10, sonst x um 5.";
+    },
+    ok: "✔ Turbo! Ein falls … sonst im falls in der Schleife – drei Schachteln." });
+
+  /* Kurz-Check */
+  quiz($("quiz"), [
+    { q: "Was macht <em>stoppe alles</em>?", options: ["Es hält das ganze Programm an.", "Es hält nur Robo kurz an.", "Es startet das Spiel neu."], right: 0,
+      miss: [null, "Kurz anhalten wäre <em>warte</em>. <em>stoppe alles</em> beendet alle Skripte.", "Neu starten musst du selbst mit ⚑."],
+      why: "<em>stoppe alles</em> beendet alle Skripte – das Spiel ist aus." },
+    { q: "Wann sagt Robo „Gewonnen!“?", html: sm(["flag", ["until", ["color", "gruen"], [["if", ["keypressed", "rechts"], [["changex", 5]]]]], ["saynow", "Gewonnen!"]]),
+      options: ["wenn er Grün berührt", "sofort beim Start", "bei jedem Druck auf ▶"], right: 0,
+      miss: [null, "<em>sage</em> steht <strong>unter</strong> der Schleife. Es läuft erst, wenn die Schleife fertig ist.",
+        "In der Schleife steht nur <em>ändere x</em>. „Gewonnen!“ steht darunter."],
+      why: "Die Schleife läuft, bis Robo Grün berührt. Danach kommt der Block darunter." },
+    { q: "Robo fliegt durch den Meteor, aber nichts passiert. Was ist der wahrscheinlichste Fehler?",
+      options: ["Die Frage nach dem Meteor steht nicht in der Spielschleife.", "Der Meteor ist zu klein.", "Robo fliegt zu langsam."], right: 0,
+      miss: [null, "Auch ein kleiner Meteor wird bemerkt – wenn Robo danach fragt.", "Das Tempo spielt keine Rolle. Robo muss in jeder Runde fragen."],
+      why: "Steht das falls nicht in der Schleife, fragt Robo nur einmal – oder nie." },
+    { q: "Welche Spielschleife passt, wenn das Spiel enden soll, sobald Robo im grünen Ziel ist?",
+      options: [sm([["until", ["color", "gruen"], []]]), sm([["forever", []]]), sm([["repeat", 100, []]])], right: 0,
+      miss: [null, "<em>wiederhole fortlaufend</em> hört nie von selbst auf.", "Nach 100 Runden (gut 3 Sekunden) wäre das Spiel vorbei – egal, wo Robo ist."],
+      why: "<em>wiederhole bis</em> läuft, bis die Bedingung wahr ist: bis Robo im Ziel ist." },
+  ]);
+
+  /* Freiwillig · Wände */
+  const WAENDE = [[-120, -180, -80, 40, "rot"], [40, -40, 80, 180, "rot"]];
+  B.create($("bwand"), { mode: "frei", start: START, felder: [...WAENDE, ...ZIEL], objekte: [STERN],
+    script: ["!flag", ["!goto", -200, 0], ["!until", ["!color", "gruen"], STEUER.map((s) => ["!" + s[0], s[1], s[2]])], ["!saynow", "Gewonnen!"]],
+    palette: [["if"], ["color", "rot"], ["goto", -200, 0]],
+    check(tr) {
+      const fi = allOps(tr.script, "if").find((n) => n.args.b && n.args.b.op === "color" && n.args.b.args.f === "rot");
+      const gut = fi && (where(tr.script, "if", (n) => n === fi) || []).includes("until") && fi.body.some((n) => n.op === "goto");
+      if (!gewonnen(tr)) return null;
+      return gut ? true : "Gewonnen – aber Robo ist einfach durch die Wände geflogen. Bau <em>falls wird Farbe rot berührt?, dann gehe zu x: −200 y: 0</em> in die Spielschleife.";
+    },
+    ok: "✔ Level geschafft – ohne Abkürzung durch die Wand!" });
+
+  /* Freiwillig · Schutzschild */
+  B.create($("bschild"), { mode: "frei", start: START, felder: ZIEL, objekte: [STERN, M1, M2],
+    script: ["!flag", ["!goto", -200, 0], ["!until", ["!color", "gruen"], [...STEUER.map((s) => ["!" + s[0], s[1], s[2]]), ["!if", ["!touch", "Meteor"], [["saynow", "Autsch!"], ["stop", "alles"]]]]], ["!saynow", "Gewonnen!"]],
+    palette: [["if"], ["not"], ["keypressed", "leertaste"]],
+    check(tr) {
+      if (tr.gestoppt) return gameOver + " Halt die Leertaste, wenn ein Meteor kommt.";
+      const fm = allOps(tr.script, "if").find(fragt("Meteor"));
+      const inner = fm && fm.body.find((n) => n.op === "if" && n.args.b && n.args.b.op === "not" && n.args.b.args.b && n.args.b.args.b.op === "keypressed");
+      const gut = inner && inner.body.some((n) => n.op === "stop");
+      if (!gewonnen(tr)) return null;
+      return gut ? true : "Gewonnen – aber noch ohne Schutzschild. Ins falls für den Meteor gehört ein zweites falls: <em>nicht Taste Leertaste gedrückt?</em> – erst dann <em>stoppe alles</em>.";
+    },
+    ok: "✔ Schutzschild! falls im falls: Game over gibt es nur, wenn der Meteor trifft <strong>und</strong> die Leertaste nicht gedrückt ist." });
+
+  checklist($("checklist"), "k6-08");
+});
+</script>
+</body>
+</html>

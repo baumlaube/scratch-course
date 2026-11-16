@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bis es passt: wiederhole bis · Scratch-Kurs Klasse 6</title>
+<meta name="description" content="Lektion 5 im Scratch-Lernpfad Klasse 6: Die bedingte Wiederholung. Mit „wiederhole bis“ läuft Robo, bis eine Bedingung wahr ist – auch wenn man nicht weiß, wie oft. Vergleich mit „wiederhole … mal“, Fehler finden, Struktogramm.">
+<link rel="canonical" href="https://scratch.herrseibert.de/k6/05-wiederhole-bis.html">
+<!-- vorschau -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Scratch-Kurs">
+<meta property="og:locale" content="de_DE">
+<meta property="og:url" content="https://scratch.herrseibert.de/k6/05-wiederhole-bis.html">
+<meta property="og:title" content="Bis es passt: wiederhole bis · Scratch-Kurs Klasse 6">
+<meta property="og:description" content="Lektion 5 im Scratch-Lernpfad Klasse 6: Die bedingte Wiederholung. Mit „wiederhole bis“ läuft Robo, bis eine Bedingung wahr ist – auch wenn man nicht weiß, wie oft. Vergleich mit „wiederhole … mal“, Fehler finden, Struktogramm.">
+<meta property="og:image" content="https://scratch.herrseibert.de/vorschau.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Scratch-Kurs – Programmieren lernen Schritt für Schritt, mit Übungsbühne">
+<meta name="twitter:card" content="summary_large_image">
+<!-- /vorschau -->
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="stylesheet" href="../assets/kurs.css?v=48917f175f">
+<link rel="stylesheet" href="../assets/buehne.css?v=a89e0c4e3f">
+<script src="../assets/i18n.js?v=4588e8929d" data-page="k6-05-wiederhole-bis" data-langs="de"></script>
+<script src="../assets/kurs.js?v=9e315750a5"></script>
+<script src="../assets/buehne.js?v=ad43812cde"></script>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><img class="logo" src="../favicon.svg" alt="" width="34" height="34"> Scratch-Kurs <span>· Programmieren lernen</span></a>
+    <span class="spacer"></span>
+    <button class="theme-btn" type="button" aria-label="Hell oder dunkel umschalten">◐ Hell/Dunkel</button>
+  </div>
+</header>
+
+<main class="wrap">
+  <nav class="path" aria-label="Lernpfad Klasse 6">
+    <strong class="t">Klasse 6:</strong>
+    <ol>
+      <li class="done"><a href="01-start-check.html" title="1 · Start-Check">1</a></li>
+      <li class="done"><a href="02-steuern.html" title="2 · Steuern mit Tasten und Finger">2</a></li>
+      <li class="done"><a href="03-falls-dann.html" title="3 · Robo entscheidet: falls … dann">3</a></li>
+      <li class="done"><a href="04-falls-sonst.html" title="4 · Zwei Wege: falls … sonst">4</a></li>
+      <li class="now"><span title="5 · Bis es passt: wiederhole bis" aria-current="step">5</span></li>
+      <li class="done"><a href="06-alles-zusammen.html" title="6 · Alles zusammen">6</a></li>
+      <li class="done"><a href="07-projekt-fangspiel.html" title="7 · Projekt Fangspiel 1: Robo jagt Sterne">7</a></li>
+      <li class="done"><a href="08-fangspiel-fertig.html" title="8 · Projekt Fangspiel 2: Meteore und Ziel">8</a></li>
+    </ol>
+  </nav>
+
+  <section class="hero">
+    <h1>Bis es passt: wiederhole bis</h1>
+    <div class="meta">
+      <span class="chip">Klasse 6 · Lektion 5</span>
+      <span class="chip">⏱ ca. 35 Minuten</span>
+    </div>
+    <ul class="goals">
+      <li>Ich weiß, wann ich <em>wiederhole bis</em> brauche: wenn ich nicht weiß, wie oft.</li>
+      <li>Ich wähle die Bedingung so, dass die Schleife aufhört.</li>
+      <li>Ich erkenne <em>wiederhole bis</em> im Struktogramm.</li>
+    </ul>
+  </section>
+
+  <details class="card woerter">
+    <summary>📖 Scratch-Wörter für diese Lektion</summary>
+    <p class="note">Die Wörter links bleiben deutsch – so heißen sie in Scratch.</p>
+    <div class="tbl-scroll"><table class="plain">
+      <tr><th class="wort">wiederhole bis <small>–</small></th><td>Eine Schleife, die so lange läuft, bis die Bedingung wahr ist.</td></tr>
+      <tr><th class="wort">die bedingte Wiederholung <small>die bedingten Wiederholungen</small></th><td>So heißt <em>wiederhole bis</em> im Unterricht.</td></tr>
+      <tr><th class="wort">die Runde <small>die Runden</small></th><td>Einmal alle Blöcke in der Schleife.</td></tr>
+      <tr><th class="wort">endlos <small>–</small></th><td>Ohne Ende. Die Schleife hört nie auf.</td></tr>
+      <tr><th class="wort">das Ziel <small>die Ziele</small></th><td>Wo Robo ankommen soll.</td></tr>
+    </table></div>
+  </details>
+
+  <section class="card">
+    <h2><span class="step-no">ℹ</span> So arbeitest du heute</h2>
+    <p class="lead">Du übst mit der <strong>Übungsbühne</strong> direkt hier im Browser. Sie funktioniert mit Maus und mit Finger.</p>
+    <ul class="tasks">
+      <li><span class="badge basis">Zähler</span><span>Bei <em>wiederhole bis</em> zählt die Bühne die Runden mit. Mit 👣 siehst du vor jeder Runde: <span class="sb-val falsch">falsch</span> = weiter, <span class="sb-val wahr">wahr</span> = Schluss.</span></li>
+      <li><span class="badge basis">⏹</span><span>Läuft Robo und läuft und hört nicht auf? Dann drück <strong>⏹</strong>. Danach suchst du den Grund.</span></li>
+      <li><span class="badge basis">Zu zweit</span><span>Eine Person zieht die Blöcke, die andere liest vor und prüft. Nach jeder Aufgabe wechseln.</span></li>
+    </ul>
+  </section>
+
+  <section class="card wdh">
+    <h2><span class="step-no">↺</span> Weißt du noch? <span class="chip">2 Minuten</span></h2>
+    <div id="wdh"></div>
+  </section>
+
+  <!-- 1 · Überleg -->
+  <section class="card">
+    <h2><span class="step-no">1</span> Überleg: Wie oft? <span class="chip">4 Minuten</span></h2>
+    <p>Beim Backen heißt es nicht „Rühre 50-mal“. Es heißt: <em>Rühre, <strong>bis</strong> der Teig glatt ist.</em><br>
+      Man weiß vorher nicht, wie oft. Man weiß nur, <strong>wann Schluss ist</strong>.</p>
+    <p>Robo soll bis zur roten Wand laufen. Die Wand steht mal weit weg, mal nah.
+      <strong>Überleg:</strong> Welches Skript klappt <strong>immer</strong>?</p>
+    <div class="choices" id="pred1">
+      <button type="button" class="choice"><span data-script='[["repeat",10,[["move",10]]]]' data-small></span></button>
+      <button type="button" class="choice"><span data-script='[["until",["color","rot"],[["move",10]]]]' data-small></span></button>
+      <button type="button" class="choice"><span data-script='[["forever",[["move",10]]]]' data-small></span></button>
+    </div>
+    <p class="fb" id="fb1"></p>
+  </section>
+
+  <!-- 2 · Zuschauen -->
+  <section class="card">
+    <h2><span class="step-no">2</span> Robo fragt vor jeder Runde <span class="chip">5 Minuten</span></h2>
+    <p><strong>Schau zu:</strong> Klick auf ⚑ Start. Dann noch einmal mit <strong>👣 Schritt</strong>. Vor jeder Runde fragt Robo: <em>Berühre ich Rot?</em>
+      <span class="sb-val falsch">falsch</span> heißt: noch eine Runde. <span class="sb-val wahr">wahr</span> heißt: Schluss, weiter unter der Schleife.</p>
+    <div id="b2"></div>
+    <p><strong>Überleg:</strong> Robo steht schon an der roten Wand, <strong>bevor</strong> die Schleife beginnt. Wie oft läuft <em>gehe 10 er Schritt</em>?</p>
+    <div class="choices" id="pred2">
+      <button type="button" class="choice">0-mal</button>
+      <button type="button" class="choice">1-mal</button>
+      <button type="button" class="choice">immer weiter</button>
+    </div>
+    <p class="fb" id="fb2"></p>
+  </section>
+
+  <!-- 3 · Puzzle -->
+  <section class="card">
+    <h2><span class="step-no">3</span> Lauf bis zur Wand <span class="badge basis">Basis</span> <span class="chip">6 Minuten</span></h2>
+    <p>Bau das Skript: Robo läuft, <strong>bis</strong> er die rote Wand berührt.</p>
+    <div id="b3"></div>
+    <div id="probe3" hidden>
+      <p><strong>Jetzt kommt der Trick:</strong> Hier steht die Wand viel näher. Dein Skript ist schon da. Klick auf ⚑ Start.</p>
+      <div id="b3b"></div>
+      <p class="note">Gleiches Skript, andere Wand – Robo hält trotzdem richtig an. Mit <em>wiederhole 10 mal</em> klappt das nicht.</p>
+    </div>
+  </section>
+
+  <!-- 4 · Lücke -->
+  <section class="card">
+    <h2><span class="step-no">4</span> Robo sucht den Stern <span class="badge basis">Basis</span> <span class="chip">5 Minuten</span></h2>
+    <p>Robo soll laufen, bis er den Stern findet. Dann sagt er „Gefunden!“.<br>
+      <strong>Überleg:</strong> Welche Bedingung gehört in das gelbe Feld? Zieh sie hinein (oder tipp sie an).</p>
+    <div id="b4"></div>
+  </section>
+
+  <!-- 5 · Fehlerdetektiv -->
+  <section class="card">
+    <h2><span class="step-no">5</span> Fehlerdetektiv 🔍 – zwei Fälle <span class="badge basis">Basis</span> <span class="chip">6 Minuten</span></h2>
+    <ol class="howto">
+      <li>Was <strong>soll</strong> passieren?</li>
+      <li>Was <strong>passiert</strong> wirklich? Schau mit 👣 zu.</li>
+      <li>Ist die Bedingung <strong>nie</strong> wahr – oder <strong>sofort</strong>?</li>
+    </ol>
+    <h3 class="sub">Fall A: Jonas</h3>
+    <p>Robo soll bis zur grünen Wiese laufen und „Wiese!“ sagen. Er läuft aber immer weiter. Drück ⏹, wenn es dir zu lang wird.</p>
+    <div id="b5a"></div>
+    <h3 class="sub">Fall B: Lena</h3>
+    <p>Robo soll vom roten Start bis zum blauen See laufen und „See!“ sagen. Er sagt es aber sofort – ohne einen Schritt.</p>
+    <div id="b5b"></div>
+    <p>Du musst jeweils nur <strong>eine Farbe ändern</strong>: Tipp auf das Farbfeld im Sechseck.</p>
+    <div id="hints5"></div>
+  </section>
+
+  <!-- 6 · Vergleich, Merksatz und Struktogramm -->
+  <section class="card">
+    <h2><span class="step-no">6</span> Zwei Schleifen im Vergleich <span class="chip">3 Minuten</span></h2>
+    <div class="tbl-scroll"><table class="plain">
+      <tr><th></th><th><span data-script='[["repeat",10,[]]]' data-small></span></th><th><span data-script='[["until",["color","rot"],[]]]' data-small></span></th></tr>
+      <tr><th>Du weißt …</th><td>wie oft.</td><td>wann Schluss ist.</td></tr>
+      <tr><th>Robo hört auf, …</th><td>wenn er bis 10 gezählt hat.</td><td>sobald die Bedingung <strong>wahr</strong> ist.</td></tr>
+      <tr><th>Gefahr</th><td>zu wenig oder zu viel Runden</td><td>Bedingung wird <strong>nie</strong> wahr: endlos. Ist sie <strong>sofort</strong> wahr: 0 Runden.</td></tr>
+    </table></div>
+    <p class="rule">Bei <strong>wiederhole bis</strong> fragt Robo <strong>vor jeder Runde</strong>: Ist die Bedingung schon wahr?<br>
+      Nein: noch eine Runde. Ja: Schluss – weiter mit dem Block unter der Schleife.</p>
+    <h3 class="sub">Das Struktogramm</h3>
+    <p class="note">Du musst kein Struktogramm zeichnen. Schau nur: Die Bedingung steht <strong>oben</strong> im Kopf der Schleife – Robo fragt, bevor er losläuft.</p>
+    <div class="script-row">
+      <figure><div data-script='["flag",["until",["color","rot"],[["move",10]]],["say","Ziel!",2]]' data-small></div><figcaption>Das Skript</figcaption></figure>
+      <figure>
+        <div class="nsd" aria-label="Struktogramm: wiederhole bis Farbe rot berührt: gehe 10 Schritte. Danach: sage Ziel.">
+          <div class="nsd-loop">
+            <div class="nsd-head">wiederhole bis Farbe rot berührt</div>
+            <div class="nsd-body"><div class="nsd-row">gehe 10 Schritte</div></div>
+          </div>
+          <div class="nsd-row">sage „Ziel!“</div>
+        </div>
+        <figcaption>Das Struktogramm dazu</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Plus -->
+  <section class="card">
+    <h2><span class="step-no">+</span> Auf die Plätze … <span class="badge plus">Plus</span> <span class="chip">für Schnelle</span></h2>
+    <p>Robo soll erst loslaufen, wenn du die <strong>Leertaste</strong> drückst. Dafür gibt es den Block <em>warte bis</em>. Er wartet, bis die Bedingung wahr ist.
+      Bau ihn an die richtige Stelle. Klick auf ⚑ – und dann gib das Startsignal.</p>
+    <div id="bplus"></div>
+  </section>
+
+  <section class="card">
+    <h2><span class="step-no">✓</span> Kurz-Check <span class="chip">4 Minuten</span></h2>
+    <div id="quiz"></div>
+  </section>
+
+  <section class="card merke">
+    <h2>Merke</h2>
+    <ul>
+      <li><em>wiederhole bis</em> wiederholt, <strong>bis</strong> die Bedingung wahr ist. Du musst nicht wissen, wie oft.</li>
+      <li>Robo fragt <strong>vor jeder Runde</strong>. Ist die Bedingung schon am Anfang wahr, läuft die Schleife <strong>0-mal</strong>.</li>
+      <li>Wird die Bedingung <strong>nie</strong> wahr, hört die Schleife nie auf.</li>
+      <li>Danach geht es mit dem Block <strong>unter</strong> der Schleife weiter.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2><span class="step-no">⚑</span> Jetzt in echt: Scratch <span class="chip">zu Hause oder nächste Stunde</span></h2>
+    <p><a class="btn" href="https://scratch.mit.edu/projects/editor/" target="_blank" rel="noopener">Scratch in neuem Fenster öffnen ↗</a></p>
+    <ol class="howto">
+      <li>Bau: <em>Wenn ⚑ angeklickt wird</em> → <em>wiederhole bis</em> (bei <strong>Steuerung</strong>) → darin <em>gehe 10 er Schritt</em>.</li>
+      <li>Ins Sechseck: <em>wird Mauszeiger berührt?</em> (bei <strong>Fühlen</strong>) und im Feld <strong>Rand</strong> wählen. Unter die Schleife: <em>sage Rand! für 2 Sekunden</em>.</li>
+      <li>Klick auf ⚑. Zieh die Katze danach an eine andere Stelle und klick wieder auf ⚑. Hält sie jedes Mal am Rand?</li>
+    </ol>
+  </section>
+
+  <section class="card">
+    <h2><span class="step-no">☑</span> Das kann ich</h2>
+    <ul class="checklist" id="checklist">
+      <li><label><input type="checkbox"> Ich kann erklären, wann ich <em>wiederhole bis</em> statt <em>wiederhole 10 mal</em> nehme.</label></li>
+      <li><label><input type="checkbox"> Ich kann Robo laufen lassen, bis er etwas berührt.</label></li>
+      <li><label><input type="checkbox"> Ich erkenne, wenn eine Bedingung nie wahr wird – oder schon am Anfang.</label></li>
+      <li><label><input type="checkbox"> Ich finde <em>wiederhole bis</em> im Struktogramm.</label></li>
+    </ul>
+  </section>
+
+  <section class="card frei">
+    <h2><span class="step-no">★</span> Freiwillig</h2>
+    <p class="lead">Für alle, die schon fertig sind.</p>
+
+    <h3 class="sub"><span class="badge ueben">Üben</span> Um die Ecke</h3>
+    <p>Robo läuft bis zur Wand, dreht sich nach links – und läuft dann bis zum Stern. Dafür brauchst du <strong>zwei</strong> <em>wiederhole bis</em> nacheinander.</p>
+    <div id="becke"></div>
+
+    <h3 class="sub"><span class="badge expedition">★ Expedition</span> Raus aus dem See</h3>
+    <p>Robo steht mitten im blauen See. Er soll laufen, <strong>bis er nicht mehr</strong> im Wasser ist. Dafür brauchst du den Block <em>nicht</em>.</p>
+    <div id="bexp"></div>
+  </section>
+
+  <nav class="pager">
+    <a href="04-falls-sonst.html">← Lektion 4: Zwei Wege: falls … sonst</a>
+    <a href="06-alles-zusammen.html">Lektion 6: Alles zusammen →</a>
+  </nav>
+</main>
+
+<footer>
+  <div class="wrap t">Lernmaterial von <a href="https://herrseibert.de">herrseibert.de</a> · Lizenz <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.de">CC BY-SA 4.0</a> · ohne Tracking, ohne Cookies<br>Erstellt von der KI Claude von Anthropic.</div>
+  <div class="wrap t gh">Fehler gefunden oder eine Idee? → <a href="https://github.com/baumlaube/scratch-course">Kurs auf GitHub</a></div>
+  <div class="wrap t gh">Scratch ist ein Projekt der Scratch Foundation. Dieser Kurs ist kein offizielles Angebot der Scratch Foundation.</div>
+  <div class="wrap legal"><a href="../impressum.html">Impressum</a> · <a href="../datenschutz.html">Datenschutz</a></div>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const { pick, quiz, hints, checklist } = window.Kurs;
+  const B = window.Buehne;
+  const $ = (id) => document.getElementById(id);
+  const sm = (s) => B.render(s, { small: true });
+  const findOp = (list, op) => { for (const n of list) { if (n.op === op) return n; for (const b of [n.body, n.body2, n.args.b && [n.args.b]]) if (b) { const r = findOp(b, op); if (r) return r; } } return null; };
+  function where(list, op, path = []) {
+    for (const n of list) {
+      if (n.op === op) return path;
+      for (const body of [n.body, n.body2]) if (body) { const r = where(body, op, path.concat(n.op)); if (r) return r; }
+    }
+    return null;
+  }
+  const countOp = (list, op) => { let k = 0; const w = (l) => l.forEach((n) => { if (n.op === op) k++; [n.body, n.body2].forEach((b) => b && w(b)); }); w(list); return k; };
+
+  /* Weißt du noch? */
+  quiz($("wdh"), [
+    { q: "Robo steht <strong>nicht</strong> am Rand. Was sagt er?", html: sm([["ifelse", ["touch", "rand"], [["say", "Rand!", 2]], [["say", "Frei!", 2]]]]),
+      options: ["„Frei!“", "„Rand!“", "gar nichts"], right: 0,
+      miss: [null, "Die Bedingung ist falsch. Dann läuft der Weg bei <em>sonst</em>.", "Bei falls … sonst läuft immer ein Weg."],
+      why: "Die Bedingung ist falsch – also läuft der sonst-Weg: „Frei!“." },
+    { q: "Wie weit läuft Robo?", html: sm([["repeat", 4, [["move", 50]]]]),
+      options: ["200 Schritte", "54 Schritte", "50 Schritte"], right: 0,
+      miss: [null, "Die 4 sagt, wie oft. Robo läuft 4-mal 50 Schritte.", "Die Schleife läuft 4 Runden – nicht nur eine."],
+      why: "4 Runden mal 50 Schritte = 200 Schritte." },
+  ]);
+
+  /* 1 · Welches Skript klappt immer? */
+  pick($("pred1"), { right: 1, fb: $("fb1"),
+    miss: ["10 Runden mal 10 Schritte = 100 Schritte. Das passt nur, wenn die Wand genau dort steht.", null,
+      "<em>wiederhole fortlaufend</em> hört nie auf. Robo läuft durch die Wand – bis zum Rand."],
+    why: "<em>wiederhole bis</em> fragt vor jeder Runde: Berühre ich Rot? Robo läuft genau so lange, wie es nötig ist." });
+
+  /* 2 · Zuschauen */
+  B.create($("b2"), { mode: "lesen", start: { x: -160, y: 0, dir: 90 }, felder: [[120, -180, 160, 180, "rot"]],
+    script: ["flag", ["until", ["color", "rot"], [["move", 10]]], ["say", "Ziel!", 2]] });
+  pick($("pred2"), { right: 0, fb: $("fb2"),
+    miss: [null, "Robo fragt <strong>vor</strong> der ersten Runde. Die Antwort ist schon „wahr“ – also keine Runde.",
+      "Die Bedingung ist wahr. Dann hört die Schleife sofort auf."],
+    why: "Robo fragt zuerst: Berühre ich Rot? Ja – also Schluss, bevor er einen Schritt macht. Die Schleife läuft 0-mal." });
+
+  /* 3 · Puzzle + gleiches Skript, andere Wand */
+  const b3b = B.create($("b3b"), { mode: "lesen", start: { x: -200, y: 0, dir: 90 }, felder: [[-40, -180, 0, 180, "rot"]],
+    check(tr) { return tr.farbe("rot") ? true : "Robo ist nicht an der Wand stehen geblieben."; },
+    ok: "✔ Auch hier hält Robo genau an der Wand – nach nur 15 Runden statt 31." });
+  B.create($("b3"), { mode: "puzzle", echtzeit: true, limit: 200, start: { x: -200, y: 0, dir: 90 }, felder: [[120, -180, 160, 180, "rot"]],
+    script: ["!flag"], palette: [["until"], ["color", "rot"], ["move", 10]],
+    check(tr) {
+      const s = tr.script, u = findOp(s, "until");
+      if (!u) return "Es fehlt die Schleife <em>wiederhole bis</em>.";
+      if (!u.args.b) return "Das Sechseck-Feld ist leer. Dann ist die Antwort nie „wahr“ – die Schleife hört nie auf.";
+      if (!(where(s, "move") || []).includes("until")) return "Der gehe-Block steht nicht <strong>in</strong> der Schleife. Dann wiederholt Robo nichts – er läuft höchstens einmal.";
+      if (tr.farbe("rot")) return true;
+      return "Noch nicht. Schau mit 👣 zu.";
+    },
+    ok: "✔ Robo hält an der Wand! Er hat 31 Runden gebraucht – das musstest du nicht ausrechnen.",
+    onRun(tr, ok, api) { if (ok) { $("probe3").hidden = false; b3b.scripts = api.scripts; b3b.el.dispatchEvent(new Event("resize")); } } });
+
+  /* 4 · Lücke: Stern suchen */
+  B.create($("b4"), { mode: "frei", edit: "gaps", echtzeit: true, limit: 300, start: { x: -200, y: 0, dir: 90 }, objekte: [{ name: "Stern", x: 120, y: 0 }],
+    script: ["!flag", ["!until", "?", [["!move", 10]]], ["!say", "Gefunden!", 2]],
+    palette: [["touch", "rand"], ["color", "blau"], ["touch", "Stern"]],
+    check(tr) {
+      const b = findOp(tr.script, "until").args.b;
+      if (tr.endlos) return "Robo läuft und läuft … Die Bedingung wird nie wahr: Auf der Bühne gibt es gar kein Blau. In Scratch würde Robo ewig weitermachen.";
+      if (b && b.op === "touch" && b.args.w === "rand") return "Robo ist am Stern vorbeigelaufen – bis zum Rand. Er hat nach dem Rand gefragt, nicht nach dem Stern.";
+      if (tr.says.includes("Gefunden!") && tr.beruehrt("Stern")) return true;
+      return null;
+    },
+    ok: "✔ Gefunden! Robo hat nach jeder Runde gefragt: Berühre ich den Stern?" });
+
+  /* 5 · Fehlerdetektiv: nie wahr / sofort wahr */
+  B.create($("b5a"), { mode: "frei", echtzeit: true, limit: 300, start: { x: -200, y: 0, dir: 90 }, felder: [[120, -180, 200, 180, "gruen"]],
+    script: ["!flag", ["!until", ["!color", "rot"], [["!move", 10]]], ["!say", "Wiese!", 2]],
+    check(tr) {
+      if (tr.endlos) return "Robo läuft und läuft – die Schleife hört nie auf. Gibt es auf der Bühne überhaupt die Farbe aus dem Sechseck?";
+      if (tr.says.includes("Wiese!") && tr.farbe("gruen")) return true;
+      if (tr.conds.falsch === 0) return "Jetzt ist die Bedingung sofort wahr. Robo soll aber bis zur Wiese laufen.";
+      return "Noch nicht. Schau mit 👣 zu.";
+    },
+    ok: "✔ Fall A gelöst! Rot gab es nicht – die Bedingung war <strong>nie</strong> wahr. Mit Grün hört die Schleife an der Wiese auf." });
+  B.create($("b5b"), { mode: "frei", echtzeit: true, limit: 300, start: { x: -180, y: 0, dir: 90 },
+    felder: [[-220, -40, -140, 40, "rot"], [120, -180, 240, 180, "blau"]],
+    script: ["!flag", ["!until", ["!color", "rot"], [["!move", 10]]], ["!say", "See!", 2]],
+    check(tr) {
+      if (tr.endlos) return "Jetzt hört die Schleife nie auf. Welche Farbe hat das Ziel?";
+      if (tr.conds.falsch === 0) return "Robo sagt sofort „See!“ – ohne einen Schritt. Die Bedingung ist schon am Anfang wahr: Robo steht ja auf Rot!";
+      if (tr.says.includes("See!") && tr.farbe("blau")) return true;
+      return "Noch nicht. Schau mit 👣 zu.";
+    },
+    ok: "✔ Fall B gelöst! Rot war der Start – die Bedingung war <strong>sofort</strong> wahr. Mit Blau läuft Robo bis zum See." });
+  hints($("hints5"), [
+    "Fall A: Gibt es auf der Bühne überhaupt Rot? Fall B: Worauf steht Robo ganz am Anfang?",
+    "Die Bedingung muss das <strong>Ziel</strong> beschreiben – nicht den Start und nicht etwas, das es gar nicht gibt.",
+    "Lösung: Fall A: Tipp auf das Farbfeld und wähl <strong>grün</strong>. Fall B: wähl <strong>blau</strong>.",
+  ]);
+
+  /* Plus · warte bis */
+  B.create($("bplus"), { mode: "frei", start: { x: -200, y: 0, dir: 90 },
+    script: ["!flag", ["!goto", -200, 0], ["!until", ["!touch", "rand"], [["!move", 5]]], ["!say", "Rand!", 2]],
+    palette: [["waituntil"], ["keypressed", "leertaste"]],
+    check(tr) {
+      const s = tr.script, iw = s.findIndex((n) => n.op === "waituntil"), iu = s.findIndex((n) => n.op === "until");
+      if (iw < 0) return (where(s, "waituntil") ? "<em>warte bis</em> steht in der Schleife. Dann wartet Robo vor jedem Schritt. Er soll nur einmal am Anfang warten." : "Robo läuft sofort los. Er soll auf dein Startsignal warten.");
+      if (!s[iw].args.b) return "Das Sechseck in <em>warte bis</em> ist leer. Worauf soll Robo warten?";
+      if (iw > iu) return "Robo wartet erst am Rand – zu spät. <em>warte bis</em> gehört <strong>vor</strong> die Schleife.";
+      return tr.says.includes("Rand!") ? true : null;
+    },
+    ok: "✔ Startschuss! <em>warte bis</em> ist wie eine Schleife ohne Inhalt: Robo fragt immer wieder, bis die Taste gedrückt ist." });
+
+  /* Kurz-Check */
+  const NSD_Q = `<div class="nsd" aria-label="Struktogramm: wiederhole bis Rand berührt: gehe 10 Schritte, drehe dich um 15 Grad.">
+    <div class="nsd-loop"><div class="nsd-head">wiederhole bis Rand berührt</div><div class="nsd-body"><div class="nsd-row">gehe 10 Schritte</div><div class="nsd-row">drehe dich um 15°</div></div></div></div>`;
+  quiz($("quiz"), [
+    { q: "Wann nimmst du <em>wiederhole bis</em> statt <em>wiederhole 10 mal</em>?",
+      options: ["wenn ich nicht weiß, wie oft – aber wann Schluss ist", "wenn ich genau weiß, wie oft", "wenn es nie aufhören soll"], right: 0,
+      miss: [null, "Dann passt <em>wiederhole 10 mal</em> mit der richtigen Zahl.", "Dafür gibt es <em>wiederhole fortlaufend</em>."],
+      why: "<em>wiederhole bis</em> braucht eine Bedingung: Sie sagt, wann Schluss ist." },
+    { q: "Robo steht schon am Rand. Wie oft läuft <em>gehe 10 er Schritt</em>?", html: sm([["until", ["touch", "rand"], [["move", 10]]]]),
+      options: ["0-mal", "1-mal", "10-mal"], right: 0,
+      miss: [null, "Robo fragt <strong>vor</strong> der Runde. Die Antwort ist schon wahr – also keine Runde.", "Hier steht keine Zahl für die Runden. Die Bedingung entscheidet."],
+      why: "Die Bedingung ist schon am Anfang wahr. Die Schleife läuft 0-mal." },
+    { q: "Auf der Bühne gibt es <strong>nichts Blaues</strong>. Was passiert?", html: sm(["flag", ["until", ["color", "blau"], [["move", 10]]], ["say", "Da!", 2]]),
+      options: ["Die Schleife hört nie auf. Robo sagt nie „Da!“.", "Robo sagt sofort „Da!“.", "Robo macht 10 Schritte und sagt „Da!“."], right: 0,
+      miss: [null, "Dafür müsste die Bedingung sofort wahr sein. Ohne Blau ist sie immer falsch.", "Hier steht keine 10 für die Runden. Ohne Blau wird die Bedingung nie wahr."],
+      why: "Ohne Blau ist die Bedingung immer falsch – Robo läuft endlos weiter." },
+    { q: "Welches Skript passt zu diesem Struktogramm?", html: NSD_Q,
+      options: [
+        sm([["until", ["touch", "rand"], [["move", 10], ["right", 15]]]]),
+        sm([["repeat", 10, [["move", 10], ["right", 15]]]]),
+        sm([["until", ["touch", "rand"], [["move", 10]]], ["right", 15]]),
+      ], right: 0,
+      miss: [null, "Im Kopf der Schleife steht eine Bedingung („bis Rand berührt“), keine Zahl.",
+        "Im Struktogramm stehen <strong>beide</strong> Blöcke in der Schleife. Hier steht <em>drehe dich</em> darunter."],
+      why: "Kopf: „wiederhole bis Rand berührt“. Darin: gehe und drehe dich." },
+  ]);
+
+  /* Freiwillig */
+  B.create($("becke"), { mode: "frei", echtzeit: true, limit: 400, start: { x: -200, y: -120, dir: 90 },
+    felder: [[120, -180, 160, -60, "rot"]], objekte: [{ name: "Stern", x: 110, y: 100 }],
+    script: ["!flag"], palette: [["until"], ["color", "rot"], ["touch", "Stern"], ["move", 10], ["left", 90]],
+    check(tr) {
+      if (tr.beruehrt("Stern") && countOp(tr.script, "until") >= 2) return true;
+      if (tr.endlos) return "Eine Schleife hört nie auf. Schau mit 🐢: Welche Bedingung wird nie wahr?";
+      if (countOp(tr.script, "until") < 2) return "Du brauchst zwei Schleifen: erst bis zur Wand, dann bis zum Stern.";
+      return "Noch nicht. Schau mit 🐢 zu, wo Robo abbiegt.";
+    },
+    ok: "✔ Um die Ecke! Zwei Schleifen nacheinander – jede mit ihrer eigenen Bedingung." });
+  B.create($("bexp"), { mode: "frei", echtzeit: true, limit: 300, start: { x: -150, y: 0, dir: 90 }, felder: [[-240, -180, 0, 180, "blau"]],
+    script: ["!flag"], palette: [["until"], ["not"], ["color", "blau"], ["move", 10]],
+    check(tr) {
+      const u = findOp(tr.script, "until");
+      if (!u) return "Es fehlt die Schleife <em>wiederhole bis</em>.";
+      if (tr.conds.falsch === 0) return "Robo bleibt stehen. Die Bedingung ist sofort wahr – er steht ja im Wasser. Er soll laufen, bis er <strong>nicht</strong> mehr im Wasser ist.";
+      if (!tr.farbe("blau") && tr.x > 0 && tr.x < 60) return true;
+      if (tr.endlos) return "Die Schleife hört nie auf. Steht im <em>nicht</em> die Frage nach Blau?";
+      return "Noch nicht. Schau mit 🐢 zu.";
+    },
+    ok: "✔ Raus aus dem See! „bis <strong>nicht</strong> Blau berührt“ heißt: bis Robo trocken ist." });
+
+  checklist($("checklist"), "k6-05");
+});
+</script>
+</body>
+</html>

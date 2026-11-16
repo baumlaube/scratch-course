@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projekt Fangspiel 1: Robo jagt Sterne · Scratch-Kurs Klasse 6</title>
+<meta name="description" content="Lektion 7 im Scratch-Lernpfad Klasse 6: Projekt Fangspiel, Teil 1. Robo wird mit Pfeiltasten oder Knöpfen gesteuert und jagt Sterne – Schritt für Schritt gebaut, am Ende spielbar.">
+<link rel="canonical" href="https://scratch.herrseibert.de/k6/07-projekt-fangspiel.html">
+<!-- vorschau -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Scratch-Kurs">
+<meta property="og:locale" content="de_DE">
+<meta property="og:url" content="https://scratch.herrseibert.de/k6/07-projekt-fangspiel.html">
+<meta property="og:title" content="Projekt Fangspiel 1: Robo jagt Sterne · Scratch-Kurs Klasse 6">
+<meta property="og:description" content="Lektion 7 im Scratch-Lernpfad Klasse 6: Projekt Fangspiel, Teil 1. Robo wird mit Pfeiltasten oder Knöpfen gesteuert und jagt Sterne – Schritt für Schritt gebaut, am Ende spielbar.">
+<meta property="og:image" content="https://scratch.herrseibert.de/vorschau.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Scratch-Kurs – Programmieren lernen Schritt für Schritt, mit Übungsbühne">
+<meta name="twitter:card" content="summary_large_image">
+<!-- /vorschau -->
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="stylesheet" href="../assets/kurs.css?v=48917f175f">
+<link rel="stylesheet" href="../assets/buehne.css?v=a89e0c4e3f">
+<script src="../assets/i18n.js?v=4588e8929d" data-page="k6-07-projekt-fangspiel" data-langs="de"></script>
+<script src="../assets/kurs.js?v=9e315750a5"></script>
+<script src="../assets/buehne.js?v=ad43812cde"></script>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><img class="logo" src="../favicon.svg" alt="" width="34" height="34"> Scratch-Kurs <span>· Programmieren lernen</span></a>
+    <span class="spacer"></span>
+    <button class="theme-btn" type="button" aria-label="Hell oder dunkel umschalten">◐ Hell/Dunkel</button>
+  </div>
+</header>
+
+<main class="wrap">
+  <nav class="path" aria-label="Lernpfad Klasse 6">
+    <strong class="t">Klasse 6:</strong>
+    <ol>
+      <li class="done"><a href="01-start-check.html" title="1 · Start-Check">1</a></li>
+      <li class="done"><a href="02-steuern.html" title="2 · Steuern mit Tasten und Finger">2</a></li>
+      <li class="done"><a href="03-falls-dann.html" title="3 · Robo entscheidet: falls … dann">3</a></li>
+      <li class="done"><a href="04-falls-sonst.html" title="4 · Zwei Wege: falls … sonst">4</a></li>
+      <li class="done"><a href="05-wiederhole-bis.html" title="5 · Bis es passt: wiederhole bis">5</a></li>
+      <li class="done"><a href="06-alles-zusammen.html" title="6 · Alles zusammen">6</a></li>
+      <li class="now"><span title="7 · Projekt Fangspiel 1: Robo jagt Sterne" aria-current="step">7</span></li>
+      <li class="done"><a href="08-fangspiel-fertig.html" title="8 · Projekt Fangspiel 2: Meteore und Ziel">8</a></li>
+    </ol>
+  </nav>
+
+  <section class="hero">
+    <h1>Projekt Fangspiel 1: Robo jagt Sterne</h1>
+    <div class="meta">
+      <span class="chip">Klasse 6 · Lektion 7</span>
+      <span class="chip">⏱ ca. 35 Minuten</span>
+      <span class="chip">Projekt: Teil 1 von 2</span>
+    </div>
+    <ul class="goals">
+      <li>Ich baue ein Spiel Schritt für Schritt – und teste nach jedem Schritt.</li>
+      <li>Ich baue eine Steuerung: eine Schleife, in der Robo immer wieder nach den Tasten fragt.</li>
+      <li>Am Ende der Stunde kann ich mein Spiel spielen.</li>
+    </ul>
+  </section>
+
+  <details class="card woerter">
+    <summary>📖 Scratch-Wörter für dieses Projekt</summary>
+    <p class="note">Die Wörter links bleiben deutsch – so heißen sie in Scratch.</p>
+    <div class="tbl-scroll"><table class="plain">
+      <tr><th class="wort">das Spiel <small>die Spiele</small></th><td>Ein Programm, bei dem du mitmachst.</td></tr>
+      <tr><th class="wort">die Spielregel <small>die Spielregeln</small></th><td>Was im Spiel erlaubt ist und wie man gewinnt.</td></tr>
+      <tr><th class="wort">die Steuerung <small>die Steuerungen</small></th><td>Damit lenkst du Robo – mit Tasten oder Knöpfen.</td></tr>
+      <tr><th class="wort">die Spielschleife <small>die Spielschleifen</small></th><td>Die Schleife, die das ganze Spiel lang läuft und immer wieder fragt.</td></tr>
+      <tr><th class="wort">testen <small>er testet</small></th><td>Ausprobieren, ob alles so klappt, wie es soll.</td></tr>
+    </table></div>
+  </details>
+
+  <section class="card">
+    <h2><span class="step-no">ℹ</span> So arbeitest du heute</h2>
+    <p class="lead">Heute und nächste Stunde baust du ein kleines Spiel – hier in der <strong>Übungsbühne</strong>.</p>
+    <ul class="tasks">
+      <li><span class="badge basis">Tasten</span><span>Am PC steuerst du mit den <strong>Pfeiltasten</strong>. Tipp vorher einmal auf die Bühne.</span></li>
+      <li><span class="badge basis">iPad</span><span>Ohne Tastatur hältst du die <strong>Knöpfe unter der Bühne</strong> ◀ ▲ ▼ ▶. Sie wirken genau wie die Tasten.</span></li>
+      <li><span class="badge basis">Testen</span><span>Nach jedem Schritt: ⚑ Start und spielen. Erst wenn es klappt, geht es weiter.</span></li>
+      <li><span class="badge basis">Zu zweit</span><span>Eine Person baut, die andere testet. Nach jedem Schritt wechseln.</span></li>
+    </ul>
+  </section>
+
+  <section class="card wdh">
+    <h2><span class="step-no">↺</span> Weißt du noch? <span class="chip">2 Minuten</span></h2>
+    <div id="wdh"></div>
+  </section>
+
+  <!-- 1 · Der Plan -->
+  <section class="card">
+    <h2><span class="step-no">1</span> Der Plan: Sternenjagd <span class="chip">4 Minuten</span></h2>
+    <p>Robo fliegt durchs All und sammelt Sterne. So sehen die <strong>Spielregeln</strong> aus:</p>
+    <div class="tbl-scroll"><table class="plain">
+      <tr><th>heute</th><td>1. Robo fliegt mit den Pfeilen in alle Richtungen.<br>2. Berührt Robo einen Stern, ist er gefangen. Oben links zählt die Bühne mit: <strong>★ 3</strong>.</td></tr>
+      <tr><th>nächste Stunde</th><td>3. Berührt Robo einen Meteor: Game over.<br>4. Fliegt Robo ins grüne Ziel: gewonnen!</td></tr>
+    </table></div>
+    <p><strong>Überleg:</strong> Robo soll das <strong>ganze Spiel lang</strong> auf die Tasten hören. Welchen Block brauchst du dafür außen herum?</p>
+    <div class="choices" id="pred1">
+      <button type="button" class="choice"><span data-script='[["repeat",10,[]]]' data-small></span></button>
+      <button type="button" class="choice"><span data-script='[["forever",[]]]' data-small></span></button>
+      <button type="button" class="choice"><span data-script='[["if",["keypressed","rechts"],[]]]' data-small></span></button>
+    </div>
+    <p class="fb" id="fb1"></p>
+  </section>
+
+  <!-- 2 · rechts und links -->
+  <section class="card">
+    <h2><span class="step-no">2</span> Steuerung: rechts und links <span class="badge basis">Basis</span> <span class="chip">6 Minuten</span></h2>
+    <p>Bau zwei Fragen in die Spielschleife: <em>Taste Pfeil nach rechts gedrückt?</em> und <em>Taste Pfeil nach links gedrückt?</em>
+      Klick dann auf ⚑ und flieg zum Stern.</p>
+    <div id="b2"></div>
+    <p class="note">Bei <strong>▶</strong> wird x größer (+5). Bei <strong>◀</strong> wird x kleiner (−5).</p>
+  </section>
+
+  <!-- 3 · hoch und runter -->
+  <section class="card">
+    <h2><span class="step-no">3</span> Steuerung: hoch und runter <span class="badge basis">Basis</span> <span class="chip">5 Minuten</span></h2>
+    <p>Rechts und links sind schon da. Bau noch zwei Fragen für <strong>▲</strong> und <strong>▼</strong> dazu. Dann flieg zum Stern oben rechts.</p>
+    <div id="b3"></div>
+    <p class="note">Hoch und runter ist <strong>y</strong>: hoch +5, runter −5.</p>
+  </section>
+
+  <!-- 4 · Fehlerdetektiv -->
+  <section class="card">
+    <h2><span class="step-no">4</span> Fehlerdetektiv 🔍 <span class="badge basis">Basis</span> <span class="chip">5 Minuten</span></h2>
+    <p>Kai hat die Steuerung mit <em>falls … sonst</em> gebaut. Klick auf ⚑: Robo saust nach links, obwohl niemand drückt.</p>
+    <div id="b4"></div>
+    <ol class="howto">
+      <li>Was <strong>soll</strong> passieren, wenn du nichts drückst?</li>
+      <li>Was <strong>passiert</strong> wirklich? Welcher Weg läuft, wenn ▶ <strong>nicht</strong> gedrückt ist?</li>
+      <li>Wie viele <strong>Fragen</strong> braucht man für zwei Tasten?</li>
+    </ol>
+    <p>Repariere Kais Steuerung und flieg zum Stern.</p>
+    <div id="hints4"></div>
+  </section>
+
+  <!-- 5 · Sterne fangen: Stand 1 -->
+  <section class="card">
+    <h2><span class="step-no">5</span> Sterne fangen – dein Spiel, Stand 1 <span class="badge basis">Basis</span> <span class="chip">6 Minuten</span></h2>
+    <p>Jetzt ist die Steuerung fertig. Der Stern springt weg, sobald Robo ihn fängt – und die Bühne zählt mit. <strong>Fang 5 Sterne!</strong></p>
+    <div id="b5"></div>
+    <p><strong>Anpassen:</strong> Zu langsam? Tipp im Skript auf die Zahlen und mach Robo schneller, z. B. 8 statt 5 (und −8 statt −5).
+      Probier aus, was sich gut spielt.</p>
+  </section>
+
+  <!-- 6 · Die Spielschleife -->
+  <section class="card">
+    <h2><span class="step-no">6</span> Die Spielschleife <span class="chip">3 Minuten</span></h2>
+    <p class="rule">Fast jedes Spiel hat eine <strong>Spielschleife</strong>. Sie läuft das ganze Spiel lang.<br>
+      In jeder Runde fragt sie: Welche Taste ist gedrückt? – und bewegt die Figur.</p>
+    <h3 class="sub">Das Struktogramm</h3>
+    <p class="note">Nur anschauen: außen die Schleife, innen vier Fragen untereinander.</p>
+    <div class="script-row">
+      <figure>
+        <div class="nsd" aria-label="Struktogramm: gehe zu x minus 200 y 0. Dann wiederhole fortlaufend: vier Verzweigungen: Pfeil rechts, dann ändere x um 5; Pfeil links, dann ändere x um minus 5; Pfeil oben, dann ändere y um 5; Pfeil unten, dann ändere y um minus 5.">
+          <div class="nsd-row">gehe zu x: −200 y: 0</div>
+          <div class="nsd-loop">
+            <div class="nsd-head">wiederhole fortlaufend</div>
+            <div class="nsd-body">
+              <div class="nsd-if"><div class="nsd-cond"><span class="nsd-q">Pfeil rechts?</span><span class="nsd-w">wahr</span><span class="nsd-f">falsch</span></div><div class="nsd-cols"><div class="nsd-col"><div class="nsd-row">ändere x um 5</div></div><div class="nsd-col"><div class="nsd-row nsd-leer">–</div></div></div></div>
+              <div class="nsd-if"><div class="nsd-cond"><span class="nsd-q">Pfeil links?</span><span class="nsd-w">wahr</span><span class="nsd-f">falsch</span></div><div class="nsd-cols"><div class="nsd-col"><div class="nsd-row">ändere x um −5</div></div><div class="nsd-col"><div class="nsd-row nsd-leer">–</div></div></div></div>
+              <div class="nsd-if"><div class="nsd-cond"><span class="nsd-q">Pfeil oben?</span><span class="nsd-w">wahr</span><span class="nsd-f">falsch</span></div><div class="nsd-cols"><div class="nsd-col"><div class="nsd-row">ändere y um 5</div></div><div class="nsd-col"><div class="nsd-row nsd-leer">–</div></div></div></div>
+              <div class="nsd-if"><div class="nsd-cond"><span class="nsd-q">Pfeil unten?</span><span class="nsd-w">wahr</span><span class="nsd-f">falsch</span></div><div class="nsd-cols"><div class="nsd-col"><div class="nsd-row">ändere y um −5</div></div><div class="nsd-col"><div class="nsd-row nsd-leer">–</div></div></div></div>
+            </div>
+          </div>
+        </div>
+        <figcaption>Die Spielschleife deines Spiels</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Plus -->
+  <section class="card">
+    <h2><span class="step-no">+</span> Robo schaut, wohin er fliegt <span class="badge plus">Plus</span> <span class="chip">für Schnelle</span></h2>
+    <p>Fliegt Robo nach links, schaut er immer noch nach rechts. Ändere das: Bei ◀ soll er <em>setze Richtung auf −90 Grad</em>, bei ▶ <em>setze Richtung auf 90 Grad</em>.
+      Dann fang 3 Sterne.</p>
+    <div id="bplus"></div>
+    <p class="note">Hier dreht sich Robo nur nach links und rechts – er steht nie auf dem Kopf. In Scratch heißt das <strong>Drehtyp links-rechts</strong>.</p>
+  </section>
+
+  <section class="card">
+    <h2><span class="step-no">✓</span> Kurz-Check <span class="chip">4 Minuten</span></h2>
+    <div id="quiz"></div>
+  </section>
+
+  <section class="card merke">
+    <h2>Merke</h2>
+    <ul>
+      <li>Ein Spiel baut man in <strong>kleinen Schritten</strong> – und testet nach jedem Schritt.</li>
+      <li>Die <strong>Spielschleife</strong> (<em>wiederhole fortlaufend</em>) läuft das ganze Spiel lang.</li>
+      <li>Für jede Taste gibt es ein eigenes <em>falls</em> <strong>in</strong> der Spielschleife.</li>
+      <li><em>falls … sonst</em> passt nicht für die Steuerung: Der sonst-Weg läuft auch, wenn du nichts drückst.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2><span class="step-no">⚑</span> Jetzt in echt: Scratch <span class="chip">zu Hause oder nächste Stunde</span></h2>
+    <p><a class="btn" href="https://scratch.mit.edu/projects/editor/" target="_blank" rel="noopener">Scratch in neuem Fenster öffnen ↗</a></p>
+    <ol class="howto">
+      <li>Bau die Steuerung für die Katze: <em>Wenn ⚑ angeklickt wird</em> → <em>wiederhole fortlaufend</em> → vier <em>falls</em> mit <em>Taste Pfeil … gedrückt?</em></li>
+      <li>Hol eine zweite Figur: unten rechts <strong>Figur wählen</strong> → den Stern <strong>Star</strong>.</li>
+      <li>Der Stern bekommt ein eigenes Skript: <em>Wenn ⚑ angeklickt wird</em> → <em>wiederhole fortlaufend</em> → <em>falls wird Figur1 berührt?, dann</em> → <em>gehe zu Zufallsposition</em>.</li>
+    </ol>
+    <p class="note">⌨️ Am iPad ohne Tastatur: <em>falls Maustaste gedrückt?, dann</em> → <em>drehe dich zu Mauszeiger</em> und <em>gehe 5 er Schritt</em>. Die Katze fliegt zu deinem Finger.<br>
+      💾 Speichern ohne Konto: <strong>Datei → Auf deinem Computer speichern</strong>. Nächste Stunde lädst du es mit <strong>Datei → Von deinem Computer hochladen</strong>.</p>
+  </section>
+
+  <section class="card">
+    <h2><span class="step-no">☑</span> Das kann ich</h2>
+    <ul class="checklist" id="checklist">
+      <li><label><input type="checkbox"> Ich kann eine Steuerung mit vier Pfeilen bauen.</label></li>
+      <li><label><input type="checkbox"> Ich weiß, warum die Fragen in die Spielschleife gehören.</label></li>
+      <li><label><input type="checkbox"> Ich kann erklären, warum <em>falls … sonst</em> hier nicht passt.</label></li>
+      <li><label><input type="checkbox"> Ich habe mein Spiel getestet und angepasst.</label></li>
+    </ul>
+  </section>
+
+  <section class="card frei">
+    <h2><span class="step-no">★</span> Freiwillig</h2>
+    <p class="lead">Für alle, die schon fertig sind.</p>
+
+    <h3 class="sub"><span class="badge ueben">Üben</span> Doppelt so viele Sterne</h3>
+    <p>Hier gibt es <strong>zwei</strong> Sterne. Fang 10! Die Steuerung baust du noch einmal selbst – wird es schon schneller?</p>
+    <div id="bzwei"></div>
+
+    <h3 class="sub"><span class="badge expedition">★ Expedition</span> Steuern wie ein Auto</h3>
+    <p>Andere Idee: ◀ und ▶ <strong>drehen</strong> Robo. ▲ lässt ihn <strong>vorwärts</strong> fliegen, in die Richtung, in die er schaut. Bau diese Steuerung und fang 5 Sterne.</p>
+    <div id="bauto"></div>
+  </section>
+
+  <details class="card">
+    <summary><strong>Für Lehrkräfte</strong></summary>
+    <p>Die Übungsbühne zählt die gefangenen Sterne selbst (★ oben links). So kommt das Spiel ohne Variablen aus – die kommen erst in Klasse 7.
+      Im echten Scratch gibt es diesen Zähler nicht; dort springt der Stern nur weg.</p>
+    <p>Lektion 8 beginnt mit dem fertigen Stand 1 in der Bühne. Wer heute nicht fertig wird, verliert also nichts.</p>
+  </details>
+
+  <nav class="pager">
+    <a href="06-alles-zusammen.html">← Lektion 6: Alles zusammen</a>
+    <a href="08-fangspiel-fertig.html">Lektion 8: Projekt Fangspiel 2: Meteore und Ziel →</a>
+  </nav>
+</main>
+
+<footer>
+  <div class="wrap t">Lernmaterial von <a href="https://herrseibert.de">herrseibert.de</a> · Lizenz <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.de">CC BY-SA 4.0</a> · ohne Tracking, ohne Cookies<br>Erstellt von der KI Claude von Anthropic.</div>
+  <div class="wrap t gh">Fehler gefunden oder eine Idee? → <a href="https://github.com/baumlaube/scratch-course">Kurs auf GitHub</a></div>
+  <div class="wrap t gh">Scratch ist ein Projekt der Scratch Foundation. Dieser Kurs ist kein offizielles Angebot der Scratch Foundation.</div>
+  <div class="wrap legal"><a href="../impressum.html">Impressum</a> · <a href="../datenschutz.html">Datenschutz</a></div>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const { pick, quiz, hints, checklist } = window.Kurs;
+  const B = window.Buehne;
+  const $ = (id) => document.getElementById(id);
+  const sm = (s) => B.render(s, { small: true });
+  function where(list, op, pred, path = []) {
+    for (const n of list) {
+      if (n.op === op && (!pred || pred(n))) return path;
+      const r = (n.body && where(n.body, op, pred, path.concat(n.op))) || (n.body2 && where(n.body2, op, pred, path.concat(n.op + ":sonst")));
+      if (r) return r;
+    }
+    return null;
+  }
+  const allOps = (list, op, out = []) => { list.forEach((n) => { if (n.op === op) out.push(n); [n.body, n.body2].forEach((b) => b && allOps(b, op, out)); }); return out; };
+
+  /* Steuerung prüfen: Für jede Taste ein falls in der Schleife, darin der richtige Block.
+     Gibt null (alles gut) oder einen Hinweis zurück. */
+  const RICHTUNG = { rechts: ["changex", 1, "x größer", "+5"], links: ["changex", -1, "x kleiner", "−5"], oben: ["changey", 1, "y größer", "+5"], unten: ["changey", -1, "y kleiner", "−5"] };
+  const PFEIL = { rechts: "▶", links: "◀", oben: "▲", unten: "▼" };
+  function steuerung(s, keys) {
+    for (const k of keys) {
+      const fi = allOps(s, "if").find((n) => n.args.b && n.args.b.op === "keypressed" && n.args.b.args.k === k);
+      if (!fi) return null;                                              // noch nicht gebaut: kein Hinweis
+      if (!(where(s, "if", (n) => n === fi) || []).includes("forever")) return `Die Frage nach ${PFEIL[k]} steht nicht <strong>in</strong> der Spielschleife. Dann fragt Robo nur einmal ganz am Anfang.`;
+      const [op, sg, txt, z] = RICHTUNG[k];
+      const m = fi.body.find((n) => n.op === "changex" || n.op === "changey");
+      if (!m) return `Im falls für ${PFEIL[k]} fehlt noch, was Robo tun soll.`;
+      if (m.op !== op || Math.sign(Number(m.args.n)) !== sg) return `Bei ${PFEIL[k]} muss ${txt} werden: <em>${op === "changex" ? "ändere x um" : "ändere y um"} ${z}</em>.`;
+    }
+    return null;
+  }
+  const fertig = (s, keys) => keys.every((k) => allOps(s, "if").some((n) => n.args.b && n.args.b.args.k === k)) && !steuerung(s, keys);
+  const STEUER = [
+    ["if", ["keypressed", "rechts"], [["changex", 5]]], ["if", ["keypressed", "links"], [["changex", -5]]],
+    ["if", ["keypressed", "oben"], [["changey", 5]]], ["if", ["keypressed", "unten"], [["changey", -5]]]];
+
+  /* Weißt du noch? */
+  quiz($("wdh"), [
+    { q: "Ein falls steckt in einer Schleife mit 10 Runden. Wie oft fragt Robo?", options: ["10-mal", "1-mal", "nie"], right: 0,
+      miss: [null, "Das falls läuft in jeder Runde mit.", "Robo fragt in jeder Runde – nur die Antwort kann „nein“ sein."],
+      why: "In jeder Runde einmal: 10-mal." },
+    { q: "Welche Schleife hört <strong>nie</strong> von selbst auf?",
+      options: [sm([["forever", []]]), sm([["until", ["touch", "rand"], []]]), sm([["repeat", 10, []]])], right: 0,
+      miss: [null, "<em>wiederhole bis</em> hört auf, sobald die Bedingung wahr ist.", "Diese Schleife hört nach 10 Runden auf."],
+      why: "<em>wiederhole fortlaufend</em> läuft, bis man auf ⏹ drückt." },
+  ]);
+
+  /* 1 · Plan */
+  pick($("pred1"), { right: 1, fb: $("fb1"),
+    miss: ["Nach 10 Runden wäre Schluss – das ist nur ein Drittel Sekunde. Danach hört Robo nicht mehr auf die Tasten.", null,
+      "Ein falls allein fragt nur einmal. Es braucht eine Schleife außen herum."],
+    why: "<em>wiederhole fortlaufend</em> läuft das ganze Spiel lang. Das ist die <strong>Spielschleife</strong>." });
+
+  /* 2 · rechts und links */
+  const S0 = (inner) => ["!flag", ["!goto", -200, 0], ["!forever", inner]];
+  B.create($("b2"), { mode: "puzzle", start: { x: -200, y: 0, dir: 90 }, objekte: [{ name: "Stern", x: 160, y: 0 }], script: S0([]),
+    palette: [["if"], ["if"], ["keypressed", "rechts"], ["keypressed", "links"], ["changex", 5], ["changex", -5]],
+    check(tr) {
+      const h = steuerung(tr.script, ["rechts", "links"]);
+      if (h) return h;
+      if (tr.beruehrt("Stern") && fertig(tr.script, ["rechts", "links"])) return true;
+      if (tr.beruehrt("Stern")) return "Am Stern! Bau noch die zweite Frage, damit Robo auch zurückfliegen kann.";
+      return null;
+    },
+    ok: "✔ Robo fliegt hin und her! Zwei Fragen in der Spielschleife – 30-mal pro Sekunde." });
+
+  /* 3 · hoch und runter */
+  B.create($("b3"), { mode: "frei", start: { x: -200, y: 0, dir: 90 }, objekte: [{ name: "Stern", x: 160, y: 120 }],
+    script: S0([["!if", ["!keypressed", "rechts"], [["!changex", 5]]], ["!if", ["!keypressed", "links"], [["!changex", -5]]]]),
+    palette: [["if"], ["keypressed", "oben"], ["keypressed", "unten"], ["changey", 5], ["changey", -5]],
+    check(tr) {
+      const h = steuerung(tr.script, ["oben", "unten"]);
+      if (h) return h;
+      if (tr.beruehrt("Stern") && fertig(tr.script, ["oben", "unten"])) return true;
+      if (tr.beruehrt("Stern")) return "Am Stern! Bau noch die Frage für die andere Richtung.";
+      return null;
+    },
+    ok: "✔ Vier Richtungen! Die Steuerung ist fertig." });
+
+  /* 4 · Fehlerdetektiv: falls … sonst als Steuerung */
+  B.create($("b4"), { mode: "frei", start: { x: -200, y: 0, dir: 90 }, objekte: [{ name: "Stern", x: 160, y: 0 }],
+    script: S0([["ifelse", ["keypressed", "rechts"], [["changex", 5]], [["changex", -5]]]]),
+    palette: [["if"], ["keypressed", "links"]],
+    check(tr) {
+      const imSonst = allOps(tr.script, "ifelse").some((n) => n.body2.length);
+      if (!imSonst && fertig(tr.script, ["links"]) && tr.beruehrt("Stern")) return true;
+      if (imSonst && tr.beruehrt("Stern")) return "Du bist am Stern – aber lass mal ▶ los: Robo saust nach links. Der sonst-Weg läuft immer, wenn ▶ <strong>nicht</strong> gedrückt ist.";
+      if (imSonst && tr.tasten === 0 && tr.x < -240) return "Robo fliegt nach links, obwohl du nichts drückst. Schau: Was steht bei <em>sonst</em>? Wann läuft dieser Weg?";
+      const h = steuerung(tr.script, ["links"]);
+      return h || null;
+    },
+    ok: "✔ Fall gelöst! Für ◀ gibt es jetzt eine eigene Frage. Drückst du nichts, bleibt Robo stehen." });
+  hints($("hints4"), [
+    "Klick auf ⚑ und drück nichts. Robo fliegt nach links. Welcher Weg läuft gerade: <em>dann</em> oder <em>sonst</em>?",
+    "<em>sonst</em> heißt hier: „▶ ist nicht gedrückt“. Das ist fast immer so! Nach links soll Robo aber nur bei <strong>◀</strong>.",
+    "Lösung: Hol ein neues <em>falls</em> in die Schleife, setz <em>Taste Pfeil nach links gedrückt?</em> hinein und zieh <em>ändere x um −5</em> aus dem sonst-Weg in dieses falls.",
+  ]);
+
+  /* 5 · Sterne fangen: Stand 1 */
+  B.create($("b5"), { mode: "frei", start: { x: -200, y: 0, dir: 90 }, objekte: [{ name: "Stern", x: 80, y: 80, fangen: "springt" }],
+    script: ["flag", ["goto", -200, 0], ["forever", STEUER]],
+    check(tr) { return tr.gefangen >= 5 ? true : null; },
+    ok: "✔ 5 Sterne! Dein Spiel läuft. Spiel ruhig weiter – mit ⚑ geht es von vorn los." });
+
+  /* Plus · Richtung */
+  const STEUER_R = [
+    ["if", ["keypressed", "rechts"], [["changex", 5]]], ["if", ["keypressed", "links"], [["changex", -5]]],
+    ["if", ["keypressed", "oben"], [["changey", 5]]], ["if", ["keypressed", "unten"], [["changey", -5]]]];
+  B.create($("bplus"), { mode: "frei", drehtyp: "links-rechts", start: { x: -200, y: 0, dir: 90 }, objekte: [{ name: "Stern", x: 80, y: 80, fangen: "springt" }],
+    script: ["!flag", ["!goto", -200, 0], ["!forever", STEUER_R]], palette: [["dir", 90], ["dir", -90]],
+    check(tr) {
+      const im = (k, g) => { const fi = allOps(tr.script, "if").find((n) => n.args.b && n.args.b.args.k === k); return !!fi && fi.body.some((n) => n.op === "dir" && Number(n.args.g) === g); };
+      const gut = im("rechts", 90) && im("links", -90);
+      if (gut && tr.gefangen >= 3) return true;
+      if (!gut && tr.gefangen >= 3) return "3 Sterne! Aber schaut Robo beim Fliegen nach links auch nach links? Die <em>setze Richtung</em>-Blöcke gehören in die falls für ◀ und ▶.";
+      return null;
+    },
+    ok: "✔ Robo schaut jetzt immer dorthin, wohin er fliegt." });
+
+  /* Kurz-Check */
+  quiz($("quiz"), [
+    { q: "Robo soll nach <strong>unten</strong> fliegen. Was gehört in <em>falls Taste Pfeil nach unten gedrückt?</em>",
+      options: [sm([["changey", -5]]), sm([["changey", 5]]), sm([["changex", -5]])], right: 0,
+      miss: [null, "+5 bei y heißt: nach oben.", "x ist links und rechts. Hoch und runter ist y."],
+      why: "Unten heißt: y wird kleiner. Also <em>ändere y um −5</em>." },
+    { q: "Du drückst <strong>keine</strong> Taste. Was macht Robo?",
+      html: sm(["flag", ["forever", [["ifelse", ["keypressed", "rechts"], [["changex", 5]], [["changex", -5]]]]]]),
+      options: ["Er fliegt nach links.", "Er bleibt stehen.", "Er fliegt nach rechts."], right: 0,
+      miss: [null, "Ohne Taste ist die Bedingung falsch – dann läuft der sonst-Weg: ändere x um −5.", "Nach rechts geht es nur bei gedrückter Taste."],
+      why: "Ohne Taste läuft immer der sonst-Weg. Darum passt <em>falls … sonst</em> nicht für die Steuerung." },
+    { q: "Lena drückt ▶, aber Robo bewegt sich nicht. Warum?",
+      html: sm(["flag", ["if", ["keypressed", "rechts"], [["changex", 5]]], ["forever", []]]),
+      options: ["Robo fragt nur einmal ganz am Anfang nach der Taste.", "Die Taste ist kaputt.", "<em>ändere x um 5</em> ist zu wenig."], right: 0,
+      miss: [null, "Die Taste ist in Ordnung. Schau, <strong>wo</strong> das falls steht.", "Auch 5 Schritte sieht man – wenn sie immer wieder passieren. Hier passieren sie nie."],
+      why: "Das falls steht vor der Schleife. Es muss <strong>in</strong> die Spielschleife." },
+    { q: "Wie viele <em>falls</em> brauchst du für vier Pfeiltasten?", options: ["4", "1", "2"], right: 0,
+      miss: [null, "Ein falls stellt eine Frage. Für vier Tasten brauchst du vier Fragen.", "Mit zwei Fragen kannst du nur zwei Tasten abfragen."],
+      why: "Für jede Taste eine eigene Frage: 4-mal <em>falls</em>." },
+  ]);
+
+  /* Freiwillig */
+  const ZWEI = [{ name: "Stern", x: 80, y: 80, fangen: "springt" }, { name: "Stern", x: 0, y: -120, fangen: "springt" }];
+  B.create($("bzwei"), { mode: "frei", start: { x: -200, y: 0, dir: 90 }, objekte: ZWEI, script: S0([]),
+    palette: [["if"], ["keypressed", "rechts"], ["keypressed", "links"], ["keypressed", "oben"], ["keypressed", "unten"], ["changex", 5], ["changex", -5], ["changey", 5], ["changey", -5]],
+    check(tr) { return steuerung(tr.script, ["rechts", "links", "oben", "unten"]) || (tr.gefangen >= 10 ? true : null); },
+    ok: "✔ 10 Sterne! Du baust Steuerungen jetzt schon im Schlaf." });
+  B.create($("bauto"), { mode: "frei", start: { x: 0, y: 0, dir: 90 }, objekte: [{ name: "Stern", x: 120, y: 80, fangen: "springt" }],
+    script: ["!flag", ["!goto", 0, 0], ["!forever", []]],
+    palette: [["if"], ["keypressed", "rechts"], ["keypressed", "links"], ["keypressed", "oben"], ["right", 5], ["left", 5], ["move", 5]],
+    check(tr) { return tr.gefangen >= 5 ? true : null; },
+    ok: "✔ 5 Sterne mit Auto-Steuerung! Drehen und vorwärts – so steuert man auch Raumschiffe in vielen Spielen." });
+
+  checklist($("checklist"), "k6-07");
+});
+</script>
+</body>
+</html>

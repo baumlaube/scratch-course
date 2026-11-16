@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alles zusammen · Scratch-Kurs Klasse 6</title>
+<meta name="description" content="Lektion 6 im Scratch-Lernpfad Klasse 6: Schachtelung. falls in der Schleife, Schleife im falls – und Struktogramm und Skript einander zuordnen. Direkt im Browser, auch am iPad.">
+<link rel="canonical" href="https://scratch.herrseibert.de/k6/06-alles-zusammen.html">
+<!-- vorschau -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Scratch-Kurs">
+<meta property="og:locale" content="de_DE">
+<meta property="og:url" content="https://scratch.herrseibert.de/k6/06-alles-zusammen.html">
+<meta property="og:title" content="Alles zusammen · Scratch-Kurs Klasse 6">
+<meta property="og:description" content="Lektion 6 im Scratch-Lernpfad Klasse 6: Schachtelung. falls in der Schleife, Schleife im falls – und Struktogramm und Skript einander zuordnen. Direkt im Browser, auch am iPad.">
+<meta property="og:image" content="https://scratch.herrseibert.de/vorschau.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Scratch-Kurs – Programmieren lernen Schritt für Schritt, mit Übungsbühne">
+<meta name="twitter:card" content="summary_large_image">
+<!-- /vorschau -->
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="stylesheet" href="../assets/kurs.css?v=48917f175f">
+<link rel="stylesheet" href="../assets/buehne.css?v=a89e0c4e3f">
+<script src="../assets/i18n.js?v=4588e8929d" data-page="k6-06-alles-zusammen" data-langs="de"></script>
+<script src="../assets/kurs.js?v=9e315750a5"></script>
+<script src="../assets/buehne.js?v=ad43812cde"></script>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><img class="logo" src="../favicon.svg" alt="" width="34" height="34"> Scratch-Kurs <span>· Programmieren lernen</span></a>
+    <span class="spacer"></span>
+    <button class="theme-btn" type="button" aria-label="Hell oder dunkel umschalten">◐ Hell/Dunkel</button>
+  </div>
+</header>
+
+<main class="wrap">
+  <nav class="path" aria-label="Lernpfad Klasse 6">
+    <strong class="t">Klasse 6:</strong>
+    <ol>
+      <li class="done"><a href="01-start-check.html" title="1 · Start-Check">1</a></li>
+      <li class="done"><a href="02-steuern.html" title="2 · Steuern mit Tasten und Finger">2</a></li>
+      <li class="done"><a href="03-falls-dann.html" title="3 · Robo entscheidet: falls … dann">3</a></li>
+      <li class="done"><a href="04-falls-sonst.html" title="4 · Zwei Wege: falls … sonst">4</a></li>
+      <li class="done"><a href="05-wiederhole-bis.html" title="5 · Bis es passt: wiederhole bis">5</a></li>
+      <li class="now"><span title="6 · Alles zusammen" aria-current="step">6</span></li>
+      <li class="done"><a href="07-projekt-fangspiel.html" title="7 · Projekt Fangspiel 1: Robo jagt Sterne">7</a></li>
+      <li class="done"><a href="08-fangspiel-fertig.html" title="8 · Projekt Fangspiel 2: Meteore und Ziel">8</a></li>
+    </ol>
+  </nav>
+
+  <section class="hero">
+    <h1>Alles zusammen: Schleifen und Fragen ineinander</h1>
+    <div class="meta">
+      <span class="chip">Klasse 6 · Lektion 6</span>
+      <span class="chip">⏱ ca. 35 Minuten</span>
+    </div>
+    <ul class="goals">
+      <li>Ich baue ein <em>falls</em> <strong>in</strong> eine Schleife: Robo fragt in jeder Runde.</li>
+      <li>Ich baue eine Schleife <strong>in</strong> ein <em>falls</em>: Die Schleife läuft nur, wenn die Bedingung wahr ist.</li>
+      <li>Ich ordne Struktogramm und Skript einander zu.</li>
+    </ul>
+  </section>
+
+  <details class="card woerter">
+    <summary>📖 Scratch-Wörter für diese Lektion</summary>
+    <p class="note">Die Wörter links bleiben deutsch – so heißen sie in Scratch.</p>
+    <div class="tbl-scroll"><table class="plain">
+      <tr><th class="wort">die Schachtelung <small>die Schachtelungen</small></th><td>Ein Block steckt in einem anderen – wie eine Schachtel in der Schachtel.</td></tr>
+      <tr><th class="wort">außen <small>–</small></th><td>Der Block, der den anderen umschließt.</td></tr>
+      <tr><th class="wort">innen <small>–</small></th><td>Der Block, der in dem anderen steckt.</td></tr>
+      <tr><th class="wort">das Struktogramm <small>die Struktogramme</small></th><td>Ein Bild vom Ablauf eines Programms.</td></tr>
+      <tr><th class="wort">zuordnen <small>er ordnet zu</small></th><td>Zwei Dinge finden, die zusammengehören.</td></tr>
+      <tr><th class="wort">das Trampolin <small>die Trampoline</small></th><td>Darauf kann man hüpfen. Auf der Bühne: blaues Feld.</td></tr>
+    </table></div>
+  </details>
+
+  <section class="card">
+    <h2><span class="step-no">ℹ</span> So arbeitest du heute</h2>
+    <p class="lead">Du übst mit der <strong>Übungsbühne</strong> direkt hier im Browser. Sie funktioniert mit Maus und mit Finger.</p>
+    <ul class="tasks">
+      <li><span class="badge basis">Innen</span><span>Ein Block mit Lücke (Schleife, falls) nimmt andere Blöcke <strong>in sich</strong> auf. Zieh sie in die Lücke, bis die Markierung eingerückt ist.</span></li>
+      <li><span class="badge basis">Start</span><span><strong>⚑ Start</strong> lässt Robo laufen. 👣 zeigt Runden und <span class="sb-val wahr">wahr</span> / <span class="sb-val falsch">falsch</span>.</span></li>
+      <li><span class="badge basis">Zu zweit</span><span>Eine Person zieht die Blöcke, die andere liest vor und prüft. Nach jeder Aufgabe wechseln.</span></li>
+    </ul>
+  </section>
+
+  <section class="card wdh">
+    <h2><span class="step-no">↺</span> Weißt du noch? <span class="chip">2 Minuten</span></h2>
+    <div id="wdh"></div>
+  </section>
+
+  <!-- 1 · Überleg -->
+  <section class="card">
+    <h2><span class="step-no">1</span> Überleg: Was steckt worin? <span class="chip">4 Minuten</span></h2>
+    <div class="script-row">
+      <figure><div data-script='[["repeat",5,[["move",20],["if",["touch","rand"],[["right",180]]]]]]' data-small></div><figcaption>A: falls <strong>in</strong> der Schleife</figcaption></figure>
+      <div style="flex:1;min-width:220px">
+        <p><strong>Überleg:</strong> Wie oft fragt Robo bei Skript A: <em>Wird der Rand berührt?</em></p>
+        <div class="choices" id="pred1">
+          <button type="button" class="choice">5-mal</button>
+          <button type="button" class="choice">1-mal</button>
+          <button type="button" class="choice">nur am Rand</button>
+        </div>
+        <p class="fb" id="fb1"></p>
+      </div>
+    </div>
+    <div class="script-row">
+      <figure><div data-script='[["if",["color","gruen"],[["repeat",4,[["right",90]]]]]]' data-small></div><figcaption>B: Schleife <strong>im</strong> falls</figcaption></figure>
+      <div style="flex:1;min-width:220px">
+        <p><strong>Überleg:</strong> Robo steht <strong>nicht</strong> auf Grün. Wie oft dreht er sich bei Skript B?</p>
+        <div class="choices" id="pred1b">
+          <button type="button" class="choice">4-mal</button>
+          <button type="button" class="choice">0-mal</button>
+          <button type="button" class="choice">1-mal</button>
+        </div>
+        <p class="fb" id="fb1b"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2 · Puzzle: falls in der Schleife -->
+  <section class="card">
+    <h2><span class="step-no">2</span> Robo sucht hin und her <span class="badge basis">Basis</span> <span class="chip">6 Minuten</span></h2>
+    <p>Robo läuft nach rechts. Der Stern liegt aber <strong>hinter</strong> ihm. Robo soll laufen, <strong>bis</strong> er den Stern findet – und am Rand umdrehen.</p>
+    <div id="b2"></div>
+    <ol class="howto">
+      <li>Außen: <em>wiederhole bis</em> mit der Frage nach dem Stern.</li>
+      <li>Innen: <em>gehe 10 er Schritt</em> und darunter das <em>falls</em>.</li>
+      <li>Im falls: die Frage nach dem Rand und <em>drehe dich</em>.</li>
+    </ol>
+  </section>
+
+  <!-- 3 · Puzzle: Schleife im falls -->
+  <section class="card">
+    <h2><span class="step-no">3</span> Robo auf dem Trampolin <span class="badge basis">Basis</span> <span class="chip">6 Minuten</span></h2>
+    <p>Steht Robo auf dem Trampolin (blau), hüpft er <strong>dreimal</strong>. Sonst sagt er „Kein Trampolin!“.</p>
+    <div id="b3"></div>
+    <ol class="howto">
+      <li>Außen: <em>falls … sonst</em> mit der Frage nach Blau.</li>
+      <li>Bei <em>dann</em>: die Schleife <em>wiederhole 3 mal</em>. Darin: hoch (y + 40) und wieder runter (y − 40).</li>
+      <li>Bei <em>sonst</em>: <em>sage</em>.</li>
+    </ol>
+    <p class="note">Die Bühne prüft dein Skript zweimal: einmal auf dem Trampolin und einmal daneben.</p>
+  </section>
+
+  <!-- 4 · Zuordnen -->
+  <section class="card">
+    <h2><span class="step-no">4</span> Struktogramm und Skript: Was gehört zusammen? <span class="chip">6 Minuten</span></h2>
+    <p>Im Struktogramm siehst du die Schachtelung genau: Was <strong>innen</strong> steht, ist eingerückt oder steht in einer Spalte.</p>
+    <div id="zuordnen"></div>
+  </section>
+
+  <!-- 5 · Fehlerdetektiv -->
+  <section class="card">
+    <h2><span class="step-no">5</span> Fehlerdetektiv 🔍 <span class="badge basis">Basis</span> <span class="chip">5 Minuten</span></h2>
+    <p>Ben will Robo mit ◀ und ▶ steuern. Klick auf ⚑ Start und drück die Pfeiltasten (oder die Knöpfe): Robo rührt sich nicht.</p>
+    <div id="b5"></div>
+    <ol class="howto">
+      <li>Was <strong>soll</strong> passieren?</li>
+      <li>Was <strong>passiert</strong> wirklich? Wann fragt Robo nach der Taste?</li>
+      <li><strong>Wo</strong> müssen die Fragen stehen?</li>
+    </ol>
+    <p>Repariere Bens Skript und steuere Robo zum Stern.</p>
+    <div id="hints5"></div>
+  </section>
+
+  <!-- 6 · Merksatz -->
+  <section class="card">
+    <h2><span class="step-no">6</span> So funktioniert Schachtelung <span class="chip">2 Minuten</span></h2>
+    <p class="rule"><strong>falls in der Schleife:</strong> Robo fragt in <strong>jeder Runde</strong> neu.<br>
+      <strong>Schleife im falls:</strong> Die ganze Schleife läuft nur, wenn die Bedingung <strong>wahr</strong> ist.</p>
+  </section>
+
+  <!-- Plus -->
+  <section class="card">
+    <h2><span class="step-no">+</span> Drei Schachteln <span class="badge plus">Plus</span> <span class="chip">für Schnelle</span></h2>
+    <p>Robo läuft über die Bühne. Auf <strong>jedem</strong> Trampolin hüpft er zweimal. Dafür brauchst du drei Schachteln: Schleife – falls – Schleife.</p>
+    <div id="bplus"></div>
+  </section>
+
+  <section class="card">
+    <h2><span class="step-no">✓</span> Kurz-Check <span class="chip">4 Minuten</span></h2>
+    <div id="quiz"></div>
+  </section>
+
+  <section class="card merke">
+    <h2>Merke</h2>
+    <ul>
+      <li><strong>Schachtelung</strong> heißt: Ein Block steckt in einem anderen.</li>
+      <li>Ein <em>falls</em> in einer Schleife fragt in jeder Runde.</li>
+      <li>Eine Schleife in einem <em>falls</em> läuft nur, wenn die Bedingung wahr ist.</li>
+      <li>Im Struktogramm erkennst du die Schachtelung am Einrücken und an den Spalten.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2><span class="step-no">⚑</span> Jetzt in echt: Scratch <span class="chip">zu Hause oder nächste Stunde</span></h2>
+    <p><a class="btn" href="https://scratch.mit.edu/projects/editor/" target="_blank" rel="noopener">Scratch in neuem Fenster öffnen ↗</a></p>
+    <p>Bau die Steuerung aus Schritt 5. Die brauchst du im Fangspiel.</p>
+    <ol class="howto">
+      <li><em>Wenn ⚑ angeklickt wird</em> → <em>wiederhole fortlaufend</em>.</li>
+      <li>Darin vier <em>falls … , dann</em>. In die Sechsecke: <em>Taste Pfeil nach rechts gedrückt?</em> usw. (bei <strong>Fühlen</strong>).</li>
+      <li>In die falls: <em>ändere x um 5</em>, <em>ändere x um −5</em>, <em>ändere y um 5</em>, <em>ändere y um −5</em>. Klick auf ⚑ und steuere.</li>
+    </ol>
+    <p class="note">⌨️ Am iPad ohne Tastatur gibt es keine Pfeiltasten. Dann so: <em>falls Maustaste gedrückt?, dann</em> → darin <em>drehe dich zu Mauszeiger</em> und <em>gehe 5 er Schritt</em>. Die Katze läuft zu deinem Finger.</p>
+  </section>
+
+  <section class="card">
+    <h2><span class="step-no">☑</span> Das kann ich</h2>
+    <ul class="checklist" id="checklist">
+      <li><label><input type="checkbox"> Ich kann ein falls in eine Schleife bauen.</label></li>
+      <li><label><input type="checkbox"> Ich kann eine Schleife in ein falls bauen.</label></li>
+      <li><label><input type="checkbox"> Ich finde zu einem Struktogramm das passende Skript.</label></li>
+      <li><label><input type="checkbox"> Ich weiß, warum die Tasten-Frage in die fortlaufende Schleife muss.</label></li>
+    </ul>
+  </section>
+
+  <section class="card frei">
+    <h2><span class="step-no">★</span> Freiwillig</h2>
+    <p class="lead">Für alle, die schon fertig sind.</p>
+
+    <h3 class="sub"><span class="badge ueben">Üben</span> Steuern in alle Richtungen</h3>
+    <p>Bau die Steuerung mit allen vier Pfeilen. Hol damit den Stern oben rechts – ohne die rote Wand zu berühren. Berührst du sie, musst du zurück zum Start.</p>
+    <div id="bvier"></div>
+
+    <h3 class="sub"><span class="badge expedition">★ Expedition</span> Der Pfützen-Melder</h3>
+    <p>Robo läuft, <strong>bis</strong> er den Rand berührt. Bei jedem Schritt meldet er: „Platsch!“ im Wasser, sonst „Trocken.“
+      Du brauchst: Schleife außen, falls … sonst innen. Diesmal ohne Hilfe.</p>
+    <div id="bexp"></div>
+  </section>
+
+  <nav class="pager">
+    <a href="05-wiederhole-bis.html">← Lektion 5: Bis es passt: wiederhole bis</a>
+    <a href="07-projekt-fangspiel.html">Lektion 7: Projekt Fangspiel 1: Robo jagt Sterne →</a>
+  </nav>
+</main>
+
+<footer>
+  <div class="wrap t">Lernmaterial von <a href="https://herrseibert.de">herrseibert.de</a> · Lizenz <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.de">CC BY-SA 4.0</a> · ohne Tracking, ohne Cookies<br>Erstellt von der KI Claude von Anthropic.</div>
+  <div class="wrap t gh">Fehler gefunden oder eine Idee? → <a href="https://github.com/baumlaube/scratch-course">Kurs auf GitHub</a></div>
+  <div class="wrap t gh">Scratch ist ein Projekt der Scratch Foundation. Dieser Kurs ist kein offizielles Angebot der Scratch Foundation.</div>
+  <div class="wrap legal"><a href="../impressum.html">Impressum</a> · <a href="../datenschutz.html">Datenschutz</a></div>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const { pick, quiz, hints, checklist } = window.Kurs;
+  const B = window.Buehne;
+  const $ = (id) => document.getElementById(id);
+  const sm = (s) => B.render(s, { small: true });
+  // Wo steht ein Block? → Liste der umgebenden Blöcke; Zweig „sonst“ heißt "ifelse:sonst"
+  function where(list, op, pred, path = []) {
+    for (const n of list) {
+      if (n.op === op && (!pred || pred(n))) return path;
+      const r = (n.body && where(n.body, op, pred, path.concat(n.op))) || (n.body2 && where(n.body2, op, pred, path.concat(n.op + ":sonst")));
+      if (r) return r;
+    }
+    return null;
+  }
+  const findOp = (list, op) => { for (const n of list) { if (n.op === op) return n; for (const b of [n.body, n.body2, n.args.b && [n.args.b]]) if (b) { const r = findOp(b, op); if (r) return r; } } return null; };
+  const last = (p) => (p && p.length ? p[p.length - 1] : null);
+  const zahl = (k) => (n) => Number(n.args.n) === k;
+
+  /* Struktogramm-Bausteine (nur zeigen) */
+  const row = (t) => `<div class="nsd-row">${t}</div>`;
+  const leer = `<div class="nsd-row nsd-leer">–</div>`;
+  const loop = (kopf, inner) => `<div class="nsd-loop"><div class="nsd-head">${kopf}</div><div class="nsd-body">${inner}</div></div>`;
+  const wenn = (q, w, f) => `<div class="nsd-if"><div class="nsd-cond"><span class="nsd-q">${q}</span><span class="nsd-w">wahr</span><span class="nsd-f">falsch</span></div>`
+    + `<div class="nsd-cols"><div class="nsd-col">${w}</div><div class="nsd-col">${f}</div></div></div>`;
+  const nsd = (label, inner) => `<div class="nsd" aria-label="${label}">${inner}</div>`;
+
+  /* Weißt du noch? */
+  quiz($("wdh"), [
+    { q: "Robo soll laufen, <strong>bis</strong> er den Stern berührt. Welcher Block passt?",
+      options: [sm([["until", ["touch", "Stern"], []]]), sm([["repeat", 10, []]]), sm([["if", ["touch", "Stern"], []]])], right: 0,
+      miss: [null, "Hier musst du vorher wissen, wie oft. Du weißt aber nur, wann Schluss ist.", "<em>falls</em> fragt nur einmal und wiederholt nichts."],
+      why: "<em>wiederhole bis</em> läuft, bis die Bedingung wahr ist." },
+    { q: "Robo steht auf Grün. Was sagt er?", html: sm([["ifelse", ["color", "gruen"], [["say", "Wiese!", 2]], [["say", "Weg!", 2]]]]),
+      options: ["„Wiese!“", "„Weg!“", "beides"], right: 0,
+      miss: [null, "Auf Grün ist die Bedingung wahr – dann läuft der obere Weg.", "Bei falls … sonst läuft immer genau ein Weg."],
+      why: "Die Bedingung ist wahr: Der Weg bei <em>dann</em> läuft." },
+  ]);
+
+  /* 1 · Überleg */
+  pick($("pred1"), { right: 0, fb: $("fb1"),
+    miss: [null, "Das falls steckt <strong>in</strong> der Schleife. Es läuft also in jeder Runde mit.",
+      "Robo <strong>fragt</strong> in jeder Runde. Nur die Antwort ist meistens „nein“."],
+    why: "5 Runden – in jeder Runde fragt Robo einmal: 5-mal." });
+  pick($("pred1b"), { right: 1, fb: $("fb1b"),
+    miss: ["Die Schleife steckt <strong>im</strong> falls. Ist die Bedingung falsch, wird sie übersprungen – ganz.", null,
+      "Die Bedingung ist falsch. Dann läuft nichts aus dem falls – auch keine einzige Runde."],
+    why: "Robo steht nicht auf Grün: Die Bedingung ist falsch. Die ganze Schleife wird übersprungen." });
+
+  /* 2 · Puzzle: falls in der Schleife */
+  B.create($("b2"), { mode: "puzzle", echtzeit: true, limit: 800, start: { x: -60, y: 0, dir: 90 }, objekte: [{ name: "Stern", x: -200, y: 0 }],
+    script: ["!flag"], palette: [["until"], ["touch", "Stern"], ["move", 10], ["if"], ["touch", "rand"], ["right", 180]],
+    check(tr) {
+      const s = tr.script, u = findOp(s, "until"), fi = findOp(s, "if");
+      if (!u) return "Außen fehlt die Schleife <em>wiederhole bis</em>.";
+      if (!u.args.b) return "Das Sechseck von <em>wiederhole bis</em> ist leer. Dann hört die Schleife nie auf.";
+      if (u.args.b.args.w === "rand") return "Robo hält am Rand an. Die Schleife soll aber erst beim <strong>Stern</strong> aufhören. Tausch die beiden Sechsecke.";
+      if (!fi || !(where(s, "if") || []).includes("until")) return "Das falls steht nicht <strong>in</strong> der Schleife. Dann fragt Robo nicht in jeder Runde nach dem Rand – er bleibt dort hängen.";
+      if (!fi.args.b) return "Das Sechseck im falls ist leer. Wonach soll Robo fragen, bevor er umdreht?";
+      if (tr.beruehrt("Stern")) return true;
+      if (tr.endlos) return "Robo findet den Stern nicht. Steht <em>drehe dich</em> im falls? Schau mit 🐢 zu.";
+      return "Noch nicht. Schau mit 🐢 zu.";
+    },
+    ok: "✔ Gefunden! Außen die Schleife bis zum Stern – innen das falls, das in jeder Runde nach dem Rand fragt." });
+
+  /* 3 · Puzzle: Schleife im falls */
+  const TRAMP = [[-60, -180, 60, -100, "blau"]];
+  B.create($("b3"), { mode: "puzzle", start: { x: 0, y: -100, dir: 90 }, felder: TRAMP,
+    script: ["!flag"], palette: [["ifelse"], ["color", "blau"], ["repeat", 3], ["changey", 40], ["changey", -40], ["say", "Kein Trampolin!", 2]],
+    check(tr) {
+      const s = tr.script, fe = findOp(s, "ifelse");
+      if (!fe) return "Außen fehlt <em>falls … sonst</em>.";
+      if (!fe.args.b) return "Das Sechseck-Feld ist leer. Wonach soll Robo fragen?";
+      const wr = where(s, "repeat");
+      if (!wr || !wr.join().includes("ifelse")) return "Die Schleife steht nicht <strong>im</strong> falls. Sie soll nur laufen, wenn Robo auf dem Trampolin steht.";
+      if (last(wr) === "ifelse:sonst") return "Die Schleife steht bei <em>sonst</em>. Dann hüpft Robo nur, wenn er <strong>nicht</strong> auf dem Trampolin steht.";
+      const auf = where(s, "changey", (n) => Number(n.args.n) === 40), ab = where(s, "changey", (n) => Number(n.args.n) === -40);
+      if (last(auf) !== "repeat" || last(ab) !== "repeat") return "Hoch und runter gehören beide <strong>in</strong> die Schleife – sonst hüpft Robo nicht dreimal.";
+      if (last(where(s, "say")) !== "ifelse:sonst") return "<em>sage Kein Trampolin!</em> gehört in die Lücke bei <em>sonst</em>.";
+      const daneben = B.simulateAll(tr.skripte, { x: 160, y: -100, dir: 90 }, { felder: TRAMP });
+      if (tr.says.length === 0 && daneben.says.join() === "Kein Trampolin!" && daneben.y === -100) return true;
+      return "Noch nicht. Schau mit 👣 zu.";
+    },
+    ok: "✔ Hüpf, hüpf, hüpf! Auf dem Trampolin läuft die Schleife. Daneben (getestet bei x: 160) sagt Robo „Kein Trampolin!“." });
+
+  /* 4 · Zuordnen */
+  quiz($("zuordnen"), [
+    { q: "Welches Skript passt zu diesem Struktogramm?",
+      html: nsd("Struktogramm: wiederhole bis Stern berührt: gehe 10 Schritte, dann Verzweigung Rand berührt? Wenn wahr: drehe dich um 180 Grad. Wenn falsch: nichts.",
+        loop("wiederhole bis Stern berührt", row("gehe 10 Schritte") + wenn("Rand berührt?", row("drehe dich um 180°"), leer))),
+      options: [
+        sm([["until", ["touch", "Stern"], [["move", 10], ["if", ["touch", "rand"], [["right", 180]]]]]]),
+        sm([["until", ["touch", "Stern"], [["move", 10]]], ["if", ["touch", "rand"], [["right", 180]]]]),
+        sm([["until", ["touch", "rand"], [["move", 10], ["if", ["touch", "Stern"], [["right", 180]]]]]]),
+      ], right: 0,
+      miss: [null, "Im Struktogramm steht das Dreieck <strong>eingerückt</strong> in der Schleife. Hier steht das falls darunter.",
+        "Die Fragen sind vertauscht. Im Kopf der Schleife steht „bis Stern berührt“."],
+      why: "Das Dreieck ist eingerückt: Das falls steckt in der Schleife." },
+    { q: "Welches Skript passt zu diesem Struktogramm?",
+      html: nsd("Struktogramm: Verzweigung Farbe blau berührt? Wenn wahr: wiederhole 3-mal: ändere y um 40, ändere y um minus 40. Wenn falsch: sage Kein Trampolin.",
+        wenn("Farbe blau berührt?", loop("wiederhole 3-mal", row("ändere y um 40") + row("ändere y um −40")), row("sage „Kein Trampolin!“"))),
+      options: [
+        sm([["repeat", 3, [["ifelse", ["color", "blau"], [["changey", 40], ["changey", -40]], [["say", "Kein Trampolin!", 2]]]]]]),
+        sm([["ifelse", ["color", "blau"], [["repeat", 3, [["changey", 40], ["changey", -40]]]], [["say", "Kein Trampolin!", 2]]]]),
+        sm([["ifelse", ["color", "blau"], [["say", "Kein Trampolin!", 2]], [["repeat", 3, [["changey", 40], ["changey", -40]]]]]]),
+      ], right: 1,
+      miss: ["Hier ist das falls in der Schleife. Im Struktogramm steht aber das Dreieck <strong>außen</strong> – die Schleife steckt in der Spalte „wahr“.", null,
+        "Die Wege sind vertauscht. Die Schleife steht im Struktogramm unter <strong>wahr</strong>."],
+      why: "Außen das Dreieck, in der Spalte „wahr“ die Schleife: Die Schleife steckt im falls." },
+    { q: "Welches Struktogramm passt zu diesem Skript?",
+      html: sm(["flag", ["forever", [["if", ["keypressed", "rechts"], [["changex", 5]]], ["if", ["keypressed", "links"], [["changex", -5]]]]]]),
+      options: [
+        nsd("Struktogramm: zwei Verzweigungen nacheinander, danach wiederhole fortlaufend ohne Inhalt.",
+          wenn("Pfeil rechts?", row("ändere x um 5"), leer) + wenn("Pfeil links?", row("ändere x um −5"), leer) + loop("wiederhole fortlaufend", leer)),
+        nsd("Struktogramm: wiederhole fortlaufend: Verzweigung Pfeil rechts? dann ändere x um 5; Verzweigung Pfeil links? dann ändere x um minus 5.",
+          loop("wiederhole fortlaufend", wenn("Pfeil rechts?", row("ändere x um 5"), leer) + wenn("Pfeil links?", row("ändere x um −5"), leer))),
+        nsd("Struktogramm: Verzweigung Pfeil rechts? Wenn wahr: wiederhole fortlaufend ändere x um 5. Wenn falsch: ändere x um minus 5.",
+          wenn("Pfeil rechts?", loop("wiederhole fortlaufend", row("ändere x um 5")), row("ändere x um −5"))),
+      ], right: 1,
+      miss: ["Hier stehen die Fragen <strong>vor</strong> der Schleife – Robo würde nur einmal fragen. Im Skript stecken sie <strong>in</strong> der Schleife.", null,
+        "Im Skript gibt es kein <em>sonst</em> und keine Schleife im falls. Die Schleife ist ganz außen."],
+      why: "Außen die Schleife, innen zwei Dreiecke untereinander: zwei Fragen in jeder Runde." },
+  ]);
+
+  /* 5 · Fehlerdetektiv: Tasten-Frage vor der Schleife */
+  const taste = (k) => (n) => n.args.b && n.args.b.args.k === k;
+  const innen = (s) => ["rechts", "links"].every((k) => (where(s, "if", taste(k)) || []).includes("forever"));
+  B.create($("b5"), { mode: "frei", edit: false, start: { x: -160, y: 0, dir: 90 }, objekte: [{ name: "Stern", x: 160, y: 0 }],
+    script: ["!flag", ["if", ["!keypressed", "rechts"], [["!changex", 5]]], ["if", ["!keypressed", "links"], [["!changex", -5]]], ["!forever", []]],
+    check(tr) {
+      if (innen(tr.script) && tr.beruehrt("Stern")) return true;
+      if (tr.live && tr.tasten > 0 && !innen(tr.script))
+        return "Robo hat nur <strong>ganz am Anfang</strong> nach den Tasten gefragt – einmal. Da hast du noch nicht gedrückt. Jetzt dreht sich die Schleife leer.";
+      return null;
+    },
+    ok: "✔ Fall gelöst! Die Fragen stecken jetzt in der Schleife – Robo fragt 30-mal pro Sekunde: Ist die Taste gedrückt?" });
+  hints($("hints5"), [
+    "Schau mit 👣 zu: Wann laufen die beiden falls? Und was passiert danach in der Schleife?",
+    "Die Schleife ist leer. Robo fragt nur einmal am Anfang – und dann nie wieder.",
+    "Lösung: Zieh beide falls-Blöcke <strong>in</strong> <em>wiederhole fortlaufend</em>.",
+  ]);
+
+  /* Plus · Schleife – falls – Schleife */
+  const PFUETZEN = [[-130, -40, -90, 40, "blau"], [70, -40, 110, 40, "blau"]];
+  B.create($("bplus"), { mode: "puzzle", start: { x: -210, y: 0, dir: 90 }, felder: PFUETZEN,
+    script: ["!flag", ["!repeat", 8, [["!move", 50]]]], palette: [["if"], ["color", "blau"], ["repeat", 2], ["changey", 40], ["changey", -40]],
+    check(tr) {
+      const s = tr.script, wi = where(s, "if"), wr = where(s, "repeat", zahl(2));
+      if (!wi || !wi.includes("repeat")) return "Das falls gehört <strong>in</strong> die große Schleife – Robo soll bei jedem Schritt fragen.";
+      if (!findOp(s, "if").args.b) return "Das Sechseck im falls ist leer.";
+      if (!wr || last(wr) !== "if") return "Die kleine Schleife (2 mal) gehört <strong>in</strong> das falls: Nur auf dem Trampolin wird gehüpft.";
+      if (last(where(s, "changey", (n) => Number(n.args.n) === 40)) !== "repeat" || last(where(s, "changey", (n) => Number(n.args.n) === -40)) !== "repeat")
+        return "Hoch und runter gehören in die kleine Schleife.";
+      return tr.conds.wahr === 2 && Math.abs(tr.y) < 1 ? true : "Noch nicht. Schau mit 🐢 zu.";
+    },
+    ok: "✔ Drei Schachteln: Schleife – falls – Schleife. Robo hüpft nur auf den Trampolinen." });
+
+  /* Kurz-Check */
+  quiz($("quiz"), [
+    { q: "Robo steht <strong>nicht</strong> auf Grün. Wie oft dreht er sich?", html: sm([["if", ["color", "gruen"], [["repeat", 4, [["right", 90]]]]]]),
+      options: ["0-mal", "4-mal", "1-mal"], right: 0,
+      miss: [null, "Die Schleife steckt im falls. Die Bedingung ist falsch – also wird die ganze Schleife übersprungen.",
+        "Auch eine Runde läuft nicht. Alles im falls wird übersprungen."],
+      why: "Die Bedingung ist falsch. Die Schleife im falls läuft gar nicht." },
+    { q: "Wie oft fragt Robo: <em>Wird der Rand berührt?</em>", html: sm([["repeat", 10, [["move", 10], ["if", ["touch", "rand"], [["right", 180]]]]]]),
+      options: ["10-mal", "1-mal", "nur, wenn er am Rand ist"], right: 0,
+      miss: [null, "Das falls steckt in der Schleife. Es läuft in jeder der 10 Runden.",
+        "Robo <strong>fragt</strong> in jeder Runde. Am Rand ist nur die <strong>Antwort</strong> ja."],
+      why: "Das falls steckt in der Schleife: 10 Runden, 10 Fragen." },
+    { q: "Was heißt <strong>Schachtelung</strong>?",
+      options: ["Ein Block steckt in einem anderen Block.", "Zwei Blöcke stehen untereinander.", "Ein Skript startet ein anderes Skript."], right: 0,
+      miss: [null, "Untereinander ist eine Sequenz – eins nach dem anderen.", "Das gibt es auch, heißt aber nicht Schachtelung."],
+      why: "Schachtelung: z. B. ein falls in einer Schleife oder eine Schleife in einem falls." },
+    { q: "Ben steuert Robo. Warum muss die Frage <em>Taste … gedrückt?</em> in <em>wiederhole fortlaufend</em> stehen?",
+      options: ["Damit Robo immer wieder fragt – auch dann, wenn ich später drücke.", "Damit Robo schneller läuft.", "Weil ein falls immer in einer Schleife stehen muss."], right: 0,
+      miss: [null, "Das Tempo kommt von <em>ändere x um 5</em>. Die Schleife sorgt dafür, dass immer wieder gefragt wird.",
+        "Ein falls darf auch allein stehen – dann fragt Robo aber nur einmal."],
+      why: "Ohne Schleife fragt Robo nur ganz am Anfang. In der Schleife fragt er immer wieder." },
+  ]);
+
+  /* Freiwillig */
+  B.create($("bvier"), { mode: "frei", start: { x: -200, y: -140, dir: 90 },
+    felder: [[-80, -180, -40, 60, "rot"]], objekte: [{ name: "Stern", x: 180, y: 140 }],
+    script: ["!flag", ["!goto", -200, -140], ["!forever", [["!if", ["!color", "rot"], [["!goto", -200, -140]]]]]],
+    palette: [["if"], ["keypressed", "rechts"], ["keypressed", "links"], ["keypressed", "oben"], ["keypressed", "unten"],
+      ["changex", 5], ["changex", -5], ["changey", 5], ["changey", -5]],
+    check(tr) { return tr.beruehrt("Stern") ? true : null; },
+    ok: "✔ Am Stern! Vier Fragen in der Schleife – vier Richtungen. Genau so steuerst du im Fangspiel." });
+  B.create($("bexp"), { mode: "frei", limit: 300, start: { x: -210, y: 0, dir: 90 }, felder: PFUETZEN, script: ["!flag"],
+    palette: [["until"], ["touch", "rand"], ["move", 50], ["ifelse"], ["color", "blau"], ["say", "Platsch!", 0.5], ["say", "Trocken.", 0.5]],
+    check(tr) {
+      const s = tr.script, u = findOp(s, "until"), wi = where(s, "ifelse");
+      if (!u) return "Außen fehlt die Schleife <em>wiederhole bis</em>.";
+      if (!wi || !wi.includes("until")) return "Das falls … sonst gehört <strong>in</strong> die Schleife.";
+      const p = tr.says.filter((t) => t === "Platsch!").length, t = tr.says.filter((x) => x === "Trocken.").length;
+      if (tr.endlos) return "Die Schleife hört nicht auf. Fragt sie nach dem Rand?";
+      if (p === 2 && t >= 5 && tr.beruehrt("rand")) return true;
+      return "Noch nicht. Im Wasser „Platsch!“, sonst „Trocken.“ – bis zum Rand.";
+    },
+    ok: "✔ Pfützen-Melder fertig: Schleife außen, falls … sonst innen. Alles, was du in Klasse 6 gelernt hast, in einem Skript!" });
+
+  checklist($("checklist"), "k6-06");
+});
+</script>
+</body>
+</html>

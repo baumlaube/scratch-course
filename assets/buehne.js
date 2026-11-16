@@ -63,7 +63,7 @@
   function ddOptions(f, welt) {
     if (f.opts === "tasten") return KEYS;
     if (f.opts === "stopp") return [["alles", "alles"], ["dieses Skript", "dieses Skript"]];
-    if (f.opts === "ziele") return [["maus", "Mauszeiger"], ["rand", "Rand"]].concat(((welt && welt.objekte) || []).map((o) => [o.name, o.name]));
+    if (f.opts === "ziele") return [["maus", "Mauszeiger"], ["rand", "Rand"]].concat([...new Set(((welt && welt.objekte) || []).map((o) => o.name))].map((n) => [n, n]));
     if (f.t === "color") return Object.keys(FARBEN).map((c) => [c, c === "gruen" ? "grün" : c]);
     return [];
   }
@@ -281,8 +281,7 @@
   function beruehrt(s, w) {
     if (w === "rand") return Math.abs(s.x) + R > 240 || Math.abs(s.y) + R > 180;
     if (w === "maus") return !!s.maus && s.maus.x !== null && Math.hypot(s.maus.x - s.x, s.maus.y - s.y) < R + 4;
-    const o = s.obj.find((q) => q.name === w && !q.weg);
-    return !!o && Math.hypot(o.x - s.x, o.y - s.y) < R + o.r;
+    return s.obj.some((o) => o.name === w && !o.weg && Math.hypot(o.x - s.x, o.y - s.y) < R + o.r);   // gleiche Namen = Klone
   }
   function farbeBeruehrt(s, f) {
     return (s.welt.felder || []).some(([x1, y1, x2, y2, c]) => {
@@ -331,6 +330,7 @@
           }
         case "until":
           for (let i = 1; ; i++) {
+            if (i > 1 && ++s.steps > s.limit) { s.halt = "limit"; return; }   // auch leere Schleifen zählen
             const v = cond(s, n.args.b);
             yield { t: "cond", n, v, i, runde: !v };
             if (v) break;
@@ -410,6 +410,7 @@
       ths = ths.filter((t) => !t.done);
       tick(s); frames++;
     }
+    if (ths.length && !s.halt) s.endlos = true;              // läuft nach 3000 Bildern noch: endlos
   }
   const hatOf = (st) => (st[0] && DEF[st[0].op].hat ? st[0] : null);
   function keyMatch(st, k) { const h = hatOf(st); return !!h && h.op === "key" && (h.args.k === k || h.args.k === "beliebig"); }
@@ -439,7 +440,7 @@
     return { segs: s.segs, says: s.says, x: s.x, y: s.y, dir: s.dir, costume: s.costume, wechsel: s.wechsel,
       blocks: all.reduce((k, st) => k + count(st), 0), hat: all.some((st) => st[0] && st[0].op === "flag"),
       errors: s.errors, script: all[0] || [], skripte: all, gefangen: s.gefangen, tasten: s.tasten, conds: { ...s.conds },
-      randBeruehrt: s.randBeruehrt, gestoppt: s.halt === "stop", bubble: s.bubble,
+      randBeruehrt: s.randBeruehrt, gestoppt: s.halt === "stop", endlos: s.halt === "limit" || !!s.endlos, bubble: s.bubble,
       objekte: s.obj.map((o) => ({ name: o.name, x: o.x, y: o.y, weg: o.weg })),
       beruehrt: (w) => beruehrt(s, w), farbe: (f) => farbeBeruehrt(s, f) };
   }
@@ -748,7 +749,18 @@
       clearTimeout(repeatTimers[k]); clearInterval(repeatTimers[k + "_"]);
       repeatTimers[k] = setTimeout(() => { repeatTimers[k + "_"] = setInterval(() => { if (keysDown.has(k)) trigger("key", k, true); }, 90); }, 400);
     });
-    const padUp = (ev) => { const b = ev.target.closest && ev.target.closest("button[data-key]"); if (b) keyUp(b.dataset.key); };
+    // Kurzes Antippen gilt mindestens 0,1 s lang als gedrückt – sonst übersieht „Taste … gedrückt?“ (30-mal pro Sekunde) es leicht
+    const padDownAt = {}, padLater = {};
+    pad.addEventListener("pointerdown", (ev) => {
+      const b = ev.target.closest("button[data-key]");
+      if (b) { padDownAt[b.dataset.key] = performance.now(); clearTimeout(padLater[b.dataset.key]); }
+    }, true);
+    const padUp = (ev) => {
+      const b = ev.target.closest && ev.target.closest("button[data-key]");
+      if (!b) return;
+      const k = b.dataset.key, rest = 100 - (performance.now() - (padDownAt[k] || 0));
+      if (rest > 0) padLater[k] = setTimeout(() => keyUp(k), rest); else keyUp(k);
+    };
     ["pointerup", "pointercancel", "lostpointercapture"].forEach((t) => pad.addEventListener(t, padUp));
     pad.addEventListener("contextmenu", (ev) => ev.preventDefault());
     function onKey(ev, down) {
@@ -1084,7 +1096,7 @@
     function beginRun(anlass) {
       const tok = Symbol("lauf");
       run = { token: tok, threads: new Set(), anlass, interaktiv: interaktiv(), forever: stacks.some((st) => { let f = false; walk(st, (n) => { if (n.op === "forever") f = true; }); return f; }) };
-      S.halt = false; S.steps = 0; S.limit = run.forever || anlass !== "flag" ? Infinity : MAX_STEPS;
+      S.halt = false; S.steps = 0; S.limit = run.forever || run.interaktiv || anlass !== "flag" ? Infinity : cfg.limit || MAX_STEPS;
       el.classList.add("running");
       $(".stop").disabled = false;
       aktiv = onKey;
@@ -1095,7 +1107,9 @@
         tick(S); draw();
         if (run.forever && cfg.check) {
           const tr = trace(S, stacks); tr.live = true; tr.anlass = run.anlass;
-          if (cfg.check(tr, api) === true) { api.last = tr; finish(tok, cfg.ok || "✔ Geschafft!", "ok", tr); }
+          const res = cfg.check(tr, api);
+          if (res === true) { api.last = tr; finish(tok, cfg.ok || "✔ Geschafft!", "ok", tr); }
+          else if (typeof res === "string" && res !== run.hinweis) { run.hinweis = res; say(res, "hint"); }   // Spiel läuft weiter
         }
       }, 1000 / 30);
       return tok;
@@ -1147,6 +1161,9 @@
       const tr = trace(S, stacks); tr.anlass = run.anlass;
       api.last = tr;
       let res = S.errors.length ? "In einem Feld steht keine Zahl." : cfg.check ? cfg.check(tr, api) : null;
+      if ((res === null || res === undefined) && S.halt === "limit") {
+        res = "Robo hat nach sehr vielen Blöcken aufgehört. Hört eine Schleife nie auf? (In Scratch würde sie ewig laufen.)";
+      }
       if ((res === null || res === undefined) && target && run.anlass === "flag") {
         res = sameDrawing(tr.segs, target.segs) ? true : "Noch nicht ganz. Vergleich deine Linien mit der grauen Vorlage.";
       }
