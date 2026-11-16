@@ -290,6 +290,7 @@
         ctx.beginPath(); ctx.moveTo(...P(s[0], s[1])); ctx.lineTo(...P(s[2], s[3])); ctx.stroke(); ctx.setLineDash([]);
       };
       if (target) target.segs.forEach((s) => line(s, "#c3cad6", 7, [10, 9]));
+      (cfg.sterne || []).forEach(([sx, sy]) => star(...P(sx, sy)));
       segs.forEach((s) => line(s, "#3d5afe", 3.5));
       if (partial) line(partial, "#3d5afe", 3.5);
       const [px, py] = P(vis.x, vis.y);
@@ -298,6 +299,16 @@
       if (img.complete && img.naturalWidth) ctx.drawImage(img, -32, -32, 64, 64);
       else { ctx.fillStyle = "#ff8c42"; ctx.fillRect(-14, -14, 28, 28); }
       ctx.restore();
+    }
+    // Ziel-Stern (cfg.sterne: [[x, y], …]) – zeigt, wohin Robo laufen soll
+    function star(cx, cy) {
+      ctx.beginPath();
+      for (let i = 0; i < 10; i++) {
+        const r = i % 2 ? 8 : 19, a = Math.PI / 5 * i - Math.PI / 2;
+        ctx.lineTo(cx + r * Math.cos(a), cy + r * Math.sin(a));
+      }
+      ctx.closePath(); ctx.fillStyle = "#ffd54a"; ctx.fill();
+      ctx.strokeStyle = "#c79100"; ctx.lineWidth = 2.5; ctx.lineJoin = "round"; ctx.stroke();
     }
     roboImg.forEach((i) => i.addEventListener("load", draw));
     if (window.ResizeObserver) new ResizeObserver(() => draw()).observe(canvas);

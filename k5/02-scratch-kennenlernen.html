@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Scratch kennenlernen · Scratch-Kurs Klasse 5</title>
+<meta name="description" content="Lektion 2 im Scratch-Lernpfad: So ist Scratch aufgebaut – Bühne, Figur, Blockpalette, Skriptbereich und grüne Flagge. Der Startblock und ein erstes Skript, direkt im Browser.">
+<link rel="canonical" href="https://scratch.herrseibert.de/k5/02-scratch-kennenlernen.html">
+<!-- vorschau -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Scratch-Kurs">
+<meta property="og:locale" content="de_DE">
+<meta property="og:url" content="https://scratch.herrseibert.de/k5/02-scratch-kennenlernen.html">
+<meta property="og:title" content="Scratch kennenlernen · Scratch-Kurs Klasse 5">
+<meta property="og:description" content="Lektion 2 im Scratch-Lernpfad: So ist Scratch aufgebaut – Bühne, Figur, Blockpalette, Skriptbereich und grüne Flagge. Der Startblock und ein erstes Skript, direkt im Browser.">
+<meta property="og:image" content="https://scratch.herrseibert.de/vorschau.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Scratch-Kurs – Programmieren lernen Schritt für Schritt, mit Übungsbühne">
+<meta name="twitter:card" content="summary_large_image">
+<!-- /vorschau -->
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="stylesheet" href="../assets/kurs.css?v=852db3b491">
+<link rel="stylesheet" href="../assets/buehne.css?v=71ab1408ba">
+<script src="../assets/i18n.js?v=4588e8929d" data-page="k5-02-scratch-kennenlernen" data-langs="de"></script>
+<script src="../assets/kurs.js?v=5fcc1de7cc"></script>
+<script src="../assets/buehne.js?v=a71be29b8b"></script>
+<style>
+  .skizze { width: 100%; max-width: 640px; height: auto; display: block; margin: 10px 0; }
+  .legende { list-style: none; padding: 0; margin: 8px 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 6px 16px; }
+  .legende li { display: flex; gap: 10px; align-items: baseline; }
+  .legende .nr { flex: none; display: inline-grid; place-items: center; width: 26px; height: 26px; border-radius: 50%; background: var(--navy); color: var(--surface); font-weight: 800; font-size: 14px; }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><img class="logo" src="../favicon.svg" alt="" width="34" height="34"> Scratch-Kurs <span>· Programmieren lernen</span></a>
+    <span class="spacer"></span>
+    <button class="theme-btn" type="button" aria-label="Hell oder dunkel umschalten">◐ Hell/Dunkel</button>
+  </div>
+</header>
+
+<main class="wrap">
+  <nav class="path" aria-label="Lernpfad Klasse 5">
+    <strong class="t">Klasse 5:</strong>
+    <ol>
+      <li class="done"><a href="01-programmieren.html" title="1 · Was ist Programmieren?">1</a></li>
+      <li class="now"><span title="2 · Scratch kennenlernen" aria-current="step">2</span></li>
+      <li class="done"><a href="03-befehle-der-reihe-nach.html" title="3 · Befehle der Reihe nach">3</a></li>
+      <li class="done"><a href="04-malen-mit-dem-stift.html" title="4 · Malen mit dem Stift">4</a></li>
+      <li class="done"><a href="05-schleife.html" title="5 · Die Schleife">5</a></li>
+      <li class="soon"><span title="6 · Schleifen üben (in Arbeit)">6</span></li>
+      <li class="soon"><span title="7 · Schleife in der Schleife (in Arbeit)">7</span></li>
+      <li class="soon"><span title="8 · Mein Projekt (in Arbeit)">8</span></li>
+    </ol>
+  </nav>
+
+  <section class="hero">
+    <h1>Scratch kennenlernen – Robo bekommt Blöcke</h1>
+    <div class="meta">
+      <span class="chip">Klasse 5 · Lektion 2</span>
+      <span class="chip">⏱ ca. 35 Minuten</span>
+    </div>
+    <ul class="goals">
+      <li>Ich kenne die Teile von Scratch: Bühne, Figur, Blockpalette, Skriptbereich.</li>
+      <li>Ich weiß, wozu der Startblock mit der grünen Flagge da ist.</li>
+      <li>Ich baue mein erstes Skript.</li>
+    </ul>
+  </section>
+
+  <details class="card woerter">
+    <summary>📖 Scratch-Wörter für diese Lektion</summary>
+    <p class="note">Die Wörter links bleiben deutsch – so heißen sie in Scratch.</p>
+    <div class="tbl-scroll"><table class="plain">
+      <tr><th class="wort">die Bühne <small>die Bühnen</small></th><td>Hier siehst du, was dein Programm macht.</td></tr>
+      <tr><th class="wort">die Figur <small>die Figuren</small></th><td>Wer auf der Bühne etwas tut. Bei uns: Robo.</td></tr>
+      <tr><th class="wort">der Block <small>die Blöcke</small></th><td>Ein Befehl in Scratch. Blöcke steckt man zusammen wie Puzzleteile.</td></tr>
+      <tr><th class="wort">die Blockpalette <small>die Blockpaletten</small></th><td>Links: Hier liegen alle Blöcke, sortiert nach Farben.</td></tr>
+      <tr><th class="wort">der Skriptbereich <small>die Skriptbereiche</small></th><td>In der Mitte: Hier baust du dein Skript zusammen.</td></tr>
+      <tr><th class="wort">das Skript <small>die Skripte</small></th><td>Blöcke, die zusammenhängen. Das ist dein Programm.</td></tr>
+      <tr><th class="wort">die grüne Flagge <small>⚑</small></th><td>Damit startest du dein Programm.</td></tr>
+    </table></div>
+  </details>
+
+  <section class="card">
+    <h2><span class="step-no">ℹ</span> So arbeitest du heute</h2>
+    <p class="lead">Du übst mit der <strong>Übungsbühne</strong> direkt hier im Browser. Sie funktioniert mit Maus und mit Finger.</p>
+    <ul class="tasks">
+      <li><span class="badge basis">Ziehen</span><span>Zieh Blöcke von <em>Blöcke</em> nach <em>Skript</em>. Tippen geht auch: Dann hängt der Block unten dran.</span></li>
+      <li><span class="badge basis">Start</span><span><strong>⚑ Start</strong> lässt Robo laufen. 🐢 ist die Zeitlupe, 👣 geht Block für Block.</span></li>
+      <li><span class="badge basis">Stern</span><span>Der gelbe Stern zeigt, wohin Robo laufen soll.</span></li>
+    </ul>
+    <p class="note">Die Übungsbühne stellt Robo vor jedem Start an den Anfang zurück. Das echte Scratch macht das nicht – dazu am Ende mehr.</p>
+  </section>
+
+  <section class="card wdh">
+    <h2><span class="step-no">↺</span> Weißt du noch? <span class="chip">2 Minuten</span></h2>
+    <div id="wdh"></div>
+  </section>
+
+  <!-- 1 · Die Oberfläche -->
+  <section class="card">
+    <h2><span class="step-no">1</span> So sieht Scratch aus</h2>
+    <p class="lead">Eine einfache Skizze. Das echte Scratch ist bunter – aber die Teile sind an denselben Stellen.</p>
+    <svg class="skizze" viewBox="0 0 640 380" role="img" aria-label="Skizze von Scratch: links die Blockpalette, in der Mitte der Skriptbereich, rechts oben die Bühne mit grüner Flagge, rechts unten die Figuren">
+      <rect x="1" y="1" width="638" height="378" rx="10" style="fill:var(--surface);stroke:var(--line)" stroke-width="2"/>
+      <rect x="1" y="1" width="638" height="34" rx="10" style="fill:var(--navy)" opacity=".85"/>
+      <text x="16" y="23" font-size="14" font-weight="700" style="fill:var(--surface)">Datei · Bearbeiten</text>
+      <!-- Kategorien -->
+      <g><circle cx="22" cy="62" r="9" fill="#4c97ff"/><circle cx="22" cy="90" r="9" fill="#9966ff"/><circle cx="22" cy="118" r="9" fill="#cf63cf"/><circle cx="22" cy="146" r="9" fill="#ffbf00"/><circle cx="22" cy="174" r="9" fill="#ffab19"/><circle cx="22" cy="202" r="9" fill="#5cb1d6"/></g>
+      <!-- 1 Blockpalette -->
+      <rect x="40" y="44" width="150" height="326" rx="6" style="fill:var(--surface-2)"/>
+      <rect x="52" y="62" width="110" height="22" rx="5" fill="#4c97ff"/><rect x="52" y="92" width="125" height="22" rx="5" fill="#4c97ff"/><rect x="52" y="122" width="100" height="22" rx="5" fill="#4c97ff"/>
+      <rect x="52" y="160" width="118" height="22" rx="5" fill="#9966ff"/><rect x="52" y="190" width="90" height="22" rx="5" fill="#9966ff"/>
+      <rect x="52" y="228" width="120" height="26" rx="10" fill="#ffbf00"/><rect x="52" y="264" width="96" height="22" rx="5" fill="#ffab19"/>
+      <!-- 2 Skriptbereich -->
+      <rect x="198" y="44" width="230" height="326" rx="6" style="fill:var(--bg);stroke:var(--line)" stroke-dasharray="6 5"/>
+      <rect x="226" y="86" width="140" height="28" rx="12" fill="#ffbf00"/><path d="M238 94v14" stroke="#3a8c2f" stroke-width="2.5"/><path d="M239 95c4-2 6 2 10 0v6c-4 2-6-2-10 0z" fill="#4cbf56"/>
+      <rect x="226" y="114" width="130" height="24" rx="5" fill="#4c97ff"/><rect x="226" y="138" width="150" height="24" rx="5" fill="#9966ff"/>
+      <!-- 3 Bühne -->
+      <rect x="436" y="44" width="196" height="26" rx="5" style="fill:var(--surface-2)"/>
+      <path d="M452 50v15" stroke="#3a8c2f" stroke-width="2.5"/><path d="M453 51c4-2 6 2 11 0v7c-5 2-7-2-11 0z" fill="#4cbf56"/>
+      <polygon points="478,50 486,50 491,55 491,62 486,67 478,67 473,62 473,55" fill="#e5484d"/>
+      <rect x="436" y="74" width="196" height="148" rx="5" style="fill:var(--surface);stroke:var(--text)" stroke-width="2"/>
+      <circle cx="520" cy="150" r="16" fill="#ff8c42" stroke="#2b3a55" stroke-width="3"/><path d="M528 146l10 4l-10 4z" fill="#2b3a55"/>
+      <!-- 4 Figuren -->
+      <rect x="436" y="230" width="196" height="140" rx="5" style="fill:var(--surface-2)"/>
+      <rect x="450" y="262" width="52" height="52" rx="8" style="fill:var(--surface);stroke:#4c97ff" stroke-width="3"/><circle cx="476" cy="288" r="13" fill="#ff8c42" stroke="#2b3a55" stroke-width="2.5"/>
+      <!-- Nummern -->
+      <g font-size="16" font-weight="800" text-anchor="middle">
+        <circle cx="115" cy="335" r="15" style="fill:var(--navy)"/><text x="115" y="341" style="fill:var(--surface)">1</text>
+        <circle cx="313" cy="335" r="15" style="fill:var(--navy)"/><text x="313" y="341" style="fill:var(--surface)">2</text>
+        <circle cx="610" cy="200" r="15" style="fill:var(--navy)"/><text x="610" y="206" style="fill:var(--surface)">3</text>
+        <circle cx="610" cy="345" r="15" style="fill:var(--navy)"/><text x="610" y="351" style="fill:var(--surface)">4</text>
+        <circle cx="520" cy="58" r="13" style="fill:var(--navy)"/><text x="520" y="64" style="fill:var(--surface)">5</text>
+      </g>
+    </svg>
+    <ul class="legende">
+      <li><span class="nr">1</span><span><strong>Blockpalette:</strong> Hier liegen die Blöcke. Links wählst du die Farbe, z. B. blau = Bewegung.</span></li>
+      <li><span class="nr">2</span><span><strong>Skriptbereich:</strong> Hier ziehst du die Blöcke hin und steckst sie zusammen.</span></li>
+      <li><span class="nr">3</span><span><strong>Bühne:</strong> Hier siehst du die Figur. Hier passiert, was dein Programm sagt.</span></li>
+      <li><span class="nr">4</span><span><strong>Figuren:</strong> Hier wählst du, welche Figur du programmierst.</span></li>
+      <li><span class="nr">5</span><span><strong>Grüne Flagge ⚑</strong> startet das Programm. Das rote Achteck stoppt es.</span></li>
+    </ul>
+    <p><strong>Überleg:</strong> Wo baust du dein Skript zusammen?</p>
+    <div class="choices" id="pred1">
+      <button type="button" class="choice">1 · in der Blockpalette</button>
+      <button type="button" class="choice">2 · im Skriptbereich</button>
+      <button type="button" class="choice">3 · auf der Bühne</button>
+      <button type="button" class="choice">4 · bei den Figuren</button>
+    </div>
+    <p class="fb" id="fb1"></p>
+  </section>
+
+  <!-- 2 · Der Startblock -->
+  <section class="card">
+    <h2><span class="step-no">2</span> Der Startblock</h2>
+    <p>Kai hat nur diesen einen Block in sein Skript gezogen:</p>
+    <div data-script='[["move",200]]' data-small></div>
+    <p><strong>Überleg:</strong> Kai klickt auf ⚑. Was passiert?</p>
+    <div class="choices" id="pred2">
+      <button type="button" class="choice">Robo geht 200 Schritte.</button>
+      <button type="button" class="choice">Robo geht 10 Schritte.</button>
+      <button type="button" class="choice">Nichts.</button>
+    </div>
+    <p class="fb" id="fb2"></p>
+    <div id="probe2" hidden>
+      <p><strong>Probier es aus:</strong> Klick auf ⚑ Start. Dann zieh den Block <em>Wenn ⚑ angeklickt wird</em> <strong>über</strong> den gehe-Block, bis er einrastet. Starte noch einmal.</p>
+      <div id="b2"></div>
+      <p class="rule">Jedes Skript braucht oben den <strong>Startblock</strong>:<br><em>Wenn ⚑ angeklickt wird</em>.</p>
+      <p>Darunter laufen die Blöcke <strong>der Reihe nach</strong> – von oben nach unten. Genau wie die Karten an der Tafel in Lektion 1.</p>
+    </div>
+  </section>
+
+  <!-- 3 · Zuschauen -->
+  <section class="card">
+    <h2><span class="step-no">3</span> Schritt für Schritt zuschauen</h2>
+    <div data-script='["flag",["say","Hallo! Ich bin Robo.",2],["move",200]]' data-small></div>
+    <p><strong>Überleg:</strong> Was macht Robo zuerst?</p>
+    <div class="choices" id="pred3">
+      <button type="button" class="choice">Er sagt „Hallo! Ich bin Robo.“</button>
+      <button type="button" class="choice">Er geht 200 Schritte.</button>
+      <button type="button" class="choice">Beides gleichzeitig.</button>
+    </div>
+    <p class="fb" id="fb3"></p>
+    <div id="probe3" hidden>
+      <p>Drück immer wieder auf <strong>👣 Schritt</strong>. Der Block, der gerade läuft, <strong>leuchtet gelb</strong>.</p>
+      <div id="b3"></div>
+    </div>
+  </section>
+
+  <!-- 4 · Puzzle -->
+  <section class="card">
+    <h2><span class="step-no">4</span> Dein erstes Skript <span class="badge basis">Basis</span></h2>
+    <div id="b4"></div>
+    <p>Robo soll zum <strong>ersten Stern</strong> in der Mitte gehen, dort <strong>„Hallo!“</strong> sagen und dann zum <strong>zweiten Stern</strong> weiterlaufen.
+      Zieh die Blöcke ins Skript – in der richtigen Reihenfolge.</p>
+  </section>
+
+  <!-- 5 · Lücke -->
+  <section class="card">
+    <h2><span class="step-no">5</span> Wie weit bis zum Stern? <span class="badge basis">Basis</span></h2>
+    <div id="b5"></div>
+    <p>Schreib die richtige Zahl in das <strong>gelbe Feld</strong>, damit Robo genau auf dem Stern stehen bleibt.</p>
+    <p class="note">Tipp: Die Bühne hat Kästchen. Ein Kästchen ist <strong>40 Schritte</strong> breit.</p>
+    <div id="hints5"></div>
+  </section>
+
+  <!-- 6 · Fehlerdetektiv -->
+  <section class="card">
+    <h2><span class="step-no">6</span> Fehlerdetektiv 🔍 <span class="badge basis">Basis</span></h2>
+    <div id="b6"></div>
+    <p>Elif will: Robo läuft zum Stern und sagt <strong>dort</strong> „Geschafft!“. Klick auf ⚑ Start. Was ist anders?</p>
+    <p><strong>Die Detektiv-Fragen:</strong></p>
+    <ol class="howto">
+      <li>Was <strong>soll</strong> passieren?</li>
+      <li>Was <strong>passiert</strong> wirklich?</li>
+      <li><strong>Ab welchem Block</strong> läuft es anders?</li>
+    </ol>
+    <p>Repariere Elifs Skript. Du musst nur <strong>einen Block verschieben</strong>.</p>
+    <div id="hints6"></div>
+  </section>
+
+  <!-- Plus -->
+  <section class="card">
+    <h2><span class="step-no">+</span> Drei Sterne <span class="badge plus">Plus</span></h2>
+    <p>Robo soll zu <strong>jedem</strong> der drei Sterne laufen. Bei jedem Stern sagt er „Hallo!“. Hol dir die Blöcke selbst – du darfst sie mehrmals nehmen.</p>
+    <div id="bplus"></div>
+  </section>
+
+  <section class="card">
+    <h2><span class="step-no">✓</span> Kurz-Check</h2>
+    <div id="quiz"></div>
+  </section>
+
+  <section class="card merke">
+    <h2>Merke</h2>
+    <ul>
+      <li>Scratch hat eine <strong>Blockpalette</strong> (links), einen <strong>Skriptbereich</strong> (Mitte) und eine <strong>Bühne</strong> mit der <strong>Figur</strong> (rechts).</li>
+      <li>Ein <strong>Skript</strong> sind Blöcke, die zusammenhängen. Es läuft von oben nach unten.</li>
+      <li>Ganz oben steht der <strong>Startblock</strong> <em>Wenn ⚑ angeklickt wird</em>. Ohne ihn passiert nichts.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2><span class="step-no">⚑</span> Jetzt in echt: Scratch</h2>
+    <p><a class="btn" href="https://scratch.mit.edu/projects/editor/" target="_blank" rel="noopener">Scratch in neuem Fenster öffnen ↗</a></p>
+    <ol class="howto">
+      <li>Links auf <strong>Ereignisse</strong> (gelb) tippen. <em>Wenn ⚑ angeklickt wird</em> in den Skriptbereich ziehen.</li>
+      <li>Bei <strong>Bewegung</strong> (blau) <em>gehe 10 er Schritt</em> darunter ziehen, bis er einrastet. Die 10 in 50 ändern.</li>
+      <li>Über der Bühne auf die grüne Flagge ⚑ klicken – ruhig mehrmals.</li>
+    </ol>
+    <p class="note">In Scratch läuft die Katze statt Robo. Sie bleibt dort stehen, wo sie aufgehört hat. Bei jedem Klick geht sie also weiter.
+      Zurückholen kannst du sie, indem du sie auf der Bühne mit dem Finger oder der Maus wegziehst.</p>
+  </section>
+
+  <section class="card">
+    <h2><span class="step-no">☑</span> Das kann ich</h2>
+    <ul class="checklist" id="checklist">
+      <li><label><input type="checkbox"> Ich finde in Scratch die Bühne, die Blockpalette und den Skriptbereich.</label></li>
+      <li><label><input type="checkbox"> Ich weiß, wozu der Startblock da ist.</label></li>
+      <li><label><input type="checkbox"> Ich kann Blöcke zu einem Skript zusammenstecken.</label></li>
+      <li><label><input type="checkbox"> Ich weiß: Die Blöcke laufen von oben nach unten.</label></li>
+    </ul>
+  </section>
+
+  <section class="card frei">
+    <h2><span class="step-no">★</span> Freiwillig</h2>
+    <p class="lead">Für alle, die schon fertig sind.</p>
+
+    <h3 class="sub"><span class="badge ueben">Üben</span> Robo stellt sich vor</h3>
+    <p>Ändere, was Robo sagt: Tipp in das weiße Feld im sage-Block und schreib deinen eigenen Satz. Wie lange soll Robo sprechen?</p>
+    <div id="bfrei"></div>
+
+    <h3 class="sub"><span class="badge expedition">★ Expedition</span> Geht es auch ohne Flagge?</h3>
+    <p>Klick im echten Scratch <strong>direkt</strong> auf einen Block im Skriptbereich – ohne Flagge. Was passiert?
+      Und was passiert, wenn du <strong>zwei</strong> Skripte mit Startblock baust und dann auf ⚑ klickst?</p>
+  </section>
+
+  <details class="card">
+    <summary><strong>Für Lehrkräfte: Ablauf und Zeit</strong></summary>
+    <table class="plain">
+      <tr><th>Teil</th><th>Zeit</th><th>Worum geht es?</th></tr>
+      <tr><td>Weißt du noch?</td><td>2 Min.</td><td>Algorithmus, Reihenfolge (Lektion 1)</td></tr>
+      <tr><td>1 · Scratch-Oberfläche</td><td>6 Min.</td><td>Skizze besprechen, am Beamer im echten Scratch zeigen</td></tr>
+      <tr><td>2 · Startblock</td><td>5 Min.</td><td>Vorhersagen, ohne Startblock passiert nichts</td></tr>
+      <tr><td>3 · Zuschauen</td><td>3 Min.</td><td>Schritt-Modus: von oben nach unten</td></tr>
+      <tr><td>4 · Puzzle</td><td>5 Min.</td><td>Erstes Skript in der richtigen Reihenfolge</td></tr>
+      <tr><td>5 · Lücke</td><td>5 Min.</td><td>Schritte abschätzen: 5 Kästchen × 40 = 200</td></tr>
+      <tr><td>6 · Fehlerdetektiv</td><td>5 Min.</td><td>sage-Block an der falschen Stelle</td></tr>
+      <tr><td>Kurz-Check</td><td>4 Min.</td><td>4 Fragen mit Rückmeldung</td></tr>
+    </table>
+    <p class="note">Plus und Freiwillig für Schnelle. „Jetzt in echt“ eignet sich als Hausaufgabe oder als Einstieg in Lektion 3.
+      Am iPad: Scratch läuft im Browser (Safari), ohne App und ohne Konto. Blöcke zieht man mit dem Finger; zum Rauslöschen zurück in die Blockpalette ziehen.
+      Partnerarbeit: eine Person zieht, die andere liest vor und prüft – nach jeder Aufgabe wechseln.</p>
+  </details>
+
+  <nav class="pager">
+    <a href="01-programmieren.html">← Lektion 1: Was ist Programmieren?</a>
+    <a href="03-befehle-der-reihe-nach.html">Lektion 3: Befehle der Reihe nach →</a>
+  </nav>
+</main>
+
+<footer>
+  <div class="wrap t">Lernmaterial von <a href="https://herrseibert.de">herrseibert.de</a> · Lizenz <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.de">CC BY-SA 4.0</a> · ohne Tracking, ohne Cookies<br>Erstellt von der KI Claude von Anthropic.</div>
+  <div class="wrap t gh">Fehler gefunden oder eine Idee? → <a href="https://github.com/baumlaube/scratch-course">Kurs auf GitHub</a></div>
+  <div class="wrap t gh">Scratch ist ein Projekt der Scratch Foundation. Dieser Kurs ist kein offizielles Angebot der Scratch Foundation.</div>
+  <div class="wrap legal"><a href="../impressum.html">Impressum</a> · <a href="../datenschutz.html">Datenschutz</a></div>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const { pick, quiz, hints, checklist } = window.Kurs;
+  const B = window.Buehne;
+  const $ = (id) => document.getElementById(id);
+  const at = (tr, x, y) => Math.hypot(tr.x - x, tr.y - y) < 1;
+  const ops = (tr) => tr.script.map((n) => n.op).filter((o) => o !== "flag");
+
+  /* Weißt du noch? */
+  quiz($("wdh"), [
+    { q: "Was ist ein Algorithmus?",
+      options: ["eine genaue Anleitung, Schritt für Schritt", "ein Computer", "ein Spiel mit Karten"], right: 0,
+      miss: [null, "Ein Computer führt Algorithmen aus. Der Algorithmus ist die Anleitung.",
+        "Mit den Karten haben wir einen Algorithmus gelegt. Der Algorithmus ist aber die Anleitung selbst."],
+      why: "Ein Algorithmus ist eine genaue Anleitung in Schritten." },
+    { q: "Robo bekommt die Karte <em>drehe dich rechts</em>. Was macht er?",
+      options: ["Er geht einen Schritt nach rechts.", "Er dreht sich auf der Stelle.", "Er dreht sich und geht los."], right: 1,
+      miss: ["Zum Gehen gibt es eine eigene Karte.", null, "Robo tut nur, was dasteht: drehen, nicht gehen."],
+      why: "Beim Drehen bleibt Robo auf seinem Feld." },
+  ]);
+
+  /* 1 · Oberfläche */
+  pick($("pred1"), { right: 1, fb: $("fb1"),
+    miss: ["In der Blockpalette <em>liegen</em> die Blöcke. Von dort ziehst du sie weg.", null,
+      "Auf der Bühne siehst du, was passiert. Gebaut wird woanders.",
+      "Bei den Figuren wählst du nur aus, welche Figur du programmierst."],
+    why: "Du ziehst Blöcke aus der Blockpalette (1) in den Skriptbereich (2) und steckst sie dort zusammen." });
+
+  /* 2 · Startblock: erst vorhersagen, dann reparieren */
+  pick($("pred2"), { right: 2, fb: $("fb2"),
+    miss: ["Der gehe-Block allein startet nicht. Es fehlt etwas ganz oben.",
+      "Die 10 ist nur die Zahl, die in Scratch am Anfang drinsteht. Hier steht 200. Aber startet der Block überhaupt?"],
+    why: "Ohne Startblock weiß Scratch nicht, dass der gehe-Block beim Klick auf ⚑ laufen soll.",
+    onDone() { $("probe2").hidden = false; b2.el.dispatchEvent(new Event("resize")); } });
+  const b2 = B.create($("b2"), { mode: "frei", edit: false, start: { x: -150, y: 0, dir: 90 }, sterne: [[50, 0]],
+    palette: ["flag"], script: [["!move", 200]],
+    check(tr) { return at(tr, 50, 0) ? true : "Robo ist nicht beim Stern angekommen."; },
+    ok: "✔ Jetzt läuft es! Der Startblock sagt: Wenn die Flagge angeklickt wird, dann mach, was darunter steht." });
+
+  /* 3 · Zuschauen */
+  pick($("pred3"), { right: 0, fb: $("fb3"),
+    miss: [null, "Der gehe-Block steht weiter unten. Scratch liest von oben nach unten.",
+      "Ein Block nach dem anderen: Erst wenn Robo fertig gesprochen hat, geht er los."],
+    why: "Die Blöcke laufen der Reihe nach, von oben nach unten. Erst sagt Robo seinen Satz, 2 Sekunden lang. Dann geht er.",
+    onDone() { $("probe3").hidden = false; b3.el.dispatchEvent(new Event("resize")); } });
+  const b3 = B.create($("b3"), { mode: "lesen", script: ["flag", ["say", "Hallo! Ich bin Robo.", 2], ["move", 200]], start: { x: -120, y: 0, dir: 90 } });
+
+  /* 4 · Puzzle: gehe, sage, gehe */
+  B.create($("b4"), { mode: "puzzle", script: [], start: { x: -200, y: 0, dir: 90 }, sterne: [[0, 0], [150, 0]],
+    palette: [["move", 150], ["say", "Hallo!", 2], "flag", ["move", 200]],
+    check(tr) {
+      const o = ops(tr), m = tr.script.filter((n) => n.op === "move").map((n) => +n.args.n);
+      if (o.length < 3) return "Es fehlen noch Blöcke.";
+      if (o[0] === "say") return "Robo sagt „Hallo!“ schon am Anfang. Er soll es erst beim ersten Stern sagen.";
+      if (o[2] === "say") return "Robo sagt „Hallo!“ erst am Ende. Er soll es schon beim ersten Stern in der Mitte sagen.";
+      if (m[0] === 150) return "Robo bleibt vor der Mitte stehen. Welcher gehe-Block bringt ihn genau bis zum ersten Stern?";
+      return at(tr, 150, 0) ? true : null;
+    },
+    ok: "✔ Geschafft! Dein erstes Skript: Startblock oben, dann gehe – sage – gehe." });
+
+  /* 5 · Lücke: 5 Kästchen = 200 Schritte */
+  B.create($("b5"), { mode: "frei", edit: "gaps", start: { x: -120, y: 0, dir: 90 }, sterne: [[80, 0]],
+    script: ["!flag", ["!move", "?"]],
+    check(tr) {
+      const d = tr.x - 80;
+      if (Math.abs(d) < 1) return true;
+      if (Math.abs(d) <= 20) return "Ganz knapp daneben! Zähl die Kästchen noch einmal genau.";
+      if (d < 0) return "Robo bleibt zu früh stehen. Er muss weiter gehen – nimm eine größere Zahl.";
+      return "Robo läuft über den Stern hinaus. Nimm eine kleinere Zahl.";
+    },
+    ok: "✔ Genau auf dem Stern! 5 Kästchen × 40 Schritte = 200 Schritte." });
+  hints($("hints5"), [
+    "Zähl die Kästchen von Robos Mitte bis zur Mitte des Sterns.",
+    "Es sind 5 Kästchen. Jedes Kästchen ist 40 Schritte breit: 5 × 40 = ?",
+    "Lösung: <em>gehe <strong>200</strong> er Schritt</em>.",
+  ]);
+
+  /* 6 · Fehlerdetektiv: sage steht vor gehe */
+  B.create($("b6"), { mode: "frei", edit: false, start: { x: -160, y: 0, dir: 90 }, sterne: [[80, 0]],
+    script: ["!flag", ["say", "Geschafft!", 2], ["move", 240]],
+    check(tr) {
+      const o = ops(tr);
+      if (o.length < 2) return "Es fehlt ein Block. Mit ↺ Von vorn holst du Elifs Skript zurück.";
+      if (o[0] === "move" && o[1] === "say") return true;
+      return "Robo sagt „Geschafft!“, bevor er überhaupt losläuft. Welcher Block muss nach unten?";
+    },
+    ok: "✔ Fall gelöst! Der sage-Block stand zu weit oben. Jetzt läuft Robo erst und sagt dann „Geschafft!“." });
+  hints($("hints6"), [
+    "Schau mit 👣 zu: Was macht Robo zuerst?",
+    "Robo soll erst laufen und dann sprechen. Welcher Block muss dann oben stehen?",
+    "Lösung: Zieh <em>sage Geschafft! für 2 Sekunden</em> <strong>unter</strong> den Block <em>gehe 240 er Schritt</em>.",
+  ]);
+
+  /* Plus · drei Sterne */
+  B.create($("bplus"), { mode: "frei", edit: false, start: { x: -200, y: 0, dir: 90 }, sterne: [[-80, 0], [40, 0], [160, 0]],
+    palette: ["flag", ["move", 120], ["say", "Hallo!", 1]],
+    check(tr) {
+      const o = ops(tr).join(" ");
+      if (o === "move say move say move say") return true;
+      if (tr.says.length < 3) return "Robo soll bei <strong>jedem</strong> Stern „Hallo!“ sagen – also 3-mal.";
+      if (!at(tr, 160, 0)) return "Robo kommt nicht beim letzten Stern an. Wie oft muss er gehen?";
+      return "Robo soll <strong>beim</strong> Stern sprechen: immer erst gehen, dann sagen.";
+    },
+    ok: "✔ Stark! Gehe, sage – gehe, sage – gehe, sage. Fällt dir was auf? Dazu später mehr." });
+
+  /* Kurz-Check */
+  quiz($("quiz"), [
+    { q: "Wo siehst du, was dein Programm macht?",
+      options: ["in der Blockpalette", "im Skriptbereich", "auf der Bühne", "bei den Figuren"], right: 2,
+      miss: ["In der Blockpalette liegen nur die Blöcke zum Aussuchen.", "Im Skriptbereich baust du das Programm. Was es <em>tut</em>, siehst du woanders.", null,
+        "Dort wählst du die Figur aus. Laufen und sprechen tut sie woanders."],
+      why: "Auf der Bühne bewegt sich die Figur und spricht." },
+    { q: "Was passiert, wenn Mia auf die grüne Flagge ⚑ klickt?",
+      options: ["Alle Blöcke in der Blockpalette laufen.", "Die Skripte mit dem Startblock <em>Wenn ⚑ angeklickt wird</em> laufen.", "Scratch speichert das Projekt.", "Robo geht immer 10 Schritte."], right: 1,
+      miss: ["Die Blockpalette ist nur das Lager. Laufen tun nur Blöcke im Skript.", null,
+        "Die Flagge ist zum Starten da, nicht zum Speichern.",
+        "Robo macht, was im Skript steht – nicht immer dasselbe."],
+      why: "Die grüne Flagge startet alle Skripte, die oben den Startblock haben." },
+    { q: "Jonas klickt auf ⚑. Was passiert?",
+      html: B.render([["say", "Hallo!", 2], ["move", 100]], { small: true }),
+      options: ["Robo sagt „Hallo!“ und geht 100 Schritte.", "Robo geht nur 100 Schritte.", "Nichts."], right: 2,
+      miss: ["Schau ganz oben: Fehlt da nicht etwas?", "Auch der gehe-Block läuft nicht. Es fehlt der Startblock."],
+      why: "Ganz oben fehlt <em>Wenn ⚑ angeklickt wird</em>. Darum passiert nichts." },
+    { q: "Was macht Robo <strong>zuletzt</strong>?",
+      html: B.render(["flag", ["move", 100], ["say", "Hallo!", 2], ["move", 50]], { small: true }),
+      options: ["gehe 100 er Schritt", "sage Hallo! für 2 Sekunden", "gehe 50 er Schritt"], right: 2,
+      miss: ["Der Block steht oben – er läuft zuerst, nicht zuletzt.", "Nach dem sage-Block kommt noch ein Block."],
+      why: "Scratch arbeitet von oben nach unten. Der unterste Block läuft zuletzt." },
+  ]);
+
+  /* Freiwillig */
+  B.create($("bfrei"), { mode: "frei", edit: true, start: { x: -60, y: -40, dir: 90 },
+    script: ["!flag", ["!say", "Ich heiße Robo.", 2], ["!say", "Und du?", 2]],
+    check(tr) { return tr.says.join("") !== "Ich heiße Robo.Und du?" ? true : "Robo sagt noch die alten Sätze. Tipp in das weiße Feld und ändere den Text."; },
+    ok: "✔ Robo spricht jetzt deine Sätze!" });
+
+  checklist($("checklist"), "k5-02");
+});
+</script>
+</body>
+</html>

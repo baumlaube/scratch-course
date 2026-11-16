@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Was ist Programmieren? · Scratch-Kurs Klasse 5</title>
+<meta name="description" content="Lektion 1 im Scratch-Lernpfad: Programmieren ganz ohne Computer. Die Klasse steuert die Lehrkraft mit vier Befehlskarten – Algorithmus, Anweisung, Reihenfolge und Fehlersuche. Mit Kopiervorlage.">
+<link rel="canonical" href="https://scratch.herrseibert.de/k5/01-programmieren.html">
+<!-- vorschau -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Scratch-Kurs">
+<meta property="og:locale" content="de_DE">
+<meta property="og:url" content="https://scratch.herrseibert.de/k5/01-programmieren.html">
+<meta property="og:title" content="Was ist Programmieren? · Scratch-Kurs Klasse 5">
+<meta property="og:description" content="Lektion 1 im Scratch-Lernpfad: Programmieren ganz ohne Computer. Die Klasse steuert die Lehrkraft mit vier Befehlskarten – Algorithmus, Anweisung, Reihenfolge und Fehlersuche. Mit Kopiervorlage.">
+<meta property="og:image" content="https://scratch.herrseibert.de/vorschau.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Scratch-Kurs – Programmieren lernen Schritt für Schritt, mit Übungsbühne">
+<meta name="twitter:card" content="summary_large_image">
+<!-- /vorschau -->
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="stylesheet" href="../assets/kurs.css?v=852db3b491">
+<link rel="stylesheet" href="../assets/buehne.css?v=71ab1408ba">
+<script src="../assets/i18n.js?v=4588e8929d" data-page="k5-01-programmieren" data-langs="de"></script>
+<script src="../assets/kurs.js?v=5fcc1de7cc"></script>
+<script src="../assets/buehne.js?v=a71be29b8b"></script>
+<style>
+  /* Befehlskarten und Raster – nur in dieser Lektion (unplugged) */
+  .karten { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin: 12px 0; }
+  .bk { border: 2px solid var(--line); border-radius: 12px; padding: 12px 10px; text-align: center; background: var(--surface); font-weight: 800; }
+  .bk svg { width: 54px; height: 54px; display: block; margin: 0 auto 6px; }
+  .bk small { display: block; font-weight: 400; color: var(--muted); font-size: 14px; }
+  .bk.gehe { color: var(--ch1); } .bk.dreh { color: var(--ch2); } .bk.hebe { color: var(--ch3); }
+  .prog { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0; padding: 0; list-style: none; counter-reset: k; }
+  .prog li { counter-increment: k; border: 2px solid var(--line); border-radius: 8px; padding: 6px 10px 4px; font-weight: 700; font-size: 15px; background: var(--surface); text-align: center; }
+  .prog li::after { content: counter(k); display: block; font-size: 12px; font-weight: 400; color: var(--muted); }
+  .choices.prog-pick { grid-template-columns: repeat(auto-fit, minmax(105px, 1fr)); }
+  .choices.prog-pick .choice { text-align: center; font-weight: 700; font-size: 15px; }
+  .choices.prog-pick .choice small { display: block; font-weight: 400; color: var(--muted); }
+  .raster { display: block; max-width: 100%; height: auto; }
+  .raster-row { display: flex; gap: 20px; flex-wrap: wrap; align-items: flex-start; }
+  .raster-row > div:last-child { flex: 1; min-width: 230px; }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><img class="logo" src="../favicon.svg" alt="" width="34" height="34"> Scratch-Kurs <span>· Programmieren lernen</span></a>
+    <span class="spacer"></span>
+    <button class="theme-btn" type="button" aria-label="Hell oder dunkel umschalten">◐ Hell/Dunkel</button>
+  </div>
+</header>
+
+<main class="wrap">
+  <nav class="path" aria-label="Lernpfad Klasse 5">
+    <strong class="t">Klasse 5:</strong>
+    <ol>
+      <li class="now"><span title="1 · Was ist Programmieren?" aria-current="step">1</span></li>
+      <li class="done"><a href="02-scratch-kennenlernen.html" title="2 · Scratch kennenlernen">2</a></li>
+      <li class="done"><a href="03-befehle-der-reihe-nach.html" title="3 · Befehle der Reihe nach">3</a></li>
+      <li class="done"><a href="04-malen-mit-dem-stift.html" title="4 · Malen mit dem Stift">4</a></li>
+      <li class="done"><a href="05-schleife.html" title="5 · Die Schleife">5</a></li>
+      <li class="soon"><span title="6 · Schleifen üben (in Arbeit)">6</span></li>
+      <li class="soon"><span title="7 · Schleife in der Schleife (in Arbeit)">7</span></li>
+      <li class="soon"><span title="8 · Mein Projekt (in Arbeit)">8</span></li>
+    </ol>
+  </nav>
+
+  <section class="hero">
+    <h1>Was ist Programmieren? – Wir steuern Robo</h1>
+    <div class="meta">
+      <span class="chip">Klasse 5 · Lektion 1</span>
+      <span class="chip">⏱ ca. 35 Minuten</span>
+      <span class="chip">ohne Computer</span>
+    </div>
+    <ul class="goals">
+      <li>Ich weiß, was ein Algorithmus ist.</li>
+      <li>Ich schreibe ein Programm aus Befehlen – in der richtigen Reihenfolge.</li>
+      <li>Ich finde einen Fehler in einem Programm.</li>
+    </ul>
+    <p class="note">Heute brauchst du keinen Computer. Diese Seite ist zum Nachlesen.
+      Lehrkräfte: <a href="#lehrkraefte">Ablauf der Stunde und Kopiervorlage ↓</a></p>
+  </section>
+
+  <details class="card woerter">
+    <summary>📖 Wörter für diese Lektion</summary>
+    <p class="note">Die Wörter links bleiben deutsch – so heißen sie im Unterricht.</p>
+    <div class="tbl-scroll"><table class="plain">
+      <tr><th class="wort">der Befehl <small>die Befehle</small></th><td>Eine Aufgabe für Robo, z. B. „gehe 1 Schritt“. Man sagt auch: die Anweisung.</td></tr>
+      <tr><th class="wort">die Anweisung <small>die Anweisungen</small></th><td>Ein einzelner Befehl in einem Programm.</td></tr>
+      <tr><th class="wort">das Programm <small>die Programme</small></th><td>Befehle, die nacheinander ausgeführt werden.</td></tr>
+      <tr><th class="wort">der Algorithmus <small>die Algorithmen</small></th><td>Eine genaue Anleitung, Schritt für Schritt. Jeder, der sie befolgt, kommt zum gleichen Ergebnis.</td></tr>
+      <tr><th class="wort">die Reihenfolge <small>die Reihenfolgen</small></th><td>Was zuerst kommt und was danach.</td></tr>
+      <tr><th class="wort">ausführen <small>er führt aus</small></th><td>Einen Befehl tun.</td></tr>
+      <tr><th class="wort">der Fehler <small>die Fehler</small></th><td>Etwas im Programm stimmt nicht. Dann macht Robo etwas anderes, als wir wollten.</td></tr>
+    </table></div>
+  </details>
+
+  <!-- 1 · Die vier Befehle -->
+  <section class="card">
+    <h2><span class="step-no">1</span> Robo kann nur 4 Befehle</h2>
+    <p class="lead">Heute spielt deine Lehrkraft <strong>Robo</strong>. Robo versteht nur diese vier Karten:</p>
+    <div class="karten" id="karten"></div>
+    <p><strong>Überleg:</strong> Robo schaut nach rechts →. Er bekommt die Karte <em>drehe dich rechts</em>. Was macht er?</p>
+    <div class="choices" id="pred1">
+      <button type="button" class="choice">Er geht einen Schritt nach rechts.</button>
+      <button type="button" class="choice">Er dreht sich auf der Stelle und schaut dann nach unten ↓.</button>
+      <button type="button" class="choice">Er dreht sich und geht dann einen Schritt.</button>
+      <button type="button" class="choice">Er dreht sich einmal ganz herum.</button>
+    </div>
+    <p class="fb" id="fb1"></p>
+  </section>
+
+  <!-- 2 · Wir programmieren Robo -->
+  <section class="card">
+    <h2><span class="step-no">2</span> Wir programmieren Robo</h2>
+    <p>Robo soll einen Gegenstand holen. Ihr legt die Karten <strong>der Reihe nach</strong> an die Tafel. Dann heißt es: <strong>Start!</strong></p>
+    <p>Robo führt eine Karte nach der anderen aus – von links nach rechts. Er denkt nicht mit. Läuft er gegen einen Tisch, dann fehlt eine Karte oder eine Karte ist falsch.</p>
+    <p class="rule">Ein Computer tut <strong>genau das</strong>, was dasteht.<br>Nicht das, was du meinst.</p>
+    <p>Eure Karten an der Tafel sind ein <strong>Programm</strong>. Jede Karte ist eine <strong>Anweisung</strong>.
+      Eine genaue Anleitung, Schritt für Schritt, heißt <strong>Algorithmus</strong>.</p>
+    <h3 class="sub">So zeichnen Informatiker das: das Struktogramm</h3>
+    <p class="note">Du musst kein Struktogramm zeichnen. Schau nur: Jede Anweisung ist ein Kasten. Gelesen wird von oben nach unten.</p>
+    <div class="nsd" aria-label="Struktogramm: gehe 1 Schritt, gehe 1 Schritt, drehe dich rechts, gehe 1 Schritt, hebe auf">
+      <div class="nsd-row">gehe 1 Schritt</div>
+      <div class="nsd-row">gehe 1 Schritt</div>
+      <div class="nsd-row">drehe dich rechts</div>
+      <div class="nsd-row">gehe 1 Schritt</div>
+      <div class="nsd-row">hebe auf</div>
+    </div>
+  </section>
+
+  <!-- 3 · Wo landet Robo? -->
+  <section class="card">
+    <h2><span class="step-no">3</span> Überleg: Wo landet Robo?</h2>
+    <div class="raster-row">
+      <div data-raster='{"cols":4,"rows":4,"robo":[1,4,"N"]}'></div>
+      <div>
+        <p>Robo steht auf <strong>A4</strong>. Der Pfeil zeigt: Er schaut nach oben. Hier ist sein Programm:</p>
+        <ol class="prog"><li>gehe</li><li>gehe</li><li>drehe dich rechts</li><li>gehe</li></ol>
+        <p><strong>Überleg:</strong> Auf welchem Feld steht Robo am Ende? Zeig mit dem Finger mit.</p>
+      </div>
+    </div>
+    <div class="choices" id="pred3">
+      <button type="button" class="choice">A1</button>
+      <button type="button" class="choice">B2</button>
+      <button type="button" class="choice">B3</button>
+      <button type="button" class="choice">C2</button>
+    </div>
+    <p class="fb" id="fb3"></p>
+  </section>
+
+  <!-- 4 · Reihenfolge -->
+  <section class="card">
+    <h2><span class="step-no">4</span> Die Reihenfolge ist wichtig</h2>
+    <p>Jonas nimmt <strong>dieselben vier Karten</strong> wie in Schritt 3. Er legt sie nur anders hin:</p>
+    <ol class="prog"><li>drehe dich rechts</li><li>gehe</li><li>gehe</li><li>gehe</li></ol>
+    <p><strong>Überleg:</strong> Robo startet wieder auf A4 und schaut nach oben. Landet er wieder auf B2?</p>
+    <div class="choices" id="pred4">
+      <button type="button" class="choice">Ja – es sind ja dieselben Karten.</button>
+      <button type="button" class="choice">Nein – er landet woanders.</button>
+    </div>
+    <p class="fb" id="fb4"></p>
+  </section>
+
+  <!-- 5 · Fehlerdetektiv -->
+  <section class="card">
+    <h2><span class="step-no">5</span> Fehlerdetektiv 🔍 <span class="badge basis">Basis</span></h2>
+    <div class="raster-row">
+      <div data-raster='{"cols":4,"rows":4,"robo":[1,4,"N"],"ziele":[[3,2,"apfel"]],"mauern":[[2,3],[4,4]]}'></div>
+      <div>
+        <p>Elif will, dass Robo den <strong>Apfel</strong> holt. Aber Robo läuft vom Feld.</p>
+        <p><strong>Die Detektiv-Fragen:</strong></p>
+        <ol class="howto">
+          <li>Was <strong>soll</strong> passieren?</li>
+          <li>Was <strong>passiert</strong> wirklich?</li>
+          <li><strong>Ab welcher Karte</strong> läuft es anders?</li>
+        </ol>
+      </div>
+    </div>
+    <p><strong>Elifs Programm.</strong> Tipp auf die Karte, die falsch ist:</p>
+    <div class="choices prog-pick" id="pred5">
+      <button type="button" class="choice">gehe<small>1</small></button>
+      <button type="button" class="choice">gehe<small>2</small></button>
+      <button type="button" class="choice">drehe dich links<small>3</small></button>
+      <button type="button" class="choice">gehe<small>4</small></button>
+      <button type="button" class="choice">gehe<small>5</small></button>
+      <button type="button" class="choice">hebe auf<small>6</small></button>
+    </div>
+    <p class="fb" id="fb5"></p>
+  </section>
+
+  <!-- 6 · Partnerarbeit -->
+  <section class="card">
+    <h2><span class="step-no">6</span> Jetzt ihr: Robo auf dem Papier <span class="badge basis">Basis</span></h2>
+    <p>Ihr arbeitet zu zweit mit dem <strong>Arbeitsblatt</strong> und den kleinen Karten.</p>
+    <ol class="howto">
+      <li><strong>Eine Person</strong> legt das Programm mit den Karten.</li>
+      <li><strong>Die andere Person</strong> ist Robo: Sie schiebt die Spielfigur – genau so, wie es auf den Karten steht.</li>
+      <li>Kommt Robo an? Wenn nicht: Detektiv-Fragen! Dann <strong>wechseln</strong>.</li>
+    </ol>
+    <p class="note">Auf dem Arbeitsblatt schreibst du kurz: <strong>↑</strong> gehe · <strong>↻</strong> drehe dich rechts · <strong>↺</strong> drehe dich links · <strong>H</strong> hebe auf.</p>
+  </section>
+
+  <!-- Plus -->
+  <section class="card">
+    <h2><span class="step-no">+</span> Robo dreht sich um <span class="badge plus">Plus</span></h2>
+    <p>Robo schaut nach oben ↑. Er soll nach <strong>unten</strong> ↓ schauen – auf demselben Feld.</p>
+    <p><strong>Überleg:</strong> Welches Programm passt? Robo kennt nur die vier Karten.</p>
+    <div class="choices" id="predplus">
+      <button type="button" class="choice">drehe dich rechts</button>
+      <button type="button" class="choice">drehe dich rechts, drehe dich rechts</button>
+      <button type="button" class="choice">drehe dich rechts, drehe dich links</button>
+      <button type="button" class="choice">gehe, gehe</button>
+    </div>
+    <p class="fb" id="fbplus"></p>
+  </section>
+
+  <section class="card">
+    <h2><span class="step-no">✓</span> Kurz-Check</h2>
+    <div id="quiz"></div>
+  </section>
+
+  <section class="card merke">
+    <h2>Merke</h2>
+    <ul>
+      <li>Ein <strong>Algorithmus</strong> ist eine genaue Anleitung, Schritt für Schritt.</li>
+      <li>Ein <strong>Programm</strong> besteht aus <strong>Anweisungen</strong>. Sie laufen der Reihe nach, von oben nach unten.</li>
+      <li>Die <strong>Reihenfolge</strong> ist wichtig: Gleiche Karten, andere Reihenfolge – anderes Ergebnis.</li>
+      <li>Ein Computer tut <strong>genau</strong> das, was dasteht. Fehler findest du mit den Detektiv-Fragen.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2><span class="step-no">⚑</span> Nächstes Mal: Scratch</h2>
+    <p>In Scratch sind die Befehle bunte <strong>Blöcke</strong>. Du steckst sie zusammen wie Puzzleteile – genau wie die Karten an der Tafel.</p>
+    <div data-script='[["move",10],["right",90],["move",10]]' data-small aria-label="Scratch-Blöcke: gehe 10 er Schritt, drehe dich um 90 Grad, gehe 10 er Schritt"></div>
+    <p><a class="btn" href="https://scratch.mit.edu/projects/editor/" target="_blank" rel="noopener">Scratch in neuem Fenster öffnen ↗</a></p>
+    <p class="note">Du kannst schon mal reinschauen. Ein Konto brauchst du nicht.</p>
+  </section>
+
+  <section class="card">
+    <h2><span class="step-no">☑</span> Das kann ich</h2>
+    <ul class="checklist" id="checklist">
+      <li><label><input type="checkbox"> Ich kann erklären, was ein Algorithmus ist.</label></li>
+      <li><label><input type="checkbox"> Ich kann ein Programm aus Befehlskarten legen.</label></li>
+      <li><label><input type="checkbox"> Ich weiß: Beim Drehen bleibt Robo auf seinem Feld.</label></li>
+      <li><label><input type="checkbox"> Ich finde eine falsche Karte mit den Detektiv-Fragen.</label></li>
+    </ul>
+  </section>
+
+  <section class="card frei">
+    <h2><span class="step-no">★</span> Freiwillig</h2>
+    <p class="lead">Für alle, die schon fertig sind.</p>
+
+    <h3 class="sub"><span class="badge ueben">Üben</span> Dein eigenes Rätsel</h3>
+    <p>Auf dem Arbeitsblatt ist ein leeres Raster (Aufgabe 4). Mal Robo, eine Batterie und graue Felder ein.
+      Dein Partner schreibt das Programm. Du spielst Robo und prüfst.</p>
+
+    <h3 class="sub"><span class="badge expedition">★ Expedition</span> Ein Algorithmus aus dem Alltag</h3>
+    <p>Schreib eine Anleitung: <em>Ein Brot mit Butter streichen</em>. Höchstens 8 Schritte.
+      Dann führt jemand sie aus – <strong>genau</strong> so, wie sie dasteht. Steht da „nimm das Messer“, aber nicht „mach die Butter auf“? Dann klappt es nicht!</p>
+  </section>
+
+  <details class="card" id="lehrkraefte">
+    <summary><strong>Für Lehrkräfte: Ablauf, Zeit und Kopiervorlage</strong></summary>
+    <div class="dl">
+      <a href="../downloads/Kopiervorlage%20Befehlskarten%20(f%C3%BCr%20Lehrkr%C3%A4fte).pdf" download>
+        <span class="ico">PDF</span><span><strong>Kopiervorlage Befehlskarten</strong><small>Tafelkarten, kleine Karten, Arbeitsblatt mit Raster, Lösungen · 6 Seiten A4</small></span></a>
+    </div>
+    <p><strong>Vorbereitung:</strong> Seite 1–2 einmal drucken und ausschneiden (Tafelkarten, Magnete). Seite 3 einmal pro Paar (kleine Karten, Spielfigur). Seite 4–5 für jedes Kind. Gegenstand zum Holen bereitlegen (z. B. Schwamm), Weg freiräumen.</p>
+    <table class="plain">
+      <tr><th>Teil</th><th>Zeit</th><th>Worum geht es?</th></tr>
+      <tr><td>Einstieg</td><td>3 Min.</td><td>„Ich bin heute Robo. Ich kann nur 4 Befehle – und ich tue genau, was auf den Karten steht.“ Karten zeigen, Ziel festlegen. Schritt 1 gemeinsam.</td></tr>
+      <tr><td>2 · Die Klasse programmiert</td><td>9 Min.</td><td>Kinder hängen nacheinander Karten an. „Start“: Ein Kind zeigt auf die Karte, die gerade dran ist. Robo führt wörtlich aus – auch Fehler. Dann verbessern und neu starten.</td></tr>
+      <tr><td>2 · Begriffe</td><td>4 Min.</td><td>Programm, Anweisung, Algorithmus. Merksatz an die Tafel. Struktogramm nur zeigen.</td></tr>
+      <tr><td>3–5 · Überleg, Reihenfolge, Detektiv</td><td>5 Min.</td><td>Mit Beamer gemeinsam oder an der Tafel nachspielen. Heimlich zwei Karten vertauschen: Wer findet den Fehler?</td></tr>
+      <tr><td>6 · Partnerarbeit</td><td>10 Min.</td><td>Arbeitsblatt Aufgabe 1–2, Schnelle Aufgabe 3–4. Rollen nach jeder Aufgabe wechseln.</td></tr>
+      <tr><td>Kurz-Check</td><td>4 Min.</td><td>Am Beamer, Antwort per Handzeichen oder A/B/C/D-Kärtchen. Merke vorlesen.</td></tr>
+    </table>
+    <p class="note">Robo spielt streng: „drehe dich rechts“ ist eine Vierteldrehung auf der Stelle. Viele Kinder erwarten, dass Robo dabei weitergeht – genau dieser Denkfehler ist das Ziel von Schritt 1.
+      Schaut Robo zur Klasse, sind „rechts“ und „links“ für die Kinder vertauscht. Das lohnt ein kurzes Gespräch.
+      Wer mag: Die leere Tafelkarte für einen eigenen Befehl nutzen („klatsche“) – die Klasse merkt, wie genau ein Befehl sein muss.</p>
+  </details>
+
+  <nav class="pager">
+    <a href="../index.html">← Übersicht</a>
+    <a href="02-scratch-kennenlernen.html">Lektion 2: Scratch kennenlernen →</a>
+  </nav>
+</main>
+
+<footer>
+  <div class="wrap t">Lernmaterial von <a href="https://herrseibert.de">herrseibert.de</a> · Lizenz <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.de">CC BY-SA 4.0</a> · ohne Tracking, ohne Cookies<br>Erstellt von der KI Claude von Anthropic.</div>
+  <div class="wrap t gh">Fehler gefunden oder eine Idee? → <a href="https://github.com/baumlaube/scratch-course">Kurs auf GitHub</a></div>
+  <div class="wrap t gh">Scratch ist ein Projekt der Scratch Foundation. Dieser Kurs ist kein offizielles Angebot der Scratch Foundation.</div>
+  <div class="wrap legal"><a href="../impressum.html">Impressum</a> · <a href="../datenschutz.html">Datenschutz</a></div>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const { pick, quiz, checklist } = window.Kurs;
+  const $ = (id) => document.getElementById(id);
+
+  /* Befehlskarten (eigene Zeichnungen) */
+  const ICON = {
+    gehe: '<svg viewBox="0 0 100 100" aria-hidden="true"><path d="M50 88V22M26 46L50 18L74 46" fill="none" stroke="currentColor" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+    rechts: '<svg viewBox="0 0 100 100" aria-hidden="true"><path d="M24 70A30 30 0 1 1 74 64" fill="none" stroke="currentColor" stroke-width="10" stroke-linecap="round"/><path d="M58 60L77 68L82 47" fill="none" stroke="currentColor" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+    links: '<svg viewBox="0 0 100 100" aria-hidden="true"><g transform="translate(100 0) scale(-1 1)"><path d="M24 70A30 30 0 1 1 74 64" fill="none" stroke="currentColor" stroke-width="10" stroke-linecap="round"/><path d="M58 60L77 68L82 47" fill="none" stroke="currentColor" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/></g></svg>',
+    hebe: '<svg viewBox="0 0 100 100" aria-hidden="true"><rect x="26" y="56" width="48" height="34" rx="4" fill="none" stroke="currentColor" stroke-width="7"/><path d="M50 46V10M34 26L50 9L66 26" fill="none" stroke="currentColor" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+  };
+  $("karten").innerHTML = [
+    ["gehe", "gehe", "gehe 1 Schritt", "nach vorn, ein Feld"],
+    ["dreh", "rechts", "drehe dich rechts", "eine Vierteldrehung ↻"],
+    ["dreh", "links", "drehe dich links", "eine Vierteldrehung ↺"],
+    ["hebe", "hebe", "hebe auf", "nimmt, was auf dem Feld liegt"],
+  ].map(([cls, ico, t, s]) => `<div class="bk ${cls}">${ICON[ico]}${t}<small>${s}</small></div>`).join("");
+
+  /* Raster mit Robo (Kreis mit Pfeil), Apfel und grauen Feldern */
+  const ROT = { N: 0, O: 90, S: 180, W: 270 };
+  document.querySelectorAll("[data-raster]").forEach((el) => {
+    const g = JSON.parse(el.dataset.raster), s = 56, m = 22, W = g.cols * s + m, H = g.rows * s + m;
+    let svg = `<svg class="raster" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-label="Raster mit ${g.cols} mal ${g.rows} Feldern">`;
+    for (let c = 1; c <= g.cols; c++) svg += `<text x="${m + (c - .5) * s}" y="16" font-size="15" text-anchor="middle" style="fill:var(--muted)">${"ABCDEF"[c - 1]}</text>`;
+    for (let r = 1; r <= g.rows; r++) svg += `<text x="9" y="${m + (r - .5) * s + 5}" font-size="15" text-anchor="middle" style="fill:var(--muted)">${r}</text>`;
+    (g.mauern || []).forEach(([c, r]) => { svg += `<rect x="${m + (c - 1) * s}" y="${m + (r - 1) * s}" width="${s}" height="${s}" style="fill:var(--muted)" opacity=".55"/>`; });
+    for (let c = 0; c <= g.cols; c++) svg += `<line x1="${m + c * s}" y1="${m}" x2="${m + c * s}" y2="${H}" style="stroke:var(--text)" stroke-width="1.5"/>`;
+    for (let r = 0; r <= g.rows; r++) svg += `<line x1="${m}" y1="${m + r * s}" x2="${W}" y2="${m + r * s}" style="stroke:var(--text)" stroke-width="1.5"/>`;
+    (g.ziele || []).forEach(([c, r]) => {
+      const x = m + (c - .5) * s, y = m + (r - .5) * s;
+      svg += `<circle cx="${x}" cy="${y + 4}" r="15" fill="#ffd6d6" stroke="#c62828" stroke-width="3"/><path d="M${x} ${y - 11}Q${x + 2} ${y - 20} ${x + 9} ${y - 22}" stroke="#2e7d32" stroke-width="3" fill="none"/>`;
+    });
+    if (g.robo) {
+      const [c, r, d] = g.robo, x = m + (c - .5) * s, y = m + (r - .5) * s;
+      svg += `<g transform="translate(${x} ${y}) rotate(${ROT[d]})"><circle r="22" fill="#ff8c42" stroke="#2b3a55" stroke-width="3"/><path d="M0 -15L12 5H4V14H-4V5H-12Z" fill="#2b3a55"/></g>`;
+    }
+    el.innerHTML = svg + "</svg>";
+  });
+
+  /* 1 · drehe dich rechts */
+  pick($("pred1"), { right: 1, fb: $("fb1"),
+    miss: ["Zum Gehen gibt es eine eigene Karte. Beim Drehen bleibt Robo auf seinem Feld.", null,
+      "Robo macht nur, was auf der Karte steht. Da steht nichts von gehen.",
+      "Eine Karte ist nur eine Vierteldrehung. Einmal ganz herum wären vier Karten."],
+    why: "Robo dreht sich eine Vierteldrehung nach rechts, auf der Stelle. Vorher schaute er nach rechts, jetzt schaut er nach unten." });
+
+  /* 3 · Wo landet Robo? */
+  pick($("pred3"), { right: 1, fb: $("fb3"),
+    miss: ["Karte 3 ist eine Drehung. Danach geht Robo nach rechts weiter, nicht mehr nach oben.", null,
+      "Zähl die gehe-Karten <em>vor</em> der Drehung: Es sind zwei. Robo ist also schon auf A2, wenn er sich dreht.",
+      "Drehen ist kein Schritt. Nach der Drehung kommt nur noch <em>ein</em> gehe."],
+    why: "A4 → A3 → A2, dann dreht sich Robo und schaut nach rechts, dann ein Schritt: B2." });
+
+  /* 4 · Reihenfolge */
+  pick($("pred4"), { right: 1, fb: $("fb4"),
+    miss: ["Es sind dieselben Karten – aber in anderer Reihenfolge. Robo dreht sich jetzt <em>zuerst</em>."],
+    why: "Robo dreht sich zuerst nach rechts und geht dann 3 Schritte geradeaus: A4 → B4 → C4 → D4. Die Reihenfolge ändert alles." });
+
+  /* 5 · Fehlerdetektiv */
+  pick($("pred5"), { right: 2, fb: $("fb5"),
+    miss: ["Karte 1 stimmt: Robo geht von A4 nach A3.", "Karte 2 stimmt: Robo geht nach A2. Er steht jetzt in der Reihe des Apfels.", null,
+      "Karte 4 ist ein gehe – das passt. Aber in welche Richtung schaut Robo vorher?",
+      "Karte 5 ist richtig. Der Fehler passiert schon früher.", "Aufheben am Ende ist richtig. Robo kommt nur nie beim Apfel an."],
+    why: "Bei Karte 3 dreht sich Robo nach <strong>links</strong> und schaut vom Feld weg. Richtig ist <strong>drehe dich rechts</strong>: Dann geht er A2 → B2 → C2 und hebt den Apfel auf." });
+
+  /* Plus */
+  pick($("predplus"), { right: 1, fb: $("fbplus"),
+    miss: ["Eine Vierteldrehung reicht nicht: Robo schaut dann nach rechts.", null,
+      "Rechts und dann links – Robo schaut wieder nach oben, wie am Anfang.",
+      "Gehen ändert nicht, wohin Robo schaut. Und er wäre nicht mehr auf demselben Feld."],
+    why: "Zweimal eine Vierteldrehung ist eine halbe Drehung: Robo schaut nach unten. Zweimal links geht übrigens auch." });
+
+  /* Kurz-Check */
+  quiz($("quiz"), [
+    { q: "Was ist ein Algorithmus?",
+      options: ["ein Computer", "eine genaue Anleitung, Schritt für Schritt", "ein Roboter", "ein Fehler im Programm"], right: 1,
+      miss: ["Ein Computer <em>führt</em> Algorithmen aus. Der Algorithmus selbst ist die Anleitung.", null,
+        "Robo führt das Programm nur aus. Der Algorithmus ist die Anleitung, die er bekommt.",
+        "Ein Fehler ist etwas, das im Programm nicht stimmt. Der Algorithmus ist die ganze Anleitung."],
+      why: "Ein Algorithmus ist eine genaue Anleitung in Schritten. Wer sie befolgt, kommt immer zum gleichen Ergebnis." },
+    { q: "Robo schaut nach rechts →. Er bekommt die Karte <em>drehe dich links</em>. Wohin schaut er jetzt?",
+      options: ["nach oben ↑", "nach unten ↓", "nach links ←", "weiter nach rechts →"], right: 0,
+      miss: [null, "Nach unten wäre eine Drehung nach rechts.",
+        "Nach links schaut er erst nach zwei Vierteldrehungen.",
+        "Robo führt jede Karte aus. Er dreht sich also."],
+      why: "Eine Vierteldrehung nach links: von rechts → nach oben ↑." },
+    { q: "Mia hat eine gehe-Karte vergessen. Was macht Robo?",
+      options: ["Er merkt es und geht trotzdem richtig.", "Er bleibt einen Schritt zu früh stehen.", "Er macht gar nichts.", "Er fragt Mia, was sie meint."], right: 1,
+      miss: ["Robo denkt nicht mit. Er tut genau das, was dasteht – nicht das, was Mia meint.", null,
+        "Die anderen Karten führt Robo ganz normal aus. Nur ein Schritt fehlt.",
+        "Ein Computer fragt nicht nach. Er führt einfach aus, was dasteht."],
+      why: "Ein Computer tut genau das, was dasteht. Fehlt eine Karte, fehlt ein Schritt." },
+    { q: "Kai vertauscht zwei Karten in seinem Programm. Was stimmt?",
+      options: ["Das ist egal, die Karten sind ja dieselben.", "Robo sortiert die Karten selbst richtig.", "Robo kann woanders landen.", "Robo läuft dann rückwärts."], right: 2,
+      miss: ["Gleiche Karten, andere Reihenfolge – das kann ein ganz anderer Weg sein. Denk an Jonas in Schritt 4.",
+        "Robo sortiert nichts. Er führt die Karten der Reihe nach aus.", null,
+        "Rückwärts gibt es nicht. Robo macht die Karten nur in einer anderen Reihenfolge."],
+      why: "Die Reihenfolge ist wichtig. Andere Reihenfolge – anderes Ergebnis." },
+  ]);
+
+  checklist($("checklist"), "k5-01");
+});
+</script>
+</body>
+</html>

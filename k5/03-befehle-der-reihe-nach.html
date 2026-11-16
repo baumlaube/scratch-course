@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Befehle der Reihe nach · Scratch-Kurs Klasse 5</title>
+<meta name="description" content="Lektion 3 im Scratch-Lernpfad: Die Sequenz – Blöcke laufen der Reihe nach. Robo geht, dreht sich, spricht, wartet und winkt mit dem Kostüm. Mit Puzzle, Lücke und Fehlerdetektiv im Browser.">
+<link rel="canonical" href="https://scratch.herrseibert.de/k5/03-befehle-der-reihe-nach.html">
+<!-- vorschau -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Scratch-Kurs">
+<meta property="og:locale" content="de_DE">
+<meta property="og:url" content="https://scratch.herrseibert.de/k5/03-befehle-der-reihe-nach.html">
+<meta property="og:title" content="Befehle der Reihe nach · Scratch-Kurs Klasse 5">
+<meta property="og:description" content="Lektion 3 im Scratch-Lernpfad: Die Sequenz – Blöcke laufen der Reihe nach. Robo geht, dreht sich, spricht, wartet und winkt mit dem Kostüm. Mit Puzzle, Lücke und Fehlerdetektiv im Browser.">
+<meta property="og:image" content="https://scratch.herrseibert.de/vorschau.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Scratch-Kurs – Programmieren lernen Schritt für Schritt, mit Übungsbühne">
+<meta name="twitter:card" content="summary_large_image">
+<!-- /vorschau -->
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="stylesheet" href="../assets/kurs.css?v=852db3b491">
+<link rel="stylesheet" href="../assets/buehne.css?v=71ab1408ba">
+<script src="../assets/i18n.js?v=4588e8929d" data-page="k5-03-befehle-der-reihe-nach" data-langs="de"></script>
+<script src="../assets/kurs.js?v=5fcc1de7cc"></script>
+<script src="../assets/buehne.js?v=a71be29b8b"></script>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><img class="logo" src="../favicon.svg" alt="" width="34" height="34"> Scratch-Kurs <span>· Programmieren lernen</span></a>
+    <span class="spacer"></span>
+    <button class="theme-btn" type="button" aria-label="Hell oder dunkel umschalten">◐ Hell/Dunkel</button>
+  </div>
+</header>
+
+<main class="wrap">
+  <nav class="path" aria-label="Lernpfad Klasse 5">
+    <strong class="t">Klasse 5:</strong>
+    <ol>
+      <li class="done"><a href="01-programmieren.html" title="1 · Was ist Programmieren?">1</a></li>
+      <li class="done"><a href="02-scratch-kennenlernen.html" title="2 · Scratch kennenlernen">2</a></li>
+      <li class="now"><span title="3 · Befehle der Reihe nach" aria-current="step">3</span></li>
+      <li class="done"><a href="04-malen-mit-dem-stift.html" title="4 · Malen mit dem Stift">4</a></li>
+      <li class="done"><a href="05-schleife.html" title="5 · Die Schleife">5</a></li>
+      <li class="soon"><span title="6 · Schleifen üben (in Arbeit)">6</span></li>
+      <li class="soon"><span title="7 · Schleife in der Schleife (in Arbeit)">7</span></li>
+      <li class="soon"><span title="8 · Mein Projekt (in Arbeit)">8</span></li>
+    </ol>
+  </nav>
+
+  <section class="hero">
+    <h1>Befehle der Reihe nach – Robo geht um die Ecke</h1>
+    <div class="meta">
+      <span class="chip">Klasse 5 · Lektion 3</span>
+      <span class="chip">⏱ ca. 35 Minuten</span>
+    </div>
+    <ul class="goals">
+      <li>Ich lasse Robo gehen, drehen, sprechen, warten und winken.</li>
+      <li>Ich weiß: Die Blöcke laufen der Reihe nach. Das heißt Sequenz.</li>
+      <li>Ich finde einen Fehler in der Reihenfolge.</li>
+    </ul>
+  </section>
+
+  <details class="card woerter">
+    <summary>📖 Scratch-Wörter für diese Lektion</summary>
+    <p class="note">Die Wörter links bleiben deutsch – so heißen sie in Scratch.</p>
+    <div class="tbl-scroll"><table class="plain">
+      <tr><th class="wort">die Sequenz <small>die Sequenzen</small></th><td>Blöcke, die der Reihe nach laufen – einer nach dem anderen.</td></tr>
+      <tr><th class="wort">die Reihenfolge <small>die Reihenfolgen</small></th><td>Was zuerst kommt und was danach.</td></tr>
+      <tr><th class="wort">drehen <small>er dreht sich</small></th><td>Die Richtung ändern. Robo bleibt dabei an seinem Platz.</td></tr>
+      <tr><th class="wort">das Grad <small>90 Grad</small></th><td>So misst man, wie weit man sich dreht. 90 Grad sind eine Vierteldrehung.</td></tr>
+      <tr><th class="wort">das Kostüm <small>die Kostüme</small></th><td>Ein Aussehen der Figur. Robo hat zwei: Arm unten und Arm oben.</td></tr>
+      <tr><th class="wort">warten <small>er wartet</small></th><td>Eine Weile nichts tun, bevor der nächste Block läuft.</td></tr>
+    </table></div>
+  </details>
+
+  <section class="card">
+    <h2><span class="step-no">ℹ</span> So arbeitest du heute</h2>
+    <p class="lead">Du übst mit der <strong>Übungsbühne</strong> direkt hier im Browser. Sie funktioniert mit Maus und mit Finger.</p>
+    <ul class="tasks">
+      <li><span class="badge basis">Ziehen</span><span>Zieh Blöcke von <em>Blöcke</em> nach <em>Skript</em>. Tippen geht auch: Dann hängt der Block unten dran.</span></li>
+      <li><span class="badge basis">Start</span><span><strong>⚑ Start</strong> lässt Robo laufen. 🐢 ist die Zeitlupe, 👣 geht Block für Block.</span></li>
+      <li><span class="badge basis">Stern</span><span>Der gelbe Stern zeigt, wohin Robo laufen soll.</span></li>
+    </ul>
+    <p class="note">Die Übungsbühne stellt Robo vor jedem Start an den Anfang zurück. Das echte Scratch macht das nicht – dazu am Ende mehr.</p>
+  </section>
+
+  <section class="card wdh">
+    <h2><span class="step-no">↺</span> Weißt du noch? <span class="chip">2 Minuten</span></h2>
+    <div id="wdh"></div>
+  </section>
+
+  <!-- 1 · Vorhersagen -->
+  <section class="card">
+    <h2><span class="step-no">1</span> Überleg: Welchen Weg geht Robo?</h2>
+    <p class="lead">Robo schaut am Anfang nach rechts →. Lies das Skript von oben nach unten. Starte noch nichts!</p>
+    <div class="script-row">
+      <figure><div data-script='["flag",["move",120],["right",90],["move",80]]' data-small></div></figure>
+      <div style="flex:1;min-width:220px">
+        <p><strong>Überleg:</strong> Welchen Weg geht Robo? Der Punkt ist der Anfang.</p>
+        <div class="choices" id="pred1">
+          <button type="button" class="choice"><svg width="60" height="46" viewBox="0 0 60 46" aria-hidden="true"><circle cx="6" cy="10" r="4" fill="currentColor"/><path d="M6 10H44V40M38 33L44 41L50 33" stroke="currentColor" stroke-width="3" fill="none" stroke-linejoin="round"/></svg><br>rechts, dann nach unten</button>
+          <button type="button" class="choice"><svg width="60" height="46" viewBox="0 0 60 46" aria-hidden="true"><circle cx="6" cy="38" r="4" fill="currentColor"/><path d="M6 38H44V6M38 13L44 5L50 13" stroke="currentColor" stroke-width="3" fill="none" stroke-linejoin="round"/></svg><br>rechts, dann nach oben</button>
+          <button type="button" class="choice"><svg width="60" height="46" viewBox="0 0 60 46" aria-hidden="true"><circle cx="4" cy="23" r="4" fill="currentColor"/><path d="M4 23H56M49 17L57 23L49 29" stroke="currentColor" stroke-width="3" fill="none" stroke-linejoin="round"/></svg><br>nur geradeaus</button>
+          <button type="button" class="choice"><svg width="60" height="46" viewBox="0 0 60 46" aria-hidden="true"><circle cx="8" cy="5" r="4" fill="currentColor"/><path d="M8 5V36H52M45 30L53 36L45 42" stroke="currentColor" stroke-width="3" fill="none" stroke-linejoin="round"/></svg><br>erst nach unten, dann rechts</button>
+        </div>
+        <p class="fb" id="fb1"></p>
+      </div>
+    </div>
+    <div id="probe1" hidden>
+      <p><strong>Probier es aus:</strong> Klick auf ⚑ Start. Mit 🐢 siehst du es langsamer.</p>
+      <div id="b1"></div>
+    </div>
+  </section>
+
+  <!-- 2 · Grad -->
+  <section class="card">
+    <h2><span class="step-no">2</span> Wie weit dreht sich Robo?</h2>
+    <p>Im Block <em>drehe dich ↻ um 90 Grad</em> steht eine Zahl: die <strong>Grad</strong>. Sie sagt, wie weit sich Robo dreht.</p>
+    <div class="script-row">
+      <figure><svg width="92" height="92" viewBox="0 0 92 92" aria-hidden="true"><circle cx="46" cy="46" r="36" fill="none" style="stroke:var(--line)" stroke-width="3"/><path d="M46 46H82" style="stroke:var(--text)" stroke-width="3"/><path d="M46 46V82" style="stroke:var(--ch2)" stroke-width="4"/><path d="M68 46A22 22 0 0 1 46 68" fill="none" style="stroke:var(--ch2)" stroke-width="3"/></svg><figcaption>90 Grad: Vierteldrehung</figcaption></figure>
+      <figure><svg width="92" height="92" viewBox="0 0 92 92" aria-hidden="true"><circle cx="46" cy="46" r="36" fill="none" style="stroke:var(--line)" stroke-width="3"/><path d="M46 46H82" style="stroke:var(--text)" stroke-width="3"/><path d="M46 46H10" style="stroke:var(--ch2)" stroke-width="4"/><path d="M68 46A22 22 0 0 1 24 46" fill="none" style="stroke:var(--ch2)" stroke-width="3"/></svg><figcaption>180 Grad: umdrehen</figcaption></figure>
+      <figure><svg width="92" height="92" viewBox="0 0 92 92" aria-hidden="true"><circle cx="46" cy="46" r="36" fill="none" style="stroke:var(--line)" stroke-width="3"/><path d="M46 46H82" style="stroke:var(--ch2)" stroke-width="4"/><path d="M68 46A22 22 0 1 1 68 45" fill="none" style="stroke:var(--ch2)" stroke-width="3"/></svg><figcaption>360 Grad: einmal ganz herum</figcaption></figure>
+    </div>
+    <p><strong>Überleg:</strong> Robo schaut nach rechts →. Dann kommt <em>drehe dich ↻ um 180 Grad</em>. Wohin schaut er jetzt?</p>
+    <div class="choices" id="pred2">
+      <button type="button" class="choice">nach unten ↓</button>
+      <button type="button" class="choice">nach links ←</button>
+      <button type="button" class="choice">wieder nach rechts →</button>
+    </div>
+    <p class="fb" id="fb2"></p>
+  </section>
+
+  <!-- 3 · Kostüm und warte -->
+  <section class="card">
+    <h2><span class="step-no">3</span> Robo winkt</h2>
+    <p>Robo hat <strong>zwei Kostüme</strong>: Arm unten und Arm oben. Der Block <em>wechsle zum nächsten Kostüm</em> schaltet um.</p>
+    <div id="b3"></div>
+    <p>Drück auf <strong>⚑ Start</strong> und schau zu. Dann <strong>probier</strong>: Zieh beide <em>warte</em>-Blöcke zurück zu den Blöcken und starte noch einmal.</p>
+    <p><strong>Überleg:</strong> Wozu braucht man den Block <em>warte 1 Sekunden</em>?</p>
+    <div class="choices" id="pred3">
+      <button type="button" class="choice">Damit Robo schneller winkt.</button>
+      <button type="button" class="choice">Damit man sieht, was passiert – sonst geht alles zu schnell.</button>
+      <button type="button" class="choice">Ohne warte geht das Kostüm nicht.</button>
+      <button type="button" class="choice">Damit das Skript startet.</button>
+    </div>
+    <p class="fb" id="fb3"></p>
+  </section>
+
+  <!-- 4 · Puzzle -->
+  <section class="card">
+    <h2><span class="step-no">4</span> Um die Ecke zum Stern <span class="badge basis">Basis</span></h2>
+    <div id="b4"></div>
+    <p>Robo soll zum Stern gehen und dort <strong>„Geschafft!“</strong> sagen. Bring die Blöcke in die richtige Reihenfolge.</p>
+    <h3 class="sub">So zeichnen Informatiker das: das Struktogramm</h3>
+    <p class="note">Du musst kein Struktogramm zeichnen. Schau nur: Blöcke der Reihe nach sind Kästen untereinander. Das ist eine <strong>Sequenz</strong>.</p>
+    <div class="nsd" aria-label="Struktogramm: gehe 120 Schritte, drehe dich 90 Grad nach links, gehe 80 Schritte, sage Geschafft!">
+      <div class="nsd-row">gehe 120 Schritte</div>
+      <div class="nsd-row">drehe dich 90° nach links</div>
+      <div class="nsd-row">gehe 80 Schritte</div>
+      <div class="nsd-row">sage „Geschafft!“</div>
+    </div>
+  </section>
+
+  <!-- 5 · Lücke -->
+  <section class="card">
+    <h2><span class="step-no">5</span> Die richtige Drehung <span class="badge basis">Basis</span></h2>
+    <div id="b5"></div>
+    <p>Robo soll um die Ecke zum Stern laufen. Welche Zahl gehört in das <strong>gelbe Feld</strong>?</p>
+    <div id="hints5"></div>
+  </section>
+
+  <!-- 6 · Fehlerdetektiv -->
+  <section class="card">
+    <h2><span class="step-no">6</span> Fehlerdetektiv 🔍 <span class="badge basis">Basis</span></h2>
+    <div id="b6"></div>
+    <p>Jonas will, dass Robo zum Stern läuft. Klick auf ⚑ Start: Robo läuft aber nach oben weg.</p>
+    <p><strong>Die Detektiv-Fragen:</strong></p>
+    <ol class="howto">
+      <li>Was <strong>soll</strong> passieren?</li>
+      <li>Was <strong>passiert</strong> wirklich?</li>
+      <li><strong>Ab welchem Block</strong> läuft es anders?</li>
+    </ol>
+    <p>Repariere Jonas' Skript. Du musst nur <strong>einen Block verschieben</strong>.</p>
+    <div id="hints6"></div>
+  </section>
+
+  <!-- Plus -->
+  <section class="card">
+    <h2><span class="step-no">+</span> Hin und wieder geradeaus <span class="badge plus">Plus</span></h2>
+    <p>Robo soll zum Stern laufen – und dort am Ende wieder <strong>nach rechts</strong> schauen →. Hol dir die Blöcke selbst.</p>
+    <div id="bplus"></div>
+  </section>
+
+  <section class="card">
+    <h2><span class="step-no">✓</span> Kurz-Check</h2>
+    <div id="quiz"></div>
+  </section>
+
+  <section class="card merke">
+    <h2>Merke</h2>
+    <ul>
+      <li>Blöcke laufen der Reihe nach, von oben nach unten. Das heißt <strong>Sequenz</strong>.</li>
+      <li>Andere Reihenfolge – anderes Ergebnis.</li>
+      <li><strong>drehe dich</strong> ändert nur die Richtung. 90 Grad ist eine Vierteldrehung, 180 Grad dreht Robo um.</li>
+      <li>Ohne <strong>warte</strong> geht vieles so schnell, dass man es nicht sieht.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2><span class="step-no">⚑</span> Jetzt in echt: Scratch</h2>
+    <p><a class="btn" href="https://scratch.mit.edu/projects/editor/" target="_blank" rel="noopener">Scratch in neuem Fenster öffnen ↗</a></p>
+    <ol class="howto">
+      <li>Bau das Skript aus Schritt 4 nach: <strong>Ereignisse</strong> (gelb), <strong>Bewegung</strong> (blau), <strong>Aussehen</strong> (lila).</li>
+      <li>Lass die Katze winken: <em>wechsle zum nächsten Kostüm</em> (Aussehen) und <em>warte 1 Sekunden</em> (<strong>Steuerung</strong>, orange).</li>
+      <li>Klick auf die grüne Flagge ⚑.</li>
+    </ol>
+    <p class="note">Die Katze bleibt nach dem Start dort stehen, wo sie aufgehört hat – und schaut in die neue Richtung.
+      Damit sie immer gleich anfängt, setz direkt unter die Flagge: <em>gehe zu x: 0 y: 0</em> und <em>setze Richtung auf 90 Grad</em>.</p>
+    <div data-script='["flag",["goto",0,0],["dir",90]]' data-small></div>
+  </section>
+
+  <section class="card">
+    <h2><span class="step-no">☑</span> Das kann ich</h2>
+    <ul class="checklist" id="checklist">
+      <li><label><input type="checkbox"> Ich kann Robo gehen und sich drehen lassen.</label></li>
+      <li><label><input type="checkbox"> Ich weiß, was 90 Grad und 180 Grad bedeuten.</label></li>
+      <li><label><input type="checkbox"> Ich kann mit Kostüm und warte eine kleine Animation bauen.</label></li>
+      <li><label><input type="checkbox"> Ich finde einen Fehler in der Reihenfolge.</label></li>
+    </ul>
+  </section>
+
+  <section class="card frei">
+    <h2><span class="step-no">★</span> Freiwillig</h2>
+    <p class="lead">Für alle, die schon fertig sind.</p>
+
+    <h3 class="sub"><span class="badge ueben">Üben</span> Robo tanzt</h3>
+    <p>Bau Robo einen Tanz: drehen, winken, warten, sprechen – wie du willst. Mindestens 8 Blöcke. Zeig ihn deinem Nachbarn!</p>
+    <div id="btanz"></div>
+
+    <h3 class="sub"><span class="badge expedition">★ Expedition</span> Mehr als ganz herum</h3>
+    <p>Was macht Robo bei <em>drehe dich ↻ um 360 Grad</em>? Und bei 720 Grad? Schau mit 🐢 genau hin. Wohin schaut Robo am Ende?
+      Findest du eine Zahl über 360, bei der Robo am Ende nach unten schaut?</p>
+    <div id="bdreh"></div>
+  </section>
+
+  <details class="card">
+    <summary><strong>Für Lehrkräfte: Ablauf und Zeit</strong></summary>
+    <table class="plain">
+      <tr><th>Teil</th><th>Zeit</th><th>Worum geht es?</th></tr>
+      <tr><td>Weißt du noch?</td><td>2 Min.</td><td>Startblock, Skriptbereich (Lektion 2)</td></tr>
+      <tr><td>1 · Überleg</td><td>4 Min.</td><td>Weg vorhersagen, dann ausprobieren</td></tr>
+      <tr><td>2 · Grad</td><td>4 Min.</td><td>90, 180, 360 Grad – gern im Stehen mitdrehen lassen</td></tr>
+      <tr><td>3 · Robo winkt</td><td>5 Min.</td><td>Kostüm wechseln, warum es warte braucht</td></tr>
+      <tr><td>4 · Puzzle</td><td>5 Min.</td><td>Sequenz bauen, Struktogramm nur zeigen</td></tr>
+      <tr><td>5 · Lücke</td><td>4 Min.</td><td>Den richtigen Winkel einsetzen</td></tr>
+      <tr><td>6 · Fehlerdetektiv</td><td>6 Min.</td><td>Drehung an der falschen Stelle</td></tr>
+      <tr><td>Kurz-Check</td><td>5 Min.</td><td>4 Fragen mit Rückmeldung</td></tr>
+    </table>
+    <p class="note">Plus und Freiwillig für Schnelle. „Jetzt in echt“ eignet sich als Hausaufgabe.
+      Bei Schritt 2 hilft es, wenn alle aufstehen und sich mitdrehen: Vierteldrehung, halbe Drehung, ganz herum.
+      Die Übungsbühne lässt zwischen zwei Blöcken immer eine kurze Pause. Im echten Scratch ist das Winken ohne warte gar nicht zu sehen – das lohnt einen Versuch am Beamer.</p>
+  </details>
+
+  <nav class="pager">
+    <a href="02-scratch-kennenlernen.html">← Lektion 2: Scratch kennenlernen</a>
+    <a href="04-malen-mit-dem-stift.html">Lektion 4: Malen mit dem Stift →</a>
+  </nav>
+</main>
+
+<footer>
+  <div class="wrap t">Lernmaterial von <a href="https://herrseibert.de">herrseibert.de</a> · Lizenz <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.de">CC BY-SA 4.0</a> · ohne Tracking, ohne Cookies<br>Erstellt von der KI Claude von Anthropic.</div>
+  <div class="wrap t gh">Fehler gefunden oder eine Idee? → <a href="https://github.com/baumlaube/scratch-course">Kurs auf GitHub</a></div>
+  <div class="wrap t gh">Scratch ist ein Projekt der Scratch Foundation. Dieser Kurs ist kein offizielles Angebot der Scratch Foundation.</div>
+  <div class="wrap legal"><a href="../impressum.html">Impressum</a> · <a href="../datenschutz.html">Datenschutz</a></div>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const { pick, quiz, hints, checklist } = window.Kurs;
+  const B = window.Buehne;
+  const $ = (id) => document.getElementById(id);
+  const at = (tr, x, y) => Math.hypot(tr.x - x, tr.y - y) < 1;
+  const ops = (tr) => tr.script.map((n) => n.op).filter((o) => o !== "flag");
+
+  /* Weißt du noch? */
+  quiz($("wdh"), [
+    { q: "Elif klickt auf ⚑. Was passiert?",
+      html: B.render([["move", 100], ["say", "Hallo!", 2]], { small: true }),
+      options: ["Robo geht 100 Schritte und sagt „Hallo!“", "Robo sagt nur „Hallo!“", "Nichts"], right: 2,
+      miss: ["Ganz oben fehlt der Startblock. Ohne ihn weiß Scratch nicht, wann es losgehen soll.",
+        "Auch das „sage“ läuft nicht: Oben fehlt der Startblock."],
+      why: "Jedes Skript braucht oben <em>Wenn ⚑ angeklickt wird</em>." },
+    { q: "Wo baust du in Scratch dein Skript zusammen?",
+      options: ["auf der Bühne", "im Skriptbereich", "in der Blockpalette"], right: 1,
+      miss: ["Auf der Bühne siehst du nur, was die Figur tut.", null, "In der Blockpalette liegen die Blöcke zum Aussuchen."],
+      why: "Blöcke aus der Blockpalette ziehst du in den Skriptbereich und steckst sie dort zusammen." },
+  ]);
+
+  /* 1 · Weg vorhersagen */
+  pick($("pred1"), { right: 0, fb: $("fb1"),
+    miss: [null, "↻ heißt: im Uhrzeigersinn, also nach rechts. Wer nach rechts schaut und sich rechts herum dreht, schaut nach unten.",
+      "Zwischen den gehe-Blöcken steht ein drehe-Block. Robo biegt also ab.",
+      "Robo geht zuerst. Der drehe-Block kommt erst danach."],
+    why: "Erst 120 Schritte nach rechts, dann eine Vierteldrehung im Uhrzeigersinn: Robo schaut nach unten und geht 80 Schritte.",
+    onDone() { $("probe1").hidden = false; b1.el.dispatchEvent(new Event("resize")); } });
+  const b1 = B.create($("b1"), { mode: "lesen", script: ["flag", ["move", 120], ["right", 90], ["move", 80]], start: { x: -100, y: 60, dir: 90 } });
+
+  /* 2 · Grad */
+  pick($("pred2"), { right: 1, fb: $("fb2"),
+    miss: ["Nach unten wären 90 Grad – eine Vierteldrehung. 180 ist doppelt so viel.", null,
+      "Wieder nach rechts schaut Robo erst nach 360 Grad, einmal ganz herum."],
+    why: "180 Grad ist eine halbe Drehung. Robo dreht sich um und schaut nach links." });
+
+  /* 3 · Robo winkt */
+  B.create($("b3"), { mode: "frei", edit: true, start: { x: 0, y: -20, dir: 90 },
+    palette: [["costume"], ["wait", 1]],
+    script: ["flag", ["say", "Hallo!", 1], ["costume"], ["wait", 1], ["costume"], ["wait", 1], ["costume"]],
+    check(tr) { return tr.script.some((n) => n.op === "wait") ? true : "So ging das Winken ganz schnell! Im echten Scratch sieht man ohne warte gar nichts."; },
+    ok: "Robo hebt den Arm, wartet, senkt ihn, wartet – und hebt ihn wieder." });
+  pick($("pred3"), { right: 1, fb: $("fb3"),
+    miss: ["warte macht nichts schneller – im Gegenteil.", null,
+      "Das Kostüm wechselt auch ohne warte. Man sieht es nur nicht, weil es so schnell geht.",
+      "Zum Starten ist <em>Wenn ⚑ angeklickt wird</em> da."],
+    why: "Ein Computer ist sehr schnell. Ohne warte wechseln die Kostüme so schnell, dass man das Winken nicht sieht." });
+
+  /* 4 · Puzzle: um die Ecke */
+  B.create($("b4"), { mode: "puzzle", script: ["!flag"], start: { x: -120, y: -80, dir: 90 }, sterne: [[0, 0]],
+    palette: [["left", 90], ["say", "Geschafft!", 2], ["move", 80], ["move", 120]],
+    check(tr) {
+      const o = ops(tr);
+      if (o.length < 4) return "Es fehlen noch Blöcke.";
+      if (!at(tr, 0, 0)) return o[0] === "left" ? "Robo dreht sich zu früh und läuft nach oben. Was soll er zuerst tun?"
+        : "Robo kommt nicht beim Stern an. Schau mit 🐢 zu: Welcher gehe-Block muss zuerst kommen?";
+      if (o[3] !== "say") return "Robo sagt „Geschafft!“ zu früh. Er soll es erst <strong>beim</strong> Stern sagen.";
+      return true;
+    },
+    ok: "✔ Geschafft! Gehe – drehe – gehe – sage: eine Sequenz." });
+
+  /* 5 · Lücke: Winkel */
+  B.create($("b5"), { mode: "frei", edit: "gaps", start: { x: -120, y: 60, dir: 90 }, sterne: [[0, -20]],
+    script: ["!flag", ["!move", 120], ["!right", "?"], ["!move", 80]],
+    check(tr) {
+      const g = parseFloat(String(tr.script.find((n) => n.op === "right").args.g).replace(",", "."));
+      if (at(tr, 0, -20)) return true;
+      if (g === 180) return "180 Grad ist eine halbe Drehung – Robo läuft zurück. Er soll nur um die Ecke biegen.";
+      if (g === 270 || g === -90) return "Robo biegt nach oben ab. Er soll nach unten.";
+      if (g === 360 || g === 0) return "Robo schaut am Ende wieder nach rechts und läuft geradeaus weiter.";
+      return "Noch nicht. Robo soll genau um eine Ecke biegen. Wie viel Grad ist eine Vierteldrehung?";
+    },
+    ok: "✔ Richtig: 90 Grad ist eine Vierteldrehung – genau eine Ecke." });
+  hints($("hints5"), [
+    "Robo schaut erst nach rechts. Am Ende soll er nach unten schauen.",
+    "Von rechts nach unten ist eine Vierteldrehung. Wie viel Grad sind das?",
+    "Lösung: <em>drehe dich ↻ um <strong>90</strong> Grad</em>.",
+  ]);
+
+  /* 6 · Fehlerdetektiv: drehe-Block zu früh */
+  B.create($("b6"), { mode: "frei", edit: false, start: { x: -120, y: -80, dir: 90 }, sterne: [[0, 0]],
+    script: ["!flag", ["left", 90], ["move", 120], ["move", 80]],
+    check(tr) {
+      if (ops(tr).length < 3) return "Es fehlt ein Block. Mit ↺ Von vorn holst du Jonas' Skript zurück.";
+      if (at(tr, 0, 0)) return true;
+      if (ops(tr)[0] === "left") return "Robo dreht sich gleich am Anfang und läuft nach oben. Wann soll er sich drehen?";
+      return "Fast! Robo dreht sich jetzt an einer anderen Stelle. Er soll erst 120 Schritte gehen, dann abbiegen.";
+    },
+    ok: "✔ Fall gelöst! Der drehe-Block stand zu weit oben. Jetzt biegt Robo erst nach 120 Schritten ab." });
+  hints($("hints6"), [
+    "Schau mit 👣 zu: Was macht Robo als Erstes?",
+    "Robo soll erst nach rechts gehen und dann abbiegen. Der drehe-Block muss zwischen die beiden gehe-Blöcke.",
+    "Lösung: Zieh <em>drehe dich ↺ um 90 Grad</em> <strong>unter</strong> <em>gehe 120 er Schritt</em>.",
+  ]);
+
+  /* Plus · am Ende wieder nach rechts */
+  B.create($("bplus"), { mode: "frei", edit: false, start: { x: -120, y: -60, dir: 90 }, sterne: [[0, 60]],
+    palette: ["flag", ["move", 120], ["left", 90], ["right", 90]],
+    check(tr) {
+      if (!at(tr, 0, 60)) return "Robo kommt noch nicht beim Stern an. Schau mit 🐢 zu.";
+      if (tr.dir !== 90) return "Robo ist beim Stern – aber er schaut noch nicht nach rechts →. Wie dreht er sich zurück?";
+      return true;
+    },
+    ok: "✔ Stark! Nach links abbiegen und am Ende nach rechts zurückdrehen." });
+
+  /* Kurz-Check */
+  quiz($("quiz"), [
+    { q: "Robo schaut nach rechts →. Dann kommt <em>drehe dich ↻ um 90 Grad</em>. Wohin schaut er?",
+      options: ["nach oben ↑", "nach unten ↓", "nach links ←", "weiter nach rechts →"], right: 1,
+      miss: ["↻ ist im Uhrzeigersinn. Nach oben geht es mit ↺.", null,
+        "Nach links wären 180 Grad, eine halbe Drehung.", "Robo führt den Block aus – er dreht sich also."],
+      why: "↻ ist im Uhrzeigersinn: von rechts nach unten. Das ist eine Vierteldrehung." },
+    { q: "Was heißt <strong>Sequenz</strong>?",
+      options: ["Alle Blöcke laufen gleichzeitig.", "Die Blöcke laufen der Reihe nach.", "Die Blöcke laufen von unten nach oben.", "Scratch sucht sich die Reihenfolge aus."], right: 1,
+      miss: ["In Scratch läuft ein Block nach dem anderen – nicht alle auf einmal.", null,
+        "Scratch liest von oben nach unten.", "Scratch hält sich genau an die Reihenfolge im Skript."],
+      why: "Sequenz heißt: ein Block nach dem anderen, von oben nach unten." },
+    { q: "Mia klickt auf ⚑, aber sie sieht Robo nicht winken. Warum?",
+      html: B.render(["flag", ["costume"], ["costume"]], { small: true }),
+      options: ["Es fehlt der Startblock.", "Es fehlen warte-Blöcke.", "Kostüme kann man nur einmal wechseln.", "Robo muss erst gehen."], right: 1,
+      miss: ["Der Startblock ist da, ganz oben.", null,
+        "Man kann so oft wechseln, wie man will.", "Winken geht auch im Stehen."],
+      why: "Ohne warte wechselt Robo das Kostüm zweimal blitzschnell. Am Ende sieht er wieder aus wie vorher." },
+    { q: "Kai und Elif haben dieselben Blöcke, aber anders sortiert. Landet Robo am selben Platz?",
+      html: B.render(["flag", ["move", 100], ["right", 90], ["move", 50]], { small: true }) + B.render(["flag", ["right", 90], ["move", 100], ["move", 50]], { small: true }),
+      options: ["Ja, es sind dieselben Blöcke.", "Nein, er landet woanders.", "Das kann man nicht sagen."], right: 1,
+      miss: ["Gleiche Blöcke heißen nicht gleiches Ergebnis. Bei Elif dreht sich Robo gleich am Anfang.", null,
+        "Doch: Lies beide Skripte von oben nach unten und geh den Weg mit dem Finger nach."],
+      why: "Bei Kai geht Robo erst nach rechts und dann nach unten. Bei Elif geht er gleich 150 Schritte nach unten. Andere Reihenfolge – anderes Ergebnis." },
+  ]);
+
+  /* Freiwillig */
+  B.create($("btanz"), { mode: "frei", edit: true, start: { x: 0, y: -20, dir: 90 },
+    palette: ["flag", ["right", 90], ["left", 90], ["costume"], ["wait", 1], ["say", "Hey!", 1], ["move", 40]],
+    check(tr) { return tr.blocks >= 9 ? true : `Dein Tanz hat ${tr.blocks - 1} Blöcke unter der Flagge. Schaffst du 8?`; },
+    ok: "✔ Toller Tanz! Zeig ihn deinem Nachbarn." });
+  B.create($("bdreh"), { mode: "frei", edit: true, start: { x: 0, y: 0, dir: 90 },
+    script: ["!flag", ["!right", 360]],
+    check(tr) { return tr.dir === 180 ? true : null; },
+    ok: "✔ Robo schaut nach unten! Zum Beispiel bei 450 Grad: einmal ganz herum und noch 90 Grad." });
+
+  checklist($("checklist"), "k5-03");
+});
+</script>
+</body>
+</html>

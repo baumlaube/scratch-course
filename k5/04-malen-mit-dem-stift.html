@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Malen mit dem Stift · Scratch-Kurs Klasse 5</title>
+<meta name="description" content="Lektion 4 im Scratch-Lernpfad: Robo malt. Stift ein und aus, Linien und Ecken – und ein Quadrat Block für Block. Mit Puzzle, Lücke und Fehlerdetektiv direkt im Browser.">
+<link rel="canonical" href="https://scratch.herrseibert.de/k5/04-malen-mit-dem-stift.html">
+<!-- vorschau -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Scratch-Kurs">
+<meta property="og:locale" content="de_DE">
+<meta property="og:url" content="https://scratch.herrseibert.de/k5/04-malen-mit-dem-stift.html">
+<meta property="og:title" content="Malen mit dem Stift · Scratch-Kurs Klasse 5">
+<meta property="og:description" content="Lektion 4 im Scratch-Lernpfad: Robo malt. Stift ein und aus, Linien und Ecken – und ein Quadrat Block für Block. Mit Puzzle, Lücke und Fehlerdetektiv direkt im Browser.">
+<meta property="og:image" content="https://scratch.herrseibert.de/vorschau.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Scratch-Kurs – Programmieren lernen Schritt für Schritt, mit Übungsbühne">
+<meta name="twitter:card" content="summary_large_image">
+<!-- /vorschau -->
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="stylesheet" href="../assets/kurs.css?v=852db3b491">
+<link rel="stylesheet" href="../assets/buehne.css?v=71ab1408ba">
+<script src="../assets/i18n.js?v=4588e8929d" data-page="k5-04-malen-mit-dem-stift" data-langs="de"></script>
+<script src="../assets/kurs.js?v=5fcc1de7cc"></script>
+<script src="../assets/buehne.js?v=a71be29b8b"></script>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><img class="logo" src="../favicon.svg" alt="" width="34" height="34"> Scratch-Kurs <span>· Programmieren lernen</span></a>
+    <span class="spacer"></span>
+    <button class="theme-btn" type="button" aria-label="Hell oder dunkel umschalten">◐ Hell/Dunkel</button>
+  </div>
+</header>
+
+<main class="wrap">
+  <nav class="path" aria-label="Lernpfad Klasse 5">
+    <strong class="t">Klasse 5:</strong>
+    <ol>
+      <li class="done"><a href="01-programmieren.html" title="1 · Was ist Programmieren?">1</a></li>
+      <li class="done"><a href="02-scratch-kennenlernen.html" title="2 · Scratch kennenlernen">2</a></li>
+      <li class="done"><a href="03-befehle-der-reihe-nach.html" title="3 · Befehle der Reihe nach">3</a></li>
+      <li class="now"><span title="4 · Malen mit dem Stift" aria-current="step">4</span></li>
+      <li class="done"><a href="05-schleife.html" title="5 · Die Schleife">5</a></li>
+      <li class="soon"><span title="6 · Schleifen üben (in Arbeit)">6</span></li>
+      <li class="soon"><span title="7 · Schleife in der Schleife (in Arbeit)">7</span></li>
+      <li class="soon"><span title="8 · Mein Projekt (in Arbeit)">8</span></li>
+    </ol>
+  </nav>
+
+  <section class="hero">
+    <h1>Malen mit dem Stift – Robo zeichnet</h1>
+    <div class="meta">
+      <span class="chip">Klasse 5 · Lektion 4</span>
+      <span class="chip">⏱ ca. 35 Minuten</span>
+    </div>
+    <ul class="goals">
+      <li>Ich schalte den Stift ein und aus.</li>
+      <li>Ich male Linien und Ecken.</li>
+      <li>Ich male ein Quadrat – Block für Block.</li>
+    </ul>
+  </section>
+
+  <details class="card woerter">
+    <summary>📖 Scratch-Wörter für diese Lektion</summary>
+    <p class="note">Die Wörter links bleiben deutsch – so heißen sie in Scratch.</p>
+    <div class="tbl-scroll"><table class="plain">
+      <tr><th class="wort">der Stift <small>die Stifte</small></th><td>Damit malt Robo. Ist er eingeschaltet, zieht Robo beim Gehen eine Linie.</td></tr>
+      <tr><th class="wort">einschalten <small>er schaltet ein</small></th><td>Etwas anmachen. Gegenteil: ausschalten.</td></tr>
+      <tr><th class="wort">die Linie <small>die Linien</small></th><td>Ein gerader Strich.</td></tr>
+      <tr><th class="wort">die Ecke <small>die Ecken</small></th><td>Die Stelle, an der zwei Linien zusammenstoßen.</td></tr>
+      <tr><th class="wort">das Quadrat <small>die Quadrate</small></th><td>Eine Form mit 4 gleich langen Seiten und 4 rechten Ecken.</td></tr>
+      <tr><th class="wort">die Erweiterung <small>die Erweiterungen</small></th><td>Zusätzliche Blöcke in Scratch, z. B. der Malstift.</td></tr>
+    </table></div>
+  </details>
+
+  <section class="card">
+    <h2><span class="step-no">ℹ</span> So arbeitest du heute</h2>
+    <p class="lead">Du übst mit der <strong>Übungsbühne</strong> direkt hier im Browser. Sie funktioniert mit Maus und mit Finger.</p>
+    <ul class="tasks">
+      <li><span class="badge basis">Ziehen</span><span>Zieh Blöcke von <em>Blöcke</em> nach <em>Skript</em>. Tippen geht auch: Dann hängt der Block unten dran.</span></li>
+      <li><span class="badge basis">Start</span><span><strong>⚑ Start</strong> lässt Robo laufen. 🐢 ist die Zeitlupe, 👣 geht Block für Block.</span></li>
+      <li><span class="badge basis">Vorlage</span><span>Die graue gestrichelte Form ist das Ziel. Robo soll genau darüber malen.</span></li>
+    </ul>
+    <p class="note">Die Übungsbühne stellt Robo vor jedem Start an den Anfang zurück und wischt die Bühne sauber. Das echte Scratch macht das nicht – dazu am Ende mehr.</p>
+  </section>
+
+  <section class="card wdh">
+    <h2><span class="step-no">↺</span> Weißt du noch? <span class="chip">2 Minuten</span></h2>
+    <div id="wdh"></div>
+  </section>
+
+  <!-- 1 · Vorhersagen -->
+  <section class="card">
+    <h2><span class="step-no">1</span> Überleg: Was malt Robo?</h2>
+    <p class="lead">Robo hat jetzt einen <strong>Stift</strong>. Ist er eingeschaltet, malt Robo beim Gehen eine Linie. Starte noch nichts!</p>
+    <div class="script-row">
+      <figure><div data-script='["flag",["pendown"],["move",120],["right",90],["move",80]]' data-small></div></figure>
+      <div style="flex:1;min-width:220px">
+        <p><strong>Überleg:</strong> Was malt Robo, wenn man auf ⚑ klickt? Er schaut am Anfang nach rechts.</p>
+        <div class="choices" id="pred1">
+          <button type="button" class="choice"><svg width="46" height="34" viewBox="0 0 46 34" aria-hidden="true"><path d="M4 17H42" stroke="currentColor" stroke-width="3" fill="none"/></svg><br>eine lange Linie</button>
+          <button type="button" class="choice"><svg width="46" height="34" viewBox="0 0 46 34" aria-hidden="true"><path d="M4 4H34V30" stroke="currentColor" stroke-width="3" fill="none"/></svg><br>eine Ecke</button>
+          <button type="button" class="choice"><svg width="46" height="34" viewBox="0 0 46 34" aria-hidden="true"><path d="M8 3H36V31H8Z" stroke="currentColor" stroke-width="3" fill="none"/></svg><br>ein Quadrat</button>
+          <button type="button" class="choice"><svg width="46" height="34" viewBox="0 0 46 34" aria-hidden="true"><circle cx="23" cy="17" r="2" fill="currentColor" opacity=".3"/></svg><br>gar nichts</button>
+        </div>
+        <p class="fb" id="fb1"></p>
+      </div>
+    </div>
+    <div id="probe1" hidden>
+      <p><strong>Probier es aus:</strong> Klick auf ⚑ Start. Mit 🐢 siehst du es langsamer.</p>
+      <div id="b1"></div>
+    </div>
+  </section>
+
+  <!-- 2 · Stift aus -->
+  <section class="card">
+    <h2><span class="step-no">2</span> Stift aus: Robo geht, ohne zu malen</h2>
+    <div class="script-row">
+      <figure><div data-script='["flag",["pendown"],["move",80],["penup"],["move",40],["pendown"],["move",80]]' data-small></div></figure>
+      <div style="flex:1;min-width:220px">
+        <p><strong>Überleg:</strong> Was malt Robo jetzt?</p>
+        <div class="choices" id="pred2">
+          <button type="button" class="choice"><svg width="60" height="20" viewBox="0 0 60 20" aria-hidden="true"><path d="M3 10H57" stroke="currentColor" stroke-width="3"/></svg><br>eine lange Linie</button>
+          <button type="button" class="choice"><svg width="60" height="20" viewBox="0 0 60 20" aria-hidden="true"><path d="M3 10H25M35 10H57" stroke="currentColor" stroke-width="3"/></svg><br>zwei Linien mit Lücke</button>
+          <button type="button" class="choice"><svg width="60" height="20" viewBox="0 0 60 20" aria-hidden="true"><path d="M3 10H25" stroke="currentColor" stroke-width="3"/></svg><br>nur eine kurze Linie</button>
+        </div>
+        <p class="fb" id="fb2"></p>
+      </div>
+    </div>
+    <div id="probe2" hidden>
+      <div id="b2"></div>
+      <p class="rule"><strong>Stift ein:</strong> Robo malt, wenn er geht.<br><strong>Stift aus:</strong> Robo geht, ohne zu malen.</p>
+      <p>Drehen malt nie – egal ob der Stift ein oder aus ist. Der Stift bleibt so, bis ein anderer Stift-Block kommt.</p>
+    </div>
+  </section>
+
+  <!-- 3 · Puzzle -->
+  <section class="card">
+    <h2><span class="step-no">3</span> Die Lücke im Strich <span class="badge basis">Basis</span></h2>
+    <div id="b3"></div>
+    <p>Robo soll die graue Vorlage malen: Strich – Lücke – Strich. Zieh die Blöcke ins Skript, in der richtigen Reihenfolge.</p>
+  </section>
+
+  <!-- 4 · Lücke -->
+  <section class="card">
+    <h2><span class="step-no">4</span> Eine Ecke nach Maß <span class="badge basis">Basis</span></h2>
+    <div id="b4"></div>
+    <p>Schreib die richtigen Zahlen in die <strong>gelben Felder</strong>, damit Robo genau über die graue Ecke malt.</p>
+    <p class="note">Weißt du noch? Ein Kästchen ist <strong>40 Schritte</strong> breit.</p>
+    <div id="hints4"></div>
+  </section>
+
+  <!-- 5 · Das Quadrat -->
+  <section class="card">
+    <h2><span class="step-no">5</span> Robo malt ein Quadrat <span class="badge basis">Basis</span></h2>
+    <div id="b5"></div>
+    <p>Male das graue Quadrat. Hol dir die Blöcke selbst – du darfst jeden Block so oft nehmen, wie du willst.</p>
+    <p class="note">Tipp: Ein Quadrat hat 4 Seiten und 4 Ecken. Bei jeder Ecke dreht sich Robo um 90 Grad.</p>
+    <div id="hints5"></div>
+  </section>
+
+  <!-- 6 · Fehlerdetektiv -->
+  <section class="card">
+    <h2><span class="step-no">6</span> Fehlerdetektiv 🔍 <span class="badge basis">Basis</span></h2>
+    <div id="b6"></div>
+    <p>Mia wollte auch ein Quadrat malen. Klick auf ⚑ Start: Es wird aber eine Zickzack-Linie.</p>
+    <p><strong>Die Detektiv-Fragen:</strong></p>
+    <ol class="howto">
+      <li>Was <strong>soll</strong> passieren?</li>
+      <li>Was <strong>passiert</strong> wirklich?</li>
+      <li><strong>Ab welchem Block</strong> läuft es anders?</li>
+    </ol>
+    <p>Repariere Mias Skript. Du musst <strong>einen Block austauschen</strong>: den falschen zu den Blöcken ziehen und den richtigen an seine Stelle.</p>
+    <div id="hints6"></div>
+  </section>
+
+  <!-- Plus -->
+  <section class="card">
+    <h2><span class="step-no">+</span> Ein Rechteck <span class="badge plus">Plus</span></h2>
+    <p>Ein Rechteck hat 2 lange und 2 kurze Seiten. Male das graue Rechteck.</p>
+    <div id="bplus"></div>
+  </section>
+
+  <section class="card">
+    <h2><span class="step-no">✓</span> Kurz-Check</h2>
+    <div id="quiz"></div>
+  </section>
+
+  <section class="card merke">
+    <h2>Merke</h2>
+    <ul>
+      <li><strong>schalte Stift ein</strong>: Robo malt, wenn er geht. <strong>schalte Stift aus</strong>: Er geht, ohne zu malen.</li>
+      <li>Der Stift muss <strong>vor</strong> dem Gehen eingeschaltet werden.</li>
+      <li>Drehen malt nie. Für eine Ecke wie beim Quadrat dreht sich Robo um <strong>90 Grad</strong>.</li>
+      <li>Ein Quadrat: 4-mal gehen und 4-mal drehen, immer abwechselnd.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2><span class="step-no">⚑</span> Jetzt in echt: Scratch</h2>
+    <p><a class="btn" href="https://scratch.mit.edu/projects/editor/" target="_blank" rel="noopener">Scratch in neuem Fenster öffnen ↗</a></p>
+    <ol class="howto">
+      <li>Unten links auf <strong>Erweiterung hinzufügen</strong> klicken und <strong>Malstift</strong> wählen. Jetzt gibt es die Stift-Blöcke.</li>
+      <li>Bau dein Quadrat-Skript aus Schritt 5 nach.</li>
+      <li>Klick auf die grüne Flagge ⚑.</li>
+    </ol>
+    <p class="note">Im echten Scratch bleibt alles Gemalte auf der Bühne, und die Katze startet dort, wo sie aufgehört hat.
+      Darum gehören diese Blöcke ganz nach oben, direkt unter die Flagge – und erst danach <em>schalte Stift ein</em>:</p>
+    <div data-script='["flag",["clear"],["penup"],["goto",0,0],["dir",90],["pendown"]]' data-small></div>
+  </section>
+
+  <section class="card">
+    <h2><span class="step-no">☑</span> Das kann ich</h2>
+    <ul class="checklist" id="checklist">
+      <li><label><input type="checkbox"> Ich kann den Stift ein- und ausschalten.</label></li>
+      <li><label><input type="checkbox"> Ich kann eine Ecke mit 90 Grad malen.</label></li>
+      <li><label><input type="checkbox"> Ich kann ein Quadrat malen.</label></li>
+      <li><label><input type="checkbox"> Ich finde einen Fehler, wenn sich Robo falsch herum dreht.</label></li>
+    </ul>
+  </section>
+
+  <section class="card frei">
+    <h2><span class="step-no">★</span> Freiwillig</h2>
+    <p class="lead">Für alle, die schon fertig sind.</p>
+
+    <h3 class="sub"><span class="badge ueben">Üben</span> Dein Buchstabe</h3>
+    <p>Male einen Buchstaben mit geraden Linien: L, T, E oder H. Tipp: Mit <em>schalte Stift aus</em> kann Robo springen, ohne zu malen.</p>
+    <div id="bbuchstabe"></div>
+
+    <h3 class="sub"><span class="badge expedition">★ Expedition</span> Das Plus-Zeichen</h3>
+    <p>Male das graue Plus-Zeichen +. Robo startet in der Mitte. Tipp: <em>drehe dich um 180 Grad</em> dreht Robo um – dann läuft er auf seiner Linie zurück.</p>
+    <div id="bplus2"></div>
+  </section>
+
+  <section class="card">
+    <h2><span class="step-no">→</span> Fällt dir was auf?</h2>
+    <p>Schau dir dein Quadrat-Skript noch einmal an. Es hat <strong>10 Blöcke</strong>:</p>
+    <div class="script-row">
+      <figure><div data-script='["flag",["pendown"],["move",100],["right",90],["move",100],["right",90],["move",100],["right",90],["move",100],["right",90]]' data-small></div></figure>
+      <div style="flex:1;min-width:220px">
+        <p>Immer wieder kommt dasselbe Paar: <em>gehe 100</em> und <em>drehe dich 90</em>. Viermal hintereinander!</p>
+        <p>Und was, wenn Robo ein Vieleck mit 20 Ecken malen soll? Dann wird das Skript sehr lang.</p>
+        <p><strong>In Lektion 5</strong> lernst du einen Block, der für dich wiederholt. Dann reichen 5 Blöcke.</p>
+      </div>
+    </div>
+  </section>
+
+  <details class="card">
+    <summary><strong>Für Lehrkräfte: Ablauf und Zeit</strong></summary>
+    <table class="plain">
+      <tr><th>Teil</th><th>Zeit</th><th>Worum geht es?</th></tr>
+      <tr><td>Weißt du noch?</td><td>2 Min.</td><td>90 Grad, Reihenfolge (Lektion 3)</td></tr>
+      <tr><td>1 · Überleg</td><td>4 Min.</td><td>Stift ein, Linie und Ecke vorhersagen</td></tr>
+      <tr><td>2 · Stift aus</td><td>4 Min.</td><td>Vorhersagen, Merksatz, Drehen malt nie</td></tr>
+      <tr><td>3 · Puzzle</td><td>5 Min.</td><td>Stift-Blöcke an der richtigen Stelle</td></tr>
+      <tr><td>4 · Lücke</td><td>4 Min.</td><td>Längen aus den Kästchen: 3 × 40, 2 × 40</td></tr>
+      <tr><td>5 · Quadrat</td><td>7 Min.</td><td>Quadrat ohne Schleife, 10 Blöcke</td></tr>
+      <tr><td>6 · Fehlerdetektiv</td><td>5 Min.</td><td>Eine Drehung falsch herum (↺ statt ↻)</td></tr>
+      <tr><td>Kurz-Check</td><td>4 Min.</td><td>4 Fragen mit Rückmeldung</td></tr>
+    </table>
+    <p class="note">„Fällt dir was auf?“ ist die Brücke zu Lektion 5 (Schleife): Zum Abschluss oder als Einstieg der nächsten Stunde gemeinsam die Blöcke zählen.
+      Plus und Freiwillig für Schnelle. „Jetzt in echt“ (Malstift-Erweiterung) eignet sich als Hausaufgabe – Lektion 5 setzt Stift, Startblock und die 90-Grad-Drehung voraus.</p>
+  </details>
+
+  <nav class="pager">
+    <a href="03-befehle-der-reihe-nach.html">← Lektion 3: Befehle der Reihe nach</a>
+    <a href="05-schleife.html">Lektion 5: Die Schleife →</a>
+  </nav>
+</main>
+
+<footer>
+  <div class="wrap t">Lernmaterial von <a href="https://herrseibert.de">herrseibert.de</a> · Lizenz <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.de">CC BY-SA 4.0</a> · ohne Tracking, ohne Cookies<br>Erstellt von der KI Claude von Anthropic.</div>
+  <div class="wrap t gh">Fehler gefunden oder eine Idee? → <a href="https://github.com/baumlaube/scratch-course">Kurs auf GitHub</a></div>
+  <div class="wrap t gh">Scratch ist ein Projekt der Scratch Foundation. Dieser Kurs ist kein offizielles Angebot der Scratch Foundation.</div>
+  <div class="wrap legal"><a href="../impressum.html">Impressum</a> · <a href="../datenschutz.html">Datenschutz</a></div>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const { pick, quiz, hints, checklist } = window.Kurs;
+  const B = window.Buehne;
+  const $ = (id) => document.getElementById(id);
+  const ops = (tr) => tr.script.map((n) => n.op).filter((o) => o !== "flag");
+  const QUADRAT = ["flag", ["pendown"], ["move", 100], ["right", 90], ["move", 100], ["right", 90], ["move", 100], ["right", 90], ["move", 100], ["right", 90]];
+
+  /* Weißt du noch? */
+  quiz($("wdh"), [
+    { q: "Robo schaut nach rechts →. Dann kommt <em>drehe dich ↻ um 90 Grad</em>. Wohin schaut er?",
+      options: ["nach oben ↑", "nach unten ↓", "nach links ←"], right: 1,
+      miss: ["↻ ist im Uhrzeigersinn. Nach oben ginge es mit ↺.", null, "Nach links wären 180 Grad, eine halbe Drehung."],
+      why: "90 Grad im Uhrzeigersinn: von rechts nach unten." },
+    { q: "Was heißt <strong>Sequenz</strong>?",
+      options: ["Alle Blöcke laufen gleichzeitig.", "Die Blöcke laufen der Reihe nach, von oben nach unten.", "Scratch wählt die Reihenfolge selbst."], right: 1,
+      miss: ["In Scratch läuft ein Block nach dem anderen.", null, "Scratch hält sich genau an die Reihenfolge im Skript."],
+      why: "Sequenz: ein Block nach dem anderen, von oben nach unten." },
+  ]);
+
+  /* 1 · Vorhersage: Ecke */
+  pick($("pred1"), { right: 1, fb: $("fb1"),
+    miss: ["Zwischen den gehe-Blöcken dreht sich Robo. Die Linie knickt also ab.", null,
+      "Für ein Quadrat bräuchte Robo 4 Seiten. Hier geht er nur zweimal.",
+      "Der Stift ist eingeschaltet, bevor Robo geht. Also malt er."],
+    why: "Robo malt 120 Schritte nach rechts, dreht sich nach unten (das malt nichts) und malt 80 Schritte nach unten: eine Ecke.",
+    onDone() { $("probe1").hidden = false; b1.el.dispatchEvent(new Event("resize")); } });
+  const b1 = B.create($("b1"), { mode: "lesen", script: ["flag", ["pendown"], ["move", 120], ["right", 90], ["move", 80]], start: { x: -60, y: 60, dir: 90 } });
+
+  /* 2 · Stift aus */
+  pick($("pred2"), { right: 1, fb: $("fb2"),
+    miss: ["Zwischendurch ist der Stift aus. Auf diesem Stück malt Robo nicht.", null,
+      "Nach der Lücke kommt <em>schalte Stift ein</em> – dann malt Robo wieder."],
+    why: "Robo malt 80 Schritte, geht 40 Schritte ohne Stift und malt dann noch einmal 80 Schritte.",
+    onDone() { $("probe2").hidden = false; b2.el.dispatchEvent(new Event("resize")); } });
+  const b2 = B.create($("b2"), { mode: "lesen", script: ["flag", ["pendown"], ["move", 80], ["penup"], ["move", 40], ["pendown"], ["move", 80]], start: { x: -100, y: 0, dir: 90 } });
+
+  /* 3 · Puzzle: Strich – Lücke – Strich */
+  const STRICH = ["flag", ["pendown"], ["move", 80], ["penup"], ["move", 40], ["pendown"], ["move", 80]];
+  const LANG = B.simulate(["flag", ["pendown"], ["move", 200]], { x: -100, y: 0, dir: 90 }).segs;
+  B.create($("b3"), { mode: "puzzle", script: ["!flag"], start: { x: -100, y: 0, dir: 90 },
+    palette: [["move", 80], ["penup"], ["pendown"], ["move", 40], ["pendown"], ["move", 80]], ziel: STRICH,
+    check(tr) {
+      if (!tr.segs.length) return "Robo malt nichts. Steht <em>schalte Stift ein</em> vor dem ersten gehe-Block?";
+      if (B.sameDrawing(tr.segs, LANG)) return "Robo malt eine durchgehende Linie. Wo muss der Stift aus sein?";
+      if (ops(tr)[0] !== "pendown") return "Der erste Strich fehlt. Der Stift muss schon <strong>vor</strong> dem ersten Gehen eingeschaltet sein.";
+      return null;
+    },
+    ok: "✔ Geschafft! Stift ein – gehen – Stift aus – gehen – Stift ein – gehen." });
+
+  /* 4 · Lücke: Längen aus den Kästchen */
+  B.create($("b4"), { mode: "frei", edit: "gaps", start: { x: -80, y: 60, dir: 90 },
+    script: ["!flag", "!pendown", ["!move", "?"], ["!right", 90], ["!move", "?"]],
+    ziel: ["flag", ["pendown"], ["move", 120], ["right", 90], ["move", 80]],
+    check(tr) {
+      const m = tr.script.filter((n) => n.op === "move").map((n) => parseFloat(String(n.args.n).replace(",", ".")));
+      if (m[0] === 120 && m[1] === 80) return true;
+      if (m[0] === 3 || m[1] === 2) return "Du hast die Kästchen gezählt – super! Aber Robo rechnet in Schritten. Ein Kästchen sind 40 Schritte.";
+      if (m[0] === 120) return "Die erste Linie stimmt! Jetzt die zweite: Wie viele Kästchen geht es nach unten?";
+      if (m[1] === 80) return "Die zweite Linie stimmt! Jetzt die erste: Wie viele Kästchen geht es nach rechts?";
+      return "Noch nicht. Zähl die Kästchen jeder Linie und rechne mal 40.";
+    },
+    ok: "✔ Genau! 3 Kästchen = 120 Schritte, 2 Kästchen = 80 Schritte." });
+  hints($("hints4"), [
+    "Die obere Linie ist 3 Kästchen lang, die rechte Linie 2 Kästchen.",
+    "Ein Kästchen sind 40 Schritte: 3 × 40 = ? und 2 × 40 = ?",
+    "Lösung: <em>gehe <strong>120</strong> er Schritt</em> und <em>gehe <strong>80</strong> er Schritt</em>.",
+  ]);
+
+  /* 5 · Quadrat ohne Schleife */
+  B.create($("b5"), { mode: "frei", edit: false, start: { x: -50, y: 50, dir: 90 },
+    palette: ["flag", ["pendown"], ["move", 100], ["right", 90]], ziel: QUADRAT,
+    check(tr) {
+      if (!tr.script.some((n) => n.op === "pendown")) return "Robo malt nichts. Fehlt <em>schalte Stift ein</em>?";
+      const n = tr.segs.length;
+      if (n && n < 4 && B.sameDrawing(tr.segs, B.simulate(QUADRAT.slice(0, 2 + 2 * n), { x: -50, y: 50, dir: 90 }).segs))
+        return `Gut so! ${n} von 4 Seiten sind fertig. Was fehlt noch?`;
+      return null;
+    },
+    ok: "✔ Ein Quadrat! Zähl mal deine Blöcke – wie viele sind es?" });
+  hints($("hints5"), [
+    "Fang an wie in Schritt 1: Startblock, Stift ein, dann gehe.",
+    "Nach jeder Seite kommt eine Ecke: <em>gehe 100</em>, dann <em>drehe dich ↻ um 90 Grad</em>. Und das 4-mal.",
+    "Lösung: Startblock, <em>schalte Stift ein</em>, dann 4-mal hintereinander <em>gehe 100 er Schritt</em> und <em>drehe dich ↻ um 90 Grad</em>.",
+  ]);
+
+  /* 6 · Fehlerdetektiv: eine Drehung falsch herum */
+  B.create($("b6"), { mode: "frei", edit: false, start: { x: -50, y: 50, dir: 90 },
+    palette: [["right", 90], ["left", 90]],
+    script: ["!flag", "!pendown", ["move", 100], ["right", 90], ["move", 100], ["left", 90], ["move", 100], ["right", 90], ["move", 100], ["right", 90]],
+    ziel: QUADRAT,
+    check(tr) {
+      if (tr.script.some((n) => n.op === "left")) return "Robo knickt einmal in die falsche Richtung ab. Schau mit 👣: Welcher drehe-Block sieht anders aus?";
+      return null;
+    },
+    ok: "✔ Fall gelöst! Ein Block drehte ↺ statt ↻. Beim Quadrat dreht sich Robo immer in dieselbe Richtung." });
+  hints($("hints6"), [
+    "Schau mit 👣 zu: An welcher Ecke biegt Robo anders ab als vorher?",
+    "Schau dir die Pfeile in den drehe-Blöcken an: ↻ und ↺. Einer passt nicht zu den anderen.",
+    "Lösung: Zieh <em>drehe dich ↺ um 90 Grad</em> zu den Blöcken und setz an seine Stelle <em>drehe dich ↻ um 90 Grad</em>.",
+  ]);
+
+  /* Plus · Rechteck */
+  const RECHTECK = ["flag", ["pendown"], ["move", 160], ["right", 90], ["move", 80], ["right", 90], ["move", 160], ["right", 90], ["move", 80], ["right", 90]];
+  B.create($("bplus"), { mode: "frei", edit: false, start: { x: -80, y: 40, dir: 90 },
+    palette: ["flag", ["pendown"], ["move", 160], ["move", 80], ["right", 90]], ziel: RECHTECK,
+    ok: "✔ Ein Rechteck! Lang – kurz – lang – kurz." });
+
+  /* Kurz-Check */
+  quiz($("quiz"), [
+    { q: "Was malt Robo?",
+      html: B.render(["flag", ["move", 100], ["pendown"]], { small: true }),
+      options: ["eine Linie mit 100 Schritten", "nichts", "einen Punkt und dann eine Linie"], right: 1,
+      miss: ["Der Stift wird erst <strong>nach</strong> dem Gehen eingeschaltet. Beim Gehen ist er noch aus.", null,
+        "Nach <em>schalte Stift ein</em> geht Robo nicht mehr. Also kommt keine Linie."],
+      why: "Der Stift muss <strong>vor</strong> dem Gehen eingeschaltet werden." },
+    { q: "Was passiert nach <em>schalte Stift aus</em>?",
+      options: ["Robo bleibt stehen.", "Robo geht weiter, malt aber nicht.", "Die Bühne wird gelöscht.", "Robo kann sich nicht mehr drehen."], right: 1,
+      miss: ["Stift aus heißt nicht stehen bleiben. Robo geht weiter, wenn ein gehe-Block kommt.", null,
+        "Löschen macht der Block <em>lösche alles</em>.", "Drehen geht immer – mit und ohne Stift."],
+      why: "Mit Stift aus geht Robo, ohne eine Linie zu malen." },
+    { q: "Der Stift ist an. Robo dreht sich um 90 Grad. Was passiert auf der Bühne?",
+      options: ["Robo malt einen Bogen.", "Robo dreht sich, malt aber nichts.", "Robo malt einen Punkt."], right: 1,
+      miss: ["Robo dreht sich auf der Stelle. Linien entstehen nur beim Gehen.", null,
+        "Beim Drehen entsteht nichts Neues. Nur beim Gehen malt Robo."],
+      why: "Drehen malt nie. Nur wenn Robo geht, entsteht eine Linie." },
+    { q: "Kai malt ein Quadrat ohne Schleife. Wie viele gehe-Blöcke braucht er?",
+      options: ["2", "3", "4", "8"], right: 2,
+      miss: ["Mit 2 Seiten wird es nur eine Ecke.",
+        "3 Seiten sind ein Dreieck oder ein offenes Quadrat. Es fehlt eine Seite.", null,
+        "8 wären es mit den drehe-Blöcken zusammen. Gefragt sind nur die gehe-Blöcke."],
+      why: "Ein Quadrat hat 4 Seiten. Für jede Seite ein gehe-Block." },
+  ]);
+
+  /* Freiwillig */
+  B.create($("bbuchstabe"), { mode: "frei", edit: true, start: { x: -40, y: 80, dir: 180 },
+    palette: ["flag", ["pendown"], ["penup"], ["move", 80], ["move", 40], ["right", 90], ["left", 90], ["right", 180]],
+    check(tr) { return tr.segs.length >= 2 ? true : "Noch nicht viel zu sehen. Ein Buchstabe braucht mindestens 2 Linien."; },
+    ok: "✔ Schön! Kann dein Nachbar erraten, welcher Buchstabe das ist?" });
+  B.create($("bplus2"), { mode: "frei", edit: true, start: { x: 0, y: 0, dir: 90 },
+    palette: ["flag", ["pendown"], ["move", 60], ["move", 120], ["right", 90], ["left", 90], ["right", 180]],
+    ziel: ["flag", ["pendown"], ["move", 60], ["right", 180], ["move", 120], ["right", 180], ["move", 60], ["left", 90], ["move", 60], ["right", 180], ["move", 120]],
+    ok: "✔ Das Plus-Zeichen! Mit 180 Grad läuft Robo auf seiner eigenen Linie zurück." });
+
+  checklist($("checklist"), "k5-04");
+});
+</script>
+</body>
+</html>
