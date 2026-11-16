@@ -25,22 +25,53 @@
 <link rel="stylesheet" href="assets/kurs.css?v=852db3b491">
 <link rel="stylesheet" href="assets/buehne.css?v=790d4b98ab">
 <script src="assets/i18n.js?v=4588e8929d" data-page="index" data-langs="de"></script>
-<script src="assets/kurs.js?v=5fcc1de7cc"></script>
+<script src="assets/kurs.js?v=4e1aee17e7"></script>
 <script src="assets/buehne.js?v=30778f51ec"></script>
 <style>
+  /* Jahrgangs-Reiter: ohne JavaScript stehen alle Jahrgänge untereinander (auch für Suchmaschinen). */
+  .jg-tabs { position: sticky; top: 0; z-index: 20; display: flex; gap: 6px; padding: 10px 0; margin: 6px 0 4px;
+    background: var(--bg); overflow-x: auto; scrollbar-width: none; }
+  .jg-tabs::-webkit-scrollbar { display: none; }
+  html:not(.js-tabs) .jg-tabs { display: none; }
+  .jg-tab { flex: none; font: inherit; font-weight: 700; font-size: 15.5px; padding: 9px 14px; border-radius: 999px; cursor: pointer;
+    border: 2px solid var(--line); background: var(--surface); color: var(--text); white-space: nowrap; }
+  .jg-tab:hover { border-color: var(--accent); }
+  .jg-tab[aria-selected="true"] { background: var(--navy); border-color: var(--navy); color: var(--surface); }
+  .jg-tab.mehr { border-color: var(--expedition); color: var(--expedition); }
+  .jg-tab.mehr[aria-selected="true"] { background: var(--expedition); color: #fff; }
+  .jg-tab .prog { font-size: 12.5px; font-weight: 800; margin-inline-start: 6px; padding: 1px 7px; border-radius: 999px; background: var(--basis); color: #fff; }
+  .jg-tab .prog:empty { display: none; }
+  html.js-tabs .jg[hidden] { display: none; }
+  .jg { scroll-margin-top: 70px; }
+  .jg-head { display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; }
+  .jg-head h2 { margin-bottom: 4px; }
   .units { list-style: none; padding: 0; margin: 12px 0 0; display: grid; gap: 10px; }
   .units a, .units .soon-card { display: flex; gap: 14px; align-items: center; padding: 12px 14px; border-radius: 12px;
     border: 1px solid var(--line); background: var(--surface); color: var(--text); text-decoration: none; }
   .units a:hover { border-color: var(--accent); }
-  .units .no { flex: none; display: grid; place-items: center; width: 40px; height: 40px; border-radius: 10px; background: var(--navy); color: var(--surface); font-weight: 800; }
+  .units .no { position: relative; flex: none; display: grid; place-items: center; min-width: 40px; height: 40px; padding: 0 6px; border-radius: 10px; background: var(--navy); color: var(--surface); font-weight: 800; }
   .units strong { display: block; }
   .units small { color: var(--muted); font-size: 14.5px; }
   .units .soon-card { opacity: .6; }
   .units .soon-card .no { background: var(--muted); }
   .units .tag { margin-inline-start: auto; font-size: 13px; font-weight: 700; color: var(--muted); white-space: nowrap; }
   .units a .tag { color: var(--basis); }
+  .units li.fertig .no { background: var(--basis); }
+  .units li.fertig .no::after { content: "✔"; position: absolute; right: -7px; top: -7px; width: 20px; height: 20px; border-radius: 50%;
+    display: grid; place-items: center; font-size: 12px; background: var(--surface); color: var(--basis); border: 2px solid var(--basis); }
+  .jg.mehr { border: 2px solid var(--expedition); }
+  .jg.mehr h2 { color: var(--expedition); }
+  .jg.mehr .units .no { background: var(--expedition); }
   .hero-row { display: flex; gap: 22px; align-items: center; flex-wrap: wrap; }
   .hero-row > div:first-child { flex: 1 1 340px; }
+  .kurz { display: none; }
+  @media (max-width: 560px) {
+    .jg-tab { padding: 8px 13px; font-size: 16px; }
+    .jg-tab .voll { display: none; }
+    .units small, .units .tag, .hero-bild, .hero .voll { display: none; }
+    .hero .kurz { display: inline; }
+    .units a, .units .soon-card { padding: 10px 12px; }
+  }
 </style>
 </head>
 <body>
@@ -58,40 +89,50 @@
     <div class="hero-row">
       <div>
         <h1>Programmieren lernen mit Scratch – Schritt für Schritt</h1>
-        <p class="lead">Ein freier Lernpfad für die Mittelschule. Jede Lektion hat kurze Erklärungen, eine <strong>Übungsbühne</strong>
-          direkt im Browser, Fehlerdetektiv-Aufgaben und einen Kurz-Check. Es geht mit Maus und mit Finger – auch am Tablet.</p>
+        <p class="lead"><span class="voll">Ein freier Lernpfad für die Mittelschule, Klasse 5 bis 9. Jede Lektion hat kurze Erklärungen, eine <strong>Übungsbühne</strong>
+          direkt im Browser, Fehlerdetektiv-Aufgaben und einen Kurz-Check. Es geht mit Maus und mit Finger – auch am Tablet.</span><span class="kurz">Klasse 5 bis 9 · mit Übungsbühne im Browser · auch am Tablet.</span></p>
         <div class="meta">
           <span class="badge basis">Basis</span> <span class="note">für alle</span>
           <span class="badge plus">Plus</span> <span class="note">für Schnelle</span>
           <span class="badge expedition">★ Freiwillig</span> <span class="note">für Neugierige</span>
         </div>
       </div>
-      <div data-script='["flag",["pendown"],["repeat",4,[["move",100],["right",90]]]]' data-small aria-label="Beispiel: ein Scratch-Skript mit Schleife"></div>
+      <div class="hero-bild" data-script='["flag",["pendown"],["repeat",4,[["move",100],["right",90]]]]' data-small aria-label="Beispiel: ein Scratch-Skript mit Schleife"></div>
     </div>
-    <p class="note">Zum Ausprobieren in echt: <a href="https://scratch.mit.edu/projects/editor/" target="_blank" rel="noopener">Scratch im Browser öffnen ↗</a> – kostenlos, auch ohne Konto.</p>
+    <p class="note">Zum Ausprobieren in echt: <a href="https://scratch.mit.edu/projects/editor/" target="_blank" rel="noopener">Scratch in neuem Fenster öffnen ↗</a> – kostenlos, auch ohne Konto.</p>
   </section>
 
-  <section class="card">
-    <h2>Klasse 5 · Erste Schritte im Programmieren</h2>
+  <nav class="jg-tabs" role="tablist" aria-label="Wähle deine Klasse">
+    <button class="jg-tab" type="button" role="tab" data-jg="k5"><span class="voll">Klasse </span>5<span class="prog"></span></button>
+    <button class="jg-tab" type="button" role="tab" data-jg="k6"><span class="voll">Klasse </span>6<span class="prog"></span></button>
+    <button class="jg-tab" type="button" role="tab" data-jg="k7"><span class="voll">Klasse </span>7<span class="prog"></span></button>
+    <button class="jg-tab" type="button" role="tab" data-jg="k8"><span class="voll">Klasse </span>8<span class="prog"></span></button>
+    <button class="jg-tab" type="button" role="tab" data-jg="k9"><span class="voll">Klasse </span>9<span class="prog"></span></button>
+    <button class="jg-tab mehr" type="button" role="tab" data-jg="mehr">★ <span class="voll">Mehr</span><span class="prog"></span></button>
+  </nav>
+
+  <!-- Jahrgänge: Lektionen, die es schon gibt, als <a>; geplante als .soon-card. data-key = Schlüssel der „Das kann ich“-Liste. -->
+  <section class="card jg" id="jg-k5" role="tabpanel" data-jg="k5">
+    <div class="jg-head"><h2>Klasse 5 · Erste Schritte im Programmieren</h2><span class="chip">8 Lektionen</span></div>
     <p class="lead">Was ist ein Algorithmus? Befehle der Reihe nach, die Schleife – und eine Schleife in der Schleife.</p>
     <ul class="units">
-      <li><a href="k5/01-programmieren.html"><span class="no">1</span><span><strong>Was ist Programmieren?</strong><small>Ohne Computer: Wir programmieren die Lehrkraft</small></span><span class="tag">mit Kopiervorlage</span></a></li>
-      <li><a href="k5/02-scratch-kennenlernen.html"><span class="no">2</span><span><strong>Scratch kennenlernen</strong><small>Bühne, Figur, Blöcke, grüne Flagge</small></span><span class="tag">Dein erstes Skript</span></a></li>
-      <li><a href="k5/03-befehle-der-reihe-nach.html"><span class="no">3</span><span><strong>Befehle der Reihe nach</strong><small>gehen, drehen, sagen, warten</small></span><span class="tag">Robo winkt</span></a></li>
-      <li><a href="k5/04-malen-mit-dem-stift.html"><span class="no">4</span><span><strong>Malen mit dem Stift</strong><small>Linien und Ecken</small></span><span class="tag">Ein Quadrat Block für Block</span></a></li>
-      <li><a href="k5/05-schleife.html"><span class="no">5</span><span><strong>Die Schleife</strong><small>wiederhole … mal – Quadrat, Dreieck, Fehlerdetektiv</small></span><span class="tag">★ Fast ein Kreis</span></a></li>
-      <li><a href="k5/06-schleifen-ueben.html"><span class="no">6</span><span><strong>Schleifen üben</strong><small>Vielecke, Muster, Animation mit Kostüm und warte</small></span><span class="tag">Robo winkt mit Schleife</span></a></li>
-      <li><a href="k5/07-schleife-in-der-schleife.html"><span class="no">7</span><span><strong>Schleife in der Schleife</strong><small>Blumen und Muster aus Vielecken, 4 × 3 = 12</small></span><span class="tag">Die Blume aus 6 Quadraten</span></a></li>
-      <li><a href="k5/08-mein-projekt.html"><span class="no">8</span><span><strong>Mein Projekt</strong><small>Eigene Animation oder eigenes Bild in Scratch</small></span><span class="tag">3 Ideen zur Wahl</span></a></li>
+      <li data-key="k5-01"><a href="k5/01-programmieren.html"><span class="no">1</span><span><strong>Was ist Programmieren?</strong><small>Ohne Computer: Wir programmieren die Lehrkraft</small></span><span class="tag">mit Kopiervorlage</span></a></li>
+      <li data-key="k5-02"><a href="k5/02-scratch-kennenlernen.html"><span class="no">2</span><span><strong>Scratch kennenlernen</strong><small>Bühne, Figur, Blöcke, grüne Flagge</small></span><span class="tag">Dein erstes Skript</span></a></li>
+      <li data-key="k5-03"><a href="k5/03-befehle-der-reihe-nach.html"><span class="no">3</span><span><strong>Befehle der Reihe nach</strong><small>gehen, drehen, sagen, warten</small></span><span class="tag">Robo winkt</span></a></li>
+      <li data-key="k5-04"><a href="k5/04-malen-mit-dem-stift.html"><span class="no">4</span><span><strong>Malen mit dem Stift</strong><small>Linien und Ecken</small></span><span class="tag">Ein Quadrat Block für Block</span></a></li>
+      <li data-key="k5-05"><a href="k5/05-schleife.html"><span class="no">5</span><span><strong>Die Schleife</strong><small>wiederhole … mal – Quadrat, Dreieck, Fehlerdetektiv</small></span><span class="tag">★ Fast ein Kreis</span></a></li>
+      <li data-key="k5-06"><a href="k5/06-schleifen-ueben.html"><span class="no">6</span><span><strong>Schleifen üben</strong><small>Vielecke, Muster, Animation mit Kostüm und warte</small></span><span class="tag">Robo winkt mit Schleife</span></a></li>
+      <li data-key="k5-07"><a href="k5/07-schleife-in-der-schleife.html"><span class="no">7</span><span><strong>Schleife in der Schleife</strong><small>Blumen und Muster aus Vielecken, 4 × 3 = 12</small></span><span class="tag">Die Blume aus 6 Quadraten</span></a></li>
+      <li data-key="k5-08"><a href="k5/08-mein-projekt.html"><span class="no">8</span><span><strong>Mein Projekt</strong><small>Eigene Animation oder eigenes Bild in Scratch</small></span><span class="tag">3 Ideen zur Wahl</span></a></li>
     </ul>
   </section>
 
-  <section class="card">
-    <h2>Klasse 6 · Programme, die entscheiden</h2>
+  <section class="card jg" id="jg-k6" role="tabpanel" data-jg="k6">
+    <div class="jg-head"><h2>Klasse 6 · Programme, die entscheiden</h2><span class="chip">8 Lektionen</span></div>
     <p class="lead">Falls … dann, falls … sonst und „wiederhole bis“.</p>
     <ul class="units">
       <li><span class="soon-card"><span class="no">1</span><span><strong>Start-Check</strong><small>Was weißt du noch aus Klasse 5?</small></span><span class="tag">in Arbeit</span></span></li>
-      <li><span class="soon-card"><span class="no">2</span><span><strong>Steuern mit Tasten</strong><small>Ereignisse und Koordinaten</small></span><span class="tag">in Arbeit</span></span></li>
+      <li><span class="soon-card"><span class="no">2</span><span><strong>Steuern mit Tasten und Finger</strong><small>Ereignisse und Koordinaten</small></span><span class="tag">in Arbeit</span></span></li>
       <li><span class="soon-card"><span class="no">3</span><span><strong>falls … dann</strong><small>Robo stellt eine Frage</small></span><span class="tag">in Arbeit</span></span></li>
       <li><span class="soon-card"><span class="no">4</span><span><strong>falls … sonst</strong><small>Zwei Wege</small></span><span class="tag">in Arbeit</span></span></li>
       <li><span class="soon-card"><span class="no">5</span><span><strong>wiederhole bis</strong><small>Wenn man nicht weiß, wie oft</small></span><span class="tag">in Arbeit</span></span></li>
@@ -100,12 +141,73 @@
     </ul>
   </section>
 
+  <section class="card jg" id="jg-k7" role="tabpanel" data-jg="k7">
+    <div class="jg-head"><h2>Klasse 7 · Figuren als Objekte</h2><span class="chip">8 Lektionen</span></div>
+    <p class="lead">Figuren haben Eigenschaften und Kostüme. Du gestaltest sie selbst – und dein Programm benutzt sie. Dazu: Variablen.</p>
+    <ul class="units">
+      <li><span class="soon-card"><span class="no">1</span><span><strong>Start-Check</strong><small>Was weißt du noch aus Klasse 5 und 6?</small></span><span class="tag">in Arbeit</span></span></li>
+      <li><span class="soon-card"><span class="no">2</span><span><strong>Figuren sind Objekte</strong><small>Attribute wie x, y, Größe – und Methoden</small></span><span class="tag">in Arbeit</span></span></li>
+      <li><span class="soon-card"><span class="no">3</span><span><strong>Pixel oder Vektor?</strong><small>Robo im Malprogramm umgestalten</small></span><span class="tag">in Arbeit</span></span></li>
+      <li><span class="soon-card"><span class="no">4</span><span><strong>Bewegung durch Kostüme</strong><small>Wie ein Daumenkino: Robo läuft</small></span><span class="tag">in Arbeit</span></span></li>
+      <li><span class="soon-card"><span class="no">5</span><span><strong>Die Variable</strong><small>Ein Name für einen Wert: Klicks zählen</small></span><span class="tag">in Arbeit</span></span></li>
+      <li><span class="soon-card"><span class="no">6</span><span><strong>Variablen verfolgen</strong><small>Zahl, Text, wahr oder falsch</small></span><span class="tag">in Arbeit</span></span></li>
+      <li><span class="soon-card"><span class="no">7</span><span><strong>Struktogramm und Skript</strong><small>Was gehört zusammen?</small></span><span class="tag">in Arbeit</span></span></li>
+      <li><span class="soon-card"><span class="no">8</span><span><strong>Projekt: Robo-Fang</strong><small>Ein Klick-Spiel mit Punkten und Countdown</small></span><span class="tag">in Arbeit</span></span></li>
+    </ul>
+  </section>
+
+  <section class="card jg" id="jg-k8" role="tabpanel" data-jg="k8">
+    <div class="jg-head"><h2>Klasse 8 · Programme, die fragen und antworten</h2><span class="chip">9 Lektionen</span></div>
+    <p class="lead">Eingabe, Verarbeitung, Ausgabe: Dein Programm stellt Fragen, rechnet, vergleicht – und deine Kulisse wird zum Spielfeld.</p>
+    <ul class="units">
+      <li><span class="soon-card"><span class="no">1</span><span><strong>Start-Check</strong><small>Was weißt du noch aus Klasse 7?</small></span><span class="tag">in Arbeit</span></span></li>
+      <li><span class="soon-card"><span class="no">2</span><span><strong>Eingabe – Verarbeitung – Ausgabe</strong><small>Ein Bot, der deinen Namen kennt</small></span><span class="tag">in Arbeit</span></span></li>
+      <li><span class="soon-card"><span class="no">3</span><span><strong>Wertzuweisung</strong><small>Rechnen mit Antworten</small></span><span class="tag">in Arbeit</span></span></li>
+      <li><span class="soon-card"><span class="no">4</span><span><strong>Größenvergleich</strong><small>größer, kleiner, gleich – und richtig testen</small></span><span class="tag">in Arbeit</span></span></li>
+      <li><span class="soon-card"><span class="no">5</span><span><strong>Rätselspiel</strong><small>Zahlenraten mit Zufallszahl</small></span><span class="tag">in Arbeit</span></span></li>
+      <li><span class="soon-card"><span class="no">6</span><span><strong>Die Kulisse als Spielfeld</strong><small>Ein Labyrinth malen, Wände erkennen</small></span><span class="tag">in Arbeit</span></span></li>
+      <li><span class="soon-card"><span class="no">7</span><span><strong>Quiz und der erste eigene Block</strong><small>Einmal bauen, oft benutzen</small></span><span class="tag">in Arbeit</span></span></li>
+      <li><span class="soon-card"><span class="no">8–9</span><span><strong>Projekt: Tic-Tac-Toe</strong><small>Zwei Spieler, neun Felder</small></span><span class="tag">in Arbeit</span></span></li>
+    </ul>
+  </section>
+
+  <section class="card jg" id="jg-k9" role="tabpanel" data-jg="k9">
+    <div class="jg-head"><h2>Klasse 9 · Mein Spiel aus Bausteinen</h2><span class="chip">8 Lektionen</span></div>
+    <p class="lead">Eigene Blöcke machen große Programme übersichtlich. Damit baust du Schritt für Schritt dein Spiel: Robos Höhlenflug.</p>
+    <ul class="units">
+      <li><span class="soon-card"><span class="no">1</span><span><strong>Start-Check</strong><small>Was weißt du noch aus Klasse 8?</small></span><span class="tag">in Arbeit</span></span></li>
+      <li><span class="soon-card"><span class="no">2</span><span><strong>Eigene Blöcke</strong><small>Ein langes Skript in Teile zerlegen</small></span><span class="tag">in Arbeit</span></span></li>
+      <li><span class="soon-card"><span class="no">3</span><span><strong>Eigene Blöcke mit Eingaben</strong><small>Ein Block für jedes Vieleck</small></span><span class="tag">in Arbeit</span></span></li>
+      <li><span class="soon-card"><span class="no">4</span><span><strong>Das fertige Spiel untersuchen</strong><small>Welcher Baustein macht was?</small></span><span class="tag">in Arbeit</span></span></li>
+      <li><span class="soon-card"><span class="no">5</span><span><strong>Meine Höhle, mein Robo</strong><small>Kulisse und Kostüme gestalten, steuern</small></span><span class="tag">in Arbeit</span></span></li>
+      <li><span class="soon-card"><span class="no">6</span><span><strong>Energie und Wände</strong><small>Wer die Wand berührt, wird langsamer</small></span><span class="tag">in Arbeit</span></span></li>
+      <li><span class="soon-card"><span class="no">7</span><span><strong>Zellen, Tor, Spielende</strong><small>Punkte sammeln und ins Ziel</small></span><span class="tag">in Arbeit</span></span></li>
+      <li><span class="soon-card"><span class="no">8</span><span><strong>Testen und verbessern</strong><small>Testprotokoll, zweiter Spieler</small></span><span class="tag">in Arbeit</span></span></li>
+    </ul>
+  </section>
+
+  <!-- Zusatzmodule: lila wie die Expeditionen; Seiten liegen später in extra/ -->
+  <section class="card jg mehr" id="jg-mehr" role="tabpanel" data-jg="mehr">
+    <div class="jg-head"><h2>★ Zusatzmodule · freiwillig</h2><span class="chip">für alle, die mehr wollen</span></div>
+    <p class="lead">Du hast Lust auf mehr? Hier geht es über den Unterricht hinaus – aus jeder Klasse, in deinem Tempo.</p>
+    <p class="note">Für Lehrkräfte: Die Module passen auch zum Wahlfach „Informatik und digitales Gestalten“
+      (z. B. Computeranimation, Computergrafiken, Softwareprojekt).</p>
+    <ul class="units">
+      <li><span class="soon-card"><span class="no">★</span><span><strong>Trickfilm</strong><small>Mehrere Figuren, Nachrichten, Ton</small></span><span class="tag">in Arbeit</span></span></li>
+      <li><span class="soon-card"><span class="no">★</span><span><strong>Kunst mit Code</strong><small>Spiralen, Rosetten und Zufallsmuster mit dem Stift</small></span><span class="tag">in Arbeit</span></span></li>
+      <li><span class="soon-card"><span class="no">★</span><span><strong>Klone</strong><small>Viele Sterne, Tropfen und Gegner aus einer Figur</small></span><span class="tag">in Arbeit</span></span></li>
+      <li><span class="soon-card"><span class="no">★</span><span><strong>Listen</strong><small>Highscore und Vokabeltrainer</small></span><span class="tag">in Arbeit</span></span></li>
+      <li><span class="soon-card"><span class="no">★</span><span><strong>Jump'n'Run</strong><small>Schwerkraft, Springen, Plattformen</small></span><span class="tag">in Arbeit</span></span></li>
+      <li><span class="soon-card"><span class="no">★</span><span><strong>Musik</strong><small>Melodien und Rhythmen mit Schleifen</small></span><span class="tag">in Arbeit</span></span></li>
+    </ul>
+  </section>
+
   <section class="card">
     <h2>Über den Kurs</h2>
     <p>Der Kurs richtet sich nach dem LehrplanPLUS Informatik der bayerischen Mittelschule. Er ist frei (OER):
       Alle dürfen ihn nutzen, verändern und weitergeben (CC BY-SA 4.0). Die Seiten setzen keine Cookies und messen nichts.</p>
     <p class="note">Die Figur „Robo“ und alle Grafiken sind eigene Zeichnungen. Die Blöcke sehen aus wie in Scratch und heißen genauso,
-      damit du dich in Scratch sofort zurechtfindest.</p>
+      damit du dich in Scratch sofort zurechtfindest. Welche Klasse du zuletzt angeschaut hast und was du abgehakt hast, merkt sich nur dein Gerät.</p>
   </section>
 </main>
 
@@ -115,5 +217,57 @@
   <div class="wrap t gh">Scratch ist ein Projekt der Scratch Foundation. Dieser Kurs ist kein offizielles Angebot der Scratch Foundation.</div>
   <div class="wrap legal"><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></div>
 </footer>
+
+<script>
+/* Jahrgangs-Reiter. Reihenfolge der Wahl: Adresse (#k7) → zuletzt gewählte Klasse → Klasse 5.
+   Gemerkt wird nur im Browser (localStorage), nichts wird gesendet. */
+(function () {
+  const S = window.Kurs.store;
+  const tabs = [...document.querySelectorAll(".jg-tab")];
+  const panels = [...document.querySelectorAll(".jg")];
+  const ids = tabs.map((t) => t.dataset.jg);
+  document.documentElement.classList.add("js-tabs");
+
+  /* Fortschritt: Häkchen an fertigen Lektionen, „3/8“ am Reiter */
+  panels.forEach((p) => {
+    const keyed = [...p.querySelectorAll("li[data-key]")];
+    let done = 0;
+    keyed.forEach((li) => { if (S.get("scratch-fertig-" + li.dataset.key) === "1") { li.classList.add("fertig"); done++; } });
+    const total = p.querySelectorAll(".units > li").length;
+    const tab = tabs.find((t) => t.dataset.jg === p.dataset.jg);
+    if (done) tab.querySelector(".prog").textContent = done + "/" + total;
+  });
+
+  function show(id, push) {
+    if (!ids.includes(id)) id = "k5";
+    tabs.forEach((t) => { const on = t.dataset.jg === id; t.setAttribute("aria-selected", on); t.tabIndex = on ? 0 : -1; });
+    panels.forEach((p) => { p.hidden = p.dataset.jg !== id; });
+    S.set("scratch-klasse", id);
+    if (push) history.pushState(null, "", "#" + id);
+  }
+  tabs.forEach((t, i) => {
+    t.id = "tab-" + t.dataset.jg;
+    t.setAttribute("aria-controls", "jg-" + t.dataset.jg);
+    t.addEventListener("click", () => {
+      show(t.dataset.jg, true);
+      const bar = document.querySelector(".jg-tabs");
+      if (bar.getBoundingClientRect().top <= 1) document.getElementById("jg-" + t.dataset.jg).scrollIntoView({ block: "start" });
+    });
+    t.addEventListener("keydown", (e) => {
+      const d = e.key === "ArrowRight" ? 1 : e.key === "ArrowLeft" ? -1 : 0;
+      if (!d) return;
+      const n = tabs[(i + d + tabs.length) % tabs.length];
+      n.focus(); n.click();
+    });
+  });
+  panels.forEach((p) => p.setAttribute("aria-labelledby", "tab-" + p.dataset.jg));
+  const fromHash = () => location.hash.slice(1);
+  window.addEventListener("popstate", () => show(fromHash() || S.get("scratch-klasse"), false));
+  window.addEventListener("hashchange", () => show(fromHash(), false));
+  show(ids.includes(fromHash()) ? fromHash() : S.get("scratch-klasse"), false);
+  const cur = document.querySelector('.jg-tab[aria-selected="true"]');
+  if (cur) cur.scrollIntoView({ block: "nearest", inline: "center" });
+})();
+</script>
 </body>
 </html>

@@ -123,12 +123,20 @@
 
   /** Ich-kann-Liste, die sich das Gerät merkt (nur lokal, nichts wird gesendet). */
   function checklist(el, key) {
-    el.querySelectorAll("input[type=checkbox]").forEach((cb, i) => {
+    const boxes = [...el.querySelectorAll("input[type=checkbox]")];
+    // Für die Startseite: „scratch-fertig-<key>“ = 1, wenn alles abgehakt ist (Häkchen und „3/8“ am Reiter).
+    const summary = () => store.set(`scratch-fertig-${key}`, boxes.every((b) => b.checked) ? "1" : "0");
+    boxes.forEach((cb, i) => {
       const k = `scratch-${key}-${i}`;
       cb.checked = store.get(k) === "1";
-      cb.addEventListener("change", () => store.set(k, cb.checked ? "1" : "0"));
+      cb.addEventListener("change", () => { store.set(k, cb.checked ? "1" : "0"); summary(); });
     });
+    summary();
   }
+
+  /* Die Startseite öffnet beim nächsten Mal gleich die Klasse der zuletzt besuchten Lektion. */
+  const jg = location.pathname.match(/\/(k\d)\/[^/]+\.html$/);
+  if (jg) store.set("scratch-klasse", jg[1]);
 
   /* Scratch-Wörter: Wer die Sprachhilfe benutzt, sieht die Wortliste gleich aufgeklappt. */
   document.addEventListener("DOMContentLoaded", () => {
