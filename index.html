@@ -29,18 +29,25 @@
 <script src="assets/buehne.js?v=30778f51ec"></script>
 <style>
   /* Jahrgangs-Reiter: ohne JavaScript stehen alle Jahrgänge untereinander (auch für Suchmaschinen). */
-  .jg-tabs { position: sticky; top: 0; z-index: 20; display: flex; gap: 6px; padding: 10px 0; margin: 6px 0 4px;
-    background: var(--bg); overflow-x: auto; scrollbar-width: none; }
+  .jg-tabs { --band: var(--navy); position: sticky; top: 0; z-index: 20; display: flex; align-items: flex-end; gap: 5px;
+    margin: 26px 0 0; padding: 8px 8px 0; border-radius: 14px 14px 0 0; background: var(--band);
+    box-shadow: 0 -8px 0 var(--bg); overflow-x: auto; scrollbar-width: none; }
+  :root[data-theme="dark"] .jg-tabs { --band: #17586a; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .jg-tabs { --band: #17586a; } }
   .jg-tabs::-webkit-scrollbar { display: none; }
   html:not(.js-tabs) .jg-tabs { display: none; }
-  .jg-tab { flex: none; font: inherit; font-weight: 700; font-size: 15.5px; padding: 9px 14px; border-radius: 999px; cursor: pointer;
-    border: 2px solid var(--line); background: var(--surface); color: var(--text); white-space: nowrap; }
-  .jg-tab:hover { border-color: var(--accent); }
-  .jg-tab[aria-selected="true"] { background: var(--navy); border-color: var(--navy); color: var(--surface); }
-  .jg-tab.mehr { border-color: var(--expedition); color: var(--expedition); }
-  .jg-tab.mehr[aria-selected="true"] { background: var(--expedition); color: #fff; }
+  .jg-label { flex: none; align-self: center; padding: 0 8px 8px 6px; color: #fff; font-weight: 800; font-size: 15px; white-space: nowrap; }
+  .jg-tab { flex: none; font: inherit; font-weight: 800; font-size: 16px; padding: 10px 16px 11px; border: 0; border-radius: 10px 10px 0 0;
+    cursor: pointer; background: rgba(255, 255, 255, .14); color: #fff; white-space: nowrap; }
+  .jg-tab:hover { background: rgba(255, 255, 255, .26); }
+  .jg-tab:focus-visible { outline: 3px solid #fff36b; outline-offset: -3px; }
+  .jg-tab[aria-selected="true"] { background: var(--surface); color: var(--navy); }
+  .jg-tab.mehr { color: #f0d4ff; }
+  .jg-tab.mehr[aria-selected="true"] { background: var(--surface); color: var(--expedition); }
   .jg-tab .prog { font-size: 12.5px; font-weight: 800; margin-inline-start: 6px; padding: 1px 7px; border-radius: 999px; background: var(--basis); color: #fff; }
   .jg-tab .prog:empty { display: none; }
+  /* Die Karte des gewählten Jahrgangs hängt direkt am Reiter */
+  html.js-tabs .jg { margin-top: 0; border-top: 0; border-radius: 0 0 var(--radius) var(--radius); }
   html.js-tabs .jg[hidden] { display: none; }
   .jg { scroll-margin-top: 70px; }
   .jg-head { display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; }
@@ -66,8 +73,9 @@
   .hero-row > div:first-child { flex: 1 1 340px; }
   .kurz { display: none; }
   @media (max-width: 560px) {
-    .jg-tab { padding: 8px 13px; font-size: 16px; }
-    .jg-tab .voll { display: none; }
+    .jg-tab { padding: 10px 15px 11px; font-size: 17px; }
+    .jg-tab .voll, .jg-label { display: none; }
+    .jg-tabs { padding: 6px 6px 0; gap: 4px; }
     .units small, .units .tag, .hero-bild, .hero .voll { display: none; }
     .hero .kurz { display: inline; }
     .units a, .units .soon-card { padding: 10px 12px; }
@@ -102,13 +110,16 @@
     <p class="note">Zum Ausprobieren in echt: <a href="https://scratch.mit.edu/projects/editor/" target="_blank" rel="noopener">Scratch in neuem Fenster öffnen ↗</a> – kostenlos, auch ohne Konto.</p>
   </section>
 
-  <nav class="jg-tabs" role="tablist" aria-label="Wähle deine Klasse">
+  <nav class="jg-tabs" aria-label="Wähle deine Klasse">
+    <span class="jg-label" aria-hidden="true">Wähle deine Klasse:</span>
+    <span role="tablist" aria-label="Klassen" style="display:contents">
     <button class="jg-tab" type="button" role="tab" data-jg="k5"><span class="voll">Klasse </span>5<span class="prog"></span></button>
     <button class="jg-tab" type="button" role="tab" data-jg="k6"><span class="voll">Klasse </span>6<span class="prog"></span></button>
     <button class="jg-tab" type="button" role="tab" data-jg="k7"><span class="voll">Klasse </span>7<span class="prog"></span></button>
     <button class="jg-tab" type="button" role="tab" data-jg="k8"><span class="voll">Klasse </span>8<span class="prog"></span></button>
     <button class="jg-tab" type="button" role="tab" data-jg="k9"><span class="voll">Klasse </span>9<span class="prog"></span></button>
     <button class="jg-tab mehr" type="button" role="tab" data-jg="mehr">★ <span class="voll">Mehr</span><span class="prog"></span></button>
+    </span>
   </nav>
 
   <!-- Jahrgänge: Lektionen, die es schon gibt, als <a>; geplante als .soon-card. data-key = Schlüssel der „Das kann ich“-Liste. -->
