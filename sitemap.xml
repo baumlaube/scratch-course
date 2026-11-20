@@ -2,70 +2,102 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://scratch.herrseibert.de/</loc>
-    <lastmod>2026-11-16</lastmod>
+    <lastmod>2026-11-20</lastmod>
   </url>
   <url>
     <loc>https://scratch.herrseibert.de/k5/01-programmieren.html</loc>
-    <lastmod>2026-11-16</lastmod>
+    <lastmod>2026-11-20</lastmod>
   </url>
   <url>
     <loc>https://scratch.herrseibert.de/k5/02-scratch-kennenlernen.html</loc>
-    <lastmod>2026-11-16</lastmod>
+    <lastmod>2026-11-20</lastmod>
   </url>
   <url>
     <loc>https://scratch.herrseibert.de/k5/03-befehle-der-reihe-nach.html</loc>
-    <lastmod>2026-11-16</lastmod>
+    <lastmod>2026-11-20</lastmod>
   </url>
   <url>
     <loc>https://scratch.herrseibert.de/k5/04-malen-mit-dem-stift.html</loc>
-    <lastmod>2026-11-16</lastmod>
+    <lastmod>2026-11-20</lastmod>
   </url>
   <url>
     <loc>https://scratch.herrseibert.de/k5/05-schleife.html</loc>
-    <lastmod>2026-11-16</lastmod>
+    <lastmod>2026-11-20</lastmod>
   </url>
   <url>
     <loc>https://scratch.herrseibert.de/k5/06-schleifen-ueben.html</loc>
-    <lastmod>2026-11-16</lastmod>
+    <lastmod>2026-11-20</lastmod>
   </url>
   <url>
     <loc>https://scratch.herrseibert.de/k5/07-schleife-in-der-schleife.html</loc>
-    <lastmod>2026-11-16</lastmod>
+    <lastmod>2026-11-20</lastmod>
   </url>
   <url>
     <loc>https://scratch.herrseibert.de/k5/08-mein-projekt.html</loc>
-    <lastmod>2026-11-16</lastmod>
+    <lastmod>2026-11-20</lastmod>
   </url>
   <url>
     <loc>https://scratch.herrseibert.de/k6/01-start-check.html</loc>
-    <lastmod>2026-11-16</lastmod>
+    <lastmod>2026-11-20</lastmod>
   </url>
   <url>
     <loc>https://scratch.herrseibert.de/k6/02-steuern.html</loc>
-    <lastmod>2026-11-16</lastmod>
+    <lastmod>2026-11-20</lastmod>
   </url>
   <url>
     <loc>https://scratch.herrseibert.de/k6/03-falls-dann.html</loc>
-    <lastmod>2026-11-16</lastmod>
+    <lastmod>2026-11-20</lastmod>
   </url>
   <url>
     <loc>https://scratch.herrseibert.de/k6/04-falls-sonst.html</loc>
-    <lastmod>2026-11-16</lastmod>
+    <lastmod>2026-11-20</lastmod>
   </url>
   <url>
     <loc>https://scratch.herrseibert.de/k6/05-wiederhole-bis.html</loc>
-    <lastmod>2026-11-16</lastmod>
+    <lastmod>2026-11-20</lastmod>
   </url>
   <url>
     <loc>https://scratch.herrseibert.de/k6/06-alles-zusammen.html</loc>
-    <lastmod>2026-11-16</lastmod>
+    <lastmod>2026-11-20</lastmod>
   </url>
   <url>
     <loc>https://scratch.herrseibert.de/k6/07-projekt-fangspiel.html</loc>
-    <lastmod>2026-11-16</lastmod>
+    <lastmod>2026-11-20</lastmod>
   </url>
   <url>
     <loc>https://scratch.herrseibert.de/k6/08-fangspiel-fertig.html</loc>
-    <lastmod>2026-11-16</lastmod>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://scratch.herrseibert.de/k7/01-start-check.html</loc>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://scratch.herrseibert.de/k7/02-objekte.html</loc>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://scratch.herrseibert.de/k7/03-pixel-vektor.html</loc>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://scratch.herrseibert.de/k7/04-kostueme.html</loc>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://scratch.herrseibert.de/k7/05-variable.html</loc>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://scratch.herrseibert.de/k7/06-variablen-verfolgen.html</loc>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://scratch.herrseibert.de/k7/07-struktogramm.html</loc>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://scratch.herrseibert.de/k7/08-robo-fang.html</loc>
+    <lastmod>2026-11-20</lastmod>
   </url>
 </urlset>

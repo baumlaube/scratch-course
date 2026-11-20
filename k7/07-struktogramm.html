@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Struktogramm und Skript · Scratch-Kurs Klasse 7</title>
+<meta name="description" content="Lektion 7 im Scratch-Lernpfad Klasse 7: Struktogramm und Skript zuordnen und einen Countdown nach Struktogramm bauen.">
+<link rel="canonical" href="https://scratch.herrseibert.de/k7/07-struktogramm.html">
+<!-- vorschau -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Scratch-Kurs">
+<meta property="og:locale" content="de_DE">
+<meta property="og:url" content="https://scratch.herrseibert.de/k7/07-struktogramm.html">
+<meta property="og:title" content="Struktogramm und Skript · Scratch-Kurs Klasse 7">
+<meta property="og:description" content="Lektion 7 im Scratch-Lernpfad Klasse 7: Struktogramm und Skript zuordnen und einen Countdown nach Struktogramm bauen.">
+<meta property="og:image" content="https://scratch.herrseibert.de/vorschau.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Scratch-Kurs – Programmieren lernen Schritt für Schritt, mit Übungsbühne">
+<meta name="twitter:card" content="summary_large_image">
+<!-- /vorschau -->
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="stylesheet" href="../assets/kurs.css?v=48917f175f">
+<link rel="stylesheet" href="../assets/buehne.css?v=811a9f4f75">
+<script src="../assets/i18n.js?v=4588e8929d" data-page="k7-07-struktogramm" data-langs="de"></script>
+<script src="../assets/kurs.js?v=9e315750a5"></script>
+<script src="../assets/buehne.js?v=a89a39db39"></script>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><img class="logo" src="../favicon.svg" alt="" width="34" height="34"> Scratch-Kurs <span>· Programmieren lernen</span></a>
+    <span class="spacer"></span>
+    <button class="theme-btn" type="button" aria-label="Hell oder dunkel umschalten">◐ Hell/Dunkel</button>
+  </div>
+</header>
+
+<main class="wrap">
+  <nav class="path" aria-label="Lernpfad Klasse 7">
+    <strong class="t">Klasse 7:</strong>
+    <ol>
+      <li class="done"><a href="01-start-check.html" title="1 · Start-Check">1</a></li>
+      <li class="done"><a href="02-objekte.html" title="2 · Robo ist ein Objekt">2</a></li>
+      <li class="done"><a href="03-pixel-vektor.html" title="3 · Pixel oder Vektor?">3</a></li>
+      <li class="done"><a href="04-kostueme.html" title="4 · Bewegung durch Kostüme">4</a></li>
+      <li class="done"><a href="05-variable.html" title="5 · Die Variable">5</a></li>
+      <li class="done"><a href="06-variablen-verfolgen.html" title="6 · Variablen verfolgen">6</a></li>
+      <li class="now"><span title="7 · Struktogramm und Skript" aria-current="step">7</span></li>
+      <li class="done"><a href="08-robo-fang.html" title="8 · Projekt: Robo-Fang">8</a></li>
+    </ol>
+  </nav>
+
+  <section class="hero">
+    <h1>Struktogramm und Skript</h1>
+    <div class="meta">
+      <span class="chip">Klasse 7 · Lektion 7</span>
+      <span class="chip">⏱ ca. 35 Minuten</span>
+    </div>
+    <ul class="goals">
+      <li>Ich kenne die Bausteine eines Struktogramms: Anweisung, Wiederholung, Verzweigung.</li>
+      <li>Ich ordne Struktogramme und Skripte einander zu.</li>
+      <li>Ich baue ein Skript nach einem Struktogramm: einen Countdown.</li>
+    </ul>
+  </section>
+
+  <details class="card woerter">
+    <summary>📖 Wörter für diese Lektion</summary>
+    <div class="tbl-scroll"><table class="plain">
+      <tr><th class="wort">das Struktogramm <small>die Struktogramme</small></th><td>Ein Bild vom Ablauf eines Programms – aus Kästen.</td></tr>
+      <tr><th class="wort">die Anweisung <small>die Anweisungen</small></th><td>Ein einzelner Befehl. Im Struktogramm: ein Rechteck.</td></tr>
+      <tr><th class="wort">die Wiederholung <small>die Wiederholungen</small></th><td>Eine Schleife. Im Struktogramm: ein Kasten mit eingerücktem Inhalt.</td></tr>
+      <tr><th class="wort">die Verzweigung <small>die Verzweigungen</small></th><td>falls … sonst. Im Struktogramm: ein Dreieck mit zwei Spalten.</td></tr>
+      <tr><th class="wort">der Countdown <small>die Countdowns</small></th><td>Rückwärts zählen bis 0: 5, 4, 3, 2, 1 – Start!</td></tr>
+    </table></div>
+  </details>
+
+  <section class="card wdh">
+    <h2><span class="step-no">↺</span> Weißt du noch? <span class="chip">2 Minuten</span></h2>
+    <div id="wdh"></div>
+  </section>
+
+  <!-- 1 · Bausteine -->
+  <section class="card">
+    <h2><span class="step-no">1</span> Die drei Bausteine <span class="chip">4 Minuten</span></h2>
+    <p>Jedes Struktogramm ist aus drei Bausteinen gebaut. Du musst es nicht zeichnen – nur lesen.</p>
+    <div class="script-row">
+      <figure><div class="nsd" aria-label="Anweisung: gehe 10 Schritte"><div class="nsd-row">gehe 10 Schritte</div></div><figcaption><strong>Anweisung</strong>: ein Rechteck</figcaption></figure>
+      <figure><div class="nsd" aria-label="Wiederholung: wiederhole 4-mal: gehe 10 Schritte"><div class="nsd-loop"><div class="nsd-head">wiederhole 4-mal</div><div class="nsd-body"><div class="nsd-row">gehe 10 Schritte</div></div></div></div><figcaption><strong>Wiederholung</strong>: Inhalt eingerückt</figcaption></figure>
+      <figure><div class="nsd" aria-label="Verzweigung: Rand berührt? wahr: drehe dich, falsch: nichts"><div class="nsd-if"><div class="nsd-cond"><span class="nsd-q">Rand berührt?</span><span class="nsd-w">wahr</span><span class="nsd-f">falsch</span></div><div class="nsd-cols"><div class="nsd-col"><div class="nsd-row">drehe dich um 180°</div></div><div class="nsd-col"><div class="nsd-row nsd-leer">–</div></div></div></div></div><figcaption><strong>Verzweigung</strong>: Dreieck, zwei Spalten</figcaption></figure>
+    </div>
+    <p><strong>Überleg:</strong> Welcher Baustein gehört zu <em>wiederhole bis</em>?</p>
+    <div class="choices" id="pred1">
+      <button type="button" class="choice">Anweisung</button>
+      <button type="button" class="choice">Wiederholung</button>
+      <button type="button" class="choice">Verzweigung</button>
+    </div>
+    <p class="fb" id="fb1"></p>
+  </section>
+
+  <!-- 2 · Zuordnen -->
+  <section class="card">
+    <h2><span class="step-no">2</span> Was gehört zusammen? <span class="badge basis">Basis</span> <span class="chip">7 Minuten</span></h2>
+    <p>Hier sind vier Struktogramme A–D. Wähl für jedes Skript darunter das passende Struktogramm.</p>
+    <div class="script-row" id="nsdABCD"></div>
+    <div id="zuordnen"></div>
+  </section>
+
+  <!-- 3 · Countdown -->
+  <section class="card">
+    <h2><span class="step-no">3</span> Ein Countdown nach Plan <span class="badge basis">Basis</span> <span class="chip">7 Minuten</span></h2>
+    <p>Bau das Skript genau nach diesem Struktogramm. Die Variable <em>Zeit</em> gibt es schon.</p>
+    <div class="script-row">
+      <figure>
+        <div class="nsd" aria-label="Struktogramm Countdown: setze Zeit auf 5. Wiederhole bis Zeit gleich 0: sage Zeit, warte 1 Sekunde, ändere Zeit um minus 1. Danach: sage Start.">
+          <div class="nsd-row">setze Zeit auf 5</div>
+          <div class="nsd-loop"><div class="nsd-head">wiederhole bis Zeit = 0</div><div class="nsd-body">
+            <div class="nsd-row">sage Zeit</div><div class="nsd-row">warte 1 Sekunde</div><div class="nsd-row">ändere Zeit um −1</div>
+          </div></div>
+          <div class="nsd-row">sage „Start!“</div>
+        </div>
+        <figcaption>Das Struktogramm</figcaption>
+      </figure>
+    </div>
+    <div id="b3"></div>
+  </section>
+
+  <!-- 4 · Fehlerdetektiv -->
+  <section class="card">
+    <h2><span class="step-no">4</span> Fehlerdetektiv 🔍: Countdown bis 0 <span class="badge basis">Basis</span> <span class="chip">5 Minuten</span></h2>
+    <p>Lena hat den Countdown gebaut. Klick auf ⚑ Start: Robo sagt 4, 3, 2, 1, 0 – die 5 fehlt, dafür kommt die 0. Vergleich ihr Skript Block für Block mit dem Struktogramm aus Schritt 3.</p>
+    <div id="b4"></div>
+    <div id="hints4"></div>
+  </section>
+
+  <!-- 5 · Skript → Struktogramm -->
+  <section class="card">
+    <h2><span class="step-no">5</span> Andersherum: Welches Struktogramm passt? <span class="chip">4 Minuten</span></h2>
+    <div id="rueck"></div>
+  </section>
+
+  <!-- 6 · Merksatz -->
+  <section class="card">
+    <h2><span class="step-no">6</span> Struktogramm lesen <span class="chip">2 Minuten</span></h2>
+    <p class="rule">Ein Struktogramm liest man <strong>von oben nach unten</strong>.<br>
+      Was <strong>eingerückt</strong> unter einem Schleifenkopf steht, wird wiederholt. Beim <strong>Dreieck</strong> wird entschieden: links bei wahr, rechts bei falsch.<br>
+      Struktogramm und Skript haben dieselbe Struktur – nur anders gezeichnet.</p>
+  </section>
+
+  <!-- Plus -->
+  <section class="card">
+    <h2><span class="step-no">+</span> Countdown mit Warnfarbe <span class="badge plus">Plus</span> <span class="chip">für Schnelle</span></h2>
+    <p>Bau dieses Struktogramm: Ab 3 wird Robo rot.</p>
+    <div class="nsd" aria-label="Struktogramm: wechsle zu Kostüm blau, setze Zeit auf 5. Wiederhole bis Zeit gleich 0: Verzweigung Zeit kleiner 4? wahr: wechsle zu Kostüm rot. Dann sage Zeit, warte 1 Sekunde, ändere Zeit um minus 1.">
+      <div class="nsd-row">wechsle zu Kostüm blau</div>
+      <div class="nsd-row">setze Zeit auf 5</div>
+      <div class="nsd-loop"><div class="nsd-head">wiederhole bis Zeit = 0</div><div class="nsd-body">
+        <div class="nsd-if"><div class="nsd-cond"><span class="nsd-q">Zeit &lt; 4?</span><span class="nsd-w">wahr</span><span class="nsd-f">falsch</span></div><div class="nsd-cols"><div class="nsd-col"><div class="nsd-row">wechsle zu Kostüm rot</div></div><div class="nsd-col"><div class="nsd-row nsd-leer">–</div></div></div></div>
+        <div class="nsd-row">sage Zeit</div><div class="nsd-row">warte 1 Sekunde</div><div class="nsd-row">ändere Zeit um −1</div>
+      </div></div>
+    </div>
+    <div id="bplus"></div>
+  </section>
+
+  <section class="card">
+    <h2><span class="step-no">✓</span> Kurz-Check <span class="chip">4 Minuten</span></h2>
+    <div id="quiz"></div>
+  </section>
+
+  <section class="card merke">
+    <h2>Merke</h2>
+    <ul>
+      <li>Drei Bausteine: <strong>Anweisung</strong> (Rechteck), <strong>Wiederholung</strong> (eingerückt), <strong>Verzweigung</strong> (Dreieck).</li>
+      <li>Was eingerückt ist, steckt in der Schleife – wie im Skript.</li>
+      <li>Ein Struktogramm ist ein Plan: Man kann danach ein Skript bauen.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2><span class="step-no">⚑</span> Jetzt in echt: Scratch <span class="chip">zu Hause oder nächste Stunde</span></h2>
+    <p><a class="btn" href="https://scratch.mit.edu/projects/editor/" target="_blank" rel="noopener">Scratch in neuem Fenster öffnen ↗</a></p>
+    <ol class="howto">
+      <li>Leg eine Variable <strong>Zeit</strong> an (Variablen → Neue Variable).</li>
+      <li>Bau den Countdown aus Schritt 3. Das Sechseck <em>( ) = (50)</em> findest du bei <strong>Operatoren</strong>, den runden Block <em>Zeit</em> bei <strong>Variablen</strong>.</li>
+      <li>Klick auf ⚑. Den Countdown brauchst du nächste Stunde im Spiel Robo-Fang.</li>
+    </ol>
+  </section>
+
+  <section class="card">
+    <h2><span class="step-no">☑</span> Das kann ich</h2>
+    <ul class="checklist" id="checklist">
+      <li><label><input type="checkbox"> Ich kenne die drei Bausteine eines Struktogramms.</label></li>
+      <li><label><input type="checkbox"> Ich kann Struktogramm und Skript einander zuordnen.</label></li>
+      <li><label><input type="checkbox"> Ich kann nach einem Struktogramm ein Skript bauen.</label></li>
+    </ul>
+  </section>
+
+  <section class="card frei">
+    <h2><span class="step-no">★</span> Freiwillig</h2>
+    <p class="lead">Für alle, die schon fertig sind.</p>
+    <h3 class="sub"><span class="badge ueben">Üben</span> Noch ein Paar</h3>
+    <div id="ueben"></div>
+    <h3 class="sub"><span class="badge expedition">★ Expedition</span> Zählen mit Schleife</h3>
+    <p>Robo soll 2, 4, 6, 8, 10 sagen. Bau es ohne Struktogramm – mit <em>wiederhole 5 mal</em> und einer Variable <em>Zahl</em>.</p>
+    <div id="bexp"></div>
+  </section>
+
+  <nav class="pager">
+    <a href="06-variablen-verfolgen.html">← Lektion 6: Variablen verfolgen</a>
+    <a href="08-robo-fang.html">Lektion 8: Projekt: Robo-Fang →</a>
+  </nav>
+</main>
+
+<footer>
+  <div class="wrap t">Lernmaterial von <a href="https://herrseibert.de">herrseibert.de</a> · Lizenz <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.de">CC BY-SA 4.0</a> · ohne Tracking, ohne Cookies<br>Erstellt von der KI Claude von Anthropic.</div>
+  <div class="wrap t gh">Fehler gefunden oder eine Idee? → <a href="https://github.com/baumlaube/scratch-course">Kurs auf GitHub</a></div>
+  <div class="wrap t gh">Scratch ist ein Projekt der Scratch Foundation. Dieser Kurs ist kein offizielles Angebot der Scratch Foundation.</div>
+  <div class="wrap legal"><a href="../impressum.html">Impressum</a> · <a href="../datenschutz.html">Datenschutz</a></div>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const { pick, quiz, hints, checklist } = window.Kurs;
+  const B = window.Buehne;
+  const $ = (id) => document.getElementById(id);
+  const sm = (s) => B.render(s, { small: true });
+  function where(list, op, pred, path = []) {
+    for (const n of list) {
+      if (n.op === op && (!pred || pred(n))) return path;
+      const r = (n.body && where(n.body, op, pred, path.concat(n.op))) || (n.body2 && where(n.body2, op, pred, path.concat(n.op + ":sonst")));
+      if (r) return r;
+    }
+    return null;
+  }
+  const row = (t) => `<div class="nsd-row">${t}</div>`;
+  const leer = `<div class="nsd-row nsd-leer">–</div>`;
+  const loop = (kopf, inner) => `<div class="nsd-loop"><div class="nsd-head">${kopf}</div><div class="nsd-body">${inner}</div></div>`;
+  const wenn = (q, w, f) => `<div class="nsd-if"><div class="nsd-cond"><span class="nsd-q">${q}</span><span class="nsd-w">wahr</span><span class="nsd-f">falsch</span></div>`
+    + `<div class="nsd-cols"><div class="nsd-col">${w}</div><div class="nsd-col">${f}</div></div></div>`;
+  const nsd = (label, inner) => `<div class="nsd" aria-label="${label}">${inner}</div>`;
+  const KF = [{ name: "blau", pose: 0, farbe: "#4c97ff" }, { name: "rot", pose: 0, farbe: "#e5484d" }];
+
+  /* Weißt du noch? */
+  quiz($("wdh"), [
+    { q: "Welchen Wert hat <em>Zeit</em> danach?", html: sm([["setvar", "Zeit", 3], ["changevar", "Zeit", -1], ["changevar", "Zeit", -1]]), options: ["1", "2", "−2"], right: 0,
+      miss: [null, "Es wird zweimal 1 abgezogen.", "Der Startwert ist 3: 3 − 1 − 1."], why: "3 − 1 − 1 = 1." },
+    { q: "Was sagt Robo?", html: sm([["say", ["join", "Zeit: ", 5], 2]]), options: ["Zeit: 5", "5", "Zeit: Zeit"], right: 0,
+      miss: [null, "<em>verbinde</em> hängt die 5 an den Text an.", "Hier steht keine Variable, sondern die Zahl 5."], why: "verbinde hängt an: „Zeit: 5“." },
+  ]);
+
+  /* 1 · Bausteine */
+  pick($("pred1"), { right: 1, fb: $("fb1"),
+    miss: ["Eine Anweisung ist ein einzelner Befehl. <em>wiederhole bis</em> enthält andere Blöcke.", null,
+      "Auch <em>wiederhole bis</em> hat eine Bedingung – aber es wiederholt. Die Verzweigung entscheidet nur einmal."],
+    why: "<em>wiederhole bis</em> ist eine Wiederholung. Die Bedingung steht oben im Kopf." });
+
+  /* 2 · Zuordnen A–D */
+  const NSDS = {
+    A: nsd("A: gehe 50, drehe 90, gehe 50", row("gehe 50 Schritte") + row("drehe dich um 90°") + row("gehe 50 Schritte")),
+    B: nsd("B: wiederhole 4-mal gehe 50, drehe 90", loop("wiederhole 4-mal", row("gehe 50 Schritte") + row("drehe dich um 90°"))),
+    C: nsd("C: wiederhole bis Rand berührt: gehe 10", loop("wiederhole bis Rand berührt", row("gehe 10 Schritte"))),
+    D: nsd("D: Verzweigung Farbe rot berührt? wahr: drehe 180, falsch: gehe 10", wenn("Farbe rot berührt?", row("drehe dich um 180°"), row("gehe 10 Schritte"))),
+  };
+  $("nsdABCD").innerHTML = Object.entries(NSDS).map(([k, h]) => `<figure>${h}<figcaption><strong>${k}</strong></figcaption></figure>`).join("");
+  const SKRIPTE = [
+    { s: [["repeat", 4, [["move", 50], ["right", 90]]]], r: "B", miss: { A: "A hat keine Schleife – hier wird aber wiederholt.", C: "C wiederholt bis zum Rand, nicht 4-mal.", D: "D ist eine Verzweigung. Hier gibt es kein falls." } },
+    { s: [["until", ["touch", "rand"], [["move", 10]]]], r: "C", miss: { A: "Hier steht eine Schleife, kein einzelner Befehl.", B: "B zählt 4 Runden. Hier steht eine Bedingung im Kopf.", D: "Ein Dreieck entscheidet nur einmal. Hier wird wiederholt." } },
+    { s: [["ifelse", ["color", "rot"], [["right", 180]], [["move", 10]]]], r: "D", miss: { A: "Hier wird entschieden – das zeigt ein Dreieck.", B: "Hier wird nichts wiederholt.", C: "Hier wird nichts wiederholt." } },
+    { s: [["move", 50], ["right", 90], ["move", 50]], r: "A", miss: { B: "Hier gibt es keine Schleife – nur drei Befehle untereinander.", C: "Hier gibt es keine Schleife.", D: "Hier gibt es kein falls." } },
+  ];
+  $("zuordnen").innerHTML = SKRIPTE.map((x, i) => `<div class="script-row"><figure>${sm(x.s)}</figure><div style="flex:1;min-width:200px"><div class="choices" id="z${i}">`
+    + ["A", "B", "C", "D"].map((k) => `<button type="button" class="choice">${k}</button>`).join("") + `</div><p class="fb" id="fbz${i}"></p></div></div>`).join("");
+  SKRIPTE.forEach((x, i) => pick($("z" + i), { right: "ABCD".indexOf(x.r), fb: $("fbz" + i),
+    miss: ["A", "B", "C", "D"].map((k) => (k === x.r ? null : x.miss[k])), why: `Struktogramm ${x.r} passt.` }));
+
+  /* 3 · Countdown nach Struktogramm */
+  const SAGT = "5,4,3,2,1,Start!";
+  B.create($("b3"), { mode: "puzzle", limit: 80, variablen: { Zeit: 0 }, start: { x: 0, y: 0, dir: 90 }, script: ["!flag"],
+    palette: [["setvar", "Zeit", 5], ["until"], ["eq", ["var", "Zeit"], 0], ["saynow", ["var", "Zeit"]], ["wait", 1], ["changevar", "Zeit", -1], ["saynow", "Start!"]],
+    check(tr) {
+      if (tr.says.join() === SAGT) return true;
+      const ws = where(tr.script, "setvar");
+      if (ws && ws.length) return "<em>setze Zeit auf 5</em> steht in der Schleife. Im Struktogramm steht es <strong>über</strong> dem Schleifenkopf.";
+      if (tr.endlos) return "Der Countdown hört nicht auf. Steht <em>Zeit = 0</em> im Kopf der Schleife? Steht <em>ändere Zeit um −1</em> in der Schleife?";
+      if (tr.says[0] === "4") return "Robo fängt bei 4 an. Vergleich die Reihenfolge in der Schleife mit dem Struktogramm.";
+      if ((where(tr.script, "saynow", (n) => n.args.t === "Start!") || []).length) return "„Start!“ steht im Struktogramm <strong>unter</strong> der Schleife.";
+      return "Noch nicht. Robo soll sagen: 5, 4, 3, 2, 1, Start!";
+    },
+    ok: "✔ 5, 4, 3, 2, 1 – Start! Genau nach Plan." });
+
+  /* 4 · Fehlerdetektiv */
+  B.create($("b4"), { mode: "frei", edit: false, variablen: { Zeit: 0 }, start: { x: 0, y: 0, dir: 90 },
+    script: ["!flag", ["!setvar", "Zeit", 5], ["!until", ["!eq", ["!var", "Zeit"], 0], [["changevar", "Zeit", -1], ["!saynow", ["!var", "Zeit"]], ["!wait", 1]]], ["!saynow", "Start!"]],
+    check(tr) { return tr.says.join() === SAGT ? true : "Robo sagt " + tr.says.join(", ") + ". Im Struktogramm kommt <em>sage Zeit</em> vor <em>ändere Zeit um −1</em>."; },
+    ok: "✔ Fall gelöst! Erst sagen, dann warten, dann eins weniger – wie im Struktogramm." });
+  hints($("hints4"), [
+    "Vergleich die Blöcke in der Schleife mit den drei Zeilen im Struktogramm: Was steht zuerst?",
+    "Lösung: Zieh <em>ändere Zeit um −1</em> nach unten – unter <em>warte 1 Sekunden</em>.",
+  ]);
+
+  /* 5 · Skript → Struktogramm */
+  quiz($("rueck"), [
+    { q: "Welches Struktogramm passt zu diesem Skript?", html: sm(["flag", ["repeat", 3, [["if", ["touch", "Stern"], [["say", "Stern!", 1]]], ["move", 40]]]]),
+      options: [
+        nsd("wiederhole 3-mal: Verzweigung Stern berührt? wahr: sage Stern; dann gehe 40", loop("wiederhole 3-mal", wenn("Stern berührt?", row("sage „Stern!“"), leer) + row("gehe 40 Schritte"))),
+        nsd("Verzweigung Stern berührt? wahr: sage Stern; dann wiederhole 3-mal gehe 40", wenn("Stern berührt?", row("sage „Stern!“"), leer) + loop("wiederhole 3-mal", row("gehe 40 Schritte"))),
+        nsd("wiederhole 3-mal: gehe 40; danach Verzweigung", loop("wiederhole 3-mal", row("gehe 40 Schritte")) + wenn("Stern berührt?", row("sage „Stern!“"), leer)),
+      ], right: 0,
+      miss: [null, "Im Skript steht das falls <strong>in</strong> der Schleife. Hier steht es davor.", "Im Skript steckt das falls in der Schleife – hier steht es darunter."],
+      why: "Außen die Schleife, darin das Dreieck und darunter <em>gehe</em>." },
+    { q: "Welches Struktogramm passt zu diesem Skript?", html: sm(["flag", ["setvar", "Punkte", 0], ["until", ["gt", ["var", "Punkte"], 9], [["changevar", "Punkte", 3]]]]),
+      options: [
+        nsd("setze Punkte auf 0; wiederhole bis Punkte > 9: ändere Punkte um 3", row("setze Punkte auf 0") + loop("wiederhole bis Punkte > 9", row("ändere Punkte um 3"))),
+        nsd("wiederhole bis Punkte > 9: setze Punkte auf 0, ändere Punkte um 3", loop("wiederhole bis Punkte > 9", row("setze Punkte auf 0") + row("ändere Punkte um 3"))),
+        nsd("setze Punkte auf 0; wiederhole 9-mal: ändere Punkte um 3", row("setze Punkte auf 0") + loop("wiederhole 9-mal", row("ändere Punkte um 3"))),
+      ], right: 0,
+      miss: [null, "<em>setze</em> steht im Skript vor der Schleife, nicht darin.", "Im Skript steht eine Bedingung im Schleifenkopf, keine Zahl."],
+      why: "Erst der Startwert, dann die Schleife mit der Bedingung im Kopf." },
+  ]);
+
+  /* Plus */
+  B.create($("bplus"), { mode: "frei", limit: 120, kostueme: KF, variablen: { Zeit: 0 }, start: { x: 0, y: 0, dir: 90 }, script: ["!flag"],
+    palette: [["costumeto", "blau"], ["costumeto", "rot"], ["setvar", "Zeit", 5], ["until"], ["eq", ["var", "Zeit"], 0], ["if"], ["lt", ["var", "Zeit"], 4],
+      ["saynow", ["var", "Zeit"]], ["wait", 1], ["changevar", "Zeit", -1]],
+    check(tr) {
+      if (tr.says.join() !== "5,4,3,2,1") return "Robo soll 5, 4, 3, 2, 1 sagen. Vergleich mit dem Struktogramm.";
+      return tr.kostuem === "rot" && tr.script[1] && tr.script[1].op === "costumeto" ? true : "Der Countdown stimmt. Fängt Robo blau an und wird ab 3 rot?";
+    },
+    ok: "✔ Countdown mit Warnfarbe: Verzweigung in der Wiederholung." });
+
+  /* Kurz-Check */
+  quiz($("quiz"), [
+    { q: "Welcher Baustein zeigt eine <strong>Verzweigung</strong>?", options: ["das Dreieck mit zwei Spalten", "der eingerückte Kasten", "das einfache Rechteck"], right: 0,
+      miss: [null, "Eingerückt ist die Wiederholung.", "Das Rechteck ist eine Anweisung."], why: "Die Verzweigung (falls … sonst) ist das Dreieck." },
+    { q: "In einem Struktogramm steht <em>gehe 10</em> eingerückt unter <em>wiederhole 5-mal</em>. Was heißt das?", options: ["Robo geht 5-mal 10 Schritte.", "Robo geht einmal 10 Schritte.", "Robo geht 15 Schritte."], right: 0,
+      miss: [null, "Eingerückt heißt: Der Befehl steckt in der Schleife.", "5 ist die Zahl der Runden, nicht die Strecke."], why: "Eingerückt = in der Schleife: 5 × 10 Schritte." },
+    { q: "Wie liest man ein Struktogramm?", options: ["von oben nach unten", "von unten nach oben", "von rechts nach links"], right: 0,
+      miss: [null, "Wie ein Skript: oben fängt es an.", "Nur in der Verzweigung gibt es links und rechts – wahr und falsch."], why: "Von oben nach unten – wie das Skript." },
+    { q: "Wo steht die Bedingung bei <em>wiederhole bis</em> im Struktogramm?", options: ["oben im Kopf der Schleife", "in einem Dreieck", "ganz unten"], right: 0,
+      miss: [null, "Das Dreieck gehört zur Verzweigung.", "Robo fragt vor jeder Runde – darum steht sie oben."], why: "Die Bedingung steht oben: Robo fragt vor jeder Runde." },
+  ]);
+
+  /* Freiwillig */
+  quiz($("ueben"), [
+    { q: "Welches Skript passt zu diesem Struktogramm?",
+      html: nsd("wiederhole 3-mal: wiederhole 4-mal gehe 30, drehe 90; danach drehe 120", loop("wiederhole 3-mal", loop("wiederhole 4-mal", row("gehe 30 Schritte") + row("drehe dich um 90°")) + row("drehe dich um 120°"))),
+      options: [
+        sm([["repeat", 3, [["repeat", 4, [["move", 30], ["right", 90]]], ["right", 120]]]]),
+        sm([["repeat", 3, [["repeat", 4, [["move", 30], ["right", 90], ["right", 120]]]]]]),
+        sm([["repeat", 4, [["repeat", 3, [["move", 30], ["right", 90]]], ["right", 120]]]]),
+      ], right: 0,
+      miss: [null, "<em>drehe dich um 120°</em> ist im Struktogramm nur einmal eingerückt – es steht in der äußeren Schleife.", "Die Zahlen sind vertauscht: außen 3, innen 4."],
+      why: "Außen 3-mal, innen 4-mal. Die Drehung um 120° steht unter der inneren Schleife." },
+  ]);
+  B.create($("bexp"), { mode: "frei", variablen: { Zahl: 0 }, start: { x: 0, y: 0, dir: 90 }, script: ["!flag"],
+    palette: [["setvar", "Zahl", 0], ["repeat", 5], ["changevar", "Zahl", 2], ["say", ["var", "Zahl"], 0.5]],
+    check: (tr) => (tr.says.join() === "2,4,6,8,10" ? true : "Robo soll 2, 4, 6, 8, 10 sagen. Robo sagt: " + (tr.says.join(", ") || "nichts")),
+    ok: "✔ 2, 4, 6, 8, 10!" });
+
+  checklist($("checklist"), "k7-07");
+});
+</script>
+</body>
+</html>

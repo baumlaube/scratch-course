@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bewegung durch Kostüme · Scratch-Kurs Klasse 7</title>
+<meta name="description" content="Lektion 4 im Scratch-Lernpfad Klasse 7: Bewegung durch Kostüme wie im Daumenkino. Kostüm als Attribut, nächstes Kostüm gegen wechsle zu Kostüm, Tempo mit warte.">
+<link rel="canonical" href="https://scratch.herrseibert.de/k7/04-kostueme.html">
+<!-- vorschau -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Scratch-Kurs">
+<meta property="og:locale" content="de_DE">
+<meta property="og:url" content="https://scratch.herrseibert.de/k7/04-kostueme.html">
+<meta property="og:title" content="Bewegung durch Kostüme · Scratch-Kurs Klasse 7">
+<meta property="og:description" content="Lektion 4 im Scratch-Lernpfad Klasse 7: Bewegung durch Kostüme wie im Daumenkino. Kostüm als Attribut, nächstes Kostüm gegen wechsle zu Kostüm, Tempo mit warte.">
+<meta property="og:image" content="https://scratch.herrseibert.de/vorschau.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Scratch-Kurs – Programmieren lernen Schritt für Schritt, mit Übungsbühne">
+<meta name="twitter:card" content="summary_large_image">
+<!-- /vorschau -->
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="stylesheet" href="../assets/kurs.css?v=48917f175f">
+<link rel="stylesheet" href="../assets/buehne.css?v=811a9f4f75">
+<script src="../assets/i18n.js?v=4588e8929d" data-page="k7-04-kostueme" data-langs="de"></script>
+<script src="../assets/kurs.js?v=9e315750a5"></script>
+<script src="../assets/buehne.js?v=a89a39db39"></script>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><img class="logo" src="../favicon.svg" alt="" width="34" height="34"> Scratch-Kurs <span>· Programmieren lernen</span></a>
+    <span class="spacer"></span>
+    <button class="theme-btn" type="button" aria-label="Hell oder dunkel umschalten">◐ Hell/Dunkel</button>
+  </div>
+</header>
+
+<main class="wrap">
+  <nav class="path" aria-label="Lernpfad Klasse 7">
+    <strong class="t">Klasse 7:</strong>
+    <ol>
+      <li class="done"><a href="01-start-check.html" title="1 · Start-Check">1</a></li>
+      <li class="done"><a href="02-objekte.html" title="2 · Robo ist ein Objekt">2</a></li>
+      <li class="done"><a href="03-pixel-vektor.html" title="3 · Pixel oder Vektor?">3</a></li>
+      <li class="now"><span title="4 · Bewegung durch Kostüme" aria-current="step">4</span></li>
+      <li class="done"><a href="05-variable.html" title="5 · Die Variable">5</a></li>
+      <li class="done"><a href="06-variablen-verfolgen.html" title="6 · Variablen verfolgen">6</a></li>
+      <li class="done"><a href="07-struktogramm.html" title="7 · Struktogramm und Skript">7</a></li>
+      <li class="done"><a href="08-robo-fang.html" title="8 · Projekt: Robo-Fang">8</a></li>
+    </ol>
+  </nav>
+
+  <section class="hero">
+    <h1>Bewegung durch Kostüme</h1>
+    <div class="meta">
+      <span class="chip">Klasse 7 · Lektion 4</span>
+      <span class="chip">⏱ ca. 35 Minuten</span>
+    </div>
+    <ul class="goals">
+      <li>Ich weiß, wie aus Einzelbildern eine Bewegung wird – wie im Daumenkino.</li>
+      <li>Ich unterscheide <em>wechsle zum nächsten Kostüm</em> und <em>wechsle zu Kostüm …</em>.</li>
+      <li>Ich zeichne in Scratch ein eigenes Kostüm für Robo.</li>
+    </ul>
+  </section>
+
+  <details class="card woerter">
+    <summary>📖 Wörter für diese Lektion</summary>
+    <p class="note">Die Scratch-Wörter bleiben deutsch – so heißen sie in Scratch.</p>
+    <div class="tbl-scroll"><table class="plain">
+      <tr><th class="wort">das Daumenkino <small>die Daumenkinos</small></th><td>Ein Heft mit Bildern. Blättert man schnell, sieht man eine Bewegung.</td></tr>
+      <tr><th class="wort">die Animation <small>die Animationen</small></th><td>Bewegung aus vielen Einzelbildern.</td></tr>
+      <tr><th class="wort">das Startkostüm <small>–</small></th><td>Das Kostüm, mit dem eine Animation immer beginnt.</td></tr>
+      <tr><th class="wort">duplizieren <small>er dupliziert</small></th><td>Eine genaue Kopie machen.</td></tr>
+      <tr><th class="wort">flackern <small>es flackert</small></th><td>Die Bilder wechseln so schnell, dass man nichts mehr erkennt.</td></tr>
+    </table></div>
+  </details>
+
+  <section class="card wdh">
+    <h2><span class="step-no">↺</span> Weißt du noch? <span class="chip">2 Minuten</span></h2>
+    <div id="wdh"></div>
+  </section>
+
+  <!-- 1 · Daumenkino -->
+  <section class="card">
+    <h2><span class="step-no">1</span> Wie im Daumenkino <span class="chip">3 Minuten</span></h2>
+    <p>Robo hat drei Kostüme. Sie unterscheiden sich nur am Arm:</p>
+    <div class="script-row" id="bilder"></div>
+    <p><strong>Überleg:</strong> Robo zeigt die Kostüme schnell nacheinander: 1, 2, 3, 1, 2, 3 … Was sieht man?</p>
+    <div class="choices" id="pred1">
+      <button type="button" class="choice">Robo winkt.</button>
+      <button type="button" class="choice">Robo läuft nach rechts.</button>
+      <button type="button" class="choice">Drei Robos nebeneinander.</button>
+    </div>
+    <p class="fb" id="fb1"></p>
+  </section>
+
+  <!-- 2 · Zuschauen -->
+  <section class="card">
+    <h2><span class="step-no">2</span> Robo winkt <span class="chip">4 Minuten</span></h2>
+    <p><strong>Schau zu:</strong> Klick auf ⚑ Start. Im Figurenbereich siehst du, wie sich das Attribut <strong>Kostüm</strong> ändert.</p>
+    <div id="b2"></div>
+    <p><strong>Überleg:</strong> Robo beginnt mit Kostüm 1 und wechselt 6-mal. Welches Kostüm hat er am Ende?</p>
+    <div class="choices" id="pred2">
+      <button type="button" class="choice">Kostüm 1</button>
+      <button type="button" class="choice">Kostüm 3</button>
+      <button type="button" class="choice">Kostüm 6</button>
+    </div>
+    <p class="fb" id="fb2"></p>
+  </section>
+
+  <!-- 3 · Puzzle -->
+  <section class="card">
+    <h2><span class="step-no">3</span> Robo winkt im Gehen <span class="badge basis">Basis</span> <span class="chip">5 Minuten</span></h2>
+    <p>Robo soll 10 kleine Schritte nach rechts gehen und dabei winken. Bau die Schleife.</p>
+    <div id="b3"></div>
+    <ol class="howto">
+      <li>Zuerst das <strong>Startkostüm</strong>: <em>wechsle zu Kostüm Robo-a</em>.</li>
+      <li>In der Schleife: ein Schritt, ein neues Bild, kurz warten.</li>
+    </ol>
+  </section>
+
+  <!-- 4 · Lücke: Tempo -->
+  <section class="card">
+    <h2><span class="step-no">4</span> Das richtige Tempo <span class="badge basis">Basis</span> <span class="chip">4 Minuten</span></h2>
+    <p>Wie lange zeigt Robo jedes Bild? Schreib eine Zahl in das gelbe Feld und probier aus. Das Winken soll flüssig aussehen – nicht zu langsam und nicht zu schnell.</p>
+    <div id="b4"></div>
+    <p class="note">0.5 bedeutet eine halbe Sekunde. Schreib den Punkt wie in Scratch: <strong>0.2</strong>.</p>
+  </section>
+
+  <!-- 5 · Fehlerdetektiv -->
+  <section class="card">
+    <h2><span class="step-no">5</span> Fehlerdetektiv 🔍: Robo flackert <span class="badge basis">Basis</span> <span class="chip">4 Minuten</span></h2>
+    <p>Elif wollte Robo winkend gehen lassen. Klick auf ⚑ Start: Robo flitzt hinüber und der Arm flackert nur.</p>
+    <div id="b5"></div>
+    <ol class="howto">
+      <li>Was <strong>soll</strong> passieren?</li>
+      <li>Was <strong>passiert</strong> wirklich? Schau mit 👣 zu – da klappt es plötzlich. Warum?</li>
+      <li>Welcher Block <strong>fehlt</strong>?</li>
+    </ol>
+    <div id="hints5"></div>
+  </section>
+
+  <!-- 6 · In Scratch zeichnen -->
+  <section class="card">
+    <h2><span class="step-no">6</span> Dein eigenes Kostüm – im echten Scratch <span class="badge basis">Basis</span> <span class="chip">7 Minuten</span></h2>
+    <p>Robo bekommt ein Kostüm, das du selbst zeichnest. Nimm deinen Robo aus Lektion 3 – oder lade ihn neu herunter.</p>
+    <p><a class="btn secondary" href="../downloads/Robo.sprite3" download>⬇ Robo.sprite3</a>
+      <a class="btn" href="https://scratch.mit.edu/projects/editor/" target="_blank" rel="noopener">Scratch in neuem Fenster öffnen ↗</a></p>
+    <ol class="howto">
+      <li>Figur wählen → <strong>Figur hochladen</strong> → Robo.sprite3. Dann Reiter <strong>Kostüme</strong>.</li>
+      <li>Rechtsklick auf <strong>Robo-a</strong> (am iPad: lange drücken) → <strong>Duplizieren</strong>. Nenn das neue Kostüm <strong>Robo-c</strong>.</li>
+      <li>Klick mit dem Werkzeug <strong>Auswählen</strong> (Pfeil) auf den Arm. Am kleinen Kreis-Pfeil kannst du ihn <strong>drehen</strong> – heb ihn ein Stück an. Nur ein bisschen, wie bei einem Daumenkino!</li>
+      <li>Zieh <strong>Robo-c</strong> in der Kostümliste zwischen Robo-a und Robo-b. Jetzt passt die Reihenfolge: unten – Mitte – oben.</li>
+      <li>Reiter <strong>Skripte</strong>: Bau das Skript aus Schritt 3 nach und klick auf ⚑.</li>
+    </ol>
+    <p class="rule">Eine <strong>Animation</strong> ist eine Folge von Bildern. Zwischen zwei Bildern muss Robo kurz <strong>warten</strong> – sonst sieht man nur Flackern.<br>
+      <em>wechsle zum nächsten Kostüm</em> geht reihum. <em>wechsle zu Kostüm …</em> wählt ein bestimmtes – gut für das <strong>Startkostüm</strong>.</p>
+  </section>
+
+  <!-- Plus -->
+  <section class="card">
+    <h2><span class="step-no">+</span> Bis zum Rand – und stehen bleiben <span class="badge plus">Plus</span> <span class="chip">für Schnelle</span></h2>
+    <p>Robo geht winkend, <strong>bis</strong> er den Rand berührt. Dann bleibt er stehen – mit dem Arm unten (Kostüm Robo-a).</p>
+    <div id="bplus"></div>
+  </section>
+
+  <section class="card">
+    <h2><span class="step-no">✓</span> Kurz-Check <span class="chip">4 Minuten</span></h2>
+    <div id="quiz"></div>
+  </section>
+
+  <section class="card merke">
+    <h2>Merke</h2>
+    <ul>
+      <li>Eine <strong>Animation</strong> entsteht aus Kostümen, die schnell nacheinander kommen.</li>
+      <li>Ohne <em>warte</em> wechseln die Kostüme zu schnell: Es <strong>flackert</strong>.</li>
+      <li><em>wechsle zum nächsten Kostüm</em> geht reihum. Nach dem letzten kommt wieder das erste.</li>
+      <li>Mit <em>wechsle zu Kostüm …</em> setzt man das <strong>Startkostüm</strong>.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2><span class="step-no">☑</span> Das kann ich</h2>
+    <ul class="checklist" id="checklist">
+      <li><label><input type="checkbox"> Ich kann erklären, wie aus Kostümen eine Bewegung wird.</label></li>
+      <li><label><input type="checkbox"> Ich weiß, warum in die Schleife ein <em>warte</em> gehört.</label></li>
+      <li><label><input type="checkbox"> Ich kann ein Kostüm duplizieren und verändern.</label></li>
+      <li><label><input type="checkbox"> Ich setze am Anfang ein Startkostüm.</label></li>
+    </ul>
+  </section>
+
+  <section class="card frei">
+    <h2><span class="step-no">★</span> Freiwillig</h2>
+    <p class="lead">Für alle, die schon fertig sind.</p>
+    <h3 class="sub"><span class="badge ueben">Üben</span> Hin und her winken</h3>
+    <p>Robo soll den Arm hoch und wieder runter bewegen: a → c → b → c → a … Das geht nicht mit <em>nächstes Kostüm</em> allein. Nimm <em>wechsle zu Kostüm</em> und baue die Reihenfolge selbst, 3-mal hintereinander.</p>
+    <div id="bhin"></div>
+    <h3 class="sub"><span class="badge expedition">★ Expedition</span> Ein Daumenkino in Scratch</h3>
+    <p>Zeichne in Scratch eine eigene Figur mit <strong>vier</strong> Kostümen, z. B. eine Blume, die aufgeht, oder einen Ball, der hüpft. Kleine Unterschiede von Bild zu Bild wirken am besten.</p>
+  </section>
+
+  <nav class="pager">
+    <a href="03-pixel-vektor.html">← Lektion 3: Pixel oder Vektor?</a>
+    <a href="05-variable.html">Lektion 5: Die Variable →</a>
+  </nav>
+</main>
+
+<footer>
+  <div class="wrap t">Lernmaterial von <a href="https://herrseibert.de">herrseibert.de</a> · Lizenz <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.de">CC BY-SA 4.0</a> · ohne Tracking, ohne Cookies<br>Erstellt von der KI Claude von Anthropic.</div>
+  <div class="wrap t gh">Fehler gefunden oder eine Idee? → <a href="https://github.com/baumlaube/scratch-course">Kurs auf GitHub</a></div>
+  <div class="wrap t gh">Scratch ist ein Projekt der Scratch Foundation. Dieser Kurs ist kein offizielles Angebot der Scratch Foundation.</div>
+  <div class="wrap legal"><a href="../impressum.html">Impressum</a> · <a href="../datenschutz.html">Datenschutz</a></div>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const { pick, quiz, hints, checklist } = window.Kurs;
+  const B = window.Buehne;
+  const $ = (id) => document.getElementById(id);
+  const sm = (s) => B.render(s, { small: true });
+  function where(list, op, pred, path = []) {
+    for (const n of list) {
+      if (n.op === op && (!pred || pred(n))) return path;
+      const r = (n.body && where(n.body, op, pred, path.concat(n.op))) || (n.body2 && where(n.body2, op, pred, path.concat(n.op + ":sonst")));
+      if (r) return r;
+    }
+    return null;
+  }
+  const K3 = [{ name: "Robo-a", pose: 0 }, { name: "Robo-c", pose: 2 }, { name: "Robo-b", pose: 1 }];
+
+  /* Weißt du noch? */
+  quiz($("wdh"), [
+    { q: "Was passiert mit einer Vektorgrafik, wenn man sie stark vergrößert?", options: ["Sie bleibt scharf.", "Sie wird treppig.", "Sie verschwindet."], right: 0,
+      miss: [null, "Treppig wird die Pixelgrafik. Die Vektorgrafik wird neu gezeichnet.", "Sie wird nur größer gezeichnet."],
+      why: "Eine Vektorgrafik besteht aus Formen. Der Computer zeichnet sie in jeder Größe neu." },
+    { q: "Robo hat die Kostüme rot, gelb und trägt gerade gelb. Was trägt er nach <em>wechsle zum nächsten Kostüm</em>?",
+      options: ["rot", "gelb", "gar keins"], right: 0,
+      miss: [null, "Der Block wechselt immer. Nach dem letzten kommt wieder das erste.", "Eine Figur trägt immer ein Kostüm."],
+      why: "Nach dem letzten Kostüm geht es wieder beim ersten los." },
+  ]);
+
+  /* 1 · Daumenkino */
+  $("bilder").innerHTML = K3.map((k, i) => `<figure><img src="data:image/svg+xml;charset=utf-8,${encodeURIComponent(B.robo(k.pose))}" width="90" height="90" alt="Robo, Kostüm ${i + 1}"><figcaption>${i + 1} · ${k.name}</figcaption></figure>`).join("");
+  pick($("pred1"), { right: 0, fb: $("fb1"),
+    miss: [null, "Die Kostüme ändern nur den Arm, nicht die Stelle. Zum Laufen bräuchte Robo auch <em>gehe</em>.", "Robo zeigt immer nur ein Kostüm auf einmal – dafür schnell nacheinander."],
+    why: "Unser Auge setzt die Bilder zu einer Bewegung zusammen – wie beim Daumenkino." });
+
+  /* 2 · Zuschauen */
+  B.create($("b2"), { mode: "lesen", kostueme: K3, figur: true, start: { x: 0, y: 0, dir: 90 },
+    script: ["flag", ["costumeto", "Robo-a"], ["repeat", 6, [["costume"], ["wait", 0.3]]]] });
+  pick($("pred2"), { right: 0, fb: $("fb2"),
+    miss: [null, "Zähl mit: 2, 3, 1, 2, 3 … und dann? Nach Kostüm 3 kommt wieder 1.", "Es gibt nur 3 Kostüme. Nach dem dritten geht es wieder beim ersten los."],
+    why: "1 → 2 → 3 → 1 → 2 → 3 → 1. Nach 6 Wechseln ist Robo wieder bei Kostüm 1." });
+
+  /* 3 · Puzzle */
+  B.create($("b3"), { mode: "puzzle", kostueme: K3, figur: true, start: { x: -100, y: 0, dir: 90 }, script: ["!flag"],
+    palette: [["costumeto", "Robo-a"], ["repeat", 10], ["move", 10], ["costume"], ["wait", 0.2]],
+    check(tr) {
+      const s = tr.script;
+      if ((where(s, "costumeto") || ["x"]).length) return "<em>wechsle zu Kostüm Robo-a</em> ist das Startkostüm. Es gehört an den Anfang – <strong>vor</strong> die Schleife.";
+      if (s.findIndex((n) => n.op === "costumeto") > s.findIndex((n) => n.op === "repeat")) return "Das Startkostüm kommt zu spät. Es gehört direkt unter die Flagge.";
+      for (const op of ["move", "costume", "wait"]) if (!(where(s, op) || []).includes("repeat")) return "In die Schleife gehören drei Blöcke: gehe, nächstes Kostüm, warte.";
+      return Math.abs(tr.x) < 1 && tr.wechsel >= 10 ? true : "Noch nicht. Schau mit 👣 zu.";
+    },
+    ok: "✔ Robo winkt im Gehen: Schritt – Bild – warten, zehnmal." });
+
+  /* 4 · Lücke: Tempo */
+  B.create($("b4"), { mode: "frei", edit: "gaps", echtzeit: true, kostueme: K3, figur: true, start: { x: 0, y: 0, dir: 90 },
+    script: ["!flag", ["!costumeto", "Robo-a"], ["!repeat", 6, [["!costume"], ["!wait", "?"]]]],
+    check(tr) {
+      const w = Number(String(tr.script[2].body[1].args.s).replace(",", "."));
+      if (w <= 0.04) return "Viel zu schnell – der Arm flackert nur. Nimm eine größere Zahl.";
+      if (w > 0.6) return "Robo winkt in Zeitlupe. Das wirkt nicht flüssig. Nimm eine kleinere Zahl.";
+      return true;
+    },
+    ok: "✔ Schönes Tempo! Zwischen 0.1 und 0.5 Sekunden wirkt eine Animation flüssig." });
+
+  /* 5 · Fehlerdetektiv: ohne warte */
+  B.create($("b5"), { mode: "frei", echtzeit: true, kostueme: K3, figur: true, start: { x: -180, y: 0, dir: 90 },
+    script: ["!flag", ["!goto", -180, 0], ["!costumeto", "Robo-a"], ["!repeat", 36, [["!move", 10], ["!costume"]]]], palette: [["wait", 0.1]],
+    check(tr) {
+      const w = where(tr.script, "wait");
+      if (w && w.includes("repeat")) return true;
+      if (w) return "<em>warte</em> steht nicht in der Schleife. Dann wartet Robo nur einmal.";
+      return "Robo ist in gut einer Sekunde drüben – 36 Kostümwechsel in einer Sekunde sieht niemand.";
+    },
+    ok: "✔ Fall gelöst! Mit <em>warte</em> in der Schleife bleibt jedes Bild kurz stehen. Bei 👣 hat es geklappt, weil du selbst gewartet hast." });
+  hints($("hints5"), [
+    "Bei 👣 wartest <strong>du</strong> zwischen den Blöcken. Bei ⚑ wartet niemand.",
+    "Lösung: Zieh <em>warte 0.1 Sekunden</em> in die Schleife, unter <em>wechsle zum nächsten Kostüm</em>.",
+  ]);
+
+  /* Plus · bis zum Rand */
+  B.create($("bplus"), { mode: "frei", kostueme: K3, figur: true, limit: 600, start: { x: -180, y: 0, dir: 90 },
+    script: ["!flag", ["!goto", -180, 0]], palette: [["until"], ["touch", "rand"], ["move", 10], ["costume"], ["wait", 0.1], ["costumeto", "Robo-a"]],
+    check(tr) {
+      if (!where(tr.script, "until")) return "Nimm <em>wiederhole bis</em> – Robo soll laufen, bis er den Rand berührt.";
+      if (!tr.beruehrt("rand")) return "Robo ist noch nicht am Rand.";
+      if (tr.kostuem !== "Robo-a") return "Am Rand soll der Arm unten sein. Was gehört <strong>unter</strong> die Schleife?";
+      return true;
+    },
+    ok: "✔ Robo geht winkend bis zum Rand und nimmt dann den Arm herunter." });
+
+  /* Kurz-Check */
+  quiz($("quiz"), [
+    { q: "Warum gehört in eine Animations-Schleife ein <em>warte</em>-Block?",
+      options: ["Sonst wechseln die Bilder so schnell, dass es flackert.", "Sonst startet die Schleife nicht.", "Sonst wechselt Robo das Kostüm nicht."], right: 0,
+      miss: [null, "Die Schleife läuft auch ohne warte – nur viel zu schnell.", "Er wechselt schon – aber so schnell, dass man es kaum sieht."],
+      why: "Jedes Bild muss kurz stehen bleiben, sonst sieht das Auge nur Flackern." },
+    { q: "Robo hat 3 Kostüme und trägt Kostüm 2. Welches trägt er nach diesem Skript?", html: sm([["repeat", 4, [["costume"]]]]),
+      options: ["Kostüm 3", "Kostüm 2", "Kostüm 6"], right: 0,
+      miss: [null, "Zähl mit: 3, 1, 2, … und noch einer.", "Es gibt nur 3 Kostüme – nach dem dritten kommt wieder das erste."],
+      why: "2 → 3 → 1 → 2 → 3." },
+    { q: "Robo soll jede Animation mit dem Arm unten beginnen. Welcher Block kommt an den Anfang?",
+      options: [sm([["costumeto", "Robo-a"]]), sm([["costume"]]), sm([["wait", 1]])], right: 0,
+      miss: [null, "<em>nächstes Kostüm</em> hängt davon ab, was Robo vorher anhatte.", "Warten ändert das Kostüm nicht."],
+      why: "<em>wechsle zu Kostüm Robo-a</em> setzt das Startkostüm – egal, was vorher war." },
+    { q: "Robo zeigt 10 Bilder und wartet nach jedem 0.2 Sekunden. Wie lange dauert die Animation ungefähr?",
+      options: ["2 Sekunden", "0.2 Sekunden", "10 Sekunden"], right: 0,
+      miss: [null, "0.2 Sekunden wartet er nach <strong>jedem</strong> Bild.", "Dann müsste er nach jedem Bild 1 Sekunde warten."],
+      why: "10 × 0.2 = 2 Sekunden." },
+  ]);
+
+  /* Freiwillig · hin und her */
+  B.create($("bhin"), { mode: "frei", kostueme: K3, figur: true, start: { x: 0, y: 0, dir: 90 }, script: ["!flag"],
+    palette: [["repeat", 3], ["costumeto", "Robo-a"], ["costumeto", "Robo-c"], ["costumeto", "Robo-b"], ["wait", 0.2]],
+    check(tr) {
+      const r = tr.script.find((n) => n.op === "repeat");
+      if (!r) return "Nimm <em>wiederhole 3 mal</em> außen herum.";
+      const folge = r.body.filter((n) => n.op === "costumeto").map((n) => n.args.c).join(",");
+      if (folge !== "Robo-a,Robo-c,Robo-b,Robo-c") return "In der Schleife soll die Folge stehen: Robo-a, Robo-c, Robo-b, Robo-c (jeweils mit warte dazwischen).";
+      return r.body.filter((n) => n.op === "wait").length >= 4 ? true : "Nach jedem Kostüm kurz warten – sonst flackert es.";
+    },
+    ok: "✔ Hoch und wieder runter – wie ein richtiges Winken." });
+
+  checklist($("checklist"), "k7-04");
+});
+</script>
+</body>
+</html>

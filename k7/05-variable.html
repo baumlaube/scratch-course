@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Die Variable · Scratch-Kurs Klasse 7</title>
+<meta name="description" content="Lektion 5 im Scratch-Lernpfad Klasse 7: Die Variable. Klicks zählen mit setze und ändere, Bezeichner und Wert, Variablen-Anzeige – direkt im Browser.">
+<link rel="canonical" href="https://scratch.herrseibert.de/k7/05-variable.html">
+<!-- vorschau -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Scratch-Kurs">
+<meta property="og:locale" content="de_DE">
+<meta property="og:url" content="https://scratch.herrseibert.de/k7/05-variable.html">
+<meta property="og:title" content="Die Variable · Scratch-Kurs Klasse 7">
+<meta property="og:description" content="Lektion 5 im Scratch-Lernpfad Klasse 7: Die Variable. Klicks zählen mit setze und ändere, Bezeichner und Wert, Variablen-Anzeige – direkt im Browser.">
+<meta property="og:image" content="https://scratch.herrseibert.de/vorschau.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Scratch-Kurs – Programmieren lernen Schritt für Schritt, mit Übungsbühne">
+<meta name="twitter:card" content="summary_large_image">
+<!-- /vorschau -->
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="stylesheet" href="../assets/kurs.css?v=48917f175f">
+<link rel="stylesheet" href="../assets/buehne.css?v=811a9f4f75">
+<script src="../assets/i18n.js?v=4588e8929d" data-page="k7-05-variable" data-langs="de"></script>
+<script src="../assets/kurs.js?v=9e315750a5"></script>
+<script src="../assets/buehne.js?v=a89a39db39"></script>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><img class="logo" src="../favicon.svg" alt="" width="34" height="34"> Scratch-Kurs <span>· Programmieren lernen</span></a>
+    <span class="spacer"></span>
+    <button class="theme-btn" type="button" aria-label="Hell oder dunkel umschalten">◐ Hell/Dunkel</button>
+  </div>
+</header>
+
+<main class="wrap">
+  <nav class="path" aria-label="Lernpfad Klasse 7">
+    <strong class="t">Klasse 7:</strong>
+    <ol>
+      <li class="done"><a href="01-start-check.html" title="1 · Start-Check">1</a></li>
+      <li class="done"><a href="02-objekte.html" title="2 · Robo ist ein Objekt">2</a></li>
+      <li class="done"><a href="03-pixel-vektor.html" title="3 · Pixel oder Vektor?">3</a></li>
+      <li class="done"><a href="04-kostueme.html" title="4 · Bewegung durch Kostüme">4</a></li>
+      <li class="now"><span title="5 · Die Variable" aria-current="step">5</span></li>
+      <li class="done"><a href="06-variablen-verfolgen.html" title="6 · Variablen verfolgen">6</a></li>
+      <li class="done"><a href="07-struktogramm.html" title="7 · Struktogramm und Skript">7</a></li>
+      <li class="done"><a href="08-robo-fang.html" title="8 · Projekt: Robo-Fang">8</a></li>
+    </ol>
+  </nav>
+
+  <section class="hero">
+    <h1>Die Variable: Robo merkt sich etwas</h1>
+    <div class="meta">
+      <span class="chip">Klasse 7 · Lektion 5</span>
+      <span class="chip">⏱ ca. 35 Minuten</span>
+    </div>
+    <ul class="goals">
+      <li>Ich weiß: Eine <strong>Variable</strong> hat einen Namen (<strong>Bezeichner</strong>) und einen <strong>Wert</strong>.</li>
+      <li>Ich setze einen Startwert mit <em>setze … auf</em> und zähle mit <em>ändere … um</em>.</li>
+      <li>Ich baue einen Klick-Zähler.</li>
+    </ul>
+  </section>
+
+  <details class="card woerter">
+    <summary>📖 Wörter für diese Lektion</summary>
+    <p class="note">Die Scratch-Wörter bleiben deutsch – so heißen sie in Scratch.</p>
+    <div class="tbl-scroll"><table class="plain">
+      <tr><th class="wort">die Variable <small>die Variablen</small></th><td>Ein Speicher mit Namen. Darin steht ein Wert, der sich ändern kann.</td></tr>
+      <tr><th class="wort">der Bezeichner <small>die Bezeichner</small></th><td>Der Name der Variable, z. B. <em>Klicks</em>.</td></tr>
+      <tr><th class="wort">der Wert <small>die Werte</small></th><td>Was gerade in der Variable steht, z. B. 3.</td></tr>
+      <tr><th class="wort">der Startwert <small>die Startwerte</small></th><td>Der Wert am Anfang, meistens 0.</td></tr>
+      <tr><th class="wort">die Anzeige <small>die Anzeigen</small></th><td>Das orange Kästchen auf der Bühne. Es zeigt den Wert.</td></tr>
+    </table></div>
+  </details>
+
+  <section class="card">
+    <h2><span class="step-no">ℹ</span> So arbeitest du heute</h2>
+    <ul class="tasks">
+      <li><span class="badge basis">Antippen</span><span>Heute tippst oder klickst du oft auf Robo. Das geht mit Maus und Finger.</span></li>
+      <li><span class="badge basis">Anzeige</span><span>Oben links auf der Bühne steht die Variable mit ihrem Wert – wie in Scratch.</span></li>
+      <li><span class="badge basis">Zu zweit</span><span>Eine Person tippt, die andere zählt laut mit und vergleicht mit der Anzeige.</span></li>
+    </ul>
+  </section>
+
+  <section class="card wdh">
+    <h2><span class="step-no">↺</span> Weißt du noch? <span class="chip">2 Minuten</span></h2>
+    <div id="wdh"></div>
+  </section>
+
+  <!-- 1 · Überleg -->
+  <section class="card">
+    <h2><span class="step-no">1</span> Ein Speicher mit Namen <span class="chip">4 Minuten</span></h2>
+    <p>Robo soll zählen, wie oft er angetippt wurde. Dafür braucht er einen <strong>Speicher</strong>. Stell dir eine Schachtel vor:
+      Außen steht ein Name, innen liegt ein Zettel mit einer Zahl. Das ist eine <strong>Variable</strong>.</p>
+    <div class="script-row">
+      <figure>
+        <div class="objektkarte" aria-label="Variable Klicks mit dem Wert 3">
+          <div class="ok-kopf">Klicks</div>
+          <div class="ok-attr" style="text-align:center;font-size:1.6em">3</div>
+        </div>
+        <figcaption>Variable</figcaption>
+      </figure>
+      <div style="flex:1;min-width:220px">
+        <p><strong>Überleg:</strong> Was ist hier der <strong>Bezeichner</strong>, was der <strong>Wert</strong>?</p>
+        <div class="choices" id="pred1">
+          <button type="button" class="choice">Bezeichner: Klicks · Wert: 3</button>
+          <button type="button" class="choice">Bezeichner: 3 · Wert: Klicks</button>
+          <button type="button" class="choice">Beides ist der Wert.</button>
+        </div>
+        <p class="fb" id="fb1"></p>
+      </div>
+    </div>
+    <div class="script-row">
+      <figure><div data-script='[["setvar","Klicks",0]]' data-small></div><figcaption>legt den Wert fest</figcaption></figure>
+      <figure><div data-script='[["changevar","Klicks",1]]' data-small></div><figcaption>zählt 1 dazu</figcaption></figure>
+      <figure><div data-script='[["var","Klicks"]]' data-small></div><figcaption>liefert den Wert</figcaption></figure>
+    </div>
+  </section>
+
+  <!-- 2 · Zuschauen -->
+  <section class="card">
+    <h2><span class="step-no">2</span> Der Klick-Zähler <span class="chip">5 Minuten</span></h2>
+    <p><strong>Probier aus:</strong> Klick auf ⚑ Start. Dann tipp Robo ein paar Mal an. Schau auf die Anzeige oben links.</p>
+    <div id="b2"></div>
+    <p><strong>Überleg:</strong> Du tippst Robo 5-mal an. Dann klickst du auf ⚑. Was zeigt die Anzeige jetzt?</p>
+    <div class="choices" id="pred2">
+      <button type="button" class="choice">0</button>
+      <button type="button" class="choice">5</button>
+      <button type="button" class="choice">6</button>
+    </div>
+    <p class="fb" id="fb2"></p>
+  </section>
+
+  <!-- 3 · Puzzle -->
+  <section class="card">
+    <h2><span class="step-no">3</span> Bau den Zähler selbst <span class="badge basis">Basis</span> <span class="chip">6 Minuten</span></h2>
+    <p>Bau zwei Skripte: Bei ⚑ beginnt <em>Klicks</em> bei 0. Bei jedem Antippen zählt Robo 1 dazu. Dann: ⚑ und mindestens 3-mal antippen.</p>
+    <div id="b3"></div>
+    <p class="note">Ein Startblock, der unter das letzte Skript gezogen wird, beginnt ein neues Skript.</p>
+  </section>
+
+  <!-- 4 · Lücke -->
+  <section class="card">
+    <h2><span class="step-no">4</span> Punkte oder Leben? <span class="badge basis">Basis</span> <span class="chip">5 Minuten</span></h2>
+    <p>Hier gibt es zwei Variablen: <em>Punkte</em> und <em>Leben</em>. Jedes Antippen soll <strong>2 Punkte</strong> bringen.
+      Wähl im gelben Feld die richtige Variable und schreib die Zahl hinein. Dann: ⚑ und Robo antippen.</p>
+    <div id="b4"></div>
+  </section>
+
+  <!-- 5 · Fehlerdetektiv -->
+  <section class="card">
+    <h2><span class="step-no">5</span> Fehlerdetektiv 🔍: Der Zähler fängt nicht neu an <span class="badge basis">Basis</span> <span class="chip">5 Minuten</span></h2>
+    <p>Jonas hat einen Zähler gebaut. Tipp Robo 3-mal an. Dann klick auf ⚑ – und tipp noch einmal. Die Anzeige zeigt 4 statt 1.</p>
+    <div id="b5"></div>
+    <ol class="howto">
+      <li>Was <strong>soll</strong> nach ⚑ passieren?</li>
+      <li>Was <strong>passiert</strong> wirklich mit dem Wert?</li>
+      <li>Welcher Block <strong>fehlt</strong> unter der Flagge?</li>
+    </ol>
+    <div id="hints5"></div>
+  </section>
+
+  <!-- 6 · Merksatz -->
+  <section class="card">
+    <h2><span class="step-no">6</span> So funktioniert eine Variable <span class="chip">2 Minuten</span></h2>
+    <p class="rule">Eine <strong>Variable</strong> hat einen <strong>Bezeichner</strong> (Namen) und einen <strong>Wert</strong>.<br>
+      <em>setze … auf</em> legt den Wert fest – am Anfang den <strong>Startwert</strong>. <em>ändere … um</em> zählt dazu (oder mit Minus weg).<br>
+      Der runde Block mit dem Namen liefert den Wert, z. B. für <em>sage</em>.</p>
+    <p class="note">Gute Bezeichner sagen, was drin ist: <em>Punkte</em>, <em>Leben</em>, <em>Zeit</em> – nicht <em>x1</em> oder <em>Ding</em>.</p>
+  </section>
+
+  <!-- Plus -->
+  <section class="card">
+    <h2><span class="step-no">+</span> Robo zählt seine Schritte <span class="badge plus">Plus</span> <span class="chip">für Schnelle</span></h2>
+    <p>Robo geht in 20er-Schritten, bis er den Rand berührt. Dabei zählt er mit. Am Ende sagt er, wie viele Schritte es waren.
+      Zieh den runden Block <em>Schritte</em> in das Feld von <em>sage</em>.</p>
+    <div id="bplus"></div>
+  </section>
+
+  <section class="card">
+    <h2><span class="step-no">✓</span> Kurz-Check <span class="chip">4 Minuten</span></h2>
+    <div id="quiz"></div>
+  </section>
+
+  <section class="card merke">
+    <h2>Merke</h2>
+    <ul>
+      <li>Eine <strong>Variable</strong> speichert einen Wert unter einem Namen (Bezeichner).</li>
+      <li><em>setze … auf</em> legt den Wert fest. <em>ändere … um</em> verändert ihn.</li>
+      <li>Scratch merkt sich den Wert. Darum gehört der <strong>Startwert</strong> unter die Flagge.</li>
+      <li>Wähl Bezeichner, die sagen, was gespeichert wird.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2><span class="step-no">⚑</span> Jetzt in echt: Scratch <span class="chip">zu Hause oder nächste Stunde</span></h2>
+    <p><a class="btn" href="https://scratch.mit.edu/projects/editor/" target="_blank" rel="noopener">Scratch in neuem Fenster öffnen ↗</a></p>
+    <ol class="howto">
+      <li>Klick links auf die Kategorie <strong>Variablen</strong> und dann auf <strong>Neue Variable</strong>. Name: <strong>Klicks</strong>, <strong>für alle Figuren</strong>, OK.</li>
+      <li>Bau: <em>Wenn ⚑ angeklickt wird</em> → <em>setze Klicks auf 0</em>. Und: <em>Wenn diese Figur angeklickt wird</em> → <em>ändere Klicks um 1</em>.</li>
+      <li>Klick auf ⚑ und dann auf die Katze. Das Häkchen vor <em>Klicks</em> in der Blockliste schaltet die Anzeige ein und aus.</li>
+    </ol>
+  </section>
+
+  <section class="card">
+    <h2><span class="step-no">☑</span> Das kann ich</h2>
+    <ul class="checklist" id="checklist">
+      <li><label><input type="checkbox"> Ich kann erklären, was Bezeichner und Wert einer Variable sind.</label></li>
+      <li><label><input type="checkbox"> Ich kann mit <em>setze</em> einen Startwert festlegen.</label></li>
+      <li><label><input type="checkbox"> Ich kann mit <em>ändere</em> zählen.</label></li>
+      <li><label><input type="checkbox"> Ich finde den Fehler, wenn der Startwert fehlt.</label></li>
+    </ul>
+  </section>
+
+  <section class="card frei">
+    <h2><span class="step-no">★</span> Freiwillig</h2>
+    <p class="lead">Für alle, die schon fertig sind.</p>
+    <h3 class="sub"><span class="badge ueben">Üben</span> Drei Leben</h3>
+    <p>Robo hat am Anfang 3 Leben. Jedes Antippen kostet ein Leben. Sind es 0, sagt Robo „Game over“ und versteckt sich. Bau die beiden Skripte fertig.</p>
+    <div id="bleben"></div>
+    <h3 class="sub"><span class="badge expedition">★ Expedition</span> Der Rekord</h3>
+    <p>Robo zählt in 5 Sekunden deine Klicks. Danach vergleicht er: Ist <em>Klicks</em> größer als der alte <em>Rekord</em>, wird Klicks der neue Rekord.
+      Klick auf ⚑ und tipp, so schnell du kannst. Dann noch einmal – schaffst du einen neuen Rekord?</p>
+    <div id="brekord"></div>
+  </section>
+
+  <nav class="pager">
+    <a href="04-kostueme.html">← Lektion 4: Bewegung durch Kostüme</a>
+    <a href="06-variablen-verfolgen.html">Lektion 6: Variablen verfolgen →</a>
+  </nav>
+</main>
+
+<footer>
+  <div class="wrap t">Lernmaterial von <a href="https://herrseibert.de">herrseibert.de</a> · Lizenz <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.de">CC BY-SA 4.0</a> · ohne Tracking, ohne Cookies<br>Erstellt von der KI Claude von Anthropic.</div>
+  <div class="wrap t gh">Fehler gefunden oder eine Idee? → <a href="https://github.com/baumlaube/scratch-course">Kurs auf GitHub</a></div>
+  <div class="wrap t gh">Scratch ist ein Projekt der Scratch Foundation. Dieser Kurs ist kein offizielles Angebot der Scratch Foundation.</div>
+  <div class="wrap legal"><a href="../impressum.html">Impressum</a> · <a href="../datenschutz.html">Datenschutz</a></div>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const { pick, quiz, hints, checklist } = window.Kurs;
+  const B = window.Buehne;
+  const $ = (id) => document.getElementById(id);
+  const sm = (s) => B.render(s, { small: true });
+  const allOps = (list, op, out = []) => { list.forEach((n) => { if (n.op === op) out.push(n); [n.body, n.body2].forEach((b) => b && allOps(b, op, out)); }); return out; };
+  const flagSkript = (tr) => tr.skripte.find((st) => st[0] && st[0].op === "flag") || [];
+
+  /* Weißt du noch? */
+  quiz($("wdh"), [
+    { q: "Warum gehört in eine Animations-Schleife ein <em>warte</em>?", options: ["Sonst flackert es.", "Sonst startet sie nicht.", "Sonst wird Robo kleiner."], right: 0,
+      miss: [null, "Die Schleife läuft auch ohne – nur viel zu schnell.", "Warten ändert die Größe nicht."],
+      why: "Jedes Bild muss kurz stehen bleiben." },
+    { q: "Scratch merkt sich Attributwerte. Was gehört darum an den Anfang eines Skripts?", options: ["ein Startwert", "ein warte-Block", "eine Schleife"], right: 0,
+      miss: [null, "Warten setzt keinen Wert zurück.", "Eine Schleife wiederholt – sie setzt keinen Anfangswert."],
+      why: "Mit einem Startwert, z. B. <em>setze Größe auf 100 %</em>, beginnt jeder Lauf gleich." },
+  ]);
+
+  /* 1 · Bezeichner und Wert */
+  pick($("pred1"), { right: 0, fb: $("fb1"),
+    miss: [null, "Umgekehrt: Der Name außen ist der Bezeichner. Die Zahl innen ist der Wert.", "Der Name bleibt gleich, der Wert kann sich ändern – das sind zwei verschiedene Dinge."],
+    why: "Bezeichner: Klicks. Wert: 3. Tippt man Robo an, ändert sich nur der Wert." });
+
+  /* 2 · Zuschauen */
+  B.create($("b2"), { mode: "lesen", variablen: { Klicks: 0 }, start: { x: 0, y: 0, dir: 90 },
+    scripts: [["flag", ["setvar", "Klicks", 0]], [["click"], ["changevar", "Klicks", 1], ["saynow", ["var", "Klicks"]]]] });
+  pick($("pred2"), { right: 0, fb: $("fb2"),
+    miss: [null, "Beim ⚑ läuft <em>setze Klicks auf 0</em>. Der alte Wert wird überschrieben.", "⚑ zählt nicht dazu – es setzt den Wert auf 0."],
+    why: "<em>setze Klicks auf 0</em> legt den Wert neu fest: 0. Der alte Wert ist weg." });
+
+  /* 3 · Puzzle: Zähler bauen */
+  let seit3 = null;
+  B.create($("b3"), { mode: "puzzle", variablen: { Klicks: 0 }, start: { x: 0, y: 0, dir: 90 }, script: [],
+    palette: ["flag", ["setvar", "Klicks", 0], ["click"], ["changevar", "Klicks", 1]],
+    onChange() { seit3 = null; },
+    check(tr) {
+      if (tr.anlass === "flag") { seit3 = 0; return tr.vars.Klicks === 0 ? "Klicks steht auf 0. Jetzt tipp Robo an!" : "Nach ⚑ soll Klicks 0 sein. Welcher Block gehört unter die Flagge?"; }
+      if (tr.anlass !== "click") return null;
+      if (seit3 === null) return "Klick zuerst auf ⚑ Start.";
+      seit3++;
+      if (tr.vars.Klicks !== seit3) return `Du hast ${seit3}-mal getippt, aber Klicks ist ${tr.vars.Klicks}. Schau dir die Skripte noch einmal an.`;
+      return seit3 >= 3 ? true : `Klicks = ${seit3}. Weiter tippen!`;
+    },
+    ok: "✔ Der Zähler stimmt! ⚑ setzt auf 0, jedes Antippen zählt 1 dazu." });
+
+  /* 4 · Lücke: Punkte oder Leben */
+  let seit4 = null;
+  B.create($("b4"), { mode: "frei", edit: "gaps", variablen: { Punkte: 0, Leben: 3 }, start: { x: 0, y: 0, dir: 90 },
+    scripts: [["!flag", ["!setvar", "Punkte", 0], ["!setvar", "Leben", 3]], [["!click"], ["!changevar", "?", "?"]]],
+    onChange() { seit4 = null; },
+    check(tr) {
+      if (tr.anlass === "flag") { seit4 = 0; return null; }
+      if (tr.anlass !== "click") return null;
+      if (seit4 === null) return "Klick zuerst auf ⚑ Start.";
+      seit4++;
+      if (tr.vars.Leben !== 3) return "Jetzt ändern sich die <strong>Leben</strong>. Die Punkte sollen sich ändern.";
+      if (tr.vars.Punkte !== 2 * seit4) return `Nach ${seit4}-mal Antippen sollen es ${2 * seit4} Punkte sein. Welche Zahl gehört ins zweite Feld?`;
+      return seit4 >= 2 ? true : "Gut! Tipp noch einmal.";
+    },
+    ok: "✔ Jedes Antippen: 2 Punkte. Der Bezeichner entscheidet, welche Variable sich ändert." });
+
+  /* 5 · Fehlerdetektiv: Startwert fehlt */
+  let seit5 = null;
+  B.create($("b5"), { mode: "frei", variablen: { Klicks: 0 }, start: { x: 0, y: 0, dir: 90 },
+    scripts: [["!flag", ["!saynow", "Los!"]], [["!click"], ["!changevar", "Klicks", 1], ["!saynow", ["!var", "Klicks"]]]], palette: [["setvar", "Klicks", 0]],
+    onChange() { seit5 = null; },
+    check(tr) {
+      const hatSetze = allOps(flagSkript(tr), "setvar").length > 0;
+      if (tr.anlass === "flag") { seit5 = 0; return null; }
+      if (tr.anlass !== "click") return null;
+      if (seit5 === null) return "Tipp Robo ein paar Mal an, dann klick auf ⚑ und tipp wieder.";
+      seit5++;
+      if (tr.vars.Klicks !== seit5) return `Nach ⚑ hast du ${seit5}-mal getippt – aber Klicks ist ${tr.vars.Klicks}. Der alte Wert ist noch da.`;
+      return hatSetze ? true : null;
+    },
+    ok: "✔ Fall gelöst! Mit <em>setze Klicks auf 0</em> unter der Flagge fängt der Zähler jedes Mal neu an." });
+  hints($("hints5"), [
+    "Was steht unter <em>Wenn ⚑ angeklickt wird</em>? Ändert irgendein Block dort den Wert von Klicks?",
+    "Scratch merkt sich den Wert. Ohne Startwert zählt Robo einfach weiter.",
+    "Lösung: Zieh <em>setze Klicks auf 0</em> unter die Flagge.",
+  ]);
+
+  /* Plus · Schritte zählen */
+  B.create($("bplus"), { mode: "puzzle", variablen: { Schritte: 0 }, echtzeit: true, start: { x: -200, y: 0, dir: 90 },
+    script: ["!flag", ["!goto", -200, 0], ["!setvar", "Schritte", 0], ["!until", ["!touch", "rand"], [["!move", 20], ["!changevar", "Schritte", 1]]], ["!say", "?", 2]],
+    palette: [["var", "Schritte"]],
+    check(tr) { return tr.says.join() === "21" ? true : "Robo soll die Zahl sagen, die in <em>Schritte</em> steht."; },
+    ok: "✔ 21 Schritte! Robo hat mitgezählt – du musstest nicht rechnen." });
+
+  /* Kurz-Check */
+  quiz($("quiz"), [
+    { q: "Welchen Wert hat <em>Punkte</em> danach?", html: sm([["setvar", "Punkte", 5], ["changevar", "Punkte", 2]]),
+      options: ["7", "2", "5"], right: 0,
+      miss: [null, "<em>ändere</em> zählt zum alten Wert dazu: 5 + 2.", "Der zweite Block ändert den Wert noch."],
+      why: "Erst 5, dann 2 dazu: 7." },
+    { q: "<em>Klicks</em> hat den Wert 4. Was sagt Robo?", html: sm([["say", ["var", "Klicks"], 2]]),
+      options: ["4", "Klicks", "0"], right: 0,
+      miss: [null, "Der runde Block liefert den <strong>Wert</strong>, nicht den Namen.", "0 war vielleicht der Startwert. Jetzt steht 4 drin."],
+      why: "Der runde Variablen-Block wird durch seinen Wert ersetzt: 4." },
+    { q: "Welcher Bezeichner ist am besten für eine Variable, die die Spielzeit speichert?", options: ["Zeit", "x1", "Variable"], right: 0,
+      miss: [null, "Bei <em>x1</em> weiß niemand, was drin ist.", "Jede Variable ist eine Variable – der Name sagt nichts aus."],
+      why: "Gute Bezeichner sagen, was gespeichert wird." },
+    { q: "Wie viel zeigt die Anzeige, wenn man Robo 3-mal antippt?", html: sm([["click"], ["setvar", "Klicks", 0], ["changevar", "Klicks", 1]]),
+      options: ["1", "3", "0"], right: 0,
+      miss: [null, "Bei jedem Antippen wird Klicks erst auf 0 gesetzt – dann 1 dazu.", "Nach dem Setzen kommt noch <em>ändere um 1</em>."],
+      why: "Der Startwert steht im falschen Skript: Jedes Antippen beginnt wieder bei 0. Er gehört unter die Flagge." },
+  ]);
+
+  /* Freiwillig · Leben */
+  B.create($("bleben"), { mode: "frei", variablen: { Leben: 3 }, start: { x: 0, y: 0, dir: 90 },
+    scripts: [["!flag", ["!setvar", "Leben", 3], ["!show"]], [["!click"], ["!changevar", "Leben", -1]]],
+    palette: [["if"], ["eq", "", 0], ["var", "Leben"], ["saynow", "Game over"], ["hide"]],
+    check(tr) {
+      if (tr.anlass !== "click") return null;
+      if (tr.vars.Leben < 0) return "Robo hat jetzt " + tr.vars.Leben + " Leben. Bei 0 soll Schluss sein – klick auf ⚑ für ein neues Spiel.";
+      if (tr.vars.Leben === 0) return tr.bubble === "Game over" && !tr.visible ? true : "Leben ist 0 – aber Robo sagt nicht „Game over“ oder versteckt sich nicht.";
+      return null;
+    },
+    ok: "✔ Game over nach 3-mal Antippen. Der Vergleich <em>Leben = 0</em> fragt den Wert der Variable ab." });
+
+  /* Freiwillig · Rekord */
+  B.create($("brekord"), { mode: "frei", variablen: { Klicks: 0, Rekord: 0 }, start: { x: 0, y: 0, dir: 90 },
+    scripts: [["!flag", ["!setvar", "Klicks", 0], ["!saynow", "Los!"], ["!wait", 5], ["!saynow", "Stopp!"]], [["!click"], ["!changevar", "Klicks", 1]]],
+    palette: [["if"], ["gt", "", ""], ["var", "Klicks"], ["var", "Rekord"], ["setvar", "Rekord", 0]],
+    check(tr) {
+      if (tr.anlass !== "flag") return null;
+      const fi = allOps(flagSkript(tr), "if")[0];
+      const gut = fi && fi.args.b && fi.args.b.op === "gt" && fi.args.b.args.a && fi.args.b.args.a.args && fi.args.b.args.a.args.v === "Klicks"
+        && fi.args.b.args.b && fi.args.b.args.b.args && fi.args.b.args.b.args.v === "Rekord"
+        && fi.body.some((n) => n.op === "setvar" && n.args.v === "Rekord" && n.args.n && n.args.n.op === "var");
+      if (!gut) return "Unter <em>Stopp!</em> fehlt noch: <em>falls Klicks > Rekord, dann setze Rekord auf (Klicks)</em>.";
+      return tr.vars.Rekord >= tr.vars.Klicks ? true : null;
+    },
+    ok: "✔ Der Rekord wird nur überschrieben, wenn du besser warst. Probier es gleich noch einmal!" });
+
+  checklist($("checklist"), "k7-05");
+});
+</script>
+</body>
+</html>

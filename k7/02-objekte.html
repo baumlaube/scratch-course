@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Robo ist ein Objekt · Scratch-Kurs Klasse 7</title>
+<meta name="description" content="Lektion 2 im Scratch-Lernpfad Klasse 7: Figuren sind Objekte. Attribute wie x, y, Größe und Kostüm, Attributwerte und Methoden – mit Objektkarte und Übungsbühne.">
+<link rel="canonical" href="https://scratch.herrseibert.de/k7/02-objekte.html">
+<!-- vorschau -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Scratch-Kurs">
+<meta property="og:locale" content="de_DE">
+<meta property="og:url" content="https://scratch.herrseibert.de/k7/02-objekte.html">
+<meta property="og:title" content="Robo ist ein Objekt · Scratch-Kurs Klasse 7">
+<meta property="og:description" content="Lektion 2 im Scratch-Lernpfad Klasse 7: Figuren sind Objekte. Attribute wie x, y, Größe und Kostüm, Attributwerte und Methoden – mit Objektkarte und Übungsbühne.">
+<meta property="og:image" content="https://scratch.herrseibert.de/vorschau.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Scratch-Kurs – Programmieren lernen Schritt für Schritt, mit Übungsbühne">
+<meta name="twitter:card" content="summary_large_image">
+<!-- /vorschau -->
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="stylesheet" href="../assets/kurs.css?v=48917f175f">
+<link rel="stylesheet" href="../assets/buehne.css?v=811a9f4f75">
+<script src="../assets/i18n.js?v=4588e8929d" data-page="k7-02-objekte" data-langs="de"></script>
+<script src="../assets/kurs.js?v=9e315750a5"></script>
+<script src="../assets/buehne.js?v=a89a39db39"></script>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><img class="logo" src="../favicon.svg" alt="" width="34" height="34"> Scratch-Kurs <span>· Programmieren lernen</span></a>
+    <span class="spacer"></span>
+    <button class="theme-btn" type="button" aria-label="Hell oder dunkel umschalten">◐ Hell/Dunkel</button>
+  </div>
+</header>
+
+<main class="wrap">
+  <nav class="path" aria-label="Lernpfad Klasse 7">
+    <strong class="t">Klasse 7:</strong>
+    <ol>
+      <li class="done"><a href="01-start-check.html" title="1 · Start-Check">1</a></li>
+      <li class="now"><span title="2 · Robo ist ein Objekt" aria-current="step">2</span></li>
+      <li class="done"><a href="03-pixel-vektor.html" title="3 · Pixel oder Vektor?">3</a></li>
+      <li class="done"><a href="04-kostueme.html" title="4 · Bewegung durch Kostüme">4</a></li>
+      <li class="done"><a href="05-variable.html" title="5 · Die Variable">5</a></li>
+      <li class="done"><a href="06-variablen-verfolgen.html" title="6 · Variablen verfolgen">6</a></li>
+      <li class="done"><a href="07-struktogramm.html" title="7 · Struktogramm und Skript">7</a></li>
+      <li class="done"><a href="08-robo-fang.html" title="8 · Projekt: Robo-Fang">8</a></li>
+    </ol>
+  </nav>
+
+  <section class="hero">
+    <h1>Robo ist ein Objekt</h1>
+    <div class="meta">
+      <span class="chip">Klasse 7 · Lektion 2</span>
+      <span class="chip">⏱ ca. 35 Minuten</span>
+    </div>
+    <ul class="goals">
+      <li>Ich weiß: Robo ist ein <strong>Objekt</strong>. Er hat <strong>Attribute</strong> mit <strong>Werten</strong>.</li>
+      <li>Ich lese eine Objektkarte und trage Werte ein.</li>
+      <li>Ich ändere Attributwerte mit <strong>Methoden</strong> – das sind Blöcke wie <em>setze Größe auf</em>.</li>
+    </ul>
+  </section>
+
+  <details class="card woerter">
+    <summary>📖 Wörter für diese Lektion</summary>
+    <p class="note">Die Scratch-Wörter bleiben deutsch – so heißen sie in Scratch.</p>
+    <div class="tbl-scroll"><table class="plain">
+      <tr><th class="wort">das Objekt <small>die Objekte</small></th><td>Ein „Ding“ im Programm, z. B. die Figur Robo.</td></tr>
+      <tr><th class="wort">das Attribut <small>die Attribute</small></th><td>Eine Eigenschaft des Objekts, z. B. Größe oder x.</td></tr>
+      <tr><th class="wort">der Attributwert <small>die Attributwerte</small></th><td>Was gerade im Attribut steht, z. B. Größe = 100.</td></tr>
+      <tr><th class="wort">die Methode <small>die Methoden</small></th><td>Was das Objekt tun kann. In Scratch: ein Block, z. B. <em>verstecke dich</em>.</td></tr>
+      <tr><th class="wort">die Objektkarte <small>die Objektkarten</small></th><td>Ein Steckbrief: oben der Name, darunter alle Attribute mit Wert.</td></tr>
+      <tr><th class="wort">sichtbar <small>–</small></th><td>Man kann Robo sehen (ja) oder nicht (nein).</td></tr>
+    </table></div>
+  </details>
+
+  <section class="card">
+    <h2><span class="step-no">ℹ</span> So arbeitest du heute</h2>
+    <p class="lead">Du übst mit der <strong>Übungsbühne</strong>. Neu: Unter der Bühne steht der <strong>Figurenbereich</strong> – dort siehst du Robos Attributwerte, während er läuft.</p>
+    <ul class="tasks">
+      <li><span class="badge basis">Werte</span><span>In die <strong>gelben Felder</strong> schreibst du Zahlen. Mehr musst du nicht tippen.</span></li>
+      <li><span class="badge basis">Zu zweit</span><span>Eine Person zieht die Blöcke, die andere liest die Werte vor und prüft. Nach jeder Aufgabe wechseln.</span></li>
+    </ul>
+  </section>
+
+  <section class="card wdh">
+    <h2><span class="step-no">↺</span> Weißt du noch? <span class="chip">2 Minuten</span></h2>
+    <div id="wdh"></div>
+  </section>
+
+  <!-- 1 · Objektkarte -->
+  <section class="card">
+    <h2><span class="step-no">1</span> Robos Steckbrief: die Objektkarte <span class="chip">5 Minuten</span></h2>
+    <p>Robo ist ein <strong>Objekt</strong>. Ein Objekt hat <strong>Attribute</strong> – das sind seine Eigenschaften. Jedes Attribut hat gerade einen <strong>Wert</strong>.
+      Das schreibt man in eine <strong>Objektkarte</strong>:</p>
+    <div class="script-row">
+      <figure>
+        <div class="objektkarte" aria-label="Objektkarte robo vom Typ Figur">
+          <div class="ok-kopf"><span>robo : Figur</span></div>
+          <div class="ok-attr">x = −120<br>y = 0<br>Richtung = 90<br>Größe = 100<br>Kostüm = Robo-a<br>sichtbar = ja</div>
+        </div>
+        <figcaption>Objektname : Art des Objekts</figcaption>
+      </figure>
+      <div style="flex:1;min-width:220px">
+        <p><strong>Überleg:</strong> In der Zeile <em>Größe = 100</em> – was ist das Attribut, was ist der Wert?</p>
+        <div class="choices" id="pred1">
+          <button type="button" class="choice">Attribut: Größe · Wert: 100</button>
+          <button type="button" class="choice">Attribut: 100 · Wert: Größe</button>
+          <button type="button" class="choice">Beides ist ein Attribut.</button>
+        </div>
+        <p class="fb" id="fb1"></p>
+      </div>
+    </div>
+    <p>Was ein Objekt <strong>tun</strong> kann, heißt <strong>Methode</strong>. In Scratch sind Methoden Blöcke. Viele Methoden ändern einen Attributwert:</p>
+    <div class="script-row">
+      <figure><div data-script='[["setsize",150]]' data-small></div><figcaption>ändert Größe</figcaption></figure>
+      <figure><div data-script='[["hide"]]' data-small></div><figcaption>ändert sichtbar</figcaption></figure>
+      <figure><div data-script='[["changex",50]]' data-small></div><figcaption>ändert x</figcaption></figure>
+    </div>
+  </section>
+
+  <!-- 2 · Vorhersagen -->
+  <section class="card">
+    <h2><span class="step-no">2</span> Was steht danach in der Objektkarte? <span class="chip">6 Minuten</span></h2>
+    <div class="script-row">
+      <figure><div data-script='["flag",["goto",-100,0],["setsize",100],["repeat",3,[["changex",50],["changesize",20]]],["hide"]]' data-small></div></figure>
+      <div style="flex:1;min-width:220px">
+        <p><strong>Überleg:</strong> Welche Werte hat Robo, wenn das Skript fertig ist? Trag sie ein.</p>
+        <div class="objektkarte" id="karte2">
+          <div class="ok-kopf"><span>robo : Figur</span></div>
+          <div class="ok-attr">
+            x = <input id="k2x" inputmode="decimal" aria-label="x" autocomplete="off"><br>
+            y = 0<br>
+            Größe = <input id="k2g" inputmode="decimal" aria-label="Größe" autocomplete="off"><br>
+            sichtbar = <select id="k2s" aria-label="sichtbar"><option value="">?</option><option>ja</option><option>nein</option></select>
+          </div>
+        </div>
+        <p><button type="button" class="btn" id="pruef2">Prüfen</button></p>
+        <p class="fb" id="fb2"></p>
+      </div>
+    </div>
+    <div id="probe2" hidden>
+      <p><strong>Schau nach:</strong> Klick auf ⚑ Start. Im Figurenbereich unter der Bühne siehst du die Werte live.</p>
+      <div id="b2"></div>
+    </div>
+  </section>
+
+  <!-- 3 · Puzzle -->
+  <section class="card">
+    <h2><span class="step-no">3</span> Robo kommt näher <span class="badge basis">Basis</span> <span class="chip">6 Minuten</span></h2>
+    <p>Robo ist weit weg – also klein. Dann kommt er näher und wird immer größer, bis er doppelt so groß ist wie normal (Größe 200).</p>
+    <div id="b3"></div>
+    <ol class="howto">
+      <li>Zuerst der <strong>Startwert</strong>: Robo ist klein (Größe 50).</li>
+      <li>Dann die Schleife: In jeder Runde wird er ein Stück größer.</li>
+      <li><strong>Überleg:</strong> 50 + 6 × 25 = ?</li>
+    </ol>
+  </section>
+
+  <!-- 4 · Lücke -->
+  <section class="card">
+    <h2><span class="step-no">4</span> Robo zaubert sich weg <span class="badge basis">Basis</span> <span class="chip">5 Minuten</span></h2>
+    <p>Robo verschwindet, taucht beim Stern wieder auf und sagt „Hokuspokus!“. Der Stern steht bei <strong>x: 120 y: 80</strong>. Schreib diese Zahlen in die gelben Felder.</p>
+    <p><strong>Überleg:</strong> Welche Attribute ändert das Skript? Schau beim Abspielen in den Figurenbereich.</p>
+    <div id="b4"></div>
+  </section>
+
+  <!-- 5 · Fehlerdetektiv -->
+  <section class="card">
+    <h2><span class="step-no">5</span> Fehlerdetektiv 🔍: Robo wird immer größer <span class="badge basis">Basis</span> <span class="chip">5 Minuten</span></h2>
+    <p>Mia will, dass Robo von Größe 100 auf 200 wächst. Klick auf ⚑ Start – und dann <strong>noch einmal</strong>. Was passiert beim zweiten Mal?</p>
+    <p class="note">Diese Bühne merkt sich die Attributwerte – genau wie das echte Scratch.</p>
+    <div id="b5"></div>
+    <ol class="howto">
+      <li>Was <strong>soll</strong> passieren?</li>
+      <li>Was <strong>passiert</strong> beim zweiten Start? Schau auf <strong>Größe</strong> im Figurenbereich.</li>
+      <li>Was fehlt <strong>ganz am Anfang</strong> des Skripts?</li>
+    </ol>
+    <div id="hints5"></div>
+  </section>
+
+  <!-- 6 · Merksatz -->
+  <section class="card">
+    <h2><span class="step-no">6</span> Objekt, Attribut, Methode <span class="chip">2 Minuten</span></h2>
+    <p class="rule">Ein <strong>Objekt</strong> hat <strong>Attribute</strong>. Jedes Attribut hat einen <strong>Wert</strong>.<br>
+      <strong>Methoden</strong> sind das, was das Objekt tun kann. Sie ändern oft einen Attributwert.<br>
+      Am Anfang eines Skripts setzt man wichtige Werte auf ihren <strong>Startwert</strong>.</p>
+    <div class="objektkarte" aria-label="Objektkarte mit Methoden">
+      <div class="ok-kopf"><span>robo : Figur</span></div>
+      <div class="ok-attr">x = 0 · y = 0 · Richtung = 90<br>Größe = 100 · Kostüm = Robo-a · sichtbar = ja</div>
+      <div class="ok-meth"><strong>Methoden:</strong> gehe, drehe dich, setze Größe auf, ändere Größe um, zeige dich, verstecke dich, wechsle zu Kostüm …</div>
+    </div>
+  </section>
+
+  <!-- Plus -->
+  <section class="card">
+    <h2><span class="step-no">+</span> Robo sagt seine Größe <span class="badge plus">Plus</span> <span class="chip">für Schnelle</span></h2>
+    <p>Den Wert eines Attributs kann man auch <strong>lesen</strong>: Der runde Block <span data-script='[["groesse"]]' data-small class="sb-inline"></span> liefert Robos Größe.
+      Zieh ihn in das weiße Feld von <em>sage</em>. Robo soll nacheinander 150, 200, 250 und 300 sagen.</p>
+    <div id="bplus"></div>
+  </section>
+
+  <section class="card">
+    <h2><span class="step-no">✓</span> Kurz-Check <span class="chip">4 Minuten</span></h2>
+    <div id="quiz"></div>
+  </section>
+
+  <section class="card merke">
+    <h2>Merke</h2>
+    <ul>
+      <li>Eine Figur ist ein <strong>Objekt</strong>. Die Objektkarte zeigt ihre <strong>Attribute</strong> mit den <strong>Werten</strong>.</li>
+      <li>Attribute von Robo: x, y, Richtung, Größe, Kostüm, sichtbar.</li>
+      <li><strong>Methoden</strong> (Blöcke) ändern Werte, z. B. <em>setze Größe auf 50 %</em>.</li>
+      <li>Scratch merkt sich die Werte. Darum setzt man am Anfang den <strong>Startwert</strong>.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2><span class="step-no">⚑</span> Jetzt in echt: Scratch <span class="chip">zu Hause oder nächste Stunde</span></h2>
+    <p><a class="btn" href="https://scratch.mit.edu/projects/editor/" target="_blank" rel="noopener">Scratch in neuem Fenster öffnen ↗</a></p>
+    <ol class="howto">
+      <li>Unter der Bühne, über der Figurenliste, stehen die Attributwerte der Katze: <strong>Figur</strong> (Name), <strong>x</strong>, <strong>y</strong>, <strong>Zeige dich</strong> (zwei Augen-Knöpfe), <strong>Größe</strong>, <strong>Richtung</strong>.</li>
+      <li>Bau: <em>Wenn ⚑ angeklickt wird</em> → <em>setze Größe auf 50 %</em> → <em>wiederhole 6 mal</em> → darin <em>ändere Größe um 25</em> und <em>warte 0.2 Sekunden</em>. Klick auf ⚑ und schau auf <strong>Größe</strong>.</li>
+      <li>Bei <strong>Aussehen</strong> ganz unten: Setz ein Häkchen vor <em>Größe</em>. Jetzt zeigt die Bühne den Wert die ganze Zeit an.</li>
+    </ol>
+  </section>
+
+  <section class="card">
+    <h2><span class="step-no">☑</span> Das kann ich</h2>
+    <ul class="checklist" id="checklist">
+      <li><label><input type="checkbox"> Ich kann Objekt, Attribut, Attributwert und Methode an Robo erklären.</label></li>
+      <li><label><input type="checkbox"> Ich kann eine Objektkarte lesen und Werte eintragen.</label></li>
+      <li><label><input type="checkbox"> Ich kann Größe und Sichtbarkeit mit Blöcken ändern.</label></li>
+      <li><label><input type="checkbox"> Ich weiß, warum man am Anfang einen Startwert setzt.</label></li>
+    </ul>
+  </section>
+
+  <section class="card frei">
+    <h2><span class="step-no">★</span> Freiwillig</h2>
+    <p class="lead">Für alle, die schon fertig sind.</p>
+
+    <h3 class="sub"><span class="badge ueben">Üben</span> Versteckspiel</h3>
+    <p>Bei ⚑ versteckt sich Robo. Tippst du die <strong>Leertaste</strong> (oder den Knopf), taucht er wieder auf – doppelt so groß. Bau zwei Skripte.</p>
+    <div id="bversteck"></div>
+
+    <h3 class="sub"><span class="badge expedition">★ Expedition</span> Robo pulsiert</h3>
+    <p>Robo soll immer weiter wachsen und schrumpfen – wie ein Herz, das schlägt: 5-mal größer werden, 5-mal kleiner werden, und das fortlaufend. Wann hat Robo welche Größe?</p>
+    <div id="bherz"></div>
+  </section>
+
+  <nav class="pager">
+    <a href="01-start-check.html">← Lektion 1: Start-Check</a>
+    <a href="03-pixel-vektor.html">Lektion 3: Pixel oder Vektor? →</a>
+  </nav>
+</main>
+
+<footer>
+  <div class="wrap t">Lernmaterial von <a href="https://herrseibert.de">herrseibert.de</a> · Lizenz <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.de">CC BY-SA 4.0</a> · ohne Tracking, ohne Cookies<br>Erstellt von der KI Claude von Anthropic.</div>
+  <div class="wrap t gh">Fehler gefunden oder eine Idee? → <a href="https://github.com/baumlaube/scratch-course">Kurs auf GitHub</a></div>
+  <div class="wrap t gh">Scratch ist ein Projekt der Scratch Foundation. Dieser Kurs ist kein offizielles Angebot der Scratch Foundation.</div>
+  <div class="wrap legal"><a href="../impressum.html">Impressum</a> · <a href="../datenschutz.html">Datenschutz</a></div>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const { pick, quiz, hints, checklist } = window.Kurs;
+  const B = window.Buehne;
+  const $ = (id) => document.getElementById(id);
+  const sm = (s) => B.render(s, { small: true });
+  const at = (tr, x, y) => Math.hypot(tr.x - x, tr.y - y) < 1;
+  function where(list, op, pred, path = []) {
+    for (const n of list) {
+      if (n.op === op && (!pred || pred(n))) return path;
+      const r = (n.body && where(n.body, op, pred, path.concat(n.op))) || (n.body2 && where(n.body2, op, pred, path.concat(n.op + ":sonst")));
+      if (r) return r;
+    }
+    return null;
+  }
+  const zeig = (el, text, gut) => { el.className = "fb show " + (gut ? "ok" : "hint"); el.innerHTML = text; };
+
+  /* Weißt du noch? */
+  quiz($("wdh"), [
+    { q: "Wann läuft dieses Skript?", html: sm([["click"], ["say", "Hallo!", 2]]),
+      options: ["wenn man Robo antippt oder anklickt", "wenn man auf ⚑ klickt", "die ganze Zeit"], right: 0,
+      miss: [null, "Hier steht kein Flaggen-Block. Der Startblock wartet auf einen Klick auf Robo.", "Ein Skript läuft erst, wenn sein Startblock ausgelöst wird."],
+      why: "<em>Wenn diese Figur angeklickt wird</em> startet beim Antippen – auch am iPad." },
+    { q: "Wie oft wird Robo größer?", html: sm(["flag", ["repeat", 3, [["repeat", 2, [["changesize", 10]]]]]]),
+      options: ["6-mal", "5-mal", "3-mal"], right: 0,
+      miss: [null, "Nicht plus rechnen: In jeder der 3 Runden läuft die innere Schleife ganz – 2-mal.", "Die innere Schleife läuft in jeder Runde 2-mal."],
+      why: "3 Runden außen × 2 Runden innen = 6-mal." },
+  ]);
+
+  /* 1 · Attribut und Wert */
+  pick($("pred1"), { right: 0, fb: $("fb1"),
+    miss: [null, "Umgekehrt: Der Name links ist das Attribut. Rechts vom = steht sein Wert.", "Die Zahl ist kein Attribut, sondern der Wert, den das Attribut gerade hat."],
+    why: "Links steht das Attribut (Größe), rechts sein Wert (100). Der Wert kann sich ändern – das Attribut bleibt." });
+
+  /* 2 · Vorhersage in die Objektkarte */
+  const b2 = B.create($("b2"), { mode: "lesen", figur: true, start: { x: -100, y: 0, dir: 90 },
+    script: ["flag", ["goto", -100, 0], ["setsize", 100], ["repeat", 3, [["changex", 50], ["changesize", 20]]], ["hide"]] });
+  $("pruef2").addEventListener("click", () => {
+    const x = Number(String($("k2x").value).replace(",", ".").replace("−", "-")), g = Number(String($("k2g").value).replace(",", ".")), sv = $("k2s").value;
+    const fehler = [];
+    if (x !== 50) fehler.push(x === 150 ? "x: Robo startet bei −100, nicht bei 0. −100 + 3 × 50 = ?" : "x: Robo startet bei −100 und geht 3-mal 50 nach rechts.");
+    if (g !== 160) fehler.push(g === 120 ? "Größe: Die Schleife läuft 3 Runden – in jeder wird Robo um 20 größer." : "Größe: Start 100, dann 3-mal +20.");
+    if (sv !== "nein") fehler.push("sichtbar: Schau auf den letzten Block.");
+    if (fehler.length) zeig($("fb2"), "Noch nicht ganz:<br>" + fehler.join("<br>") + "<br>Schau dir den Lauf unten an.", false);
+    else zeig($("fb2"), "✔ Richtig: x = 50, Größe = 160, sichtbar = nein. Prüf es unten auf der Bühne nach.", true);
+    $("probe2").hidden = false; b2.el.dispatchEvent(new Event("resize"));
+  });
+
+  /* 3 · Puzzle: Robo kommt näher */
+  B.create($("b3"), { mode: "puzzle", figur: true, start: { x: 0, y: 0, dir: 90 }, script: ["!flag"],
+    palette: [["setsize", 50], ["repeat", 6], ["changesize", 25], ["wait", 0.2]],
+    check(tr) {
+      const s = tr.script, ws = where(s, "setsize"), wc = where(s, "changesize");
+      if (!ws) return "Es fehlt der Startwert: <em>setze Größe auf 50 %</em>.";
+      if (ws.includes("repeat")) return "<em>setze Größe</em> steht in der Schleife. Dann wird Robo in jeder Runde wieder klein. Der Startwert gehört <strong>vor</strong> die Schleife.";
+      if (!wc || !wc.includes("repeat")) return "<em>ändere Größe um 25</em> gehört <strong>in</strong> die Schleife – sonst wächst Robo nur einmal.";
+      if (s.findIndex((n) => n.op === "setsize") > s.findIndex((n) => n.op === "repeat")) return "Der Startwert kommt zu spät: Erst klein machen, dann wachsen.";
+      return tr.size === 200 ? true : "Noch nicht. Schau auf Größe im Figurenbereich.";
+    },
+    ok: "✔ Robo kommt näher: 50 + 6 × 25 = 200." });
+
+  /* 4 · Lücke: verstecken und wieder zeigen */
+  B.create($("b4"), { mode: "frei", edit: "gaps", figur: true, start: { x: -120, y: -60, dir: 90 }, sterne: [[120, 80]],
+    script: ["!flag", ["!goto", -120, -60], ["!say", "Achtung …", 1], ["!hide"], ["!wait", 1], ["!goto", "?", "?"], ["!show"], ["!say", "Hokuspokus!", 2]],
+    check(tr) {
+      if (at(tr, 120, 80) && tr.visible) return true;
+      return `Robo ist jetzt bei x: ${Math.round(tr.x)} y: ${Math.round(tr.y)}. Der Stern steht bei x: 120 y: 80.`;
+    },
+    ok: "✔ Hokuspokus! <em>verstecke dich</em> setzt sichtbar auf nein, <em>gehe zu</em> ändert x und y, <em>zeige dich</em> setzt sichtbar wieder auf ja." });
+
+  /* 5 · Fehlerdetektiv: Startwert fehlt */
+  B.create($("b5"), { mode: "frei", merken: true, figur: true, start: { x: 0, y: 0, dir: 90 },
+    script: ["!flag", ["!repeat", 5, [["!changesize", 20]]]], palette: [["setsize", 100]],
+    check(tr) {
+      const s = tr.script, st = s[1] && s[1].op === "setsize" && Number(s[1].args.n) === 100;
+      if (tr.size === 200 && st) return true;
+      if (tr.size === 200) return "Beim ersten Mal stimmt es. Klick noch einmal auf ⚑ Start!";
+      if (tr.size > 200) return `Robo ist jetzt ${tr.size} groß. Er hat nicht bei 100 angefangen, sondern bei ${tr.size - 100} – da hat der letzte Lauf aufgehört.`;
+      return "Robo soll von 100 auf 200 wachsen. Wo steht <em>setze Größe auf 100 %</em>?";
+    },
+    ok: "✔ Fall gelöst! Mit dem Startwert <em>setze Größe auf 100 %</em> fängt Robo bei jedem Start gleich an." });
+  hints($("hints5"), [
+    "Klick zweimal auf ⚑. Wie groß ist Robo, <strong>bevor</strong> die Schleife beim zweiten Mal anfängt?",
+    "Scratch merkt sich die Größe vom letzten Lauf. Robo braucht am Anfang einen festen Startwert.",
+    "Lösung: Zieh <em>setze Größe auf 100 %</em> direkt unter <em>Wenn ⚑ angeklickt wird</em> – vor die Schleife.",
+  ]);
+
+  /* Plus · Attributwert lesen */
+  B.create($("bplus"), { mode: "puzzle", start: { x: 0, y: 0, dir: 90 },
+    script: ["!flag", ["!setsize", 100], ["!repeat", 4, [["!changesize", 50], ["!say", "?", 1]]]], palette: [["groesse"]],
+    check(tr) { return tr.says.join() === "150,200,250,300" ? true : "Robo sagt noch nicht seine Größe. Zieh den runden Block <em>Größe</em> in das Feld von <em>sage</em>."; },
+    ok: "✔ Robo liest seinen eigenen Attributwert: 150, 200, 250, 300." });
+
+  /* Kurz-Check */
+  quiz($("quiz"), [
+    { q: "Was ist eine <strong>Methode</strong> von Robo?", options: [sm([["hide"]]), "Größe", "x = 20"], right: 0,
+      miss: [null, "Größe ist ein <strong>Attribut</strong> – eine Eigenschaft, kein Tun.", "Das ist ein Attribut mit seinem Wert."],
+      why: "Methoden sind das, was Robo tun kann – in Scratch die Blöcke." },
+    { q: "Robo hat Größe 100. Welchen Wert hat Größe danach?", html: sm([["changesize", 50], ["changesize", -20]]),
+      options: ["130", "70", "150"], right: 0,
+      miss: [null, "Erst kommt +50 dazu, dann −20 weg: 100 + 50 − 20.", "Der zweite Block zieht noch 20 ab."],
+      why: "100 + 50 = 150, dann 150 − 20 = 130." },
+    { q: "Warum steht am Anfang eines Skripts oft <em>setze Größe auf 100 %</em>?",
+      options: ["Damit Robo bei jedem Start gleich groß anfängt.", "Weil Robo sonst nicht zu sehen ist.", "Weil jedes Skript diesen Block braucht."], right: 0,
+      miss: [null, "Ob man Robo sieht, ist das Attribut <em>sichtbar</em>, nicht die Größe.", "Nötig ist er nur, wenn das Skript die Größe ändert."],
+      why: "Scratch merkt sich die Werte vom letzten Lauf. Der Startwert sorgt für einen festen Anfang." },
+    { q: "Robo hat Richtung = 90. Was steht danach in der Objektkarte?", html: sm([["dir", 180], ["move", 50]]),
+      options: ["Richtung = 180", "Richtung = 90", "Richtung = 50"], right: 0,
+      miss: [null, "<em>setze Richtung auf 180</em> ändert den Wert.", "50 ist die Strecke für <em>gehe</em>. Sie ändert x oder y, nicht die Richtung."],
+      why: "Die Methode <em>setze Richtung auf</em> ändert das Attribut Richtung auf 180." },
+  ]);
+
+  /* Freiwillig */
+  B.create($("bversteck"), { mode: "frei", figur: true, start: { x: 0, y: 0, dir: 90 }, script: [],
+    palette: ["flag", ["hide"], ["key", "leertaste"], ["show"], ["setsize", 200], ["setsize", 100]],
+    check(tr) {
+      if (tr.anlass === "key" && tr.visible && tr.size === 200) return true;
+      if (tr.anlass === "key" && !tr.visible) return "Robo bleibt versteckt. Welcher Block macht ihn wieder sichtbar?";
+      return null;
+    },
+    ok: "✔ Da ist er wieder – doppelt so groß!" });
+  B.create($("bherz"), { mode: "frei", figur: true, start: { x: 0, y: 0, dir: 90 },
+    script: ["!flag", ["!setsize", 100], ["!forever", []]], palette: [["repeat", 5], ["changesize", 10], ["changesize", -10], ["wait", 0.1]],
+    check(tr) {
+      const f = tr.script.find((n) => n.op === "forever"), rs = f ? f.body.filter((n) => n.op === "repeat") : [];
+      const gut = rs.length === 2 && rs[0].body.some((n) => n.op === "changesize" && Number(n.args.n) === 10) && rs[1].body.some((n) => n.op === "changesize" && Number(n.args.n) === -10);
+      return gut && tr.size >= 140 ? true : null;
+    },
+    ok: "✔ Bumm-bumm! Größe pendelt zwischen 100 und 150." });
+
+  checklist($("checklist"), "k7-02");
+});
+</script>
+</body>
+</html>

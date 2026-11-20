@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Variablen verfolgen · Scratch-Kurs Klasse 7</title>
+<meta name="description" content="Lektion 6 im Scratch-Lernpfad Klasse 7: Variablen verfolgen mit der Werte-Tabelle. Datentypen Zahl, Text und wahr/falsch – 3 + 4 gegen verbinde 3 und 4.">
+<link rel="canonical" href="https://scratch.herrseibert.de/k7/06-variablen-verfolgen.html">
+<!-- vorschau -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Scratch-Kurs">
+<meta property="og:locale" content="de_DE">
+<meta property="og:url" content="https://scratch.herrseibert.de/k7/06-variablen-verfolgen.html">
+<meta property="og:title" content="Variablen verfolgen · Scratch-Kurs Klasse 7">
+<meta property="og:description" content="Lektion 6 im Scratch-Lernpfad Klasse 7: Variablen verfolgen mit der Werte-Tabelle. Datentypen Zahl, Text und wahr/falsch – 3 + 4 gegen verbinde 3 und 4.">
+<meta property="og:image" content="https://scratch.herrseibert.de/vorschau.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Scratch-Kurs – Programmieren lernen Schritt für Schritt, mit Übungsbühne">
+<meta name="twitter:card" content="summary_large_image">
+<!-- /vorschau -->
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="stylesheet" href="../assets/kurs.css?v=48917f175f">
+<link rel="stylesheet" href="../assets/buehne.css?v=811a9f4f75">
+<script src="../assets/i18n.js?v=4588e8929d" data-page="k7-06-variablen-verfolgen" data-langs="de"></script>
+<script src="../assets/kurs.js?v=9e315750a5"></script>
+<script src="../assets/buehne.js?v=a89a39db39"></script>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><img class="logo" src="../favicon.svg" alt="" width="34" height="34"> Scratch-Kurs <span>· Programmieren lernen</span></a>
+    <span class="spacer"></span>
+    <button class="theme-btn" type="button" aria-label="Hell oder dunkel umschalten">◐ Hell/Dunkel</button>
+  </div>
+</header>
+
+<main class="wrap">
+  <nav class="path" aria-label="Lernpfad Klasse 7">
+    <strong class="t">Klasse 7:</strong>
+    <ol>
+      <li class="done"><a href="01-start-check.html" title="1 · Start-Check">1</a></li>
+      <li class="done"><a href="02-objekte.html" title="2 · Robo ist ein Objekt">2</a></li>
+      <li class="done"><a href="03-pixel-vektor.html" title="3 · Pixel oder Vektor?">3</a></li>
+      <li class="done"><a href="04-kostueme.html" title="4 · Bewegung durch Kostüme">4</a></li>
+      <li class="done"><a href="05-variable.html" title="5 · Die Variable">5</a></li>
+      <li class="now"><span title="6 · Variablen verfolgen" aria-current="step">6</span></li>
+      <li class="done"><a href="07-struktogramm.html" title="7 · Struktogramm und Skript">7</a></li>
+      <li class="done"><a href="08-robo-fang.html" title="8 · Projekt: Robo-Fang">8</a></li>
+    </ol>
+  </nav>
+
+  <section class="hero">
+    <h1>Variablen verfolgen</h1>
+    <div class="meta">
+      <span class="chip">Klasse 7 · Lektion 6</span>
+      <span class="chip">⏱ ca. 35 Minuten</span>
+    </div>
+    <ul class="goals">
+      <li>Ich verfolge den Wert einer Variable Zeile für Zeile in einer <strong>Werte-Tabelle</strong>.</li>
+      <li>Ich unterscheide die Datentypen <strong>Zahl</strong>, <strong>Text</strong> und <strong>Wahrheitswert</strong>.</li>
+      <li>Ich finde den Fehler, wenn <em>setze</em> in der Schleife steht.</li>
+    </ul>
+  </section>
+
+  <details class="card woerter">
+    <summary>📖 Wörter für diese Lektion</summary>
+    <p class="note">Die Scratch-Wörter bleiben deutsch – so heißen sie in Scratch.</p>
+    <div class="tbl-scroll"><table class="plain">
+      <tr><th class="wort">die Werte-Tabelle <small>die Werte-Tabellen</small></th><td>Nach jedem Block steht in einer Zeile, welchen Wert die Variable hat.</td></tr>
+      <tr><th class="wort">der Datentyp <small>die Datentypen</small></th><td>Die Art eines Werts: Zahl, Text oder Wahrheitswert.</td></tr>
+      <tr><th class="wort">der Text <small>die Texte</small></th><td>Buchstaben und Zeichen, z. B. „Hallo“. Auch „34“ kann ein Text sein.</td></tr>
+      <tr><th class="wort">der Wahrheitswert <small>die Wahrheitswerte</small></th><td>wahr oder falsch. Scratch schreibt <strong>true</strong> und <strong>false</strong>.</td></tr>
+      <tr><th class="wort">verbinden <small>er verbindet</small></th><td>Zwei Texte aneinanderhängen.</td></tr>
+    </table></div>
+  </details>
+
+  <section class="card wdh">
+    <h2><span class="step-no">↺</span> Weißt du noch? <span class="chip">2 Minuten</span></h2>
+    <div id="wdh"></div>
+  </section>
+
+  <!-- 1 · Werte-Tabelle -->
+  <section class="card">
+    <h2><span class="step-no">1</span> Zeile für Zeile <span class="chip">5 Minuten</span></h2>
+    <p>Mia verfolgt ihr Taschengeld. <strong>Überleg:</strong> Welchen Wert hat <em>Geld</em> nach jedem Block? Trag nur die Zahlen ein.</p>
+    <div class="script-row">
+      <figure><div data-script='["flag",["setvar","Geld",10],["changevar","Geld",5],["changevar","Geld",-8],["changevar","Geld",4]]' data-small></div></figure>
+      <div style="flex:1;min-width:240px">
+        <div class="tbl-scroll"><table class="plain wt" id="wt1"></table></div>
+        <p><button type="button" class="btn" id="pruef1">Prüfen</button></p>
+        <p class="fb" id="fb1"></p>
+      </div>
+    </div>
+    <div id="probe1" hidden>
+      <p><strong>Prüf nach:</strong> Klick auf ⚑ Start. Die Bühne schreibt ihre eigene Werte-Tabelle.</p>
+      <div id="b1"></div>
+    </div>
+  </section>
+
+  <!-- 2 · Zwei Variablen -->
+  <section class="card">
+    <h2><span class="step-no">2</span> Zwei Variablen auf einmal <span class="badge basis">Basis</span> <span class="chip">6 Minuten</span></h2>
+    <p>Jetzt gibt es <em>Punkte</em> und <em>Bonus</em>. Achtung: Ein runder Block wie <span data-script='[["var","Bonus"]]' data-small class="sb-inline"></span> liefert den <strong>Wert, den die Variable gerade hat</strong>.</p>
+    <div class="script-row">
+      <figure><div data-script='["flag",["setvar","Punkte",3],["setvar","Bonus",5],["setvar","Punkte",["var","Bonus"]],["changevar","Bonus",["var","Punkte"]]]' data-small></div></figure>
+      <div style="flex:1;min-width:240px">
+        <div class="tbl-scroll"><table class="plain wt" id="wt2"></table></div>
+        <p><button type="button" class="btn" id="pruef2">Prüfen</button></p>
+        <p class="fb" id="fb2"></p>
+      </div>
+    </div>
+    <div id="probe2" hidden><div id="b2"></div></div>
+  </section>
+
+  <!-- 3 · Datentypen -->
+  <section class="card">
+    <h2><span class="step-no">3</span> Zahl, Text oder wahr/falsch? <span class="chip">6 Minuten</span></h2>
+    <p>Werte haben einen <strong>Datentyp</strong>. Mit Zahlen kann man rechnen. Texte kann man verbinden. Und eine Bedingung liefert wahr oder falsch.</p>
+    <p><strong>Überleg:</strong> Was sagt Robo?</p>
+    <div class="wf">
+      <p><strong>a)</strong> <span data-script='[["say",["add",3,4],2]]' data-small class="sb-inline"></span></p>
+      <div class="choices" id="dt1"><button type="button" class="choice">7</button><button type="button" class="choice">34</button><button type="button" class="choice">3 + 4</button></div>
+      <p class="fb" id="fbdt1"></p>
+      <p><strong>b)</strong> <span data-script='[["say",["join",3,4],2]]' data-small class="sb-inline"></span></p>
+      <div class="choices" id="dt2"><button type="button" class="choice">7</button><button type="button" class="choice">34</button><button type="button" class="choice">3 und 4</button></div>
+      <p class="fb" id="fbdt2"></p>
+      <p><strong>c)</strong> <span data-script='[["say",["gt",3,2],2]]' data-small class="sb-inline"></span></p>
+      <div class="choices" id="dt3"><button type="button" class="choice">true</button><button type="button" class="choice">3</button><button type="button" class="choice">1</button></div>
+      <p class="fb" id="fbdt3"></p>
+    </div>
+    <div id="b3"></div>
+    <div class="tbl-scroll"><table class="plain">
+      <tr><th>Datentyp</th><th>Beispiel</th><th>Was man damit macht</th></tr>
+      <tr><td><strong>Zahl</strong></td><td>7 · −3 · 0.5</td><td>rechnen: + − * /</td></tr>
+      <tr><td><strong>Text</strong></td><td>Hallo · Robo · 34</td><td>verbinden, sagen</td></tr>
+      <tr><td><strong>Wahrheitswert</strong></td><td>true · false</td><td>entscheiden: falls, wiederhole bis</td></tr>
+    </table></div>
+  </section>
+
+  <!-- 4 · Lücke -->
+  <section class="card">
+    <h2><span class="step-no">4</span> Robo meldet den Spielstand <span class="badge basis">Basis</span> <span class="chip">5 Minuten</span></h2>
+    <p>Robo soll nicht nur „7“ sagen, sondern <strong>„Punkte: 7“</strong>. Dafür verbindet er einen Text mit dem Wert der Variable.
+      Zieh <em>verbinde</em> in das Feld von <em>sage</em> und die Variable in das zweite Feld von <em>verbinde</em>.</p>
+    <div id="b4"></div>
+  </section>
+
+  <!-- 5 · Fehlerdetektiv -->
+  <section class="card">
+    <h2><span class="step-no">5</span> Fehlerdetektiv 🔍: Der Zähler bleibt bei 1 <span class="badge basis">Basis</span> <span class="chip">5 Minuten</span></h2>
+    <p>Kai will bis 5 zählen. Klick auf ⚑ Start und schau in die Werte-Tabelle unter der Bühne: Robo sagt immer nur 1.</p>
+    <div id="b5"></div>
+    <ol class="howto">
+      <li>Was <strong>soll</strong> in der Tabelle stehen?</li>
+      <li>Was <strong>steht</strong> wirklich da? Welche Zeilen wiederholen sich?</li>
+      <li>Welcher Block steht an der <strong>falschen Stelle</strong>?</li>
+    </ol>
+    <div id="hints5"></div>
+  </section>
+
+  <!-- 6 · Merksatz -->
+  <section class="card">
+    <h2><span class="step-no">6</span> So verfolgst du Variablen <span class="chip">2 Minuten</span></h2>
+    <p class="rule">Geh das Skript <strong>Block für Block</strong> durch und schreib nach jedem Block den Wert auf.<br>
+      <em>setze</em> überschreibt den alten Wert. <em>ändere</em> rechnet mit dem alten Wert weiter.<br>
+      Ein <em>setze</em> in der Schleife fängt in jeder Runde wieder von vorn an.</p>
+  </section>
+
+  <!-- Plus -->
+  <section class="card">
+    <h2><span class="step-no">+</span> 1 + 2 + 3 + … + 10 <span class="badge plus">Plus</span> <span class="chip">für Schnelle</span></h2>
+    <p>Robo soll alle Zahlen von 1 bis 10 zusammenzählen. Dafür braucht er zwei Variablen: <em>Zahl</em> zählt 1, 2, 3 …, <em>Summe</em> sammelt.
+      Schau in die Werte-Tabelle, wenn es nicht klappt.</p>
+    <div id="bplus"></div>
+  </section>
+
+  <section class="card">
+    <h2><span class="step-no">✓</span> Kurz-Check <span class="chip">4 Minuten</span></h2>
+    <div id="quiz"></div>
+  </section>
+
+  <section class="card merke">
+    <h2>Merke</h2>
+    <ul>
+      <li>In einer <strong>Werte-Tabelle</strong> steht nach jedem Block der Wert jeder Variable.</li>
+      <li><em>setze</em> überschreibt, <em>ändere</em> rechnet weiter.</li>
+      <li>Datentypen: <strong>Zahl</strong> (rechnen), <strong>Text</strong> (verbinden), <strong>Wahrheitswert</strong> (true/false).</li>
+      <li>Startwerte gehören <strong>vor</strong> die Schleife.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2><span class="step-no">⚑</span> Jetzt in echt: Scratch <span class="chip">zu Hause oder nächste Stunde</span></h2>
+    <p><a class="btn" href="https://scratch.mit.edu/projects/editor/" target="_blank" rel="noopener">Scratch in neuem Fenster öffnen ↗</a></p>
+    <ol class="howto">
+      <li>Bei <strong>Operatoren</strong> findest du <em>( ) + ( )</em> und <em>verbinde Apfel und Banane</em>. Schreib 3 und 4 in die Felder.</li>
+      <li><strong>Klick einmal auf den Block</strong> (ohne Skript). Scratch zeigt in einer Blase seinen Wert: 7 bzw. 34.</li>
+      <li>Probier auch <em>( ) &gt; (50)</em> mit 3 und 2: Scratch zeigt <strong>true</strong>.</li>
+    </ol>
+  </section>
+
+  <section class="card">
+    <h2><span class="step-no">☑</span> Das kann ich</h2>
+    <ul class="checklist" id="checklist">
+      <li><label><input type="checkbox"> Ich kann eine Werte-Tabelle ausfüllen.</label></li>
+      <li><label><input type="checkbox"> Ich kenne den Unterschied zwischen <em>setze</em> und <em>ändere</em>.</label></li>
+      <li><label><input type="checkbox"> Ich kann die Datentypen Zahl, Text und Wahrheitswert unterscheiden.</label></li>
+      <li><label><input type="checkbox"> Ich finde den Fehler, wenn <em>setze</em> in der Schleife steht.</label></li>
+    </ul>
+  </section>
+
+  <section class="card frei">
+    <h2><span class="step-no">★</span> Freiwillig</h2>
+    <p class="lead">Für alle, die schon fertig sind.</p>
+    <h3 class="sub"><span class="badge ueben">Üben</span> Eine Schleife verfolgen</h3>
+    <p>Trag nach jeder Runde den Wert von <em>Zahl</em> ein.</p>
+    <div class="script-row">
+      <figure><div data-script='["flag",["setvar","Zahl",1],["repeat",4,[["changevar","Zahl",["var","Zahl"]]]]]' data-small></div></figure>
+      <div style="flex:1;min-width:240px">
+        <div class="tbl-scroll"><table class="plain wt" id="wt3"></table></div>
+        <p><button type="button" class="btn" id="pruef3">Prüfen</button></p>
+        <p class="fb" id="fb3"></p>
+      </div>
+    </div>
+    <h3 class="sub"><span class="badge expedition">★ Expedition</span> Ein Text, der rechnet</h3>
+    <p><strong>Überleg:</strong> Was sagt Robo? <span data-script='[["say",["add",["join",3,4],1],2]]' data-small class="sb-inline"></span></p>
+    <div class="choices" id="predExp"><button type="button" class="choice">35</button><button type="button" class="choice">8</button><button type="button" class="choice">341</button></div>
+    <p class="fb" id="fbExp"></p>
+  </section>
+
+  <nav class="pager">
+    <a href="05-variable.html">← Lektion 5: Die Variable</a>
+    <a href="07-struktogramm.html">Lektion 7: Struktogramm und Skript →</a>
+  </nav>
+</main>
+
+<footer>
+  <div class="wrap t">Lernmaterial von <a href="https://herrseibert.de">herrseibert.de</a> · Lizenz <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.de">CC BY-SA 4.0</a> · ohne Tracking, ohne Cookies<br>Erstellt von der KI Claude von Anthropic.</div>
+  <div class="wrap t gh">Fehler gefunden oder eine Idee? → <a href="https://github.com/baumlaube/scratch-course">Kurs auf GitHub</a></div>
+  <div class="wrap t gh">Scratch ist ein Projekt der Scratch Foundation. Dieser Kurs ist kein offizielles Angebot der Scratch Foundation.</div>
+  <div class="wrap legal"><a href="../impressum.html">Impressum</a> · <a href="../datenschutz.html">Datenschutz</a></div>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const { pick, quiz, hints, checklist } = window.Kurs;
+  const B = window.Buehne;
+  const $ = (id) => document.getElementById(id);
+  const sm = (s) => B.render(s, { small: true });
+  function where(list, op, pred, path = []) {
+    for (const n of list) {
+      if (n.op === op && (!pred || pred(n))) return path;
+      const r = (n.body && where(n.body, op, pred, path.concat(n.op))) || (n.body2 && where(n.body2, op, pred, path.concat(n.op + ":sonst")));
+      if (r) return r;
+    }
+    return null;
+  }
+  const zeig = (el, text, gut) => { el.className = "fb show " + (gut ? "ok" : "hint"); el.innerHTML = text; };
+
+  /** Werte-Tabelle zum Ausfüllen: zeilen = [[Blocktext, Wert je Variable …]]; Wert {fest: v} wird nur gezeigt */
+  function wertetabelle(id, vars, zeilen, knopf, fb, tipps, fertig) {
+    const t = $(id);
+    t.innerHTML = `<tr><th>Block</th>${vars.map((v) => `<th>${v}</th>`).join("")}</tr>`
+      + zeilen.map(([txt, ...w], i) => `<tr><td>${txt}</td>${w.map((x, j) => `<td>${x && x.fest !== undefined ? `<strong>${x.fest}</strong>`
+        : `<input inputmode="numeric" autocomplete="off" data-i="${i}" data-j="${j}" aria-label="${vars[j]} nach Zeile ${i + 1}">`}</td>`).join("")}</tr>`).join("");
+    $(knopf).addEventListener("click", () => {
+      let falsch = 0, erst = null;
+      t.querySelectorAll("input").forEach((inp) => {
+        const soll = zeilen[+inp.dataset.i][+inp.dataset.j + 1];
+        const gut = Number(inp.value.replace(",", ".").replace("−", "-")) === soll && inp.value.trim() !== "";
+        inp.classList.toggle("richtig", gut); inp.classList.toggle("falsch", !gut);
+        if (!gut) { falsch++; if (erst === null) erst = +inp.dataset.i; }
+      });
+      if (!falsch) zeig($(fb), "✔ Alles richtig! Prüf es auf der Bühne nach.", true);
+      else zeig($(fb), `Noch ${falsch} Feld${falsch === 1 ? "" : "er"} falsch (rot). ${tipps(erst)}`, false);
+      if (fertig) fertig(!falsch);
+    });
+  }
+
+  /* Weißt du noch? */
+  quiz($("wdh"), [
+    { q: "Welchen Wert hat <em>Punkte</em> danach?", html: sm([["setvar", "Punkte", 4], ["changevar", "Punkte", 3]]),
+      options: ["7", "3", "4"], right: 0,
+      miss: [null, "<em>ändere</em> zählt zum alten Wert dazu.", "Der zweite Block ändert den Wert noch."],
+      why: "4 + 3 = 7." },
+    { q: "Wo gehört der Startwert <em>setze Punkte auf 0</em> hin?", options: ["unter die Flagge", "unter <em>Wenn diese Figur angeklickt wird</em>", "ans Ende des Skripts"], right: 0,
+      miss: [null, "Dann fängt jedes Antippen wieder bei 0 an.", "Am Ende ist es zu spät – gezählt wird ja vorher."],
+      why: "Der Startwert gehört ganz an den Anfang, unter die Flagge." },
+  ]);
+
+  /* 1 · Taschengeld */
+  const b1 = B.create($("b1"), { mode: "lesen", wertetabelle: true, variablen: { Geld: 0 }, start: { x: 0, y: 0, dir: 90 },
+    script: ["flag", ["setvar", "Geld", 10], ["changevar", "Geld", 5], ["changevar", "Geld", -8], ["changevar", "Geld", 4]] });
+  wertetabelle("wt1", ["Geld"], [["setze Geld auf 10", 10], ["ändere Geld um 5", 15], ["ändere Geld um −8", 7], ["ändere Geld um 4", 11]], "pruef1", "fb1",
+    (i) => (i === 2 ? "−8 heißt: 8 weniger." : i === 0 ? "<em>setze</em> legt den Wert genau fest." : "Rechne immer mit dem Wert aus der Zeile darüber."),
+    () => { $("probe1").hidden = false; b1.el.dispatchEvent(new Event("resize")); });
+
+  /* 2 · Zwei Variablen */
+  const b2 = B.create($("b2"), { mode: "lesen", wertetabelle: true, variablen: { Punkte: 0, Bonus: 0 }, start: { x: 0, y: 0, dir: 90 },
+    script: ["flag", ["setvar", "Punkte", 3], ["setvar", "Bonus", 5], ["setvar", "Punkte", ["var", "Bonus"]], ["changevar", "Bonus", ["var", "Punkte"]]] });
+  wertetabelle("wt2", ["Punkte", "Bonus"], [["setze Punkte auf 3", 3, { fest: 0 }], ["setze Bonus auf 5", 3, 5], ["setze Punkte auf (Bonus)", 5, 5], ["ändere Bonus um (Punkte)", 5, 10]], "pruef2", "fb2",
+    (i) => (i === 2 ? "(Bonus) liefert den Wert, den Bonus gerade hat: 5. Punkte wird überschrieben." : i === 3 ? "(Punkte) ist jetzt 5. Bonus bekommt 5 dazu." : "Eine Variable behält ihren Wert, bis ein Block sie ändert."),
+    () => { $("probe2").hidden = false; b2.el.dispatchEvent(new Event("resize")); });
+
+  /* 3 · Datentypen */
+  pick($("dt1"), { right: 0, fb: $("fbdt1"), miss: [null, "Das wäre <em>verbinde</em>. Das Plus rechnet.", "Scratch rechnet das Ergebnis aus."], why: "Zahl + Zahl wird gerechnet: 7." });
+  pick($("dt2"), { right: 1, fb: $("fbdt2"), miss: ["<em>verbinde</em> rechnet nicht. Es hängt die Texte aneinander.", null, "Das Wort „und“ gehört zum Block, nicht zum Ergebnis."], why: "<em>verbinde</em> hängt Texte aneinander: 3 und 4 ergibt 34." });
+  pick($("dt3"), { right: 0, fb: $("fbdt3"), miss: [null, "Das Sechseck liefert keine Zahl, sondern einen Wahrheitswert.", "Scratch zeigt kein 1, sondern das englische Wort für wahr."], why: "3 > 2 ist wahr. Scratch schreibt dafür <strong>true</strong> (englisch für wahr), sonst <strong>false</strong>." });
+  B.create($("b3"), { mode: "lesen", start: { x: 0, y: 0, dir: 90 }, script: ["flag", ["say", ["add", 3, 4], 1.5], ["say", ["join", 3, 4], 1.5], ["say", ["gt", 3, 2], 1.5]] });
+
+  /* 4 · Spielstand mit verbinde */
+  B.create($("b4"), { mode: "puzzle", variablen: { Punkte: 0 }, start: { x: 0, y: 0, dir: 90 },
+    script: ["!flag", ["!setvar", "Punkte", 7], ["!say", "?", 2]], palette: [["join", "Punkte: ", ""], ["var", "Punkte"]],
+    check(tr) {
+      const s = tr.says[0];
+      if (s === "Punkte: 7") return true;
+      if (s === "7") return "Fast! Robo sagt nur 7. Zuerst gehört <em>verbinde</em> in das Feld von <em>sage</em> – die Variable dann in <em>verbinde</em>.";
+      if (s === "Punkte: ") return "Robo sagt „Punkte:“ – aber ohne Zahl. Zieh die Variable in das zweite Feld von <em>verbinde</em>.";
+      return "Noch nicht. Robo soll „Punkte: 7“ sagen.";
+    },
+    ok: "✔ „Punkte: 7“ – ein Text und ein Zahlenwert, verbunden zu einem Text." });
+
+  /* 5 · Fehlerdetektiv: setze in der Schleife */
+  B.create($("b5"), { mode: "frei", wertetabelle: true, variablen: { Sterne: 0 }, start: { x: 0, y: 0, dir: 90 },
+    script: ["!flag", ["!repeat", 5, [["setvar", "Sterne", 0], ["!changevar", "Sterne", 1], ["!say", ["!var", "Sterne"], 0.5]]]],
+    check(tr) {
+      const w = where(tr.script, "setvar");
+      if (w && w.includes("repeat")) return "In der Tabelle wechseln sich 0 und 1 ab: <em>setze</em> fängt in jeder Runde wieder bei 0 an.";
+      if (!w) return "Jetzt fehlt der Startwert ganz. Beim nächsten ⚑ zählt Robo einfach weiter.";
+      return tr.vars.Sterne === 5 && tr.says.join() === "1,2,3,4,5" ? true : "Noch nicht. Schau in die Werte-Tabelle.";
+    },
+    ok: "✔ Fall gelöst! Der Startwert steht jetzt vor der Schleife: 1, 2, 3, 4, 5." });
+  hints($("hints5"), [
+    "Lies die Werte-Tabelle: Was passiert mit Sterne am Anfang jeder Runde?",
+    "Lösung: Zieh <em>setze Sterne auf 0</em> aus der Schleife heraus und häng es direkt unter die Flagge – <strong>vor</strong> die Schleife.",
+  ]);
+
+  /* Plus · Summe */
+  B.create($("bplus"), { mode: "puzzle", wertetabelle: true, echtzeit: true, variablen: { Summe: 0, Zahl: 0 }, start: { x: 0, y: 0, dir: 90 }, script: ["!flag"],
+    palette: [["setvar", "Summe", 0], ["setvar", "Zahl", 1], ["repeat", 10], ["changevar", "Summe", ["var", "Zahl"]], ["changevar", "Zahl", 1], ["say", ["var", "Summe"], 2]],
+    check(tr) {
+      if (tr.says[0] === "55") return true;
+      const ws = where(tr.script, "setvar");
+      if (ws && ws.includes("repeat")) return "Ein <em>setze</em> steht in der Schleife. Startwerte gehören davor.";
+      if ((where(tr.script, "say") || []).includes("repeat")) return "Robo sagt die Summe in jeder Runde. Sie soll erst am Ende kommen – unter der Schleife.";
+      return `Robo sagt ${tr.says[0] || "nichts"}. Die Summe von 1 bis 10 ist 55. Schau in die Werte-Tabelle.`;
+    },
+    ok: "✔ 55! Zahl zählt 1 bis 10, Summe sammelt alles ein." });
+
+  /* Kurz-Check */
+  quiz($("quiz"), [
+    { q: "Welchen Wert hat <em>Zeit</em> danach?", html: sm([["setvar", "Zeit", 2], ["setvar", "Zeit", 5]]), options: ["5", "7", "2"], right: 0,
+      miss: [null, "<em>setze</em> rechnet nicht dazu – es überschreibt.", "Der zweite Block überschreibt die 2."],
+      why: "<em>setze</em> überschreibt: Zeit = 5." },
+    { q: "Welchen Datentyp hat der Wert <strong>Hallo</strong>?", options: ["Text", "Zahl", "Wahrheitswert"], right: 0,
+      miss: [null, "Mit „Hallo“ kann man nicht rechnen.", "Ein Wahrheitswert ist nur true oder false."],
+      why: "Buchstaben und Zeichen sind Text." },
+    { q: "Was sagt Robo?", html: sm([["say", ["join", "Robo", 7], 2]]), options: ["Robo7", "Robo 7", "14"], right: 0,
+      miss: [null, "<em>verbinde</em> fügt kein Leerzeichen ein – das müsste im Text stehen.", "Mit Text kann man nicht rechnen. Hier wird nur angehängt."],
+      why: "<em>verbinde</em> hängt direkt an: Robo7." },
+    { q: "Startwert x = 0. Welchen Wert hat x nach der <strong>2.</strong> Runde?", html: sm([["repeat", 3, [["changevar", "x", 2]]]]), options: ["4", "2", "6"], right: 0,
+      miss: [null, "Das ist der Wert nach der 1. Runde.", "Das ist der Wert nach der 3. Runde."],
+      why: "Runde 1: 2. Runde 2: 4. Runde 3: 6." },
+  ]);
+
+  /* Freiwillig */
+  wertetabelle("wt3", ["Zahl"], [["setze Zahl auf 1", 1], ["Runde 1: ändere Zahl um (Zahl)", 2], ["Runde 2", 4], ["Runde 3", 8], ["Runde 4", 16]], "pruef3", "fb3",
+    () => "<em>ändere Zahl um (Zahl)</em> heißt: Zahl kommt noch einmal dazu – der Wert verdoppelt sich.");
+  pick($("predExp"), { right: 0, fb: $("fbExp"),
+    miss: [null, "Erst wird verbunden: 3 und 4 ergibt 34. Dann kommt 1 dazu.", "Das Plus rechnet – es hängt nicht an."],
+    why: "verbinde 3 und 4 ergibt den Text 34. Weil darin nur Ziffern stehen, kann Scratch damit rechnen: 34 + 1 = 35." });
+
+  checklist($("checklist"), "k7-06");
+});
+</script>
+</body>
+</html>

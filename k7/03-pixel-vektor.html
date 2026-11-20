@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pixel oder Vektor? · Scratch-Kurs Klasse 7</title>
+<meta name="description" content="Lektion 3 im Scratch-Lernpfad Klasse 7: Pixel- und Vektorgrafik vergleichen, Robo im Malprogramm von Scratch umfärben und Kostüme per Programm wechseln.">
+<link rel="canonical" href="https://scratch.herrseibert.de/k7/03-pixel-vektor.html">
+<!-- vorschau -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Scratch-Kurs">
+<meta property="og:locale" content="de_DE">
+<meta property="og:url" content="https://scratch.herrseibert.de/k7/03-pixel-vektor.html">
+<meta property="og:title" content="Pixel oder Vektor? · Scratch-Kurs Klasse 7">
+<meta property="og:description" content="Lektion 3 im Scratch-Lernpfad Klasse 7: Pixel- und Vektorgrafik vergleichen, Robo im Malprogramm von Scratch umfärben und Kostüme per Programm wechseln.">
+<meta property="og:image" content="https://scratch.herrseibert.de/vorschau.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Scratch-Kurs – Programmieren lernen Schritt für Schritt, mit Übungsbühne">
+<meta name="twitter:card" content="summary_large_image">
+<!-- /vorschau -->
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="stylesheet" href="../assets/kurs.css?v=48917f175f">
+<link rel="stylesheet" href="../assets/buehne.css?v=811a9f4f75">
+<script src="../assets/i18n.js?v=4588e8929d" data-page="k7-03-pixel-vektor" data-langs="de"></script>
+<script src="../assets/kurs.js?v=9e315750a5"></script>
+<script src="../assets/buehne.js?v=a89a39db39"></script>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><img class="logo" src="../favicon.svg" alt="" width="34" height="34"> Scratch-Kurs <span>· Programmieren lernen</span></a>
+    <span class="spacer"></span>
+    <button class="theme-btn" type="button" aria-label="Hell oder dunkel umschalten">◐ Hell/Dunkel</button>
+  </div>
+</header>
+
+<main class="wrap">
+  <nav class="path" aria-label="Lernpfad Klasse 7">
+    <strong class="t">Klasse 7:</strong>
+    <ol>
+      <li class="done"><a href="01-start-check.html" title="1 · Start-Check">1</a></li>
+      <li class="done"><a href="02-objekte.html" title="2 · Robo ist ein Objekt">2</a></li>
+      <li class="now"><span title="3 · Pixel oder Vektor?" aria-current="step">3</span></li>
+      <li class="done"><a href="04-kostueme.html" title="4 · Bewegung durch Kostüme">4</a></li>
+      <li class="done"><a href="05-variable.html" title="5 · Die Variable">5</a></li>
+      <li class="done"><a href="06-variablen-verfolgen.html" title="6 · Variablen verfolgen">6</a></li>
+      <li class="done"><a href="07-struktogramm.html" title="7 · Struktogramm und Skript">7</a></li>
+      <li class="done"><a href="08-robo-fang.html" title="8 · Projekt: Robo-Fang">8</a></li>
+    </ol>
+  </nav>
+
+  <section class="hero">
+    <h1>Pixel oder Vektor?</h1>
+    <div class="meta">
+      <span class="chip">Klasse 7 · Lektion 3</span>
+      <span class="chip">⏱ ca. 35 Minuten</span>
+    </div>
+    <ul class="goals">
+      <li>Ich erkenne den Unterschied zwischen Pixelgrafik und Vektorgrafik.</li>
+      <li>Ich färbe Robo im Malprogramm von Scratch um – im Vektormodus.</li>
+      <li>Ich lasse Robo per Programm sein Kostüm wechseln.</li>
+    </ul>
+  </section>
+
+  <details class="card woerter">
+    <summary>📖 Wörter für diese Lektion</summary>
+    <p class="note">Die Scratch-Wörter bleiben deutsch – so heißen sie in Scratch.</p>
+    <div class="tbl-scroll"><table class="plain">
+      <tr><th class="wort">das Pixel <small>die Pixel</small></th><td>Ein winziges, einfarbiges Quadrat. Viele Pixel ergeben ein Bild.</td></tr>
+      <tr><th class="wort">die Pixelgrafik <small>die Pixelgrafiken</small></th><td>Ein Bild aus Pixeln. In Scratch heißt das <strong>Rastergrafik</strong>.</td></tr>
+      <tr><th class="wort">die Vektorgrafik <small>die Vektorgrafiken</small></th><td>Ein Bild aus Formen (Rechteck, Kreis, Linie). Jede Form hat Attribute.</td></tr>
+      <tr><th class="wort">die Füllfarbe <small>die Füllfarben</small></th><td>Die Farbe innen in einer Form.</td></tr>
+      <tr><th class="wort">der Rand <small>die Ränder</small></th><td>Die Linie außen um eine Form. In Scratch: <strong>Randfarbe</strong> und Randbreite.</td></tr>
+      <tr><th class="wort">das Kostüm <small>die Kostüme</small></th><td>Ein Bild der Figur. Eine Figur kann mehrere Kostüme haben.</td></tr>
+    </table></div>
+  </details>
+
+  <section class="card wdh">
+    <h2><span class="step-no">↺</span> Weißt du noch? <span class="chip">2 Minuten</span></h2>
+    <div id="wdh"></div>
+  </section>
+
+  <!-- 1 · Zoom -->
+  <section class="card">
+    <h2><span class="step-no">1</span> Ganz nah heran <span class="chip">6 Minuten</span></h2>
+    <p>Hier ist Robo zweimal: links als <strong>Pixelgrafik</strong>, rechts als <strong>Vektorgrafik</strong>. Beide sehen gleich aus.</p>
+    <p><strong>Überleg:</strong> Was passiert, wenn du ganz nah an Robos Auge heranzoomst?</p>
+    <div class="choices" id="pred1">
+      <button type="button" class="choice">Beide bleiben scharf.</button>
+      <button type="button" class="choice">Das Pixelbild wird treppig, das Vektorbild bleibt scharf.</button>
+      <button type="button" class="choice">Das Vektorbild wird treppig, das Pixelbild bleibt scharf.</button>
+    </div>
+    <p class="fb" id="fb1"></p>
+    <div id="zoom" hidden>
+      <p><strong>Probier aus:</strong> Schieb den Regler nach rechts.</p>
+      <div class="zoom-paar">
+        <figure><canvas id="zPixel" width="400" height="400" aria-label="Robo als Pixelgrafik, vergrößert"></canvas><figcaption>Pixelgrafik (Rastergrafik)</figcaption></figure>
+        <figure><canvas id="zVektor" width="400" height="400" aria-label="Robo als Vektorgrafik, vergrößert"></canvas><figcaption>Vektorgrafik</figcaption></figure>
+      </div>
+      <p><label for="zRegler"><strong>Zoom:</strong> <span id="zWert">1×</span></label><br>
+        <input type="range" id="zRegler" min="1" max="8" step="0.5" value="1" style="width:100%;max-width:420px"></p>
+      <p class="rule">Eine <strong>Pixelgrafik</strong> speichert für jedes Pixel eine Farbe. Vergrößert man sie, werden die Pixel sichtbar: Das Bild wird <strong>treppig</strong>.<br>
+        Eine <strong>Vektorgrafik</strong> speichert Formen. Der Computer zeichnet sie bei jeder Größe neu: Sie bleibt <strong>scharf</strong>.</p>
+    </div>
+  </section>
+
+  <!-- 2 · Formen haben Attribute -->
+  <section class="card">
+    <h2><span class="step-no">2</span> Formen sind Objekte <span class="chip">3 Minuten</span></h2>
+    <p>In einer Vektorgrafik ist jede Form ein <strong>Objekt</strong> mit Attributen. So sieht Robos Kopf als Objektkarte aus:</p>
+    <div class="script-row">
+      <div class="objektkarte" aria-label="Objektkarte kopf vom Typ Rechteck">
+        <div class="ok-kopf"><span>kopf : Rechteck</span></div>
+        <div class="ok-attr">Breite = 44<br>Höhe = 36<br>Ecken = abgerundet<br>Füllfarbe = orange<br>Randfarbe = dunkelblau<br>Randbreite = 3</div>
+      </div>
+      <div style="flex:1;min-width:220px">
+        <p><strong>Überleg:</strong> Robos Kopf soll blau werden. Was musst du in der Vektorgrafik ändern?</p>
+        <div class="choices" id="pred2">
+          <button type="button" class="choice">nur den Wert von Füllfarbe</button>
+          <button type="button" class="choice">jedes orange Pixel einzeln</button>
+          <button type="button" class="choice">Breite und Höhe</button>
+        </div>
+        <p class="fb" id="fb2"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 · In Scratch umfärben -->
+  <section class="card">
+    <h2><span class="step-no">3</span> Robo umfärben – im echten Scratch <span class="badge basis">Basis</span> <span class="chip">9 Minuten</span></h2>
+    <p>Lade dir Robo herunter. Dann bekommt Robo in Scratch ein zweites Kostüm in einer neuen Farbe.</p>
+    <p><a class="btn" href="../downloads/Robo.sprite3" download>⬇ Robo.sprite3 herunterladen</a>
+      <a class="btn secondary" href="https://scratch.mit.edu/projects/editor/" target="_blank" rel="noopener">Scratch in neuem Fenster öffnen ↗</a></p>
+    <ol class="howto">
+      <li>Unten rechts ist der Knopf mit der Katze (<strong>Figur wählen</strong>). Zeig mit der Maus darauf (am iPad: antippen) und wähl ganz oben <strong>Figur hochladen</strong>. Such <strong>Robo.sprite3</strong> in deinen Downloads.</li>
+      <li>Robo ist jetzt eine Figur. Klick oben links auf den Reiter <strong>Kostüme</strong>. Unten steht <strong>In Rastergrafik umwandeln</strong> – das heißt: Robo ist gerade eine <strong>Vektorgrafik</strong>.</li>
+      <li>Rechtsklick auf das Kostüm <strong>Robo-a</strong> (am iPad: lange drücken) → <strong>Duplizieren</strong>. Gib dem neuen Kostüm oben den Namen <strong>blau</strong>.</li>
+      <li>Nimm das Werkzeug <strong>Auswählen</strong> (Pfeil) und klick auf Robos Kopf. Wähl oben bei <strong>Füllfarbe</strong> ein Blau. Nur der Kopf wird blau – es ist ja eine Form.</li>
+      <li>Probier zum Vergleich: <strong>In Rastergrafik umwandeln</strong> und mit der Lupe (+) ganz nah heran. Siehst du die Treppen? Mit <strong>Rückgängig</strong> (↶) wird Robo wieder eine Vektorgrafik.</li>
+    </ol>
+    <p class="note">Kein Scratch zur Hand? Dann mach gleich mit Schritt 4 weiter. Den Download brauchst du in Lektion 4 und 8 wieder.</p>
+  </section>
+
+  <!-- 4 · Kostüm per Programm -->
+  <section class="card">
+    <h2><span class="step-no">4</span> Antippen färbt um <span class="badge basis">Basis</span> <span class="chip">5 Minuten</span></h2>
+    <p>Robo hat hier zwei Kostüme: <strong>blau</strong> und <strong>rot</strong>. Tippst du Robo an, wird er rot. Drückst du die Leertaste, wird er wieder blau. Bau zwei Skripte.</p>
+    <div id="b4"></div>
+    <p class="note">Ein Startblock, der unter das letzte Skript gezogen wird, beginnt ein neues Skript. Danach: Robo antippen und die Leertaste (oder den Knopf) drücken.</p>
+  </section>
+
+  <!-- 5 · Fehlerdetektiv -->
+  <section class="card">
+    <h2><span class="step-no">5</span> Fehlerdetektiv 🔍: Die Ampel hängt <span class="badge basis">Basis</span> <span class="chip">4 Minuten</span></h2>
+    <p>Kais Robo hat drei Kostüme: rot, gelb, grün. Bei jedem Antippen soll er zur nächsten Farbe wechseln. Tipp Robo ein paar Mal an: Er bleibt gelb.</p>
+    <div id="b5"></div>
+    <div id="hints5"></div>
+  </section>
+
+  <!-- 6 · Merksatz -->
+  <section class="card">
+    <h2><span class="step-no">6</span> Pixel und Vektor im Vergleich <span class="chip">2 Minuten</span></h2>
+    <div class="tbl-scroll"><table class="plain">
+      <tr><th></th><th>Pixelgrafik (Rastergrafik)</th><th>Vektorgrafik</th></tr>
+      <tr><th>besteht aus</th><td>vielen Pixeln</td><td>Formen mit Attributen</td></tr>
+      <tr><th>vergrößert</th><td>treppig</td><td>scharf</td></tr>
+      <tr><th>gut für</th><td>Fotos, weiche Übergänge</td><td>Figuren, Logos, Schrift</td></tr>
+      <tr><th>umfärben</th><td>viele Pixel ändern</td><td>einen Attributwert ändern</td></tr>
+    </table></div>
+  </section>
+
+  <!-- Plus -->
+  <section class="card">
+    <h2><span class="step-no">+</span> Ein Knopf für beides <span class="badge plus">Plus</span> <span class="chip">für Schnelle</span></h2>
+    <p>Jetzt soll <strong>jedes</strong> Antippen die Farbe wechseln: blau → rot → blau … Nimm <em>falls … sonst</em> und frag nach dem Attribut <em>Kostüm Nummer</em>:
+      Ist es 1 (blau), dann wechsle zu rot – sonst zu blau.</p>
+    <div id="bplus"></div>
+  </section>
+
+  <section class="card">
+    <h2><span class="step-no">✓</span> Kurz-Check <span class="chip">4 Minuten</span></h2>
+    <div id="quiz"></div>
+  </section>
+
+  <section class="card merke">
+    <h2>Merke</h2>
+    <ul>
+      <li>Eine <strong>Pixelgrafik</strong> besteht aus Pixeln. Vergrößert wird sie treppig.</li>
+      <li>Eine <strong>Vektorgrafik</strong> besteht aus Formen. Sie bleibt bei jeder Größe scharf.</li>
+      <li>Jede Form ist ein Objekt mit Attributen wie Füllfarbe, Randfarbe und Randbreite.</li>
+      <li><em>wechsle zu Kostüm</em> ändert das Attribut Kostüm einer Figur.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2><span class="step-no">⚑</span> Jetzt in echt: Scratch <span class="chip">zu Hause oder nächste Stunde</span></h2>
+    <p><a class="btn" href="https://scratch.mit.edu/projects/editor/" target="_blank" rel="noopener">Scratch in neuem Fenster öffnen ↗</a></p>
+    <ol class="howto">
+      <li>Nimm deinen Robo mit dem Kostüm <strong>blau</strong> aus Schritt 3. Klick auf den Reiter <strong>Skripte</strong>.</li>
+      <li>Bau: <em>Wenn diese Figur angeklickt wird</em> → <em>wechsle zu Kostüm blau</em> und <em>Wenn Taste Leertaste gedrückt wird</em> → <em>wechsle zu Kostüm Robo-a</em>.</li>
+      <li>Klick auf Robo, dann drück die Leertaste. 💾 Speichern: <strong>Datei → Auf deinem Computer speichern</strong>.</li>
+    </ol>
+  </section>
+
+  <section class="card">
+    <h2><span class="step-no">☑</span> Das kann ich</h2>
+    <ul class="checklist" id="checklist">
+      <li><label><input type="checkbox"> Ich kann den Unterschied zwischen Pixel- und Vektorgrafik erklären.</label></li>
+      <li><label><input type="checkbox"> Ich habe Robo in Scratch hochgeladen und ein Kostüm umgefärbt.</label></li>
+      <li><label><input type="checkbox"> Ich kann mit <em>wechsle zu Kostüm</em> und <em>wechsle zum nächsten Kostüm</em> umgehen.</label></li>
+    </ul>
+  </section>
+
+  <section class="card frei">
+    <h2><span class="step-no">★</span> Freiwillig</h2>
+    <p class="lead">Für alle, die schon fertig sind.</p>
+    <h3 class="sub"><span class="badge ueben">Üben</span> Mein Farb-Robo in Scratch</h3>
+    <p>Mach in Scratch noch mehr Kostüme: grün, lila, gestreift … Ändere auch die <strong>Randfarbe</strong> und die <strong>Randbreite</strong> (die Zahl daneben). Lass Robo dann bei jedem Klick das nächste Kostüm anziehen.</p>
+    <h3 class="sub"><span class="badge expedition">★ Expedition</span> Pixel zählen</h3>
+    <p>Ein Bild ist 480 Pixel breit und 360 Pixel hoch – so groß wie die Scratch-Bühne. <strong>Überleg:</strong> Wie viele Pixel hat das Bild?</p>
+    <div class="choices" id="predExp">
+      <button type="button" class="choice">840</button>
+      <button type="button" class="choice">172 800</button>
+      <button type="button" class="choice">48 360</button>
+    </div>
+    <p class="fb" id="fbExp"></p>
+  </section>
+
+  <details class="card">
+    <summary><strong>Für Lehrkräfte</strong></summary>
+    <p><strong>Download:</strong> <a href="../downloads/Robo.sprite3" download>Robo.sprite3</a> – die Figur Robo mit zwei Vektor-Kostümen (Robo-a, Robo-b).
+      Sie wird in Scratch über <strong>Figur wählen → Figur hochladen</strong> geladen, nicht über „Datei“. Am iPad landet sie nach dem Herunterladen in der App <strong>Dateien</strong>.</p>
+  </details>
+
+  <nav class="pager">
+    <a href="02-objekte.html">← Lektion 2: Robo ist ein Objekt</a>
+    <a href="04-kostueme.html">Lektion 4: Bewegung durch Kostüme →</a>
+  </nav>
+</main>
+
+<footer>
+  <div class="wrap t">Lernmaterial von <a href="https://herrseibert.de">herrseibert.de</a> · Lizenz <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.de">CC BY-SA 4.0</a> · ohne Tracking, ohne Cookies<br>Erstellt von der KI Claude von Anthropic.</div>
+  <div class="wrap t gh">Fehler gefunden oder eine Idee? → <a href="https://github.com/baumlaube/scratch-course">Kurs auf GitHub</a></div>
+  <div class="wrap t gh">Scratch ist ein Projekt der Scratch Foundation. Dieser Kurs ist kein offizielles Angebot der Scratch Foundation.</div>
+  <div class="wrap legal"><a href="../impressum.html">Impressum</a> · <a href="../datenschutz.html">Datenschutz</a></div>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const { pick, quiz, hints, checklist } = window.Kurs;
+  const B = window.Buehne;
+  const $ = (id) => document.getElementById(id);
+  const sm = (s) => B.render(s, { small: true });
+  const allOps = (list, op, out = []) => { list.forEach((n) => { if (n.op === op) out.push(n); [n.body, n.body2].forEach((b) => b && allOps(b, op, out)); }); return out; };
+
+  /* Weißt du noch? */
+  quiz($("wdh"), [
+    { q: "Was ist ein <strong>Attribut</strong> von Robo?", options: ["Größe", sm([["hide"]]), sm([["move", 10]])], right: 0,
+      miss: [null, "<em>verstecke dich</em> ist eine Methode – etwas, das Robo tut.", "<em>gehe</em> ist eine Methode. Sie ändert das Attribut x oder y."],
+      why: "Attribute sind Eigenschaften: x, y, Richtung, Größe, Kostüm, sichtbar." },
+    { q: "Warum setzt man am Anfang <em>setze Größe auf 100 %</em>?",
+      options: ["Damit Robo bei jedem Start gleich groß anfängt.", "Weil Robo sonst nicht startet.", "Damit Robo schneller wird."], right: 0,
+      miss: [null, "Gestartet wird mit dem Startblock. Die Größe hat damit nichts zu tun.", "Die Größe ändert nicht das Tempo."],
+      why: "Scratch merkt sich Werte. Der Startwert sorgt für einen festen Anfang." },
+  ]);
+
+  /* 1 · Zoom: Pixel gegen Vektor */
+  const img = new Image(), off = document.createElement("canvas");
+  off.width = off.height = 48;                                  // die Pixelgrafik: 48 × 48 Pixel
+  img.onload = () => { off.getContext("2d").drawImage(img, 0, 0, 48, 48); zeichne(); };
+  img.src = "data:image/svg+xml;charset=utf-8," + encodeURIComponent(B.robo(0));
+  function zeichne() {
+    const z = Number($("zRegler").value), k = 400 / 80 * z;      // Bildpunkte pro Robo-Einheit (Leinwand 400 px)
+    const cx = 40 + 5 * (z - 1) / 7, cy = 40 - 6 * (z - 1) / 7;  // beim Heranzoomen wandert die Mitte zum Auge
+    $("zWert").textContent = z + "×";
+    [["zPixel", off, 48], ["zVektor", img, 80]].forEach(([id, src, n]) => {
+      const c = $(id), ctx = c.getContext("2d");
+      ctx.imageSmoothingEnabled = false;
+      ctx.fillStyle = "#fff"; ctx.fillRect(0, 0, 400, 400);
+      if (src === off) ctx.drawImage(off, 0, 0, n, n, 200 - cx * k, 200 - cy * k, 80 * k, 80 * k);
+      else ctx.drawImage(img, 200 - cx * k, 200 - cy * k, 80 * k, 80 * k);
+    });
+  }
+  $("zRegler").addEventListener("input", zeichne);
+  pick($("pred1"), { right: 1, fb: $("fb1"),
+    miss: ["Probier es gleich aus – ein Bild wird beim Heranzoomen treppig.", null, "Umgekehrt: Das Bild aus Pixeln zeigt beim Vergrößern seine Pixel."],
+    why: "Das Pixelbild hat nur eine feste Zahl von Pixeln. Vergrößert sieht man sie als Treppen.",
+    onDone() { $("zoom").hidden = false; zeichne(); } });
+
+  /* 2 · Form als Objekt */
+  pick($("pred2"), { right: 0, fb: $("fb2"),
+    miss: [null, "So wäre es bei einer Pixelgrafik. In der Vektorgrafik ist der Kopf <strong>eine</strong> Form.", "Breite und Höhe ändern die Form, nicht die Farbe."],
+    why: "Der Kopf ist ein Objekt. Ein einziger Attributwert ändert sich: Füllfarbe = blau." });
+
+  /* 4 · Kostüm per Antippen und Taste */
+  const BLAU_ROT = [{ name: "blau", pose: 0, farbe: "#4c97ff" }, { name: "rot", pose: 0, farbe: "#e5484d" }];
+  let gesehen = { rot: false };
+  B.create($("b4"), { mode: "puzzle", kostueme: BLAU_ROT, figur: true, start: { x: 0, y: 0, dir: 90 }, script: [],
+    palette: [["click"], ["key", "leertaste"], ["costumeto", "rot"], ["costumeto", "blau"]],
+    onChange() { gesehen = { rot: false }; },
+    check(tr) {
+      if (tr.anlass === "click") {
+        if (tr.kostuem === "rot") { gesehen.rot = true; return "Rot! Jetzt drück die Leertaste."; }
+        return "Beim Antippen soll Robo <strong>rot</strong> werden.";
+      }
+      if (tr.anlass === "key") {
+        if (tr.kostuem !== "blau") return "Bei der Leertaste soll Robo wieder <strong>blau</strong> werden.";
+        return gesehen.rot ? true : "Blau stimmt. Tipp jetzt Robo an – wird er rot?";
+      }
+      return null;
+    },
+    ok: "✔ Antippen: rot. Leertaste: blau. Das Attribut Kostüm ändert sich per Programm." });
+
+  /* 5 · Fehlerdetektiv: Ampel */
+  const AMPEL = [{ name: "rot", pose: 0, farbe: "#e5484d" }, { name: "gelb", pose: 0, farbe: "#f5c400" }, { name: "grün", pose: 0, farbe: "#2fb344" }];
+  let ampel = [];
+  B.create($("b5"), { mode: "frei", kostueme: AMPEL, figur: true, merken: true, start: { x: 0, y: 0, dir: 90 },
+    scripts: [[["!click"], ["costumeto", "gelb"]]], palette: [["costume"]],
+    onChange() { ampel = []; },
+    check(tr) {
+      if (tr.anlass !== "click") return null;
+      ampel.push(tr.kostuem);
+      const n = allOps(tr.skripte[0], "costume").length;
+      if (n && new Set(ampel.slice(-3)).size === 3) return true;
+      if (n) return "Gut! Tipp noch ein paar Mal – kommen alle drei Farben?";
+      return "Robo bleibt gelb. <em>wechsle zu Kostüm gelb</em> wählt bei jedem Antippen dasselbe Kostüm.";
+    },
+    ok: "✔ Fall gelöst! <em>wechsle zum nächsten Kostüm</em> geht reihum: rot → gelb → grün → rot …" });
+  hints($("hints5"), [
+    "Welcher Block steht unter <em>Wenn diese Figur angeklickt wird</em>? Welches Kostüm wählt er – jedes Mal?",
+    "Lösung: Zieh <em>wechsle zu Kostüm gelb</em> weg (zurück zu den Blöcken) und setz <em>wechsle zum nächsten Kostüm</em> ein.",
+  ]);
+
+  /* Plus · falls … sonst mit Kostüm-Nummer */
+  let vorher = null;
+  B.create($("bplus"), { mode: "puzzle", kostueme: BLAU_ROT, figur: true, merken: true, start: { x: 0, y: 0, dir: 90 },
+    scripts: [[["!click"]]], palette: [["ifelse"], ["eq", "", 1], ["kostuemnr", "nummer"], ["costumeto", "rot"], ["costumeto", "blau"]],
+    onChange() { vorher = null; },
+    check(tr) {
+      if (tr.anlass !== "click") return null;
+      const fe = allOps(tr.skripte[0], "ifelse")[0];
+      const gut = fe && fe.args.b && fe.args.b.op === "eq" && fe.args.b.args.a && fe.args.b.args.a.op === "kostuemnr";
+      const wechsel = vorher !== null && vorher !== tr.kostuem;
+      vorher = tr.kostuem;
+      if (gut && wechsel) return true;
+      if (!gut) return "Bau das Sechseck <em>Kostüm Nummer = 1</em> in das falls … sonst.";
+      return "Tipp Robo noch einmal an.";
+    },
+    ok: "✔ Ein Knopf für beides: Robo fragt sein eigenes Attribut ab und entscheidet." });
+
+  /* Kurz-Check */
+  quiz($("quiz"), [
+    { q: "Woran erkennst du eine Pixelgrafik, wenn du sie stark vergrößerst?", options: ["Sie wird treppig.", "Sie bleibt scharf.", "Sie wird bunter."], right: 0,
+      miss: [null, "Scharf bleibt die Vektorgrafik.", "Die Farben bleiben gleich – nur die Pixel werden sichtbar."],
+      why: "Vergrößert werden die einzelnen Pixel sichtbar: treppig." },
+    { q: "Was speichert eine Vektorgrafik?", options: ["Formen mit Attributen wie Füllfarbe", "eine Farbe für jedes Pixel", "nur Text"], right: 0,
+      miss: [null, "Das macht die Pixelgrafik.", "Auch Bilder aus Formen sind Vektorgrafiken."],
+      why: "Eine Vektorgrafik besteht aus Formen – jede ist ein Objekt mit Attributen." },
+    { q: "Robo hat die Kostüme rot, gelb, grün und trägt gerade grün. Was trägt er danach?", html: sm([["costume"]]),
+      options: ["rot", "grün", "gelb"], right: 0,
+      miss: [null, "<em>nächstes Kostüm</em> wechselt immer – nach dem letzten kommt wieder das erste.", "gelb kommt <strong>vor</strong> grün."],
+      why: "Nach dem letzten Kostüm geht es wieder beim ersten los." },
+    { q: "Welcher Block macht Robo bei jedem Antippen <strong>blau</strong> – egal, was er vorher anhatte?",
+      options: [sm([["costumeto", "blau"]]), sm([["costume"]]), sm([["setsize", 100]])], right: 0,
+      miss: [null, "<em>nächstes Kostüm</em> hängt davon ab, was Robo vorher anhatte.", "Das ändert die Größe, nicht das Kostüm."],
+      why: "<em>wechsle zu Kostüm blau</em> setzt das Attribut Kostüm immer auf blau." },
+  ]);
+  pick($("predExp"), { right: 1, fb: $("fbExp"),
+    miss: ["Das ist 480 + 360. Ein Bild ist ein Rechteck aus Pixeln: Breite mal Höhe.", null, "Rechne Breite mal Höhe: 480 × 360."],
+    why: "480 × 360 = 172 800 Pixel – und für jedes speichert die Pixelgrafik eine Farbe." });
+
+  checklist($("checklist"), "k7-03");
+});
+</script>
+</body>
+</html>

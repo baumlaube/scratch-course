@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Start-Check · Scratch-Kurs Klasse 7</title>
+<meta name="description" content="Lektion 1 im Scratch-Lernpfad Klasse 7: Start-Check. Was kannst du noch aus Klasse 6? Tasten, falls … dann, falls … sonst, wiederhole bis und Schachtelung – mit Bericht und Übe-Stationen.">
+<link rel="canonical" href="https://scratch.herrseibert.de/k7/01-start-check.html">
+<!-- vorschau -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Scratch-Kurs">
+<meta property="og:locale" content="de_DE">
+<meta property="og:url" content="https://scratch.herrseibert.de/k7/01-start-check.html">
+<meta property="og:title" content="Start-Check · Scratch-Kurs Klasse 7">
+<meta property="og:description" content="Lektion 1 im Scratch-Lernpfad Klasse 7: Start-Check. Was kannst du noch aus Klasse 6? Tasten, falls … dann, falls … sonst, wiederhole bis und Schachtelung – mit Bericht und Übe-Stationen.">
+<meta property="og:image" content="https://scratch.herrseibert.de/vorschau.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Scratch-Kurs – Programmieren lernen Schritt für Schritt, mit Übungsbühne">
+<meta name="twitter:card" content="summary_large_image">
+<!-- /vorschau -->
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="stylesheet" href="../assets/kurs.css?v=48917f175f">
+<link rel="stylesheet" href="../assets/buehne.css?v=811a9f4f75">
+<script src="../assets/i18n.js?v=4588e8929d" data-page="k7-01-start-check" data-langs="de"></script>
+<script src="../assets/kurs.js?v=9e315750a5"></script>
+<script src="../assets/buehne.js?v=a89a39db39"></script>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><img class="logo" src="../favicon.svg" alt="" width="34" height="34"> Scratch-Kurs <span>· Programmieren lernen</span></a>
+    <span class="spacer"></span>
+    <button class="theme-btn" type="button" aria-label="Hell oder dunkel umschalten">◐ Hell/Dunkel</button>
+  </div>
+</header>
+
+<main class="wrap">
+  <nav class="path" aria-label="Lernpfad Klasse 7">
+    <strong class="t">Klasse 7:</strong>
+    <ol>
+      <li class="now"><span title="1 · Start-Check" aria-current="step">1</span></li>
+      <li class="done"><a href="02-objekte.html" title="2 · Robo ist ein Objekt">2</a></li>
+      <li class="done"><a href="03-pixel-vektor.html" title="3 · Pixel oder Vektor?">3</a></li>
+      <li class="done"><a href="04-kostueme.html" title="4 · Bewegung durch Kostüme">4</a></li>
+      <li class="done"><a href="05-variable.html" title="5 · Die Variable">5</a></li>
+      <li class="done"><a href="06-variablen-verfolgen.html" title="6 · Variablen verfolgen">6</a></li>
+      <li class="done"><a href="07-struktogramm.html" title="7 · Struktogramm und Skript">7</a></li>
+      <li class="done"><a href="08-robo-fang.html" title="8 · Projekt: Robo-Fang">8</a></li>
+    </ol>
+  </nav>
+
+  <section class="hero">
+    <h1>Start-Check – was weiß Robo noch?</h1>
+    <div class="meta">
+      <span class="chip">Klasse 7 · Lektion 1</span>
+      <span class="chip">⏱ ca. 35 Minuten</span>
+    </div>
+    <ul class="goals">
+      <li>Ich finde heraus, was ich aus Klasse 6 noch kann.</li>
+      <li>Ich weiß, wo ich nachschlagen kann.</li>
+      <li>Ich übe gezielt das, was noch wackelt.</li>
+    </ul>
+  </section>
+
+  <details class="card woerter">
+    <summary>📖 Scratch-Wörter aus Klasse 6</summary>
+    <p class="note">Die Wörter links bleiben deutsch – so heißen sie in Scratch.</p>
+    <div class="tbl-scroll"><table class="plain">
+      <tr><th class="wort">das Ereignis <small>die Ereignisse</small></th><td>Etwas passiert, z. B. eine Taste wird gedrückt. Ein Startblock wartet darauf.</td></tr>
+      <tr><th class="wort">die Bedingung <small>die Bedingungen</small></th><td>Eine Ja-Nein-Frage im Sechseck. Sie ist wahr oder falsch.</td></tr>
+      <tr><th class="wort">die Alternative <small>die Alternativen</small></th><td><em>falls … sonst</em>: zwei Wege, Robo nimmt genau einen.</td></tr>
+      <tr><th class="wort">die bedingte Wiederholung <small>–</small></th><td><em>wiederhole bis</em>: so lange, bis die Bedingung wahr ist.</td></tr>
+      <tr><th class="wort">die Schachtelung <small>die Schachtelungen</small></th><td>Ein Block steckt in einem anderen, z. B. falls in der Schleife.</td></tr>
+    </table></div>
+  </details>
+
+  <section class="card">
+    <h2><span class="step-no">ℹ</span> So arbeitest du heute</h2>
+    <ul class="tasks">
+      <li><span class="badge basis">Allein</span><span>Den Start-Check machst du <strong>allein</strong>. Nur so zeigt der Bericht, was <em>du</em> kannst.</span></li>
+      <li><span class="badge basis">Ein Versuch</span><span>Bei jeder Frage zählt die <strong>erste</strong> Antwort. Auf der Bühne darfst du so oft probieren, wie du willst.</span></li>
+      <li><span class="badge basis">Keine Note</span><span>Fehler sind heute gut: Sie zeigen dir, was du üben sollst.</span></li>
+      <li><span class="badge basis">Danach</span><span>Im Bericht stehen Links. Unten auf dieser Seite gibt es zu jedem Thema eine Übe-Station.</span></li>
+    </ul>
+  </section>
+
+  <section class="card wdh" id="check">
+    <h2><span class="step-no">↺</span> Der Start-Check <span class="chip">15 Minuten</span></h2>
+    <p class="lead">10 Aufgaben aus Klasse 6: Tasten, falls … dann, falls … sonst, wiederhole bis und Schachtelung.</p>
+    <div id="diag"></div>
+  </section>
+
+  <section class="card">
+    <h2><span class="step-no">🛠</span> Stationen: Üb, was wackelt <span class="chip">15 Minuten</span></h2>
+    <p class="lead">Fang mit den Stationen an, die <span class="badge plus">für dich</span> markiert sind. Sitzt alles? Dann probier die Stationen trotzdem – und danach die Plus-Aufgabe.</p>
+    <p class="note">Die Bühne funktioniert mit Maus und mit Finger. Tippen auf einen Block hängt ihn unten an. 🐢 ist die Zeitlupe, 👣 geht Block für Block.</p>
+  </section>
+
+  <section class="card station" id="st-tasten">
+    <h2><span class="step-no">A</span> Fernsteuerung <span class="badge plus empfohlen">für dich</span> <span class="badge basis">Basis</span> <span class="chip">3 Minuten</span></h2>
+    <p>Bau zwei Skripte: <strong>▶</strong> schiebt Robo 40 Schritte nach rechts, <strong>▲</strong> 40 Schritte nach oben. Dann steuere Robo zum Stern – mit den Tasten oder den Knöpfen unter der Bühne.</p>
+    <div id="bA"></div>
+    <p class="note">Nachlesen: <a href="../k6/02-steuern.html">Klasse 6 · Lektion 2: Steuern mit Tasten und Finger</a></p>
+  </section>
+
+  <section class="card station" id="st-falls">
+    <h2><span class="step-no">B</span> Fehlerdetektiv: Pfützen <span class="badge plus empfohlen">für dich</span> <span class="badge basis">Basis</span> <span class="chip">4 Minuten</span></h2>
+    <p>Robo soll im Wasser „Platsch!“ sagen und sonst „Trocken.“. Klick auf ⚑ Start: Es ist genau verkehrt herum. Repariere das Skript – du musst nur zwei Blöcke tauschen.</p>
+    <div id="bB"></div>
+    <div id="hintsB"></div>
+    <p class="note">Nachlesen: <a href="../k6/03-falls-dann.html">Klasse 6 · Lektion 3: falls … dann</a> und <a href="../k6/04-falls-sonst.html">Lektion 4: falls … sonst</a></p>
+  </section>
+
+  <section class="card station" id="st-bis">
+    <h2><span class="step-no">C</span> wiederhole bis: Robo sagt es zu früh <span class="badge plus empfohlen">für dich</span> <span class="badge basis">Basis</span> <span class="chip">4 Minuten</span></h2>
+    <p>Robo soll vom roten Start bis zum blauen See laufen und dann „See!“ sagen. Er sagt es aber sofort. Tipp auf das Farbfeld im Sechseck und wähl die richtige Farbe.</p>
+    <div id="bC"></div>
+    <p class="note">Nachlesen: <a href="../k6/05-wiederhole-bis.html">Klasse 6 · Lektion 5: wiederhole bis</a></p>
+  </section>
+
+  <section class="card station" id="st-schachtel">
+    <h2><span class="step-no">D</span> Schachtelung: Steuerung im Spiel <span class="badge plus empfohlen">für dich</span> <span class="badge basis">Basis</span> <span class="chip">4 Minuten</span></h2>
+    <p>Ben will Robo mit ◀ und ▶ steuern. Klick auf ⚑ und drück die Tasten: Robo rührt sich nicht. Repariere das Skript und steuere Robo zum Stern.</p>
+    <div id="bD"></div>
+    <div id="hintsD"></div>
+    <p class="note">Nachlesen: <a href="../k6/06-alles-zusammen.html">Klasse 6 · Lektion 6: Alles zusammen</a></p>
+  </section>
+
+  <section class="card">
+    <h2><span class="step-no">+</span> Der Pfützen-Melder <span class="badge plus">Plus</span> <span class="chip">für Schnelle</span></h2>
+    <p>Robo läuft, <strong>bis</strong> er den Rand berührt. Bei jedem Schritt meldet er „Platsch!“ im Wasser, sonst „Trocken.“. Bau das Skript ohne Hilfe.</p>
+    <div id="bplus"></div>
+  </section>
+
+  <section class="card">
+    <h2><span class="step-no">👀</span> Ausblick: Was weiß Robo über sich selbst? <span class="chip">3 Minuten</span></h2>
+    <p>In Klasse 7 schaust du Robo genauer an. Unter der Bühne steht jetzt, was Robo über sich weiß. Klick auf ⚑ Start und schau, was sich ändert.</p>
+    <div id="bAus"></div>
+    <p><strong>Überleg:</strong> Welche Werte hat das Skript verändert?</p>
+    <div class="choices" id="predAus">
+      <button type="button" class="choice">nur x</button>
+      <button type="button" class="choice">x und Größe</button>
+      <button type="button" class="choice">alle Werte</button>
+    </div>
+    <p class="fb" id="fbAus"></p>
+  </section>
+
+  <section class="card merke">
+    <h2>Merke aus Klasse 6</h2>
+    <ul>
+      <li>Ein <strong>Startblock</strong> wartet auf ein Ereignis: ⚑, eine Taste oder einen Klick auf Robo.</li>
+      <li><em>falls … dann</em> fragt einmal. <em>falls … sonst</em> hat zwei Wege – Robo nimmt genau einen.</li>
+      <li><em>wiederhole bis</em> läuft, bis die Bedingung wahr ist. Ist sie sofort wahr: 0 Runden.</li>
+      <li>Ein falls <strong>in</strong> der Schleife fragt in jeder Runde neu.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2><span class="step-no">⚑</span> Jetzt in echt: Scratch <span class="chip">zu Hause oder nächste Stunde</span></h2>
+    <p><a class="btn" href="https://scratch.mit.edu/projects/editor/" target="_blank" rel="noopener">Scratch in neuem Fenster öffnen ↗</a></p>
+    <ol class="howto">
+      <li>Klick unten rechts auf die Katze. Über der Figurenliste stehen ihre Werte: <strong>Figur</strong>, <strong>x</strong>, <strong>y</strong>, <strong>Zeige dich</strong>, <strong>Größe</strong>, <strong>Richtung</strong>.</li>
+      <li>Zieh die Katze auf der Bühne an eine andere Stelle. Was ändert sich bei x und y?</li>
+      <li>Schreib bei <strong>Größe</strong> 200 hinein. Was passiert? Das schauen wir uns nächste Stunde genau an.</li>
+    </ol>
+  </section>
+
+  <section class="card">
+    <h2><span class="step-no">☑</span> Das kann ich</h2>
+    <ul class="checklist" id="checklist">
+      <li><label><input type="checkbox"> Ich habe den Start-Check gemacht und meinen Bericht gelesen.</label></li>
+      <li><label><input type="checkbox"> Ich habe die Stationen geübt, die für mich markiert waren.</label></li>
+      <li><label><input type="checkbox"> Ich weiß, wo ich Klasse 6 nachschlagen kann.</label></li>
+    </ul>
+  </section>
+
+  <details class="card">
+    <summary><strong>Für Lehrkräfte</strong></summary>
+    <p>Das Ergebnis des Start-Checks bleibt nur im Browser des Geräts (localStorage) und wird nirgends hingeschickt. Wer es zeigen soll, zeigt den Bericht am Bildschirm.
+      Die Stationen A–D passen zu den Themen im Bericht.</p>
+  </details>
+
+  <nav class="pager">
+    <a href="../k6/08-fangspiel-fertig.html">← Klasse 6 · Lektion 8: Projekt Fangspiel 2</a>
+    <a href="02-objekte.html">Lektion 2: Robo ist ein Objekt →</a>
+  </nav>
+</main>
+
+<footer>
+  <div class="wrap t">Lernmaterial von <a href="https://herrseibert.de">herrseibert.de</a> · Lizenz <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.de">CC BY-SA 4.0</a> · ohne Tracking, ohne Cookies<br>Erstellt von der KI Claude von Anthropic.</div>
+  <div class="wrap t gh">Fehler gefunden oder eine Idee? → <a href="https://github.com/baumlaube/scratch-course">Kurs auf GitHub</a></div>
+  <div class="wrap t gh">Scratch ist ein Projekt der Scratch Foundation. Dieser Kurs ist kein offizielles Angebot der Scratch Foundation.</div>
+  <div class="wrap legal"><a href="../impressum.html">Impressum</a> · <a href="../datenschutz.html">Datenschutz</a></div>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const { pick, hints, checklist, diagnose } = window.Kurs;
+  const B = window.Buehne;
+  const $ = (id) => document.getElementById(id);
+  const sm = (s) => B.render(s, { small: true });
+  const at = (tr, x, y) => Math.hypot(tr.x - x, tr.y - y) < 1;
+  function where(list, op, pred, path = []) {
+    for (const n of list) {
+      if (n.op === op && (!pred || pred(n))) return path;
+      const r = (n.body && where(n.body, op, pred, path.concat(n.op))) || (n.body2 && where(n.body2, op, pred, path.concat(n.op + ":sonst")));
+      if (r) return r;
+    }
+    return null;
+  }
+  const findOp = (list, op) => { for (const n of list) { if (n.op === op) return n; for (const b of [n.body, n.body2, n.args.b && [n.args.b]]) if (b) { const r = findOp(b, op); if (r) return r; } } return null; };
+  const nsd = (label, inner) => `<div class="nsd" aria-label="${label}">${inner}</div>`;
+  const row = (t) => `<div class="nsd-row">${t}</div>`;
+  const leer = `<div class="nsd-row nsd-leer">–</div>`;
+  const loop = (kopf, inner) => `<div class="nsd-loop"><div class="nsd-head">${kopf}</div><div class="nsd-body">${inner}</div></div>`;
+  const wenn = (q, w, f) => `<div class="nsd-if"><div class="nsd-cond"><span class="nsd-q">${q}</span><span class="nsd-w">wahr</span><span class="nsd-f">falsch</span></div>`
+    + `<div class="nsd-cols"><div class="nsd-col">${w}</div><div class="nsd-col">${f}</div></div></div>`;
+
+  /* ---------- Start-Check ---------- */
+  const THEMEN = {
+    "Tasten und Ereignisse": { href: "../k6/02-steuern.html", titel: "Klasse 6 · Lektion 2", station: "st-tasten", stationTitel: "Station A" },
+    "falls … dann": { href: "../k6/03-falls-dann.html", titel: "Klasse 6 · Lektion 3", station: "st-falls", stationTitel: "Station B" },
+    "falls … sonst": { href: "../k6/04-falls-sonst.html", titel: "Klasse 6 · Lektion 4", station: "st-falls", stationTitel: "Station B" },
+    "wiederhole bis": { href: "../k6/05-wiederhole-bis.html", titel: "Klasse 6 · Lektion 5", station: "st-bis", stationTitel: "Station C" },
+    "Schachtelung": { href: "../k6/06-alles-zusammen.html", titel: "Klasse 6 · Lektion 6", station: "st-schachtel", stationTitel: "Station D" },
+  };
+  diagnose($("diag"), [
+    { thema: "Tasten und Ereignisse", q: "Wann läuft dieses Skript?", html: sm([["key", "leertaste"], ["move", 10]]),
+      options: ["jedes Mal, wenn man die Leertaste drückt", "wenn man auf ⚑ klickt", "nur beim ersten Druck auf die Leertaste"], right: 0,
+      miss: [null, "Hier steht kein Flaggen-Block. Der Startblock wartet auf die Leertaste.", "Das Skript startet bei <strong>jedem</strong> Druck neu."],
+      why: "<em>Wenn Taste Leertaste gedrückt wird</em> startet das Skript bei jedem Druck." },
+    { thema: "Tasten und Ereignisse", q: "Bau ein Skript: Bei ▲ geht Robo 40 Schritte nach oben. Dann bring ihn mit ▲ zum Stern (Taste oder Knopf).",
+      buehne: { mode: "frei", start: { x: 0, y: -40, dir: 90 }, sterne: [[0, 40]], script: [],
+        palette: [["key", "oben"], ["key", "unten"], ["changey", 40], ["changey", -40], ["changex", 40]],
+        check: (tr) => (tr.anlass === "key" && at(tr, 0, 40) ? true : tr.anlass === "key" && tr.y < -40 ? "Robo läuft nach unten. Nach oben wird y größer." : null),
+        ok: "✔ Mit der Taste am Stern!" } },
+    { thema: "falls … dann", q: "Robo steht in der Mitte der Bühne. Wie oft sagt er „Rand!“?",
+      html: sm(["flag", ["repeat", 3, [["if", ["touch", "rand"], [["say", "Rand!", 1]]]]]]),
+      options: ["0-mal", "1-mal", "3-mal"], right: 0,
+      miss: [null, "In der Mitte berührt Robo nie den Rand. Die Bedingung ist in jeder Runde falsch.", "Robo fragt 3-mal – aber die Antwort ist jedes Mal „falsch“."],
+      why: "In der Mitte ist die Bedingung immer falsch: Robo sagt nichts." },
+    { thema: "falls … dann", q: "Robo soll an der roten Wand umdrehen. Bau die Entscheidung in die Schleife.",
+      buehne: { mode: "puzzle", echtzeit: true, start: { x: -160, y: 0, dir: 90 }, felder: [[120, -180, 160, 180, "rot"]],
+        script: ["!flag", ["!repeat", 30, [["!move", 10]]]], palette: [["if"], ["color", "rot"], ["right", 180]],
+        check(tr) {
+          const w = where(tr.script, "if");
+          if (!w || !w.includes("repeat")) return "Das falls gehört <strong>in</strong> die Schleife – sonst fragt Robo nur einmal.";
+          const wr = where(tr.script, "right");
+          if (!wr || !wr.includes("if")) return "Der drehe-Block gehört <strong>in</strong> das falls.";
+          return tr.x < 120 && tr.dir === -90 ? true : "Noch nicht. Schau mit 🐢 zu.";
+        }, ok: "✔ Robo kehrt an der Wand um!" } },
+    { thema: "falls … sonst", q: "Robo steht auf Blau. Was sagt er?",
+      html: sm([["ifelse", ["color", "blau"], [["say", "Wasser!", 2]], [["say", "Trocken.", 2]]]]),
+      options: ["„Wasser!“", "„Trocken.“", "beides"], right: 0,
+      miss: [null, "Auf Blau ist die Bedingung wahr – dann läuft der obere Weg.", "Bei falls … sonst läuft immer genau ein Weg."],
+      why: "Die Bedingung ist wahr: Der Weg bei <em>dann</em> läuft." },
+    { thema: "falls … sonst", q: "Du drückst <strong>keine</strong> Taste. Was macht Robo?",
+      html: sm(["flag", ["forever", [["ifelse", ["keypressed", "rechts"], [["changex", 5]], [["changex", -5]]]]]]),
+      options: ["Er fliegt nach links.", "Er bleibt stehen.", "Er fliegt nach rechts."], right: 0,
+      miss: [null, "Ohne Taste ist die Bedingung falsch – dann läuft der sonst-Weg: ändere x um −5.", "Nach rechts geht es nur bei gedrückter Taste."],
+      why: "Ohne Taste läuft immer der sonst-Weg." },
+    { thema: "wiederhole bis", q: "Robo steht schon am Rand. Wie oft läuft <em>gehe 10 er Schritt</em>?",
+      html: sm([["until", ["touch", "rand"], [["move", 10]]]]),
+      options: ["0-mal", "1-mal", "10-mal"], right: 0,
+      miss: [null, "Robo fragt <strong>vor</strong> jeder Runde. Die Antwort ist schon wahr – also keine Runde.", "Hier steht keine Zahl für die Runden. Die Bedingung entscheidet."],
+      why: "Die Bedingung ist schon am Anfang wahr: 0 Runden." },
+    { thema: "wiederhole bis", q: "Robo soll laufen, bis er den Stern findet. Welche Bedingung gehört in das gelbe Feld?",
+      buehne: { mode: "frei", edit: "gaps", echtzeit: true, limit: 300, start: { x: -200, y: 0, dir: 90 }, objekte: [{ name: "Stern", x: 120, y: 0 }],
+        script: ["!flag", ["!until", "?", [["!move", 10]]], ["!say", "Gefunden!", 2]], palette: [["touch", "rand"], ["touch", "Stern"]],
+        check(tr) {
+          const b = findOp(tr.script, "until").args.b;
+          if (b && b.args.w === "rand") return "Robo ist am Stern vorbeigelaufen – bis zum Rand.";
+          return tr.says.includes("Gefunden!") && tr.beruehrt("Stern") ? true : null;
+        }, ok: "✔ Gefunden!" } },
+    { thema: "Schachtelung", q: "Robo steht <strong>nicht</strong> auf Grün. Wie oft dreht er sich?",
+      html: sm([["if", ["color", "gruen"], [["repeat", 4, [["right", 90]]]]]]),
+      options: ["0-mal", "4-mal", "1-mal"], right: 0,
+      miss: [null, "Die Schleife steckt im falls. Ist die Bedingung falsch, wird sie ganz übersprungen.", "Auch eine Runde läuft nicht."],
+      why: "Die Bedingung ist falsch – die ganze Schleife im falls wird übersprungen." },
+    { thema: "Schachtelung", q: "Welches Skript passt zu diesem Struktogramm?",
+      html: nsd("Struktogramm: wiederhole bis Stern berührt: gehe 10 Schritte, dann Verzweigung Rand berührt? Wenn wahr: drehe dich um 180 Grad.",
+        loop("wiederhole bis Stern berührt", row("gehe 10 Schritte") + wenn("Rand berührt?", row("drehe dich um 180°"), leer))),
+      options: [
+        sm([["until", ["touch", "Stern"], [["move", 10], ["if", ["touch", "rand"], [["right", 180]]]]]]),
+        sm([["until", ["touch", "Stern"], [["move", 10]]], ["if", ["touch", "rand"], [["right", 180]]]]),
+      ], right: 0,
+      miss: [null, "Im Struktogramm steht das Dreieck <strong>eingerückt</strong> in der Schleife. Hier steht das falls darunter."],
+      why: "Das Dreieck ist eingerückt: Das falls steckt in der Schleife." },
+  ], {
+    key: "k7-01", themen: THEMEN,
+    onReport(r) {
+      document.querySelectorAll(".station").forEach((s) => s.classList.remove("ist-empfohlen"));
+      if (!r) return;
+      r.luecken.forEach((t) => { const st = THEMEN[t] && $(THEMEN[t].station); if (st) st.classList.add("ist-empfohlen"); });
+    },
+  });
+
+  /* ---------- Stationen ---------- */
+  B.create($("bA"), { mode: "frei", start: { x: -80, y: -80, dir: 90 }, sterne: [[40, 80]], script: [],
+    palette: [["key", "rechts"], ["key", "oben"], ["changex", 40], ["changey", 40]],
+    check: (tr) => (tr.anlass === "key" && at(tr, 40, 80) ? true : null),
+    ok: "✔ Ferngesteuert zum Stern! Jede Taste hat ihr eigenes Skript." });
+
+  const PF = [[-130, -40, -90, 40, "blau"], [70, -40, 110, 40, "blau"]], PS = { x: -210, y: 0, dir: 90 };
+  const pf = (d, s) => ["flag", ["repeat", 8, [["move", 50], ["ifelse", ["color", "blau"], d, s]]]];
+  const RICHTIG = B.simulate(pf([["say", "Platsch!", 0.5]], [["say", "Trocken.", 0.5]]), PS, { felder: PF }).says.join();
+  B.create($("bB"), { mode: "frei", edit: false, start: PS, felder: PF,
+    script: ["!flag", ["!repeat", 8, [["!move", 50], ["!ifelse", ["!color", "blau"], [["say", "Trocken.", 0.5]], [["say", "Platsch!", 0.5]]]]]],
+    check: (tr) => (tr.says.join() === RICHTIG ? true : tr.says.length !== 8 ? "In jede Lücke gehört genau ein <em>sage</em>-Block." : "Noch verkehrt. Im Wasser ist die Bedingung wahr – welcher Weg läuft dann?"),
+    ok: "✔ Bei wahr läuft der obere Weg – dort gehört „Platsch!“ hin." });
+  hints($("hintsB"), [
+    "Schau mit 👣 zu, wenn Robo in der Pfütze steht. Neben dem falls steht dann <span class=\"sb-val wahr\">wahr</span>.",
+    "Lösung: Zieh „Platsch!“ nach oben (unter <em>dann</em>) und „Trocken.“ nach unten (unter <em>sonst</em>).",
+  ]);
+
+  B.create($("bC"), { mode: "frei", echtzeit: true, limit: 300, start: { x: -180, y: 0, dir: 90 },
+    felder: [[-220, -40, -140, 40, "rot"], [120, -180, 240, 180, "blau"]],
+    script: ["!flag", ["!until", ["!color", "rot"], [["!move", 10]]], ["!say", "See!", 2]],
+    check(tr) {
+      if (tr.endlos) return "Jetzt hört die Schleife nie auf. Welche Farbe hat das Ziel?";
+      if (tr.conds.falsch === 0) return "Robo sagt sofort „See!“. Die Bedingung ist schon am Anfang wahr: Er steht ja auf Rot!";
+      return tr.says.includes("See!") && tr.farbe("blau") ? true : null;
+    }, ok: "✔ Die Bedingung beschreibt jetzt das Ziel: Blau." });
+
+  const taste = (k) => (n) => n.args.b && n.args.b.args.k === k;
+  const innen = (s) => ["rechts", "links"].every((k) => (where(s, "if", taste(k)) || []).includes("forever"));
+  B.create($("bD"), { mode: "frei", edit: false, start: { x: -160, y: 0, dir: 90 }, objekte: [{ name: "Stern", x: 160, y: 0 }],
+    script: ["!flag", ["if", ["!keypressed", "rechts"], [["!changex", 5]]], ["if", ["!keypressed", "links"], [["!changex", -5]]], ["!forever", []]],
+    check(tr) {
+      if (innen(tr.script) && tr.beruehrt("Stern")) return true;
+      if (tr.live && tr.tasten > 0 && !innen(tr.script)) return "Robo hat nur <strong>ganz am Anfang</strong> nach den Tasten gefragt. Die Fragen gehören <strong>in</strong> die Schleife.";
+      return null;
+    }, ok: "✔ Die Fragen stecken in der Schleife – Robo fragt immer wieder." });
+  hints($("hintsD"), [
+    "Wann laufen die beiden falls? Und was passiert danach in der Schleife?",
+    "Lösung: Zieh beide falls-Blöcke <strong>in</strong> <em>wiederhole fortlaufend</em>.",
+  ]);
+
+  B.create($("bplus"), { mode: "frei", limit: 300, start: PS, felder: PF, script: ["!flag"],
+    palette: [["until"], ["touch", "rand"], ["move", 50], ["ifelse"], ["color", "blau"], ["say", "Platsch!", 0.5], ["say", "Trocken.", 0.5]],
+    check(tr) {
+      const w = where(tr.script, "ifelse");
+      if (!findOp(tr.script, "until")) return "Außen fehlt die Schleife <em>wiederhole bis</em>.";
+      if (!w || !w.includes("until")) return "Das falls … sonst gehört <strong>in</strong> die Schleife.";
+      const p = tr.says.filter((t) => t === "Platsch!").length, t = tr.says.filter((x) => x === "Trocken.").length;
+      return p === 2 && t >= 5 && tr.beruehrt("rand") ? true : "Noch nicht. Im Wasser „Platsch!“, sonst „Trocken.“ – bis zum Rand.";
+    }, ok: "✔ Schleife außen, falls … sonst innen – Klasse 6 sitzt!" });
+
+  /* ---------- Ausblick ---------- */
+  B.create($("bAus"), { mode: "lesen", figur: true, start: { x: -120, y: 0, dir: 90 },
+    script: ["flag", ["repeat", 5, [["changex", 40], ["changesize", 10]]]] });
+  pick($("predAus"), { right: 1, fb: $("fbAus"),
+    miss: ["Schau auch auf <strong>Größe</strong>: <em>ändere Größe um 10</em> steht in der Schleife.", null,
+      "y, Richtung, Kostüm und sichtbar bleiben gleich. Kein Block im Skript ändert sie."],
+    why: "x wird 5-mal um 40 größer, die Größe 5-mal um 10. Solche Werte heißen <strong>Attribute</strong> – darum geht es nächste Stunde." });
+
+  checklist($("checklist"), "k7-01");
+});
+</script>
+</body>
+</html>

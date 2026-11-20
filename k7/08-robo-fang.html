@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projekt: Robo-Fang · Scratch-Kurs Klasse 7</title>
+<meta name="description" content="Lektion 8 im Scratch-Lernpfad Klasse 7: Projekt Robo-Fang. Ein Klick-Spiel mit Zufall, Punkten und Countdown – mit Maus und Finger. Abschluss von Klasse 7.">
+<link rel="canonical" href="https://scratch.herrseibert.de/k7/08-robo-fang.html">
+<!-- vorschau -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Scratch-Kurs">
+<meta property="og:locale" content="de_DE">
+<meta property="og:url" content="https://scratch.herrseibert.de/k7/08-robo-fang.html">
+<meta property="og:title" content="Projekt: Robo-Fang · Scratch-Kurs Klasse 7">
+<meta property="og:description" content="Lektion 8 im Scratch-Lernpfad Klasse 7: Projekt Robo-Fang. Ein Klick-Spiel mit Zufall, Punkten und Countdown – mit Maus und Finger. Abschluss von Klasse 7.">
+<meta property="og:image" content="https://scratch.herrseibert.de/vorschau.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Scratch-Kurs – Programmieren lernen Schritt für Schritt, mit Übungsbühne">
+<meta name="twitter:card" content="summary_large_image">
+<!-- /vorschau -->
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="stylesheet" href="../assets/kurs.css?v=48917f175f">
+<link rel="stylesheet" href="../assets/buehne.css?v=811a9f4f75">
+<script src="../assets/i18n.js?v=4588e8929d" data-page="k7-08-robo-fang" data-langs="de"></script>
+<script src="../assets/kurs.js?v=9e315750a5"></script>
+<script src="../assets/buehne.js?v=a89a39db39"></script>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><img class="logo" src="../favicon.svg" alt="" width="34" height="34"> Scratch-Kurs <span>· Programmieren lernen</span></a>
+    <span class="spacer"></span>
+    <button class="theme-btn" type="button" aria-label="Hell oder dunkel umschalten">◐ Hell/Dunkel</button>
+  </div>
+</header>
+
+<main class="wrap">
+  <nav class="path" aria-label="Lernpfad Klasse 7">
+    <strong class="t">Klasse 7:</strong>
+    <ol>
+      <li class="done"><a href="01-start-check.html" title="1 · Start-Check">1</a></li>
+      <li class="done"><a href="02-objekte.html" title="2 · Robo ist ein Objekt">2</a></li>
+      <li class="done"><a href="03-pixel-vektor.html" title="3 · Pixel oder Vektor?">3</a></li>
+      <li class="done"><a href="04-kostueme.html" title="4 · Bewegung durch Kostüme">4</a></li>
+      <li class="done"><a href="05-variable.html" title="5 · Die Variable">5</a></li>
+      <li class="done"><a href="06-variablen-verfolgen.html" title="6 · Variablen verfolgen">6</a></li>
+      <li class="done"><a href="07-struktogramm.html" title="7 · Struktogramm und Skript">7</a></li>
+      <li class="now"><span title="8 · Projekt: Robo-Fang" aria-current="step">8</span></li>
+    </ol>
+  </nav>
+
+  <section class="hero">
+    <h1>Projekt: Robo-Fang</h1>
+    <div class="meta">
+      <span class="chip">Klasse 7 · Lektion 8</span>
+      <span class="chip">⏱ ca. 35 Minuten</span>
+      <span class="chip">Projekt</span>
+    </div>
+    <ul class="goals">
+      <li>Ich baue ein Klick-Spiel aus allem, was ich in Klasse 7 gelernt habe.</li>
+      <li>Ich verwende Zufall, zwei Variablen (Punkte, Zeit) und einen Countdown.</li>
+      <li>Ich teste mein Spiel und passe es an.</li>
+    </ul>
+  </section>
+
+  <details class="card woerter">
+    <summary>📖 Wörter für dieses Projekt</summary>
+    <div class="tbl-scroll"><table class="plain">
+      <tr><th class="wort">der Zufall <small>–</small></th><td>Niemand weiß vorher, was kommt. <em>gehe zu Zufallsposition</em> wählt jedes Mal einen anderen Ort.</td></tr>
+      <tr><th class="wort">die Zufallsposition <small>die Zufallspositionen</small></th><td>Ein zufälliger Ort auf der Bühne.</td></tr>
+      <tr><th class="wort">der Punktestand <small>die Punktestände</small></th><td>Wie viele Punkte man gerade hat.</td></tr>
+      <tr><th class="wort">die Spieldauer <small>–</small></th><td>Wie lange ein Spiel dauert.</td></tr>
+      <tr><th class="wort">gleichzeitig <small>–</small></th><td>Zwei Skripte laufen zur selben Zeit.</td></tr>
+    </table></div>
+  </details>
+
+  <section class="card">
+    <h2><span class="step-no">ℹ</span> So arbeitest du heute</h2>
+    <ul class="tasks">
+      <li><span class="badge basis">Antippen</span><span>Robo-Fang spielst du mit der Maus oder dem Finger – auch zu Hause am iPad.</span></li>
+      <li><span class="badge basis">Testen</span><span>Nach jedem Schritt: ⚑ Start und spielen. Erst wenn es klappt, geht es weiter.</span></li>
+      <li><span class="badge basis">Zu zweit</span><span>Eine Person baut, die andere spielt und testet. Nach jedem Schritt wechseln.</span></li>
+    </ul>
+  </section>
+
+  <section class="card wdh">
+    <h2><span class="step-no">↺</span> Weißt du noch? <span class="chip">2 Minuten</span></h2>
+    <div id="wdh"></div>
+  </section>
+
+  <!-- 1 · Plan -->
+  <section class="card">
+    <h2><span class="step-no">1</span> Der Plan <span class="chip">3 Minuten</span></h2>
+    <p><strong>Spielregeln:</strong> Robo springt jede Sekunde an einen zufälligen Ort. Tippst du ihn an, bekommst du einen Punkt. Nach 20 Sekunden ist Schluss – dann sagt Robo deinen Punktestand.</p>
+    <p><strong>Überleg:</strong> Welche Variablen braucht das Spiel?</p>
+    <div class="choices" id="pred1">
+      <button type="button" class="choice">Punkte und Zeit</button>
+      <button type="button" class="choice">nur x und y</button>
+      <button type="button" class="choice">keine – Scratch zählt von selbst</button>
+    </div>
+    <p class="fb" id="fb1"></p>
+  </section>
+
+  <!-- 2 · Robo springt -->
+  <section class="card">
+    <h2><span class="step-no">2</span> Robo springt herum <span class="badge basis">Basis</span> <span class="chip">5 Minuten</span></h2>
+    <p>Bau die Spielschleife: Robo springt an eine Zufallsposition, wartet eine Sekunde – und das fortlaufend.</p>
+    <div id="b2"></div>
+  </section>
+
+  <!-- 3 · Punkte -->
+  <section class="card">
+    <h2><span class="step-no">3</span> Fang mich: Punkte <span class="badge basis">Basis</span> <span class="chip">6 Minuten</span></h2>
+    <p>Die Spielschleife ist fertig. Bau ein zweites Skript: <em>Wenn diese Figur angeklickt wird</em> → 1 Punkt dazu → Robo springt sofort weg. Dann: ⚑ und fang Robo 3-mal.</p>
+    <div id="b3"></div>
+  </section>
+
+  <!-- 4 · Countdown -->
+  <section class="card">
+    <h2><span class="step-no">4</span> Die Zeit läuft <span class="badge basis">Basis</span> <span class="chip">6 Minuten</span></h2>
+    <p>Ein drittes Skript ist der Countdown – wie in Lektion 7. Es startet auch mit ⚑ und läuft <strong>gleichzeitig</strong> mit der Spielschleife.
+      Schreib in die gelben Felder: Das Spiel soll <strong>20 Sekunden</strong> dauern und enden, wenn die Zeit <strong>0</strong> ist.</p>
+    <div id="b4"></div>
+    <p class="note">Am Ende verbindet Robo einen Text mit dem Wert von <em>Punkte</em> und hält mit <em>stoppe alles</em> das ganze Spiel an.</p>
+  </section>
+
+  <!-- 5 · Fehlerdetektiv -->
+  <section class="card">
+    <h2><span class="step-no">5</span> Fehlerdetektiv 🔍: Robo flimmert <span class="badge basis">Basis</span> <span class="chip">4 Minuten</span></h2>
+    <p>Bei Ben flimmert Robo nur noch über die Bühne. Niemand kann ihn fangen. Klick auf ⚑ und schau hin – dann drück ⏹.</p>
+    <div id="b5"></div>
+    <div id="hints5"></div>
+  </section>
+
+  <!-- 6 · Spielen und anpassen -->
+  <section class="card">
+    <h2><span class="step-no">6</span> Dein Robo-Fang: spielen und anpassen <span class="badge basis">Basis</span> <span class="chip">6 Minuten</span></h2>
+    <p>Das ist das ganze Spiel – mit einem Kostüm-Paar: Beim Fangen reißt Robo kurz den Arm hoch. Spiel eine Runde. Dann <strong>ändere genau eine Sache</strong> und spiel wieder:</p>
+    <ul>
+      <li>Tempo: <em>warte 1 Sekunden</em> → 0.7</li>
+      <li>Schwierigkeit: <em>setze Größe auf 100 %</em> → 60</li>
+      <li>Spieldauer: <em>setze Zeit auf 20</em> → 30</li>
+    </ul>
+    <div id="b6"></div>
+  </section>
+
+  <!-- Plus -->
+  <section class="card">
+    <h2><span class="step-no">+</span> Es wird schneller <span class="badge plus">Plus</span> <span class="chip">für Schnelle</span></h2>
+    <p>Ab 5 Punkten soll Robo doppelt so schnell springen. Ersetz in der Spielschleife <em>warte 1 Sekunden</em> durch ein <em>falls … sonst</em>:
+      Ist <em>Punkte &gt; 4</em>, dann <em>warte 0.5</em>, sonst <em>warte 1</em>. Dann spiel und hol mehr als 5 Punkte.</p>
+    <div id="bplus"></div>
+  </section>
+
+  <section class="card">
+    <h2><span class="step-no">✓</span> Kurz-Check <span class="chip">3 Minuten</span></h2>
+    <div id="quiz"></div>
+  </section>
+
+  <section class="card merke">
+    <h2>Merke</h2>
+    <ul>
+      <li>In Robo-Fang steckt Klasse 7: Robo ist ein <strong>Objekt</strong>, Kostüme machen <strong>Animation</strong>, <strong>Variablen</strong> speichern Punkte und Zeit.</li>
+      <li>Mehrere Skripte können <strong>gleichzeitig</strong> laufen: Spielschleife, Antippen, Countdown.</li>
+      <li>Startwerte (<em>setze Punkte auf 0</em>, <em>setze Zeit auf 20</em>) machen jedes Spiel gleich fair.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2><span class="step-no">⚑</span> Jetzt in echt: Scratch <span class="chip">zu Hause oder nächste Stunde</span></h2>
+    <p><a class="btn secondary" href="../downloads/Robo.sprite3" download>⬇ Robo.sprite3</a>
+      <a class="btn" href="https://scratch.mit.edu/projects/editor/" target="_blank" rel="noopener">Scratch in neuem Fenster öffnen ↗</a></p>
+    <ol class="howto">
+      <li>Lade Robo hoch (Figur wählen → <strong>Figur hochladen</strong>). Lösch die Katze (Rechtsklick auf die Katze → <strong>Löschen</strong>).</li>
+      <li><strong>Gestalten:</strong> Zeichne ein eigenes Kostüm-Paar: Dupliziere Robo-a, nenne es <strong>erwischt</strong> und ändere etwas Auffälliges – andere Farbe, große Augen, ein Stern.</li>
+      <li>Leg die Variablen <strong>Punkte</strong> und <strong>Zeit</strong> an und bau die drei Skripte aus Schritt 6 nach. Beim Antippen: <em>wechsle zu Kostüm erwischt</em>, kurz warten, <em>wechsle zu Kostüm Robo-a</em>.</li>
+      <li>💾 Speichern: <strong>Datei → Auf deinem Computer speichern</strong>. Zu Hause am iPad geht Robo-Fang auch – Antippen statt Klicken.</li>
+    </ol>
+  </section>
+
+  <section class="card">
+    <h2><span class="step-no">☑</span> Das kann ich</h2>
+    <ul class="checklist" id="checklist">
+      <li><label><input type="checkbox"> Ich kann Robo mit <em>gehe zu Zufallsposition</em> springen lassen.</label></li>
+      <li><label><input type="checkbox"> Ich kann beim Antippen Punkte zählen.</label></li>
+      <li><label><input type="checkbox"> Ich kann einen Countdown bauen, der das Spiel beendet.</label></li>
+      <li><label><input type="checkbox"> Ich habe mein Spiel getestet und genau eine Sache angepasst.</label></li>
+    </ul>
+  </section>
+
+  <section class="card frei">
+    <h2><span class="step-no">★</span> Freiwillig</h2>
+    <p class="lead">Für alle, die schon fertig sind.</p>
+    <h3 class="sub"><span class="badge ueben">Üben</span> Robo wird kleiner</h3>
+    <p>Mit jedem Punkt wird Robo ein bisschen kleiner – und schwerer zu treffen. Bau den Block in das Antipp-Skript. Vergiss den Startwert nicht!</p>
+    <div id="bklein"></div>
+    <h3 class="sub"><span class="badge expedition">★ Expedition</span> Der Rekord</h3>
+    <p>Robo merkt sich deinen besten Punktestand in der Variable <em>Rekord</em>. Bau am Spielende ein: falls <em>Punkte &gt; Rekord</em>, dann <em>setze Rekord auf (Punkte)</em>. Spiel zweimal!</p>
+    <div id="brekord"></div>
+  </section>
+
+  <section class="card">
+    <h2><span class="step-no">🎓</span> Klasse 7 geschafft! Wie geht es weiter?</h2>
+    <p>Du weißt jetzt: Figuren sind <strong>Objekte</strong> mit Attributen und Methoden. Du gestaltest Kostüme als Vektorgrafik, verfolgst <strong>Variablen</strong> und liest Struktogramme.</p>
+    <p><strong>In Klasse 8</strong> stellen deine Programme <strong>Fragen</strong> und rechnen mit den Antworten. Du baust ein Rätselspiel, ein Labyrinth mit selbst gemalter Kulisse und am Ende <em>Tic-Tac-Toe</em>.</p>
+    <p><a class="btn secondary" href="../index.html#k8">Zur Übersicht Klasse 8</a></p>
+  </section>
+
+  <nav class="pager">
+    <a href="07-struktogramm.html">← Lektion 7: Struktogramm und Skript</a>
+    <span>Klasse 8: Programme, die fragen und antworten (in Arbeit) →</span>
+  </nav>
+</main>
+
+<footer>
+  <div class="wrap t">Lernmaterial von <a href="https://herrseibert.de">herrseibert.de</a> · Lizenz <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.de">CC BY-SA 4.0</a> · ohne Tracking, ohne Cookies<br>Erstellt von der KI Claude von Anthropic.</div>
+  <div class="wrap t gh">Fehler gefunden oder eine Idee? → <a href="https://github.com/baumlaube/scratch-course">Kurs auf GitHub</a></div>
+  <div class="wrap t gh">Scratch ist ein Projekt der Scratch Foundation. Dieser Kurs ist kein offizielles Angebot der Scratch Foundation.</div>
+  <div class="wrap legal"><a href="../impressum.html">Impressum</a> · <a href="../datenschutz.html">Datenschutz</a></div>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const { pick, quiz, hints, checklist } = window.Kurs;
+  const B = window.Buehne;
+  const $ = (id) => document.getElementById(id);
+  const sm = (s) => B.render(s, { small: true });
+  const allOps = (list, op, out = []) => { list.forEach((n) => { if (n.op === op) out.push(n); [n.body, n.body2].forEach((b) => b && allOps(b, op, out)); }); return out; };
+  const skript = (tr, hut) => tr.skripte.find((st) => st[0] && st[0].op === hut) || [];
+  const schleife = (tr) => { for (const st of tr.skripte) { const f = st.find((n) => n.op === "forever"); if (f) return f; } return null; };
+
+  /* Bausteine des Spiels */
+  const SPIEL = ["flag", ["setvar", "Punkte", 0], ["setsize", 100], ["costumeto", "Robo-a"], ["forever", [["gotorandom", "zufall"], ["wait", 1]]]];
+  const KLICK = [["click"], ["changevar", "Punkte", 1], ["costumeto", "Robo-b"], ["wait", 0.2], ["costumeto", "Robo-a"], ["gotorandom", "zufall"]];
+  const COUNT = (z, ende) => ["flag", ["setvar", "Zeit", z], ["until", ["eq", ["var", "Zeit"], 0], [["wait", 1], ["changevar", "Zeit", -1]]], ["saynow", ["join", "Punkte: ", ["var", "Punkte"]]], ...(ende || []), ["stop", "alles"]];
+  const fest = (x) => (Array.isArray(x) ? (typeof x[0] === "string" ? ["!" + x[0].replace(/^!/, ""), ...x.slice(1).map(fest)] : x.map(fest)) : x);
+  const VARS = { Punkte: 0, Zeit: 0 };
+  const ende = (tr) => tr.gestoppt && tr.says.some((s) => /^Punkte: /.test(s));
+
+  /* Weißt du noch? */
+  quiz($("wdh"), [
+    { q: "Was zeigt die Anzeige nach dem 3. Antippen?", html: sm([["click"], ["changevar", "Punkte", 1]]) + sm(["flag", ["setvar", "Punkte", 0]]),
+      options: ["3 (nach ⚑ und 3-mal Antippen)", "1", "0"], right: 0,
+      miss: [null, "Jedes Antippen zählt 1 dazu – der Startwert steht nur unter der Flagge.", "Gezählt wird bei jedem Antippen."],
+      why: "⚑ setzt auf 0, dann 3-mal +1 = 3." },
+    { q: "Wann hört diese Schleife auf?", html: sm([["until", ["eq", ["var", "Zeit"], 0], [["wait", 1], ["changevar", "Zeit", -1]]]]),
+      options: ["wenn Zeit 0 ist", "nach einer Sekunde", "nie"], right: 0,
+      miss: [null, "Sie wiederholt – bis die Bedingung wahr ist.", "Zeit wird jede Runde kleiner. Irgendwann ist sie 0."],
+      why: "Countdown: Zeit wird kleiner, bis Zeit = 0 wahr ist." },
+  ]);
+
+  /* 1 · Plan */
+  pick($("pred1"), { right: 0, fb: $("fb1"),
+    miss: [null, "x und y sind Attribute von Robo. Punkte und Zeit muss sich das Spiel selbst merken.", "Scratch zählt nichts von selbst. Dafür gibt es Variablen."],
+    why: "Punkte zählt die Treffer, Zeit zählt rückwärts. Zwei Variablen." });
+
+  /* 2 · Robo springt */
+  B.create($("b2"), { mode: "puzzle", start: { x: 0, y: 0, dir: 90 }, script: ["!flag"], palette: [["forever"], ["gotorandom", "zufall"], ["wait", 1]],
+    check(tr) {
+      const f = schleife(tr);
+      if (!f) return null;
+      const ops = f.body.map((n) => n.op);
+      if (ops.includes("gotorandom") && !ops.includes("wait")) return "Robo springt 30-mal pro Sekunde. Es fehlt noch etwas in der Schleife.";
+      return ops.includes("gotorandom") && ops.includes("wait") && (tr.x !== 0 || tr.y !== 0) ? true : null;
+    },
+    ok: "✔ Robo springt – jedes Mal an einen anderen Ort. Das ist Zufall." });
+
+  /* 3 · Punkte beim Antippen */
+  B.create($("b3"), { mode: "frei", variablen: { Punkte: 0 }, start: { x: 0, y: 0, dir: 90 },
+    scripts: [fest(["flag", ["setvar", "Punkte", 0], ["forever", [["gotorandom", "zufall"], ["wait", 1]]]])],
+    palette: [["click"], ["changevar", "Punkte", 1], ["gotorandom", "zufall"]],
+    check(tr) { return tr.vars.Punkte >= 3 ? true : null; },
+    ok: "✔ 3 Punkte! Zwei Skripte laufen gleichzeitig: die Spielschleife und das Antippen." });
+
+  /* 4 · Countdown mit Lücken */
+  B.create($("b4"), { mode: "frei", edit: "gaps", variablen: VARS, start: { x: 0, y: 0, dir: 90 },
+    scripts: [fest(SPIEL), fest(KLICK), ["!flag", ["!setvar", "Zeit", "?"], ["!until", ["!eq", ["!var", "Zeit"], "?"], [["!wait", 1], ["!changevar", "Zeit", -1]]],
+      ["!saynow", ["!join", "Punkte: ", ["!var", "Punkte"]]], ["!stop", "alles"]]],
+    check(tr) {
+      if (!tr.gestoppt) return null;
+      const c = skript(tr, "flag") && tr.skripte.find((st) => st.some((n) => n.op === "until"));
+      const z = Number(c[1].args.n), e = Number(c[2].args.b.args.b);
+      if (z !== 20) return `Das Spiel hat ${z} Sekunden gedauert. Es soll 20 Sekunden dauern.`;
+      if (e !== 0) return "Das Spiel soll enden, wenn die Zeit 0 ist.";
+      return ende(tr) ? true : null;
+    },
+    ok: "✔ Nach 20 Sekunden ist Schluss – und Robo sagt deinen Punktestand." });
+
+  /* 5 · Fehlerdetektiv: ohne warte */
+  let blick = 0;
+  B.create($("b5"), { mode: "frei", variablen: { Punkte: 0 }, start: { x: 0, y: 0, dir: 90 },
+    scripts: [["!flag", ["!setvar", "Punkte", 0], ["!forever", [["!gotorandom", "zufall"]]]], fest(KLICK.slice(0, 2))], palette: [["wait", 1]],
+    onChange() { blick = 0; },
+    check(tr) {
+      const f = schleife(tr), mitWarte = f && f.body.some((n) => n.op === "wait");
+      if (!tr.live) return null;
+      if (mitWarte) return tr.x !== 0 || tr.y !== 0 ? true : null;
+      return ++blick > 60 ? "Robo springt 30-mal pro Sekunde an einen neuen Ort. Wie in Lektion 4: Zwischen zwei Bildern muss er warten." : null;
+    },
+    ok: "✔ Fall gelöst! Mit <em>warte 1 Sekunden</em> bleibt Robo kurz stehen – jetzt kann man ihn fangen." });
+  hints($("hints5"), [
+    "Was steht in der Schleife? Wie oft pro Sekunde läuft sie ohne Pause?",
+    "Lösung: Zieh <em>warte 1 Sekunden</em> in die Schleife, unter <em>gehe zu Zufallsposition</em>.",
+  ]);
+
+  /* 6 · Das ganze Spiel */
+  B.create($("b6"), { mode: "frei", variablen: VARS, start: { x: 0, y: 0, dir: 90 }, scripts: [SPIEL, KLICK, COUNT(20)],
+    check(tr) { return !tr.live && ende(tr) ? true : null; },
+    ok: "✔ Spiel vorbei! Schau, wie viele Punkte du hast. Ändere eine Sache – und schaffst du mehr?" });
+
+  /* Plus · schneller ab 5 Punkten */
+  B.create($("bplus"), { mode: "frei", variablen: VARS, start: { x: 0, y: 0, dir: 90 },
+    scripts: [fest(["flag", ["setvar", "Punkte", 0], ["forever", [["gotorandom", "zufall"]]]]), fest(KLICK), fest(COUNT(20))],
+    palette: [["ifelse"], ["gt", ["var", "Punkte"], 4], ["wait", 0.5], ["wait", 1]],
+    check(tr) {
+      if (tr.live || !tr.gestoppt) return null;
+      const fe = allOps(schleife(tr).body, "ifelse")[0];
+      const gut = fe && fe.args.b && fe.args.b.op === "gt" && fe.body.some((n) => n.op === "wait" && Number(n.args.s) === 0.5) && fe.body2.some((n) => n.op === "wait" && Number(n.args.s) === 1);
+      if (!gut) return "Spiel vorbei. In die Spielschleife gehört noch: falls Punkte > 4, dann warte 0.5 – sonst warte 1.";
+      return tr.vars.Punkte > 5 ? true : `Gebaut! Du hattest ${tr.vars.Punkte} Punkte. Hol mehr als 5 – dann merkst du, wie Robo schneller wird.`;
+    },
+    ok: "✔ Ab 5 Punkten wird es schwerer – das Spiel passt sich an!" });
+
+  /* Kurz-Check */
+  quiz($("quiz"), [
+    { q: "Welcher Block sorgt dafür, dass Robo jedes Mal woanders auftaucht?", options: [sm([["gotorandom", "zufall"]]), sm([["goto", 0, 0]]), sm([["move", 10]])], right: 0,
+      miss: [null, "<em>gehe zu x: 0 y: 0</em> ist immer derselbe Ort.", "<em>gehe 10 er Schritt</em> geht immer ein Stück in dieselbe Richtung."],
+      why: "<em>gehe zu Zufallsposition</em> wählt jedes Mal einen neuen Ort." },
+    { q: "Am Ende des Countdowns steht <em>stoppe alles</em>. Was passiert dann?", options: ["Alle Skripte halten an – auch die Spielschleife.", "Nur der Countdown hält an.", "Das Spiel fängt von vorn an."], right: 0,
+      miss: [null, "Dafür gäbe es <em>stoppe dieses Skript</em>.", "Neu starten musst du selbst mit ⚑."],
+      why: "<em>stoppe alles</em> beendet das ganze Programm." },
+    { q: "Zwei Skripte beginnen mit <em>Wenn ⚑ angeklickt wird</em>. Was passiert beim Klick auf ⚑?", options: ["Beide laufen gleichzeitig.", "Nur das obere läuft.", "Erst das eine, dann das andere."], right: 0,
+      miss: [null, "Jedes Skript mit Flagge startet.", "Sie warten nicht aufeinander – sie laufen zur selben Zeit."],
+      why: "Alle Skripte mit Flagge starten gleichzeitig: Spielschleife und Countdown." },
+  ]);
+
+  /* Freiwillig */
+  B.create($("bklein"), { mode: "frei", variablen: VARS, start: { x: 0, y: 0, dir: 90 }, scripts: [fest(SPIEL), fest(KLICK), fest(COUNT(20))], palette: [["changesize", -10]],
+    check(tr) {
+      if (tr.live || !tr.gestoppt) return null;
+      const kl = skript(tr, "click");
+      return allOps(kl, "changesize").length ? true : "Spiel vorbei. Bau <em>ändere Größe um −10</em> in das Antipp-Skript.";
+    },
+    ok: "✔ Robo schrumpft mit jedem Punkt. Und weil <em>setze Größe auf 100 %</em> im Start-Skript steht, ist er beim nächsten Spiel wieder groß." });
+  B.create($("brekord"), { mode: "frei", variablen: { Punkte: 0, Zeit: 0, Rekord: 0 }, start: { x: 0, y: 0, dir: 90 },
+    scripts: [fest(SPIEL), fest(KLICK), fest(COUNT(10))], palette: [["if"], ["gt", ["var", "Punkte"], ["var", "Rekord"]], ["setvar", "Rekord", ["var", "Punkte"]]],
+    check(tr) {
+      if (tr.live || !tr.gestoppt) return null;
+      const fi = tr.skripte.map((st) => allOps(st, "if")).flat().find((n) => n.args.b && n.args.b.op === "gt");
+      const gut = fi && fi.body.some((n) => n.op === "setvar" && n.args.v === "Rekord");
+      return gut && tr.vars.Rekord >= tr.vars.Punkte ? true : "Spiel vorbei. Vor <em>stoppe alles</em> fehlt noch: falls Punkte > Rekord, dann setze Rekord auf (Punkte).";
+    },
+    ok: "✔ Rekord gespeichert! Spiel noch einmal – nur ein besseres Ergebnis überschreibt ihn." });
+
+  checklist($("checklist"), "k7-08");
+});
+</script>
+</body>
+</html>
