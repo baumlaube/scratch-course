@@ -25,7 +25,7 @@
 <link rel="stylesheet" href="../assets/kurs.css?v=a6cd486b38">
 <link rel="stylesheet" href="../assets/buehne.css?v=811a9f4f75">
 <script src="../assets/i18n.js?v=4588e8929d" data-page="k5-01-programmieren" data-langs="de"></script>
-<script src="../assets/kurs.js?v=9e315750a5"></script>
+<script src="../assets/kurs.js?v=4a1a4bea27"></script>
 <script src="../assets/buehne.js?v=a89a39db39"></script>
 <style>
   /* Befehlskarten und Raster – nur in dieser Lektion (unplugged) */
@@ -239,16 +239,6 @@
     <p class="note">Du kannst schon mal reinschauen. Ein Konto brauchst du nicht.</p>
   </section>
 
-  <section class="card">
-    <h2><span class="step-no">☑</span> Das kann ich</h2>
-    <ul class="checklist" id="checklist">
-      <li><label><input type="checkbox"> Ich kann erklären, was ein Algorithmus ist.</label></li>
-      <li><label><input type="checkbox"> Ich kann ein Programm aus Befehlskarten legen.</label></li>
-      <li><label><input type="checkbox"> Ich weiß: Beim Drehen bleibt Robo auf seinem Feld.</label></li>
-      <li><label><input type="checkbox"> Ich finde eine falsche Karte mit den Detektiv-Fragen.</label></li>
-    </ul>
-  </section>
-
   <section class="card frei">
     <h2><span class="step-no">★</span> Freiwillig</h2>
     <p class="lead">Für alle, die schon fertig sind.</p>
@@ -293,7 +283,7 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-  const { pick, quiz, checklist } = window.Kurs;
+  const { pick, quiz } = window.Kurs;
   const $ = (id) => document.getElementById(id);
 
   /* Befehlskarten (eigene Zeichnungen) */
@@ -391,8 +381,6 @@ document.addEventListener("DOMContentLoaded", () => {
         "Rückwärts gibt es nicht. Robo macht die Karten nur in einer anderen Reihenfolge."],
       why: "Die Reihenfolge ist wichtig. Andere Reihenfolge – anderes Ergebnis." },
   ]);
-
-  checklist($("checklist"), "k5-01");
 });
 </script>
 </body>

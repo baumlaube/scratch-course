@@ -25,7 +25,7 @@
 <link rel="stylesheet" href="../assets/kurs.css?v=a6cd486b38">
 <link rel="stylesheet" href="../assets/buehne.css?v=811a9f4f75">
 <script src="../assets/i18n.js?v=4588e8929d" data-page="k5-02-scratch-kennenlernen" data-langs="de"></script>
-<script src="../assets/kurs.js?v=9e315750a5"></script>
+<script src="../assets/kurs.js?v=4a1a4bea27"></script>
 <script src="../assets/buehne.js?v=a89a39db39"></script>
 <style>
   .skizze { width: 100%; max-width: 640px; height: auto; display: block; margin: 10px 0; }
@@ -256,16 +256,6 @@
       Am iPad läuft Scratch im Browser (Safari) – ohne App und ohne Konto.</p>
   </section>
 
-  <section class="card">
-    <h2><span class="step-no">☑</span> Das kann ich</h2>
-    <ul class="checklist" id="checklist">
-      <li><label><input type="checkbox"> Ich finde in Scratch die Bühne, die Blockpalette und den Skriptbereich.</label></li>
-      <li><label><input type="checkbox"> Ich weiß, wozu der Startblock da ist.</label></li>
-      <li><label><input type="checkbox"> Ich kann Blöcke zu einem Skript zusammenstecken.</label></li>
-      <li><label><input type="checkbox"> Ich weiß: Die Blöcke laufen von oben nach unten.</label></li>
-    </ul>
-  </section>
-
   <section class="card frei">
     <h2><span class="step-no">★</span> Freiwillig</h2>
     <p class="lead">Für alle, die schon fertig sind.</p>
@@ -294,7 +284,7 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-  const { pick, quiz, hints, checklist } = window.Kurs;
+  const { pick, quiz, hints } = window.Kurs;
   const B = window.Buehne;
   const $ = (id) => document.getElementById(id);
   const at = (tr, x, y) => Math.hypot(tr.x - x, tr.y - y) < 1;
@@ -427,8 +417,6 @@ document.addEventListener("DOMContentLoaded", () => {
     script: ["!flag", ["!say", "Ich heiße Robo.", 2], ["!say", "Und du?", 2]],
     check(tr) { return tr.says.join("") !== "Ich heiße Robo.Und du?" ? true : "Robo sagt noch die alten Sätze. Tipp in das weiße Feld und ändere den Text."; },
     ok: "✔ Robo spricht jetzt deine Sätze!" });
-
-  checklist($("checklist"), "k5-02");
 });
 </script>
 </body>

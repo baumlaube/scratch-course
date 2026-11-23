@@ -25,7 +25,7 @@
 <link rel="stylesheet" href="assets/kurs.css?v=a6cd486b38">
 <link rel="stylesheet" href="assets/buehne.css?v=811a9f4f75">
 <script src="assets/i18n.js?v=4588e8929d" data-page="index" data-langs="de"></script>
-<script src="assets/kurs.js?v=9e315750a5"></script>
+<script src="assets/kurs.js?v=4a1a4bea27"></script>
 <script src="assets/buehne.js?v=a89a39db39"></script>
 <style>
   /* Jahrgangs-Reiter: ohne JavaScript stehen alle Jahrgänge untereinander (auch für Suchmaschinen). */
@@ -44,8 +44,6 @@
   .jg-tab[aria-selected="true"] { background: var(--surface); color: var(--navy); }
   .jg-tab.mehr { color: #f0d4ff; }
   .jg-tab.mehr[aria-selected="true"] { background: var(--surface); color: var(--expedition); }
-  .jg-tab .prog { font-size: 12.5px; font-weight: 800; margin-inline-start: 6px; padding: 1px 7px; border-radius: 999px; background: var(--basis); color: #fff; }
-  .jg-tab .prog:empty { display: none; }
   /* Die Karte des gewählten Jahrgangs hängt direkt am Reiter */
   html.js-tabs .jg { margin-top: 0; border-top: 0; border-radius: 0 0 var(--radius) var(--radius); }
   html.js-tabs .jg[hidden] { display: none; }
@@ -63,9 +61,6 @@
   .units .soon-card .no { background: var(--muted); }
   .units .tag { margin-inline-start: auto; font-size: 13px; font-weight: 700; color: var(--muted); white-space: nowrap; }
   .units a .tag { color: var(--basis); }
-  .units li.fertig .no { background: var(--basis); }
-  .units li.fertig .no::after { content: "✔"; position: absolute; right: -7px; top: -7px; width: 20px; height: 20px; border-radius: 50%;
-    display: grid; place-items: center; font-size: 12px; background: var(--surface); color: var(--basis); border: 2px solid var(--basis); }
   .jg.mehr { border: 2px solid var(--expedition); }
   .jg.mehr h2 { color: var(--expedition); }
   .jg.mehr .units .no { background: var(--expedition); }
@@ -113,28 +108,28 @@
   <nav class="jg-tabs" aria-label="Wähle deine Klasse">
     <span class="jg-label" aria-hidden="true">Wähle deine Klasse:</span>
     <span role="tablist" aria-label="Klassen" style="display:contents">
-    <button class="jg-tab" type="button" role="tab" data-jg="k5"><span class="voll">Klasse </span>5<span class="prog"></span></button>
-    <button class="jg-tab" type="button" role="tab" data-jg="k6"><span class="voll">Klasse </span>6<span class="prog"></span></button>
-    <button class="jg-tab" type="button" role="tab" data-jg="k7"><span class="voll">Klasse </span>7<span class="prog"></span></button>
-    <button class="jg-tab" type="button" role="tab" data-jg="k8"><span class="voll">Klasse </span>8<span class="prog"></span></button>
-    <button class="jg-tab" type="button" role="tab" data-jg="k9"><span class="voll">Klasse </span>9<span class="prog"></span></button>
-    <button class="jg-tab mehr" type="button" role="tab" data-jg="mehr">★ <span class="voll">Mehr</span><span class="prog"></span></button>
+    <button class="jg-tab" type="button" role="tab" data-jg="k5"><span class="voll">Klasse </span>5</button>
+    <button class="jg-tab" type="button" role="tab" data-jg="k6"><span class="voll">Klasse </span>6</button>
+    <button class="jg-tab" type="button" role="tab" data-jg="k7"><span class="voll">Klasse </span>7</button>
+    <button class="jg-tab" type="button" role="tab" data-jg="k8"><span class="voll">Klasse </span>8</button>
+    <button class="jg-tab" type="button" role="tab" data-jg="k9"><span class="voll">Klasse </span>9</button>
+    <button class="jg-tab mehr" type="button" role="tab" data-jg="mehr">★ <span class="voll">Mehr</span></button>
     </span>
   </nav>
 
-  <!-- Jahrgänge: Lektionen, die es schon gibt, als <a>; geplante als .soon-card. data-key = Schlüssel der „Das kann ich“-Liste. -->
+  <!-- Jahrgänge: Lektionen, die es schon gibt, als <a>; geplante als .soon-card. -->
   <section class="card jg" id="jg-k5" role="tabpanel" data-jg="k5">
     <div class="jg-head"><h2>Klasse 5 · Erste Schritte im Programmieren</h2><span class="chip">8 Lektionen</span></div>
     <p class="lead">Was ist ein Algorithmus? Befehle der Reihe nach, die Schleife – und eine Schleife in der Schleife.</p>
     <ul class="units">
-      <li data-key="k5-01"><a href="k5/01-programmieren.html"><span class="no">1</span><span><strong>Was ist Programmieren?</strong><small>Ohne Computer: Wir programmieren die Lehrkraft</small></span><span class="tag">mit Kopiervorlage</span></a></li>
-      <li data-key="k5-02"><a href="k5/02-scratch-kennenlernen.html"><span class="no">2</span><span><strong>Scratch kennenlernen</strong><small>Bühne, Figur, Blöcke, grüne Flagge</small></span><span class="tag">Dein erstes Skript</span></a></li>
-      <li data-key="k5-03"><a href="k5/03-befehle-der-reihe-nach.html"><span class="no">3</span><span><strong>Befehle der Reihe nach</strong><small>gehen, drehen, sagen, warten</small></span><span class="tag">Robo winkt</span></a></li>
-      <li data-key="k5-04"><a href="k5/04-malen-mit-dem-stift.html"><span class="no">4</span><span><strong>Malen mit dem Stift</strong><small>Linien und Ecken</small></span><span class="tag">Ein Quadrat Block für Block</span></a></li>
-      <li data-key="k5-05"><a href="k5/05-schleife.html"><span class="no">5</span><span><strong>Die Schleife</strong><small>wiederhole … mal – Quadrat, Dreieck, Fehlerdetektiv</small></span><span class="tag">★ Fast ein Kreis</span></a></li>
-      <li data-key="k5-06"><a href="k5/06-schleifen-ueben.html"><span class="no">6</span><span><strong>Schleifen üben</strong><small>Vielecke, Muster, Animation mit Kostüm und warte</small></span><span class="tag">Robo winkt mit Schleife</span></a></li>
-      <li data-key="k5-07"><a href="k5/07-schleife-in-der-schleife.html"><span class="no">7</span><span><strong>Schleife in der Schleife</strong><small>Blumen und Muster aus Vielecken, 4 × 3 = 12</small></span><span class="tag">Die Blume aus 6 Quadraten</span></a></li>
-      <li data-key="k5-08"><a href="k5/08-mein-projekt.html"><span class="no">8</span><span><strong>Mein Projekt</strong><small>Eigene Animation oder eigenes Bild in Scratch</small></span><span class="tag">3 Ideen zur Wahl</span></a></li>
+      <li><a href="k5/01-programmieren.html"><span class="no">1</span><span><strong>Was ist Programmieren?</strong><small>Ohne Computer: Wir programmieren die Lehrkraft</small></span><span class="tag">mit Kopiervorlage</span></a></li>
+      <li><a href="k5/02-scratch-kennenlernen.html"><span class="no">2</span><span><strong>Scratch kennenlernen</strong><small>Bühne, Figur, Blöcke, grüne Flagge</small></span><span class="tag">Dein erstes Skript</span></a></li>
+      <li><a href="k5/03-befehle-der-reihe-nach.html"><span class="no">3</span><span><strong>Befehle der Reihe nach</strong><small>gehen, drehen, sagen, warten</small></span><span class="tag">Robo winkt</span></a></li>
+      <li><a href="k5/04-malen-mit-dem-stift.html"><span class="no">4</span><span><strong>Malen mit dem Stift</strong><small>Linien und Ecken</small></span><span class="tag">Ein Quadrat Block für Block</span></a></li>
+      <li><a href="k5/05-schleife.html"><span class="no">5</span><span><strong>Die Schleife</strong><small>wiederhole … mal – Quadrat, Dreieck, Fehlerdetektiv</small></span><span class="tag">★ Fast ein Kreis</span></a></li>
+      <li><a href="k5/06-schleifen-ueben.html"><span class="no">6</span><span><strong>Schleifen üben</strong><small>Vielecke, Muster, Animation mit Kostüm und warte</small></span><span class="tag">Robo winkt mit Schleife</span></a></li>
+      <li><a href="k5/07-schleife-in-der-schleife.html"><span class="no">7</span><span><strong>Schleife in der Schleife</strong><small>Blumen und Muster aus Vielecken, 4 × 3 = 12</small></span><span class="tag">Die Blume aus 6 Quadraten</span></a></li>
+      <li><a href="k5/08-mein-projekt.html"><span class="no">8</span><span><strong>Mein Projekt</strong><small>Eigene Animation oder eigenes Bild in Scratch</small></span><span class="tag">3 Ideen zur Wahl</span></a></li>
     </ul>
   </section>
 
@@ -142,14 +137,14 @@
     <div class="jg-head"><h2>Klasse 6 · Programme, die entscheiden</h2><span class="chip">8 Lektionen</span></div>
     <p class="lead">Falls … dann, falls … sonst und „wiederhole bis“.</p>
     <ul class="units">
-      <li data-key="k6-01"><a href="k6/01-start-check.html"><span class="no">1</span><span><strong>Start-Check</strong><small>Was weißt du noch aus Klasse 5?</small></span><span class="tag">Dein Bericht mit Übe-Stationen</span></a></li>
-      <li data-key="k6-02"><a href="k6/02-steuern.html"><span class="no">2</span><span><strong>Steuern mit Tasten und Finger</strong><small>Ereignisse und Koordinaten x und y</small></span><span class="tag">Die Fernsteuerung</span></a></li>
-      <li data-key="k6-03"><a href="k6/03-falls-dann.html"><span class="no">3</span><span><strong>Robo entscheidet: falls … dann</strong><small>Bedingungen: wahr oder falsch?</small></span><span class="tag">Robo kehrt an der Wand um</span></a></li>
-      <li data-key="k6-04"><a href="k6/04-falls-sonst.html"><span class="no">4</span><span><strong>Zwei Wege: falls … sonst</strong><small>Die Alternative: immer genau ein Weg</small></span><span class="tag">Robo hüpft und bremst</span></a></li>
-      <li data-key="k6-05"><a href="k6/05-wiederhole-bis.html"><span class="no">5</span><span><strong>Bis es passt: wiederhole bis</strong><small>Wenn man nicht weiß, wie oft</small></span><span class="tag">Fehlerdetektiv: nie oder sofort?</span></a></li>
-      <li data-key="k6-06"><a href="k6/06-alles-zusammen.html"><span class="no">6</span><span><strong>Alles zusammen</strong><small>Schleifen und Fragen ineinander</small></span><span class="tag">Struktogramm und Skript zuordnen</span></a></li>
-      <li data-key="k6-07"><a href="k6/07-projekt-fangspiel.html"><span class="no">7</span><span><strong>Projekt Fangspiel 1: Robo jagt Sterne</strong><small>Steuerung mit Pfeilen oder Knöpfen</small></span><span class="tag">Dein Spiel, Stand 1</span></a></li>
-      <li data-key="k6-08"><a href="k6/08-fangspiel-fertig.html"><span class="no">8</span><span><strong>Projekt Fangspiel 2: Meteore und Ziel</strong><small>Game over, Ziel, Schwierigkeit – Abschluss Klasse 6</small></span><span class="tag">Das fertige Spiel</span></a></li>
+      <li><a href="k6/01-start-check.html"><span class="no">1</span><span><strong>Start-Check</strong><small>Was weißt du noch aus Klasse 5?</small></span><span class="tag">Dein Bericht mit Übe-Stationen</span></a></li>
+      <li><a href="k6/02-steuern.html"><span class="no">2</span><span><strong>Steuern mit Tasten und Finger</strong><small>Ereignisse und Koordinaten x und y</small></span><span class="tag">Die Fernsteuerung</span></a></li>
+      <li><a href="k6/03-falls-dann.html"><span class="no">3</span><span><strong>Robo entscheidet: falls … dann</strong><small>Bedingungen: wahr oder falsch?</small></span><span class="tag">Robo kehrt an der Wand um</span></a></li>
+      <li><a href="k6/04-falls-sonst.html"><span class="no">4</span><span><strong>Zwei Wege: falls … sonst</strong><small>Die Alternative: immer genau ein Weg</small></span><span class="tag">Robo hüpft und bremst</span></a></li>
+      <li><a href="k6/05-wiederhole-bis.html"><span class="no">5</span><span><strong>Bis es passt: wiederhole bis</strong><small>Wenn man nicht weiß, wie oft</small></span><span class="tag">Fehlerdetektiv: nie oder sofort?</span></a></li>
+      <li><a href="k6/06-alles-zusammen.html"><span class="no">6</span><span><strong>Alles zusammen</strong><small>Schleifen und Fragen ineinander</small></span><span class="tag">Struktogramm und Skript zuordnen</span></a></li>
+      <li><a href="k6/07-projekt-fangspiel.html"><span class="no">7</span><span><strong>Projekt Fangspiel 1: Robo jagt Sterne</strong><small>Steuerung mit Pfeilen oder Knöpfen</small></span><span class="tag">Dein Spiel, Stand 1</span></a></li>
+      <li><a href="k6/08-fangspiel-fertig.html"><span class="no">8</span><span><strong>Projekt Fangspiel 2: Meteore und Ziel</strong><small>Game over, Ziel, Schwierigkeit – Abschluss Klasse 6</small></span><span class="tag">Das fertige Spiel</span></a></li>
     </ul>
   </section>
 
@@ -157,14 +152,14 @@
     <div class="jg-head"><h2>Klasse 7 · Figuren als Objekte</h2><span class="chip">8 Lektionen</span></div>
     <p class="lead">Figuren haben Eigenschaften und Kostüme. Du gestaltest sie selbst – und dein Programm benutzt sie. Dazu: Variablen.</p>
     <ul class="units">
-      <li data-key="k7-01"><a href="k7/01-start-check.html"><span class="no">1</span><span><strong>Start-Check</strong><small>Was weißt du noch aus Klasse 6?</small></span><span class="tag">Dein Bericht mit Übe-Stationen</span></a></li>
-      <li data-key="k7-02"><a href="k7/02-objekte.html"><span class="no">2</span><span><strong>Robo ist ein Objekt</strong><small>Attribute, Werte und Methoden</small></span><span class="tag">Die Objektkarte</span></a></li>
-      <li data-key="k7-03"><a href="k7/03-pixel-vektor.html"><span class="no">3</span><span><strong>Pixel oder Vektor?</strong><small>Robo im Malprogramm umfärben</small></span><span class="tag">Zoom: treppig oder scharf</span></a></li>
-      <li data-key="k7-04"><a href="k7/04-kostueme.html"><span class="no">4</span><span><strong>Bewegung durch Kostüme</strong><small>Wie ein Daumenkino: Robo winkt</small></span><span class="tag">Dein eigenes Kostüm</span></a></li>
-      <li data-key="k7-05"><a href="k7/05-variable.html"><span class="no">5</span><span><strong>Die Variable</strong><small>Ein Name für einen Wert: Klicks zählen</small></span><span class="tag">Der Klick-Zähler</span></a></li>
-      <li data-key="k7-06"><a href="k7/06-variablen-verfolgen.html"><span class="no">6</span><span><strong>Variablen verfolgen</strong><small>Werte-Tabelle; Zahl, Text, wahr oder falsch</small></span><span class="tag">3 + 4 oder 34?</span></a></li>
-      <li data-key="k7-07"><a href="k7/07-struktogramm.html"><span class="no">7</span><span><strong>Struktogramm und Skript</strong><small>Was gehört zusammen?</small></span><span class="tag">Countdown nach Plan</span></a></li>
-      <li data-key="k7-08"><a href="k7/08-robo-fang.html"><span class="no">8</span><span><strong>Projekt: Robo-Fang</strong><small>Ein Klick-Spiel mit Punkten und Countdown – Abschluss Klasse 7</small></span><span class="tag">Fang Robo!</span></a></li>
+      <li><a href="k7/01-start-check.html"><span class="no">1</span><span><strong>Start-Check</strong><small>Was weißt du noch aus Klasse 6?</small></span><span class="tag">Dein Bericht mit Übe-Stationen</span></a></li>
+      <li><a href="k7/02-objekte.html"><span class="no">2</span><span><strong>Robo ist ein Objekt</strong><small>Attribute, Werte und Methoden</small></span><span class="tag">Die Objektkarte</span></a></li>
+      <li><a href="k7/03-pixel-vektor.html"><span class="no">3</span><span><strong>Pixel oder Vektor?</strong><small>Robo im Malprogramm umfärben</small></span><span class="tag">Zoom: treppig oder scharf</span></a></li>
+      <li><a href="k7/04-kostueme.html"><span class="no">4</span><span><strong>Bewegung durch Kostüme</strong><small>Wie ein Daumenkino: Robo winkt</small></span><span class="tag">Dein eigenes Kostüm</span></a></li>
+      <li><a href="k7/05-variable.html"><span class="no">5</span><span><strong>Die Variable</strong><small>Ein Name für einen Wert: Klicks zählen</small></span><span class="tag">Der Klick-Zähler</span></a></li>
+      <li><a href="k7/06-variablen-verfolgen.html"><span class="no">6</span><span><strong>Variablen verfolgen</strong><small>Werte-Tabelle; Zahl, Text, wahr oder falsch</small></span><span class="tag">3 + 4 oder 34?</span></a></li>
+      <li><a href="k7/07-struktogramm.html"><span class="no">7</span><span><strong>Struktogramm und Skript</strong><small>Was gehört zusammen?</small></span><span class="tag">Countdown nach Plan</span></a></li>
+      <li><a href="k7/08-robo-fang.html"><span class="no">8</span><span><strong>Projekt: Robo-Fang</strong><small>Ein Klick-Spiel mit Punkten und Countdown – Abschluss Klasse 7</small></span><span class="tag">Fang Robo!</span></a></li>
     </ul>
   </section>
 
@@ -219,7 +214,7 @@
     <p>Der Kurs richtet sich nach dem LehrplanPLUS Informatik der bayerischen Mittelschule. Er ist frei (OER):
       Alle dürfen ihn nutzen, verändern und weitergeben (CC BY-SA 4.0). Die Seiten setzen keine Cookies und messen nichts.</p>
     <p class="note">Die Figur „Robo“ und alle Grafiken sind eigene Zeichnungen. Die Blöcke sehen aus wie in Scratch und heißen genauso,
-      damit du dich in Scratch sofort zurechtfindest. Welche Klasse du zuletzt angeschaut hast und was du abgehakt hast, merkt sich nur dein Gerät.</p>
+      damit du dich in Scratch sofort zurechtfindest. Welche Klasse du zuletzt angeschaut hast, merkt sich nur dein Gerät.</p>
   </section>
 </main>
 
@@ -239,16 +234,6 @@
   const panels = [...document.querySelectorAll(".jg")];
   const ids = tabs.map((t) => t.dataset.jg);
   document.documentElement.classList.add("js-tabs");
-
-  /* Fortschritt: Häkchen an fertigen Lektionen, „3/8“ am Reiter */
-  panels.forEach((p) => {
-    const keyed = [...p.querySelectorAll("li[data-key]")];
-    let done = 0;
-    keyed.forEach((li) => { if (S.get("scratch-fertig-" + li.dataset.key) === "1") { li.classList.add("fertig"); done++; } });
-    const total = p.querySelectorAll(".units > li").length;
-    const tab = tabs.find((t) => t.dataset.jg === p.dataset.jg);
-    if (done) tab.querySelector(".prog").textContent = done + "/" + total;
-  });
 
   function show(id, push) {
     if (!ids.includes(id)) id = "k5";

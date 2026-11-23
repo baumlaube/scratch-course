@@ -25,7 +25,7 @@
 <link rel="stylesheet" href="../assets/kurs.css?v=a6cd486b38">
 <link rel="stylesheet" href="../assets/buehne.css?v=811a9f4f75">
 <script src="../assets/i18n.js?v=4588e8929d" data-page="k6-02-steuern" data-langs="de"></script>
-<script src="../assets/kurs.js?v=9e315750a5"></script>
+<script src="../assets/kurs.js?v=4a1a4bea27"></script>
 <script src="../assets/buehne.js?v=a89a39db39"></script>
 </head>
 <body>
@@ -207,16 +207,6 @@
     </div>
   </section>
 
-  <section class="card">
-    <h2><span class="step-no">☑</span> Das kann ich</h2>
-    <ul class="checklist" id="checklist">
-      <li><label><input type="checkbox"> Ich kann ein Skript mit einer Taste starten.</label></li>
-      <li><label><input type="checkbox"> Ich kann sagen, wo x: 0 y: 0 ist und in welche Richtung x und y größer werden.</label></li>
-      <li><label><input type="checkbox"> Ich kann Robo mit vier Skripten in alle Richtungen steuern.</label></li>
-      <li><label><input type="checkbox"> Ich weiß, was ich am iPad ohne Tastatur nehmen kann.</label></li>
-    </ul>
-  </section>
-
   <section class="card frei">
     <h2><span class="step-no">★</span> Freiwillig</h2>
     <p class="lead">Für alle, die schon fertig sind.</p>
@@ -246,7 +236,7 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-  const { pick, quiz, hints, checklist } = window.Kurs;
+  const { pick, quiz, hints } = window.Kurs;
   const B = window.Buehne;
   const $ = (id) => document.getElementById(id);
   const sm = (s) => B.render(s, { small: true });
@@ -398,8 +388,6 @@ document.addEventListener("DOMContentLoaded", () => {
     palette: ["flag", ["pendown"], ["penup"], ["key", "rechts"], ["key", "links"], ["key", "oben"], ["key", "unten"], ["changex", 10], ["changex", -10], ["changey", 10], ["changey", -10]],
     check(tr) { return tr.segs.length >= 12 ? true : null; },
     ok: "✔ Du malst mit den Pfeiltasten! Klick auf ⚑, um neu anzufangen." });
-
-  checklist($("checklist"), "k6-02");
 });
 </script>
 </body>

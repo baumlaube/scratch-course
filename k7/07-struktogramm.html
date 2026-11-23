@@ -25,7 +25,7 @@
 <link rel="stylesheet" href="../assets/kurs.css?v=a6cd486b38">
 <link rel="stylesheet" href="../assets/buehne.css?v=811a9f4f75">
 <script src="../assets/i18n.js?v=4588e8929d" data-page="k7-07-struktogramm" data-langs="de"></script>
-<script src="../assets/kurs.js?v=9e315750a5"></script>
+<script src="../assets/kurs.js?v=4a1a4bea27"></script>
 <script src="../assets/buehne.js?v=a89a39db39"></script>
 </head>
 <body>
@@ -184,15 +184,6 @@
     </ol>
   </section>
 
-  <section class="card">
-    <h2><span class="step-no">☑</span> Das kann ich</h2>
-    <ul class="checklist" id="checklist">
-      <li><label><input type="checkbox"> Ich kenne die drei Bausteine eines Struktogramms.</label></li>
-      <li><label><input type="checkbox"> Ich kann Struktogramm und Skript einander zuordnen.</label></li>
-      <li><label><input type="checkbox"> Ich kann nach einem Struktogramm ein Skript bauen.</label></li>
-    </ul>
-  </section>
-
   <section class="card frei">
     <h2><span class="step-no">★</span> Freiwillig</h2>
     <p class="lead">Für alle, die schon fertig sind.</p>
@@ -218,7 +209,7 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-  const { pick, quiz, hints, checklist } = window.Kurs;
+  const { pick, quiz, hints } = window.Kurs;
   const B = window.Buehne;
   const $ = (id) => document.getElementById(id);
   const sm = (s) => B.render(s, { small: true });
@@ -354,8 +345,6 @@ document.addEventListener("DOMContentLoaded", () => {
     palette: [["setvar", "Zahl", 0], ["repeat", 5], ["changevar", "Zahl", 2], ["say", ["var", "Zahl"], 0.5]],
     check: (tr) => (tr.says.join() === "2,4,6,8,10" ? true : "Robo soll 2, 4, 6, 8, 10 sagen. Robo sagt: " + (tr.says.join(", ") || "nichts")),
     ok: "✔ 2, 4, 6, 8, 10!" });
-
-  checklist($("checklist"), "k7-07");
 });
 </script>
 </body>

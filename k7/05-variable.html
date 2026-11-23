@@ -25,7 +25,7 @@
 <link rel="stylesheet" href="../assets/kurs.css?v=a6cd486b38">
 <link rel="stylesheet" href="../assets/buehne.css?v=811a9f4f75">
 <script src="../assets/i18n.js?v=4588e8929d" data-page="k7-05-variable" data-langs="de"></script>
-<script src="../assets/kurs.js?v=9e315750a5"></script>
+<script src="../assets/kurs.js?v=4a1a4bea27"></script>
 <script src="../assets/buehne.js?v=a89a39db39"></script>
 </head>
 <body>
@@ -203,16 +203,6 @@
     </ol>
   </section>
 
-  <section class="card">
-    <h2><span class="step-no">☑</span> Das kann ich</h2>
-    <ul class="checklist" id="checklist">
-      <li><label><input type="checkbox"> Ich kann erklären, was Bezeichner und Wert einer Variable sind.</label></li>
-      <li><label><input type="checkbox"> Ich kann mit <em>setze</em> einen Startwert festlegen.</label></li>
-      <li><label><input type="checkbox"> Ich kann mit <em>ändere</em> zählen.</label></li>
-      <li><label><input type="checkbox"> Ich finde den Fehler, wenn der Startwert fehlt.</label></li>
-    </ul>
-  </section>
-
   <section class="card frei">
     <h2><span class="step-no">★</span> Freiwillig</h2>
     <p class="lead">Für alle, die schon fertig sind.</p>
@@ -240,7 +230,7 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-  const { pick, quiz, hints, checklist } = window.Kurs;
+  const { pick, quiz, hints } = window.Kurs;
   const B = window.Buehne;
   const $ = (id) => document.getElementById(id);
   const sm = (s) => B.render(s, { small: true });
@@ -373,8 +363,6 @@ document.addEventListener("DOMContentLoaded", () => {
       return tr.vars.Rekord >= tr.vars.Klicks ? true : null;
     },
     ok: "✔ Der Rekord wird nur überschrieben, wenn du besser warst. Probier es gleich noch einmal!" });
-
-  checklist($("checklist"), "k7-05");
 });
 </script>
 </body>
