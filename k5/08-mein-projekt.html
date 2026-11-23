@@ -94,7 +94,6 @@
     <ul class="tasks">
       <li><span class="badge basis">Fenster</span><span>Lass diese Seite offen. Wechsle zwischen der Anleitung hier und Scratch hin und her.</span></li>
       <li><span class="badge basis">Allein oder zu zweit</span><span>Zu zweit: Eine Person baut, die andere liest die Anleitung vor. Nach jeder Stufe wechseln.</span></li>
-      <li><span class="badge basis">Stufen</span><span>Erst <span class="badge basis">Basis</span>, dann <span class="badge plus">Plus</span>, dann <span class="badge expedition">★ Freiwillig</span>. Die Basis reicht!</span></li>
     </ul>
     <p class="note">Scratch geht nicht? Ganz unten auf der Seite gibt es eine <a href="#ersatz">Übungsbühne als Ersatz</a>.</p>
   </section>
@@ -126,7 +125,7 @@
 
   <details class="card idee" id="idee-tanz">
     <summary>💃 Idee A: Die Tanz-Show</summary>
-    <h3><span class="badge basis">Basis</span> Die Katze tanzt</h3>
+    <h3><span class="badge basis">Basis</span> Die Katze tanzt <span class="chip">Das reicht schon!</span></h3>
     <ol class="howto">
       <li>Zieh <em>Wenn ⚑ angeklickt wird</em> auf die Fläche. Darunter: <em>gehe zu x: 0 y: 0</em> und <em>setze Richtung auf 90 Grad</em>. So fängt die Katze immer gleich an.</li>
       <li>Die Katze sagt etwas: <em>sage Schaut mal! für 2 Sekunden</em>.</li>
@@ -134,10 +133,10 @@
       <li>Zum Schluss: <em>sage Tada! für 2 Sekunden</em>. Klick auf ⚑.</li>
     </ol>
     <div data-script='["flag",["goto",0,0],["dir",90],["say","Schaut mal!",2],["repeat",10,[["right",15],["wait",0.3],["left",15],["costume"],["wait",0.3]]],["say","Tada!",2]]' data-small></div>
-    <h3><span class="badge plus">Plus</span> Eine Pirouette</h3>
+    <h3><span class="badge plus">Plus</span> Eine Pirouette <span class="chip">wenn die Basis läuft</span></h3>
     <p>Setz nach der Schleife eine <strong>zweite</strong> Schleife: <em>wiederhole 24 mal</em>, darin <em>drehe dich ↻ um 15 Grad</em>.
       Überleg: Wie weit dreht sich die Katze insgesamt? (24 × 15 = ?)</p>
-    <h3><span class="badge expedition">★ Freiwillig</span> Mehr Show</h3>
+    <h3><span class="badge expedition">★ Freiwillig</span> Mehr Show <span class="chip">wenn du noch Zeit hast</span></h3>
     <ul>
       <li>Unten rechts auf <strong>Bühnenbild wählen</strong> klicken und einen Hintergrund aussuchen.</li>
       <li>Die ganze Tanz-Schleife 3-mal wiederholen: eine Schleife in der Schleife!</li>
@@ -146,7 +145,7 @@
 
   <details class="card idee" id="idee-blume">
     <summary>🌸 Idee B: Die Blumenwiese</summary>
-    <h3><span class="badge basis">Basis</span> Eine Blume</h3>
+    <h3><span class="badge basis">Basis</span> Eine Blume <span class="chip">Das reicht schon!</span></h3>
     <ol class="howto">
       <li>Unten links auf <strong>Erweiterung hinzufügen</strong> klicken und <strong>Malstift</strong> wählen.</li>
       <li>Unter <em>Wenn ⚑ angeklickt wird</em>: <em>lösche alles</em>, <em>gehe zu x: 0 y: 0</em>, <em>setze Richtung auf 90 Grad</em>.</li>
@@ -154,10 +153,10 @@
       <li>Klick auf ⚑.</li>
     </ol>
     <div data-script='["flag",["clear"],["goto",0,0],["dir",90],["pendown"],["repeat",6,[["repeat",4,[["move",60],["right",90]]],["right",60]]]]' data-small></div>
-    <h3><span class="badge plus">Plus</span> Eine zweite Blume</h3>
+    <h3><span class="badge plus">Plus</span> Eine zweite Blume <span class="chip">wenn die Basis läuft</span></h3>
     <p>Hänge unten an: <em>schalte Stift aus</em>, <em>gehe zu x: 150 y: 50</em>, <em>schalte Stift ein</em> – und noch einmal die Blumen-Schleife.
       Mit <em>setze Stiftfarbe auf ●</em> (Malstift) bekommt die neue Blume eine andere Farbe.</p>
-    <h3><span class="badge expedition">★ Freiwillig</span> Die ganze Wiese</h3>
+    <h3><span class="badge expedition">★ Freiwillig</span> Die ganze Wiese <span class="chip">wenn du noch Zeit hast</span></h3>
     <ul>
       <li>Male eine dritte Blume – vielleicht aus Dreiecken oder Sechsecken.</li>
       <li>Male jeder Blume einen Stiel: Stift ein, <em>setze Richtung auf 180 Grad</em>, <em>gehe 100 er Schritt</em>.</li>
@@ -166,7 +165,7 @@
 
   <details class="card idee" id="idee-auftritt">
     <summary>👋 Idee C: Der Auftritt</summary>
-    <h3><span class="badge basis">Basis</span> Die Katze kommt auf die Bühne</h3>
+    <h3><span class="badge basis">Basis</span> Die Katze kommt auf die Bühne <span class="chip">Das reicht schon!</span></h3>
     <ol class="howto">
       <li>Unter <em>Wenn ⚑ angeklickt wird</em>: <em>gehe zu x: -180 y: 0</em> und <em>setze Richtung auf 90 Grad</em>. Die Katze steht jetzt links am Rand.</li>
       <li>Die Schleife: Die Katze läuft in die Mitte. Kostüm wechseln + kurz warten = Laufen.</li>
@@ -174,10 +173,10 @@
       <li>Klick auf ⚑.</li>
     </ol>
     <div data-script='["flag",["goto",-180,0],["dir",90],["repeat",18,[["move",10],["costume"],["wait",0.1]]],["say","Hallo, ich bin Mimi!",2]]' data-small></div>
-    <h3><span class="badge plus">Plus</span> Winken und Moonwalk</h3>
+    <h3><span class="badge plus">Plus</span> Winken und Moonwalk <span class="chip">wenn die Basis läuft</span></h3>
     <p>Hänge an: eine Schleife, in der die Katze 4-mal winkt (<em>wechsle zum nächsten Kostüm</em>, <em>warte 0.5 Sekunden</em>).
       Dann <em>sage Tschüss! für 2 Sekunden</em> – und eine Schleife mit <em>gehe -10 er Schritt</em>. Was passiert?</p>
-    <h3><span class="badge expedition">★ Freiwillig</span> Ein Gespräch</h3>
+    <h3><span class="badge expedition">★ Freiwillig</span> Ein Gespräch <span class="chip">wenn du noch Zeit hast</span></h3>
     <ul>
       <li>Unten rechts auf <strong>Figur wählen</strong> klicken und eine zweite Figur holen. Gib ihr auch ein Skript mit <em>Wenn ⚑ angeklickt wird</em>.</li>
       <li>Die zweite Figur antwortet: Erst <em>warte</em>, bis die Katze fertig gesprochen hat, dann <em>sage</em>.</li>
